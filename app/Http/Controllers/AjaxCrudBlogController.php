@@ -52,9 +52,8 @@ class AjaxCrudBlogController extends Controller
     {
         $rules = array(
             'subject'    =>  'required',
-            'post_by'     =>  'required',
-          //  'article'     =>  'required',
-           //'image'         =>  'required|image|max:2048'
+            'title'     =>  'required',
+           // 'image'         =>  'required|image|max:2048'
         );
 
         $error = Validator::make($request->all(), $rules);
@@ -64,19 +63,19 @@ class AjaxCrudBlogController extends Controller
             return response()->json(['errors' => $error->errors()->all()]);
         }
 
-//        $image = $request->file('image');
+        $image = $request->file('image');
 
-        //$new_name = rand() . '.' . $image->getClientOriginalExtension();
+        $new_name = rand() . '.' . $image->getClientOriginalExtension();
 
-  //      $image->move(public_path('images'), $new_name);
+        $image->move(public_path('images'), $new_name);
 
         $form_data = array(
             'subject'        =>  $request->subject,
-            'post_by'         =>  $request->post_by,
-            //'image'             =>  $new_name,
-            'title' => $request->title,
+            'title'         =>  $request->title,
+           // 'image'             =>  $new_name,
             'article' => $request->article,
-        
+            'post_by' => $request->post_by
+            
         );
 
         list_blog::create($form_data);
@@ -125,8 +124,8 @@ class AjaxCrudBlogController extends Controller
         {
             $rules = array(
                 'subject'    =>  'required',
-                'post_by'     =>  'required',
-                //'image'         =>  'image|max:2048'
+                'title'     =>  'required',
+             //   'image'         =>  'image|max:2048'
             );
             $error = Validator::make($request->all(), $rules);
             if($error->fails())
@@ -134,15 +133,14 @@ class AjaxCrudBlogController extends Controller
                 return response()->json(['errors' => $error->errors()->all()]);
             }
 
-            // $image_name = rand() . '.' . $image->getClientOriginalExtension();
-            // $image->move(public_path('images'), $image_name);
+           // $image_name = rand() . '.' . $image->getClientOriginalExtension();
+           // $image->move(public_path('images'), $image_name);
         }
         else
         {
             $rules = array(
                 'subject'    =>  'required',
-                'post_by'     =>  'required',
-                
+                'title'     =>  'required',
                 
             );
 
@@ -155,10 +153,12 @@ class AjaxCrudBlogController extends Controller
         }
 
         $form_data = array(
-            'subject'        =>  $request->subject,
-            'post_by'         =>  $request->post_by,
-            'title'            =>    $request->title,
-            'article'        => $request->article,
+            'subject'       =>   $request->brand,
+            'title'        =>   $request->model,
+            //'image'            =>   $image_name,
+            'article' => $request->article,
+            'post_by' => $request->post_by
+           
         );
         list_blog::whereId($request->hidden_id)->update($form_data);
 
