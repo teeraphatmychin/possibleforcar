@@ -8,6 +8,6 @@ class list_blog extends Model
 {
     //
     protected $fillable = [
-        'blog_id', 'subject', 'post_by','article'
+        'blog_id', 'subject', 'post_by','article','title'
        ];
 }

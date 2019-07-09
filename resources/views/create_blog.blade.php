@@ -3,17 +3,13 @@
 <html>
                 <head>
                  <meta name="viewport" content="width=device-width, initial-scale=1">
-                 <title>Blog manage</title>
+                 <title>Car manage</title>
                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
                  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
                  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
                  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
                  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-               {{--    --}}
-                   <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
-               
-                 {{--    --}}
                 </head>
                 <body>
                 
@@ -22,13 +18,12 @@
                                                </div>
                                                <br />
                                                <div class="table-responsive">
-                                                   <table class="table table-bordered table-striped" id="blog_manage_table">
+                                                   <table class="table table-bordered table-striped" id="car_manage_table">
                                                        <thead>
                                                            <tr>
-                                                               <th width="5%">Image</th>
-                                                               <th width="5%">subject</th>                                              
-                                                               <th width="20%">title</th>
-                                                               <th width="50%">article</th>
+                                                               <th width="5%">Subject</th>
+                                                               <th width="5%">title</th>
+                                                               <th width="5%">article</th>
                                                                <th width="5%">post_by</th>
                                                                <th width="5%">Created</th>
                                                                <th width="5%">Updated</th>
@@ -59,48 +54,27 @@
                         <form method="post" id="sample_form" class="form-horizontal" enctype="multipart/form-data">
                          @csrf
                          <div class="form-group">
-                           <label class="control-label col-md-2" >subject : </label>
-                           <div class="col-md-10">
+                           <label class="control-label col-md-4" >Subject: </label>
+                           <div class="col-md-8">
                             <input type="text" name="subject" id="subject" class="form-control" />
                            </div>
                           </div>
-                          {{--    --}}
                           <div class="form-group">
-                               <label class="control-label col-md-2">title : </label>
-                               <div class="col-md-10">
-                                    <input type="text" name="title" id="title" class="form-control" />
-                               </div>
-                           </div>
-                         
-                         
-                           <div class="form-group">
-                               <label class="control-label col-md-2">post_by: </label>
-                               <div class="col-md-10">
-                                    <input type="text" name="post_by" id="post_by" class="form-control" />
-                               </div>
-                          </div>
-                          <div class="form-group">
-                                <label class="control-label col-md-1">article:</label>
-                                <div class="col-md-12">
-                                    <textarea name="article" id="article" class="form-control">{{old('article')}} </textarea> 
-                                </div>
-                          </div>
-                          
-                                
-                         
-                        
-                          </div>
-                          {{--    --}}
-               
-                          {{--    --}}
-                          <div class="form-group">
-                           <label class="control-label col-md-4">Select Profile Image : </label>
+                           <label class="control-label col-md-4">title : </label>
                            <div class="col-md-8">
-                            <input type="file" name="image" id="image" />
-                            <span id="store_image"></span>
+                            <input type="text" name="title" id="title" class="form-control" />
                            </div>
                           </div>
-                               
+                          {{--    --}}
+                          <div class="form-group">
+                               <label class="control-label col-md-4">article : </label>
+                               <div class="col-md-8">
+                                    <input type="text" name="article" id="article" class="form-control" />
+                               </div>
+                           </div>
+                           
+                          {{--    --}}
+                          
                           <br />
                           <div class="form-group" align="center">
                            <input type="hidden" name="action" id="action" />
@@ -131,57 +105,33 @@
                        </div>
                    </div>
                </div>
-
-
-               <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-               <script>
-                        var options = {
-                          filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-                          filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-                          filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-                          filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
-                        };
-                      </script>
-               <script>
-                        CKEDITOR.replace( 'article',options);
-                </script>
-               <script>
                
+               
+               <script>
                $(document).ready(function(){
                
-                $('#blog_manage_table').DataTable({
+                $('#car_manage_table').DataTable({
                  processing: true,
                  serverSide: true,
                  ajax:{
-                  url: "{{ route('ajax-crudBlog.index') }}",
+                  url: "{{ route('ajax-crud.index') }}",
                  },
                  columns:[
-                  {
-                   data: 'image',
-                   name: 'image',
-                  
-                   render: function(data, type, full, meta){
-                   return "<img src={{ URL::to('/') }}/images/allcar/" + subject + model + "/370_260/" + data + " width='70' class='img-thumbnail' />";
-                    //return "<img src={{ URL::to('/') }}/images/allcar/Toyota/Yaris/370_260/" + data + " width='70' class='img-thumbnail' />";
-                    //return "<img src={{ URL::to('/') }}/allcar/images/" + data + " width='70' class='img-thumbnail' />";
-                   },
-                   orderable: false
-                  },
                   {
                    data: 'subject',
                    name: 'subject'
                   },
                   {
-                   data: 'title',
-                   name: 'title'
+                   data: 'm',
+                   name: 'model'
                   },
                    {
-                   data: 'post_by',
-                   name: 'post_by'
+                   data: 'year_model',
+                   name: 'year_model'
                   },
                   {
-                   data: 'article',
-                   name: 'article'
+                   data: 'price',
+                   name: 'price'
                   },
                   
                   {
@@ -213,7 +163,7 @@
                  if($('#action').val() == 'Add')
                  {
                   $.ajax({
-                   url:"{{ route('ajax-crudBlog.store') }}",
+                   url:"{{ route('ajax-crud.store') }}",
                    method:"POST",
                    data: new FormData(this),
                    contentType: false,
@@ -236,7 +186,7 @@
                     {
                      html = '<div class="alert alert-success">' + data.success + '</div>';
                      $('#sample_form')[0].reset();
-                     $('#blog_manage_table').DataTable().ajax.reload();
+                     $('#car_manage_table').DataTable().ajax.reload();
                     }
                     $('#form_result').html(html);
                    }
@@ -246,7 +196,7 @@
                  if($('#action').val() == "Edit")
                  {
                   $.ajax({
-                   url:"{{ route('ajax-crudBlog.update') }}",
+                   url:"{{ route('ajax-crud.update') }}",
                    method:"POST",
                    data:new FormData(this),
                    contentType: false,
@@ -270,7 +220,7 @@
                      html = '<div class="alert alert-success">' + data.success + '</div>';
                      $('#sample_form')[0].reset();
                      $('#store_image').html('');
-                     $('#blog_manage_table').DataTable().ajax.reload();
+                     $('#car_manage_table').DataTable().ajax.reload();
                     }
                     $('#form_result').html(html);
                    }
@@ -282,13 +232,18 @@
                  var id = $(this).attr('id');
                  $('#form_result').html('');
                  $.ajax({
-                  url:"/ajax-crudBlog/"+id+"/edit",
+                  url:"/ajax-crud/"+id+"/edit",
                   dataType:"json",
                   success:function(html){
-                   $('#subject').val(html.data.subject);
+                   $('#brand').val(html.data.brand);
+                   $('#model').val(html.data.model);
+                   $('#year_model').val(html.data.year_model);
+                   $('#price').val(html.data.price);
+                   $('#type').val(html.data.type);
+                   $('#engine').val(html.data.engine);
                    $('#title').val(html.data.title);
-                   $('#article').val(html.data.article);
-                   $('#post_by').val(html.data.post_by);
+                   $('#detail').val(html.data.detail);
+                   $('#status_car').val(html.data.status_car);
                    $('#store_image').html("<img src={{ URL::to('/') }}/images/allcar/" + html.data.image + " width='70' class='img-thumbnail' />");
                    $('#store_image').append("<input type='hidden' name='hidden_image' value='"+html.data.image+"' />");
                    $('#hidden_id').val(html.data.id);
@@ -309,7 +264,7 @@
                
                 $('#ok_button').click(function(){
                  $.ajax({
-                  url:"ajax-crudBlog/destroy/"+user_id,
+                  url:"ajax-crud/destroy/"+user_id,
                   beforeSend:function(){
                    $('#ok_button').text('Deleting...');
                   },
@@ -317,7 +272,7 @@
                   {
                    setTimeout(function(){
                     $('#confirmModal').modal('hide');
-                    $('#blog_manage_table').DataTable().ajax.reload();
+                    $('#car_manage_table').DataTable().ajax.reload();
                    }, 2000);
                   }
                  })

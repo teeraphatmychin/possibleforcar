@@ -53,8 +53,8 @@ class AjaxCrudBlogController extends Controller
         $rules = array(
             'subject'    =>  'required',
             'post_by'     =>  'required',
-            'article'     =>  'required',
-           'image'         =>  'required|image|max:2048'
+          //  'article'     =>  'required',
+           //'image'         =>  'required|image|max:2048'
         );
 
         $error = Validator::make($request->all(), $rules);
@@ -64,16 +64,16 @@ class AjaxCrudBlogController extends Controller
             return response()->json(['errors' => $error->errors()->all()]);
         }
 
-        $image = $request->file('image');
+//        $image = $request->file('image');
 
-        $new_name = rand() . '.' . $image->getClientOriginalExtension();
+        //$new_name = rand() . '.' . $image->getClientOriginalExtension();
 
-        $image->move(public_path('images'), $new_name);
+  //      $image->move(public_path('images'), $new_name);
 
         $form_data = array(
             'subject'        =>  $request->subject,
             'post_by'         =>  $request->post_by,
-            'image'             =>  $new_name,
+            //'image'             =>  $new_name,
             'title' => $request->title,
             'article' => $request->article,
         
@@ -126,7 +126,7 @@ class AjaxCrudBlogController extends Controller
             $rules = array(
                 'subject'    =>  'required',
                 'post_by'     =>  'required',
-                'image'         =>  'image|max:2048'
+                //'image'         =>  'image|max:2048'
             );
             $error = Validator::make($request->all(), $rules);
             if($error->fails())
@@ -134,8 +134,8 @@ class AjaxCrudBlogController extends Controller
                 return response()->json(['errors' => $error->errors()->all()]);
             }
 
-            $image_name = rand() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images'), $image_name);
+            // $image_name = rand() . '.' . $image->getClientOriginalExtension();
+            // $image->move(public_path('images'), $image_name);
         }
         else
         {
@@ -157,9 +157,8 @@ class AjaxCrudBlogController extends Controller
         $form_data = array(
             'subject'        =>  $request->subject,
             'post_by'         =>  $request->post_by,
-            'image'             =>  $new_name,
-            'title' => $request->title,
-            'article' => $request->article,
+            'title'            =>    $request->title,
+            'article'        => $request->article,
         );
         list_blog::whereId($request->hidden_id)->update($form_data);
 
