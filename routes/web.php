@@ -23,6 +23,10 @@ Route::resource('car_crud','car_manageController')->middleware(['auth','auth.adm
  Route::post('ajax-crud/update', 'AjaxCrudController@update')->name('ajax-crud.update')->middleware(['auth','auth.admin']);
  Route::get('ajax-crud/destroy/{id}', 'AjaxCrudController@destroy')->middleware(['auth','auth.admin']);
 
+ Route::resource('ajax-crudBlog', 'AjaxCrudBlogController')->middleware(['auth','auth.admin']);
+ Route::post('ajax-crudBlog/update', 'AjaxCrudBlogController@update')->name('ajax-crudBlog.update')->middleware(['auth','auth.admin']);
+ Route::get('ajax-crudBlog/destroy/{id}', 'AjaxCrudBlogController@destroy')->middleware(['auth','auth.admin']);
+
 Route::namespace('Admin')->prefix('admin')->middleware(['auth','auth.admin'])->name('admin.')->group(function(){
      Route::resource('/users','UserController',['except' => ['show','create','store']]);
      Route::get('/impersonate/user/{id}','ImpersonateController@index')->name('impersonate');

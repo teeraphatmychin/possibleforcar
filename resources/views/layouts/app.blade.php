@@ -57,6 +57,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('car_crud')}}">Manage Car</a>
                         </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{url('ajax-crudBlog')}}">Manage Blog</a>
+                        </li>
                         @endhasrole
                         @impersonate
                         <li class="nav-item">

@@ -41,7 +41,7 @@ class car_manageController extends Controller
         $image = $request->file('image');
 
         $new_name = rand() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('images'), $new_name);
+        $image->move(public_path('images/allcar/$request->brand/$request->model/'), $new_name);
         $form_data = array(
             'brand'       =>   $request->brand,
             'model'        =>   $request->model,
