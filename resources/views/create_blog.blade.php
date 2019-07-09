@@ -11,7 +11,10 @@
                  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
                  
-                 <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+                 //<script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+                 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+
+
 
                 </head>
                 <body>
@@ -24,11 +27,10 @@
                                                    <table class="table table-bordered table-striped" id="blog_manage_table">
                                                        <thead>
                                                            <tr>
-                                                               <th width="5%">Image</th>
-                                                               <th width="5%">Brand</th>
-                                                               <th width="5%">model</th>
-                                                               <th width="5%">Year</th>
-                                                               <th width="5%">Price</th>
+                                                               <th width="5%">Subject</th>
+                                                               <th width="5%">Title</th>
+                                                               <th width="5%">Article</th>
+                                                               <th width="5%">PostBy</th>
                                                                <th width="5%">Created</th>
                                                                <th width="5%">Updated</th>
                                                                <th width="5%">Action</th>
@@ -80,15 +82,16 @@
                           <div class="form-group">
                                <label class="control-label col-md-1">article : </label>
                                <div class="col-md-12">
-                                    <textarea name="article" id="article"></textarea>
+                                <textarea name="article" class="form-control article"></textarea>
+
+                                {{--  <textarea name="article" id="article"></textarea>  --}}
                                     {{--  <input type="text" name="article" id="article" class="form-control" />  --}}
                                </div>
                            </div>
                            
                            
                           {{--    --}}
-                                
-                                
+      
                           
                           <br />
                           <div class="form-group" align="center">
@@ -120,9 +123,44 @@
                        </div>
                    </div>
                </div>
-                <script>
-                        CKEDITOR.replace( 'article' );
-                </script>
+
+               <script>
+                        var editor_config = {
+                          path_absolute : "/",
+                          selector: "textarea.article",
+                          plugins: [
+                            "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+                            "searchreplace wordcount visualblocks visualchars code fullscreen",
+                            "insertdatetime media nonbreaking save table contextmenu directionality",
+                            "emoticons template paste textcolor colorpicker textpattern"
+                          ],
+                          toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media",
+                          relative_urls: false,
+                          file_browser_callback : function(field_name, url, type, win) {
+                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                      
+                            var cmsURL = editor_config.path_absolute + 'laravel-filemanager?field_name=' + field_name;
+                            if (type == 'image') {
+                              cmsURL = cmsURL + "&type=Images";
+                            } else {
+                              cmsURL = cmsURL + "&type=Files";
+                            }
+                      
+                            tinyMCE.activeEditor.windowManager.open({
+                              file : cmsURL,
+                              title : 'Filemanager',
+                              width : x * 0.8,
+                              height : y * 0.8,
+                              resizable : "yes",
+                              close_previous : "no"
+                            });
+                          }
+                        };
+                      
+                        tinymce.init(editor_config);
+                      </script>
+               
                
                <script>
                $(document).ready(function(){
@@ -134,17 +172,7 @@
                   url: "{{ route('ajax-crudBlog.index') }}",
                  },
                  columns:[
-                  {
-                   data: 'image',
-                   name: 'image',
-                  
-                   render: function(data, type, full, meta){
-                   //return "<img src={{ URL::to('/') }}/images/allcar/" + brand + model + "/370_260/" + data + " width='70' class='img-thumbnail' />";
-                    //return "<img src={{ URL::to('/') }}/images/allcar/Toyota/Yaris/370_260/" + data + " width='70' class='img-thumbnail' />";
-                    return "<img src={{ URL::to('/') }}/allcar/images/" + data + " width='70' class='img-thumbnail' />";
-                   },
-                   orderable: false
-                  },
+               
                   {
                    data: 'subject',
                    name: 'subject'
@@ -267,8 +295,6 @@
                    $('#title').val(html.data.title);
                    $('#article').val(html.data.article);
                    $('#post_by').val(html.data.post_by);
-                   $('#store_image').html("<img src={{ URL::to('/') }}/images/allcar/" + html.data.image + " width='70' class='img-thumbnail' />");
-                   $('#store_image').append("<input type='hidden' name='hidden_image' value='"+html.data.image+"' />");
                    $('#hidden_id').val(html.data.id);
                    $('.modal-title').text("Edit New Record");
                    $('#action_button').val("Edit");
@@ -303,4 +329,4 @@
                
                });
                </script>
-            
+        
