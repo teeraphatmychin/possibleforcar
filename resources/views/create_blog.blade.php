@@ -59,29 +59,29 @@
                         <form method="post" id="sample_form" class="form-horizontal" enctype="multipart/form-data">
                          @csrf
                          <div class="form-group">
-                           <label class="control-label col-md-4" >subject : </label>
-                           <div class="col-md-8">
+                           <label class="control-label col-md-2" >subject : </label>
+                           <div class="col-md-10">
                             <input type="text" name="subject" id="subject" class="form-control" />
                            </div>
                           </div>
                           {{--    --}}
                           <div class="form-group">
-                               <label class="control-label col-md-4">title : </label>
-                               <div class="col-md-8">
+                               <label class="control-label col-md-2">title : </label>
+                               <div class="col-md-10">
                                     <input type="text" name="title" id="title" class="form-control" />
                                </div>
                            </div>
                          
                          
                            <div class="form-group">
-                               <label class="control-label col-md-4">post_by: </label>
-                               <div class="col-md-8">
+                               <label class="control-label col-md-2">post_by: </label>
+                               <div class="col-md-10">
                                     <input type="text" name="post_by" id="post_by" class="form-control" />
                                </div>
                           </div>
                           <div class="form-group">
-                                <label class="control-label col-md-4">article : </label>
-                                <div class="col-md-8">
+                                <label class="control-label col-md-1">article:</label>
+                                <div class="col-md-12">
                                     <textarea name="article" id="article" class="form-control">{{old('article')}} </textarea> 
                                 </div>
                           </div>
@@ -172,12 +172,12 @@
                    name: 'subject'
                   },
                   {
-                   data: 'model',
-                   name: 'model'
-                  },
-                   {
                    data: 'title',
                    name: 'title'
+                  },
+                   {
+                   data: 'post_by',
+                   name: 'post_by'
                   },
                   {
                    data: 'article',

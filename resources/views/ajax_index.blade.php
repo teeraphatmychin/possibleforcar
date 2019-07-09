@@ -10,10 +10,6 @@
   <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-{{--    --}}
-    <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
-
-  {{--    --}}
  </head>
  <body>
  
@@ -114,8 +110,6 @@
             </div>
            </div>
            {{--    --}}
-
-           {{--    --}}
            <div class="form-group">
             <label class="control-label col-md-4">Select Profile Image : </label>
             <div class="col-md-8">
@@ -123,7 +117,6 @@
              <span id="store_image"></span>
             </div>
            </div>
-                
            <br />
            <div class="form-group" align="center">
             <input type="hidden" name="action" id="action" />
@@ -157,7 +150,6 @@
 
 
 <script>
-
 $(document).ready(function(){
 
  $('#car_manage_table').DataTable({
