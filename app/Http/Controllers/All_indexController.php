@@ -22,7 +22,7 @@ class All_indexController extends Controller
         //$imagesGalleries=ImageGallery_model::where('products_id',$id)->get();
         //$totalStock=ProductAtrr_model::where('products_id',$id)->sum('stock');
         //$relateProducts=Products_model::where([['id','!=',$id],['categories_id',$detail_product->categories_id]])->get();
-        return view('single_car',compact('detail_car','slide_similars'));
+        return view('detail-car',compact('detail_car','slide_similars'));
     }
     public function detialpro_blog($id, $request){
         $detail_blog=list_blog::findOrFail($id);        
@@ -30,7 +30,7 @@ class All_indexController extends Controller
         //$imagesGalleries=ImageGallery_model::where('products_id',$id)->get();
         //$totalStock=ProductAtrr_model::where('products_id',$id)->sum('stock');
         //$relateProducts=Products_model::where([['id','!=',$id],['categories_id',$detail_product->categories_id]])->get();
-        return view('single_post',compact('detail_blog'));
+        return view('article-post',compact('detail_blog'));
     }
     
     public function contact_us()

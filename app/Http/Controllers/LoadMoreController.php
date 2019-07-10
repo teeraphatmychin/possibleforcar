@@ -15,7 +15,7 @@ class LoadMoreController extends Controller
     		$view = view('data',compact('postGrids'))->render();
             return response()->json(['html'=>$view]);
         }
-    	return view('car_grid_no_sidebar',compact('postGrids'));
+    	return view('car-view-grid',compact('postGrids'));
     }
     public function blogPost(Request $request)
     {
@@ -24,7 +24,7 @@ class LoadMoreController extends Controller
     		$view = view('blog_data',compact('blogs'))->render();
             return response()->json(['html'=>$view]);
         }
-    	return view('blog_grid_no_sidebar',compact('blogs'));
+    	return view('blog-view-grid',compact('blogs'));
     }
 
     public function listLoad(Request $request)
@@ -34,6 +34,6 @@ class LoadMoreController extends Controller
     		$view = view('carListingData',compact('postLists'))->render();
             return response()->json(['html'=>$view]);
         }
-    	return view('car_listing_no_sidebar',compact('postLists'));
+    	return view('car-view-grid',compact('postLists'));
     }
 }

@@ -36,19 +36,19 @@ Route::get('/welcome', function () {
 Route::get('/', 'All_indexController@shop')->name('index');
 Route::get('about_us', 'All_indexController@about_us')->name('about_us');
 Route::get('contact_us', 'All_indexController@contact_us')->name('contact_us');
-Route::get('blog_grid_no_sidebar', 'LoadMoreController@blogPost')->name('blog_grid_no_sidebar');
+Route::get('blog-view-grid', 'LoadMoreController@blogPost')->name('blog-view-grid');
 // Route::get('/blog_grid_sidebar', 'LoadMoreController@blogPost')->name('blog_grid_sidebar');
 // Route::get('/blog_listing_no_sidebar', 'UserController@blog_listing_no_sidebar')->name('blog_listing_no_sidebar');
 // Route::get('/blog_listing_sidebar', 'UserController@blog_listing_sidebar')->name('blog_listing_sidebar');
-Route::get('car_grid_no_sidebar', 'LoadMoreController@gridLoad')->name('car_grid_no_sidebar');
+Route::get('car-view-grid', 'LoadMoreController@gridLoad')->name('car-view-grid');
 // Route::get('/car_grid_sidebar', 'LoadMoreController@myPost')->name('car_grid_sidebar');
-Route::get('car_listing_no_sidebar', 'LoadMoreController@listLoad')->name('car_listing_no_sidebar');
+Route::get('car-view-list', 'LoadMoreController@listLoad')->name('car-view-list');
 // Route::get('/car_listing_sidebar', 'LoadMoreController@myPost')->name('car_listing_sidebar');
 //Route::get('/indexs', 'Indexcontroller@shop')->name('indexs');
 // Route::get('/single_car', 'UserController@single_car')->name('single_car');
-Route::get('single_car_test/{id}', 'All_indexController@detialpro')->name('single_car_test');
+Route::get('detail-car/{id}', 'All_indexController@detialpro')->name('detail-car');
 // Route::get('/single_post', 'UserController@single_post')->name('single_post');
-Route::get('frontend.single_posts/{id}', 'All_indexController@detialpro_blog')->name('single_posts');
+Route::get('frontend.article-post/{id}', 'All_indexController@detialpro_blog')->name('article-post');
 
 ////////////////////////////backend///////////////////////////////
 // Route::get('backend_admin/index',function(){

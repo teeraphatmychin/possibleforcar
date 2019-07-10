@@ -40,7 +40,7 @@
 				<h3>กำลังมองหารถคันใหม่อยู่<em></em>?</h3>
 					
 	          	<h6 class="secondary-button">
-	          		<a href="{{route('car_grid_no_sidebar')}}">ค้นหารถ <i class="fa fa-car"></i></a>
+	          		<a href="{{route('car-view-grid')}}">ค้นหารถ <i class="fa fa-car"></i></a>
 	          	</h6>
 	        </div>
 	      </div>
@@ -57,7 +57,7 @@
 				<h5>เราคือโชว์รูมออนไลน์ดีที่สุดของประเทศไทย</h5>
 				<h3>ช่วยเลือกโปรโมชั่นที่คุ้มค่าที่สุด<em>จากทั่วประเทศ</em></h3>
 	          	<h6 class="secondary-button">
-	          		<a href="{{route('car_grid_no_sidebar')}}">ค้นหารถ <i class="fa fa-car"></i></a>
+	          		<a href="{{route('car-view-grid')}}">ค้นหารถ <i class="fa fa-car"></i></a>
 	          	</h6>
 	        </div>
 	      </div>
@@ -78,10 +78,10 @@
 							<div class="item car-item">
 								<div class="thumb-content">
 									{{--  <a href="{{route('single_car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
-									<a href="{{url('/single_car_test',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{ $product->image }}" class="img-thumbnail" alt=""  ></a>
+									<a href="{{url('/detail-car',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{ $product->image }}" class="img-thumbnail" alt=""  ></a>
 								</div>
 								<div class="down-content">
-									<a href="{{url('/single_car_test',$product->id)}}"><h4>{{$product->model}}</h4></a>
+									<a href="{{url('/detail-car',$product->id)}}"><h4>{{$product->model}}</h4></a>
 									<span>{{$product->price}}บาท</span>
 								</div>
 							</div>
@@ -131,12 +131,12 @@
 										<a href="{{url('/single_car_test',$product->id)}}">มีจำกัด</a>
 									</div>
 									<div class="thumb-inner">
-										{{--  <a href="{{route('single_car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
+										{{--  <a href="{{route('detail-car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
 										<a href="{{url('/single_car_test',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{$product->image}}" class="img-thumbnail" alt=""></a>
 									</div>
 								</div>
 								<div class="down-content">	
-									<a href="{{url('/single_car_test',$product->id)}}"><h4>{{$product->brand }} {{  $product->model}}</h4></a>
+									<a href="{{url('/detail-car',$product->id)}}"><h4>{{$product->brand }} {{  $product->model}}</h4></a>
 									<span>ราคาเริ่มต้น {{$product->price}} บาท</span>
 									<p>{{str_limit($product->title,90)}}</p>	
 						

@@ -4,16 +4,16 @@
                 <div class="car-item">
                     <div class="thumb-content">
                         <div class="car-banner">
-                                <a href="{{url('/single_car_test',$postGrid->id)}}">ดิลพิเศษ</a>
+                                <a href="{{url('/detail-car',$postGrid->id)}}">ดิลพิเศษ</a>
                         </div>
                         <div class="thumb-inner">
                             {{--  <a href="{{route('single_car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
-                            <a href="{{url('/single_car_test',$postGrid->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$postGrid->brand}}/{{$postGrid->model}}/370_260/{{ $postGrid->image }}" class="img-thumbnail" alt=""></a>
+                            <a href="{{url('/detail-car',$postGrid->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$postGrid->brand}}/{{$postGrid->model}}/370_260/{{ $postGrid->image }}" class="img-thumbnail" alt=""></a>
 
                         </div>
                     </div>
                     <div class="down-content">
-                            <a href="{{url('/single_car_test',$postGrid->id)}}"><h4>{{$postGrid->brand}}{{$postGrid->model}}</h4></a>
+                            <a href="{{url('/detail-car',$postGrid->id)}}"><h4>{{$postGrid->brand}}{{$postGrid->model}}</h4></a>
                             <span> เริ่มต้น {{$postGrid->price}} บาท</span>
                             <div class="line-dec"></div>
                             <p> {{ str_limit( $postGrid->title, 90)}}</p>

@@ -23,7 +23,7 @@
 				<div id='cssmenu'>
 					<ul>
 					   	<li><a href='{{ route('index') }}'>หน้าแรก</a></li>
-					   	<li class='active'><a href='{{ route('car_grid_no_sidebar')}}'>รถทั้งหมด</a>
+					   	<li class='active'><a href='{{ route('car-view-grid')}}'>รถทั้งหมด</a>
 					      	{{-- <ul>
 					         	<li><a href='#'>Sidebar</a>
 					            	<ul>
@@ -40,7 +40,7 @@
 					         	<li><a href='{{route('single_car')}}'>Single Car</a></li>
 					      	</ul> --}}
 					   	</li>
-					   	<li class='active'><a href='{{route('blog_grid_no_sidebar')}}'>บทความ</a>
+					   	<li class='active'><a href='{{route('blog-view-grid')}}'>บทความ</a>
 					      	{{-- <ul>
 					         	<li><a href='#'>Sidebar</a>
 					            	<ul>
