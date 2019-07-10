@@ -15,11 +15,11 @@ class CreateListBlogsTable extends Migration
     {
         Schema::create('list_blogs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('blog_id');
-            $table->string('subject_blog');
-            $table->string('post_by_blog');
-            $table->string('title_blog');
-            $table->string('article_blog');
+            $table->string('blog_id')->nullable();
+            $table->string('subject_blog')->nullable();
+            $table->string('post_by_blog')->nullable();
+            $table->string('title_blog')->nullable();
+            $table->string('article_blog')->nullable();
             $table->timestamps();
         });
     }

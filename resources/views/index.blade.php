@@ -484,3 +484,47 @@
 	
 </body>
 </html>
+<script>
+$(document).ready(function(){
+$('#create_record').click(function(){
+	$('.modal-title').text("Add New Record");
+	   $('#action_button').val("Add");
+	   $('#action').val("Add");
+	   $('#formModal').modal('show');
+   });
+  
+   $('#sample_form').on('submit', function(event){
+	event.preventDefault();
+	if($('#action').val() == 'Add')
+	{
+	 $.ajax({
+	  url:"{{ route('ajax-crud.store') }}",
+	  method:"POST",
+	  data: new FormData(this),
+	  contentType: false,
+	  cache:false,
+	  processData: false,
+	  dataType:"json",
+	  success:function(data)
+	  {
+	   var html = '';
+	   if(data.errors)
+	   {
+		html = '<div class="alert alert-danger">';
+		for(var count = 0; count < data.errors.length; count++)
+		{
+		 html += '<p>' + data.errors[count] + '</p>';
+		}
+		html += '</div>';
+	   }
+	   if(data.success)
+	   {
+		html = '<div class="alert alert-success">' + data.success + '</div>';
+		$('#sample_form')[0].reset();
+		$('#car_manage_table').DataTable().ajax.reload();
+	   }
+	   $('#form_result').html(html);
+	  }
+	 })
+	}
+</script>
