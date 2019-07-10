@@ -22,7 +22,7 @@
 				<h5>เราคือโชว์รูมออนไลน์</h5>
 				<h3>ช่วยคุณในการเลือกโปรโมชั่น<em>ที่คุ้มค่าที่สุด</em></h3>
           		<h6 class="secondary-button">
-	          		<a href="{{route('car_listing_no_sidebar')}}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
+	          		<a href="{{route('car-view-grid')}}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
 	          	</h6>
 	        </div>
 	      </div>
@@ -77,7 +77,7 @@
 							{{--  //@if($product->category->status==1)  --}}
 							<div class="item car-item">
 								<div class="thumb-content">
-									{{--  <a href="{{route('single_car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
+									{{--  <a href="{{route('detail-car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
 									<a href="{{url('/detail-car',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{ $product->image }}" class="img-thumbnail" alt=""  ></a>
 								</div>
 								<div class="down-content">
@@ -128,11 +128,11 @@
 								<div class="thumb-content">
 									<div class="car-banner">
 											
-										<a href="{{url('/single_car_test',$product->id)}}">มีจำกัด</a>
+										<a href="{{url('/detail-car',$product->id)}}">มีจำกัด</a>
 									</div>
 									<div class="thumb-inner">
 										{{--  <a href="{{route('detail-car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
-										<a href="{{url('/single_car_test',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{$product->image}}" class="img-thumbnail" alt=""></a>
+										<a href="{{url('/detail-car',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{$product->image}}" class="img-thumbnail" alt=""></a>
 									</div>
 								</div>
 								<div class="down-content">	
@@ -140,12 +140,6 @@
 									<span>ราคาเริ่มต้น {{$product->price}} บาท</span>
 									<p>{{str_limit($product->title,90)}}</p>	
 						
-									<ul class="car-info">
-										<li><div class="item"><i class="flaticon flaticon-calendar"></i><p>{{$product->year_model}}</p></div></li>
-										<li><div class="item"><i class="flaticon flaticon-speed"></i><p>{{$product->speed}}p/h</p></div></li>
-										<li><div class="item"><i class="flaticon flaticon-road"></i><p>{{$product->road}}km</p></div></li>
-										<li><div class="item"><i class="fa fa-shopping-cart"></i><p>{{$product->engine}}.</p></div></li>
-									</ul>
 								</div>
 							</div>
 						</div>
@@ -326,19 +320,19 @@
 								<div class="item wow fadeIn" data-wow-duration="0.75s">
 									 <div class="thumb-content">
 										<div class="date-post">
-											<a href="{{route('single_posts',$blog_slide->id)}}">{{$blog_slide->create_at}}</a>
+											<a href="{{route('article-post',$blog_slide->id)}}">{{$blog_slide->create_at}}</a>
 										</div>
 							
 										<div class="thumb-inner">
-											<a href="{{route('single_posts',$blog_slide->id)}}"><img src="http://placehold.it/370x260" alt=""></a>
+											<a href="{{route('article-post',$blog_slide->id)}}"><img src="http://placehold.it/370x260" alt=""></a>
 										</div>
 									</div>
 									<div class="down-content">
-										<a href="{{route('single_posts',$blog_slide->id)}}"><h4>{{$blog_slide->subject}}</h4></a>
+										<a href="{{route('article-post',$blog_slide->id)}}"><h4>{{$blog_slide->subject}}</h4></a>
 										<span>Posted by: <em>{{$blog_slide->post_by}}</em></span>
 										<p>{{$blog_slide->article}}</p>	
 										<div class="text-button">
-											<a href="{{route('single_posts',$blog_slide->id)}}">Continue Reading <i class="fa fa-arrow-right"></i></a>
+											<a href="{{route('article-post',$blog_slide->id)}}">Continue Reading <i class="fa fa-arrow-right"></i></a>
 										</div>							
 									</div>
 								  </div>
@@ -481,50 +475,9 @@
 	
 	@extends('layout.partials.footer')
 	@extends('layout.partials.footer-scripts')
+
+
+
 	
 </body>
 </html>
-<script>
-$(document).ready(function(){
-$('#create_record').click(function(){
-	$('.modal-title').text("Add New Record");
-	   $('#action_button').val("Add");
-	   $('#action').val("Add");
-	   $('#formModal').modal('show');
-   });
-  
-   $('#sample_form').on('submit', function(event){
-	event.preventDefault();
-	if($('#action').val() == 'Add')
-	{
-	 $.ajax({
-	  url:"{{ route('ajax-crud.store') }}",
-	  method:"POST",
-	  data: new FormData(this),
-	  contentType: false,
-	  cache:false,
-	  processData: false,
-	  dataType:"json",
-	  success:function(data)
-	  {
-	   var html = '';
-	   if(data.errors)
-	   {
-		html = '<div class="alert alert-danger">';
-		for(var count = 0; count < data.errors.length; count++)
-		{
-		 html += '<p>' + data.errors[count] + '</p>';
-		}
-		html += '</div>';
-	   }
-	   if(data.success)
-	   {
-		html = '<div class="alert alert-success">' + data.success + '</div>';
-		$('#sample_form')[0].reset();
-		$('#car_manage_table').DataTable().ajax.reload();
-	   }
-	   $('#form_result').html(html);
-	  }
-	 })
-	}
-</script>

@@ -9,7 +9,7 @@
 	<div id="search">
 	    <button type="button" class="close">×</button>
 	    <form>
-	        <input type="search" value="" placeholder="type keyword(s) here" />
+	        <input type="search" value="" placeholder="หารุ่นรถที่ต้องการ" />
 	        <button type="submit" class="primary-button">Search <i class="fa fa-search"></i></button>
 	    </form>
 	</div>  

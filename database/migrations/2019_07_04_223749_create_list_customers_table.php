@@ -17,12 +17,11 @@ class CreateListCustomersTable extends Migration
             $table->bigIncrements('id');
             $table->string('customer_name')->nullable();
             $table->string('customer_phone')->nullable();
+            $table->string('customer_social')->nullable();
             $table->string('brand')->nullable();
             $table->string('model')->nullable();
-            $table->string('year_model')->nullable();
-            $table->string('interest')->nullable();
-            $table->string('image')->nullable();
             $table->string('customer_status')->nullable();
+            $table->string('sell_name')->nullable();
             $table->timestamps();
         });
     }

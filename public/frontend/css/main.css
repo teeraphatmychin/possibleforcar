@@ -29,6 +29,11 @@ Primary use:    Car Dealer
 body {
     font-family: 'Roboto', sans-serif
 }
+.modal-backdrop {
+    z-index: 1000;
+  }
+
+.modal{z-index: 9999999;}
 
 a {
     text-decoration: none!important
@@ -160,7 +165,7 @@ section {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.98);
-    z-index: 9999999;
+    z-index: 9999;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
@@ -180,7 +185,7 @@ section {
     -o-transform: translate(0px, 0px) scale(1, 1);
     -ms-transform: translate(0px, 0px) scale(1, 1);
     transform: translate(0px, 0px) scale(1, 1);
-    opacity: 1
+    opacity: ๅ
 }
 
 #search input[type=search] {
@@ -488,7 +493,7 @@ section {
 
 .scrolled-header {
     position: fixed!important;
-    z-index: 9999;
+    z-index: 999;
     top: 0;
     left: 0;
     width: 100%;
@@ -525,7 +530,7 @@ section {
 
 .site-header {
     position: absolute;
-    z-index: 9999;
+    z-index: 999;
     top: 0;
     left: 0;
     width: 100%;

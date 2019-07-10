@@ -18,4 +18,6 @@
     <script src="{{asset('frontend/js/wow.animation.js')}}"></script>
 
 	<!-- Custom Js -->
-    <script src="{{asset('frontend/js/custom.js')}}"></script>
+	<script src="{{asset('frontend/js/custom.js')}}"></script>
+	
+	

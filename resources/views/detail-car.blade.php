@@ -12,6 +12,8 @@
 	
 	@include('layout.partials.nav')
 
+
+
 	<div class="page-heading wow fadeIn" data-wow-duration="0.5s">
 		<div class="container">
 			<div class="row">
@@ -30,6 +32,7 @@
 		</div>
 	</div>
 
+	
 	<div class="recent-car single-car wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
 		<div class="container">
 			<div class="recent-car-content">
@@ -102,23 +105,58 @@
 									<!-- Trigger the modal with a button -->
 									<button type="button" class="btn btn-primary" id="myBtn2">สนใจโปรโมชั่นนี้</button>
 									<!-- Modal -->
-									<div class="modal fade" id="myModal2" role="dialog">
-										<div class="modal-dialog modal-dialog-centered">
+									<div class="modal fade" id="myModal2" role="dialog" >
+																									   
+										<div class="modal-dialog modal-dialog-centered" style="z-index: 9999999999999999999999;">
 										
 										<!-- Modal content-->
-										<div class="modal-content">
-											<div class="modal-header">
-											<h4 class="modal-title">{{$detail_car->brand}} {{$detail_car->model}}</h4>
+										<div class="modal-content" >
+											<div class="modal-header" ;>
+											<h4 class="modal-title" >{{$detail_car->brand}} {{$detail_car->model}}</h4>
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
 											</div>
-											<div class="modal-body">
-											<p>This modal has no overlay.</p>
-											<p><strong>Note:</strong> You cannot click outside of this modal to close it.</p>
+												<div class="modal-body" >
+												
+													
+				
+																	<span id="form_result"></span>
+																	<form method="post" id="sample_form" class="form-horizontal" enctype="multipart/form-data">
+																	 @csrf
+																	 <div class="form-group">
+																		<label class="control-label col-md-12" >ชื่อของท่าน : </label>
+							
+																	   <div class="col-md-12">
+																		<input type="text" name="customer_name" id="customer_name" class="form-control" placeholder="">
+																	   </div>
+																	  </div>
+																	  <div class="form-group">
+																	   <label class="control-label col-md-12">เบอร์ติดต่อของท่าน : </label>
+																	   <div class="col-md-12">
+																		<input type="text" name="customer_phone" id="customer_phone" class="form-control" placeholder="">
+																	   </div>
+																	  </div>
+																	  {{--    --}}
+																	  <div class="form-group">
+																		   <label class="control-label col-md-12"> สะดวกให้ติดต่อทางไลน์หรือเฟสบุ๊ค : </label>
+																		   <div class="col-md-12">
+																				<input type="text" name="customer_social" id="customer_social" class="form-control" placeholder="">
+																		   </div>
+																	   </div>
+																	   
+																	  <br />
+																	  <div class="form-group" align="center">
+																	   <input type="hidden" name="action" id="action" />
+																	   <input type="hidden" name="hidden_id" id="hidden_id" />
+																	   <input type="submit" name="action_button" id="action_button" class="btn btn-warning" value="Add" />
+																	  </div>
+																	</form>
+															
+
+
+
+												</div>
+											
 											</div>
-											<div class="modal-footer">
-											<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-											</div>
-										</div>
 										
 										</div>
 									</div>
@@ -231,19 +269,63 @@
 			</div>
 		</section>
 	
-	@extends('layout.partials.footer')
+	@extend('layout.partials.footer')
 	@extends('layout.partials.footer-scripts')
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 	<script>
+			$('.modal').insertAfter($('body'));
 			$(document).ready(function(){
 			$("#myBtn2").click(function(){
-				$("#myModal2").modal({backdrop: false});
-				
-			  });
-			});
-			</script>
-			
+				$("#myModal2").modal({backdrop: true});
+					  $('.modal-title').text("สนใจโปรโมชั่นของรถรุ่นนี้");
+						 $('#action_button').val("ส่งข้อมูล");
+						 $('#action').val("ส่งข้อมูล");
+						 $('#formModal').appendTo("body").modal('show');
+						
+					 });
+					
+					 $('#sample_form').on('submit', function(event){
+					  event.preventDefault();
+					  if($('#action').val() == 'ส่งข้อมูล')
+					  {
+					   $.ajax({
+						url:"{{ route('customerOrder.store') }}",
+						method:"POST",
+						data: new FormData(this),
+						contentType: false,
+						cache:false,
+						processData: false,
+						dataType:"json",
+						success:function(data)
+						{
+						 var html = '';
+						 if(data.errors)
+						 {
+						  html = '<div class="alert alert-danger">';
+						  for(var count = 0; count < data.errors.length; count++)
+						  {
+						   html += '<p>' + data.errors[count] + '</p>';
+						  }
+						  html += '</div>';
+						 }
+						 if(data.success)
+						 {
+						  html = '<div class="alert alert-success">' + data.success + '</div>';
+						  $('#sample_form')[0].reset();
+						  $('#car_manage_table').DataTable().ajax.reload();
+						 }
+						 $('#form_result').html(html);
+						}
+					   })
+					  }
+					
+		
+		 });
+			  
+	});
+					</script>
+						
 	
 </body>
 </html>

@@ -46,7 +46,8 @@ class customer_manageController extends Controller
             'model'        =>   $request->model,
             'year_model'        =>   $request->year_model,
             'interest'        =>   $request->interest,
-            'customer_status' => $request->customer_status
+            'customer_status' => $request->customer_status,
+            'sell_name' => $request->sell_name
         );
 
         list_customer::create($form_data);

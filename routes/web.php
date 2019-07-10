@@ -33,6 +33,8 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware(['auth','a
 Route::get('/welcome', function () {
     return view('welcome');
 });
+Route::resource('customerOrder', 'AjaxCustomerOrderController');
+Route::post('customerOrder/update', 'AjaxCustomerOrderController@update')->name('customerOrder.update');
 Route::get('/', 'All_indexController@shop')->name('index');
 Route::get('about_us', 'All_indexController@about_us')->name('about_us');
 Route::get('contact_us', 'All_indexController@contact_us')->name('contact_us');
