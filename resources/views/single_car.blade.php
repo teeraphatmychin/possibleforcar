@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie ie9" lang="en-US">
+<![endif]-->
+<html lang="en-US">
+<head>
+		
+		@section('title','รายละเอียดรถ')
+		@include('layout.partials.head')
+</head>
+<body>
+	
+	@include('layout.partials.nav')
+
+	<div class="page-heading wow fadeIn" data-wow-duration="0.5s">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="heading-content-bg wow fadeIn" data-wow-delay="0.75s" data-wow-duration="1s">
+						<div class="row">
+							<div class="heading-content col-md-12">
+								<p><a href="{{route('index')}}">Homepage</a> / <em> Cars</em> / <em> Car Details</em></p>
+								<h2>Car <em>Details</em></h2>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="recent-car single-car wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
+		<div class="container">
+			<div class="recent-car-content">
+				<div class="row">
+					<div class="col-md-6">
+						<div id="single-car" class="slider-pro">
+							<div class="sp-slides">
+							
+								<div class="sp-slide">
+									{{--  <img class="sp-image" src="http://placehold.it/570x450" alt="" />  --}}
+									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/1.jpg" alt="">	
+								</div>
+
+						        <div class="sp-slide">
+									{{--  <img class="sp-image" src="http://placehold.it/570x450" alt="" />  --}}
+									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/2.jpg" alt="">
+								</div>
+
+								<div class="sp-slide">
+									{{--  <img class="sp-image" src="http://placehold.it/570x450" alt="" />  --}}
+									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/3.jpg" alt="">
+								</div>
+
+								<div class="sp-slide">
+									{{--  <img class="sp-image" src="http://placehold.it/570x450" alt="" />  --}}
+									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/4.jpg" alt="">
+								</div>
+
+								<div class="sp-slide">
+									{{--  <img class="sp-image" src="http://placehold.it/570x450" alt="" />  --}}
+									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/5.jpg" alt="">
+								</div>
+
+							</div>
+
+							<div class="sp-thumbnails">
+								{{--  <img class="sp-thumbnail" src="http://placehold.it/120x80" alt="" />  --}}
+								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/1.jpg" alt="">
+								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/2.jpg" alt="">
+								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/3.jpg" alt="">
+								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/4.jpg" alt="">
+								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/5.jpg"lt="">								
+							</div>
+					    </div>
+					</div>
+					<div class="col-md-6">
+						<div class="car-details">
+							<a href="{{url('/single_car',$detail_car->id)}}"><h4></h4></a>
+							<h4>{{$detail_car->brand }} {{ $detail_car->model}}</h4>
+							<span>{{$detail_car->price}} บาท</span>
+							
+							<div class="container">
+								<div class="row">
+									<ul class="car-info col-md-6">
+										<li><i class="flaticon flaticon-calendar"></i><p>{{$detail_car->year_model}}</p></li>
+										<li><i class="flaticon flaticon-speed"></i><p>{{$detail_car->speed}} p/h</p></li>
+										<li><i class="flaticon flaticon-road"></i><p>{{$detail_car->road}}</p></li>
+										<li><i class="flaticon flaticon-fuel"></i><p>{{$detail_car->engine}}</p></li>
+									</ul>
+									<ul class="car-info col-md-6">
+										<li><i class="flaticon flaticon-art"></i><p>White</p></li>
+										<li><i class="flaticon flaticon-shift"></i><p>{{$detail_car->type}}</p></li>
+										<li><i class="flaticon flaticon-car"></i><p>4/5</p></li>
+										<li><i class="flaticon flaticon-motor"></i><p>3000cm3</p></li>
+									</ul>
+								</div>
+							</div>
+							<div class="similar-info">
+									{{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">สนใจโปรโมชั่นนี้</button>		 --}}
+									<!-- Trigger the modal with a button -->
+									<button type="button" class="btn btn-primary" id="myBtn2">สนใจโปรโมชั่นนี้</button>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal2" role="dialog">
+										<div class="modal-dialog modal-dialog-centered">
+										
+										<!-- Modal content-->
+										<div class="modal-content">
+											<div class="modal-header">
+											<h4 class="modal-title">{{$detail_car->brand}} {{$detail_car->model}}</h4>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+											<div class="modal-body">
+											<p>This modal has no overlay.</p>
+											<p><strong>Note:</strong> You cannot click outside of this modal to close it.</p>
+											</div>
+											<div class="modal-footer">
+											<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+										
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section>
+		<div class="more-details">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="item wow fadeInUp" data-wow-duration="0.5s">
+							<div class="sep-section-heading">
+								<h2> <em>รายละเอียดรถ</em></h2>
+							</div>
+							<p>{{$detail_car->detail}}<br><br> <em></em><br><br></p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="item wow fadeInUp" data-wow-duration="0.75s">
+							<div class="sep-section-heading">
+								<h2>Additional <em>Features</em></h2>
+							</div>
+							<div class="info-list">
+								<ul>
+									<li><i class="fa fa-check-square"></i><span>Neon lights under</span></li>
+									<li><i class="fa fa-check-square"></i><span>ABS brakes</span></li>
+									<li><i class="fa fa-check-square"></i><span>ESP</span></li>
+									<li><i class="fa fa-check-square"></i><span>ESD</span></li>
+									<li><i class="fa fa-check-square"></i><span>Anti-th</span></li>
+									<li><i class="fa fa-check-square"></i><span>Tined glass</span></li>
+									<li><i class="fa fa-check-square"></i><span>Alarm</span></li>
+									<li><i class="fa fa-check-square"></i><span>Protection framework</span></li>
+									<li><i class="fa fa-check-square"></i><span>Parking sensor</span></li>
+									<li><i class="fa fa-check-square"></i><span>Electric windows</span></li>
+									<li><i class="fa fa-check-square"></i><span>Electric mirrors</span></li>
+									<li><i class="fa fa-check-square"></i><span>Xenon</span></li>
+									<li><i class="fa fa-check-square"></i><span>Designed spoiler</span></li>
+									<li><i class="fa fa-check-square"></i><span>Steering wheels control</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 wow fadeInUp" data-wow-duration="1s">
+						<div class="item">
+							<div class="sep-section-heading">
+								<h2>รายละเอียดรถ <em></em></h2>
+							</div>
+							<p>{{$detail_car->detail}}</p>
+							<div class="contact-info">
+								<div class="row">
+									<div class="phone col-md-12 col-sm-6 col-xs-6">
+										<i class="fa fa-phone"></i><span>+900212368</span>
+									</div>
+									<div class="mail col-md-12 col-sm-6 col-xs-6">
+										<i class="fa fa-envelope"></i><span>possiblecar.4@gmail.com</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+			<div class="recent-car similar-car wow fadeIn" data-wow-duration="1s">
+				<div class="container">
+					<div class="recent-car-content">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="section-heading">
+									<div class="icon">
+										<i class="fa fa-car"></i>
+									</div>
+									<div class="text-content">
+										<h2>รถที่คล้ายกัน</h2>
+										<span>คุณอาจจะสนใจรุ่นนี้</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="owl-similar" class="owl-carousel owl-theme">
+							@foreach($slide_similars as $slide_similar)
+								@if($slide_similar->type == '{{$slide_similar->type}}')
+								{{--  //@if($product->category->status==1)  --}}
+								<div class="item car-item">
+									<div class="thumb-content">
+									{{--  <a href="{{route('single_car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
+									<a href="{{url('/single_car_test',$slide_similar->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$slide_similar->brand}}/{{$slide_similar->model}}/370_260/{{ $slide_similar->image }}" class="img-thumbnail" alt=""></a>
+									</div>
+									<div class="down-content">
+										<a href="{{url('/single_car_test',$slide_similar->id)}}"><h4>{{$slide_similar->model}}</h4></a>
+										<span>{{$slide_similar->price}} บาท</span>
+									</div>
+								</div>
+								{{--  //@endif  --}}
+								@endif
+							@endforeach 
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+	@extends('layout.partials.footer')
+	@extends('layout.partials.footer-scripts')
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+			$(document).ready(function(){
+			$("#myBtn2").click(function(){
+				$("#myModal2").modal({backdrop: false});
+				
+			  });
+			});
+			</script>
+			
+	
+</body>
+</html>
