@@ -566,9 +566,7 @@
 						 $('#action_button').val("ส่งข้อมูล");
 						 $('#action').val("ส่งข้อมูล");
 						 $('#formModal').appendTo("body").modal('show');
-						
-					 
-					
+
 
 					 $('#sample_form').on('submit', function(event){
 					  event.preventDefault();

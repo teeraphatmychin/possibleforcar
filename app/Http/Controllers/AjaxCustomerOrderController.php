@@ -50,7 +50,7 @@ class AjaxCustomerOrderController extends Controller
     {
         $rules = array(
             'customer_name'    =>  'required',
-            'customer_phone'     =>  'required'
+            
            
         );
         $error = Validator::make($request->all(), $rules);
@@ -61,12 +61,16 @@ class AjaxCustomerOrderController extends Controller
         }
 
         $form_data = array(
-            'brand'        =>  $request->brand,
-            'model'         =>  $request->model,
-            
-            'customer_name' => $request->customer_name,
-            'customer_phone' => $request->customer_phone,
-            'customer_socail' => $request->customer_socail
+            'customer_name'       =>   $request->customer_name,
+            'customer_phone'        =>   $request->customer_phone,
+            'brand'        =>   $request->brand,
+            'model'        =>   $request->model,
+            'year_model'        =>   $request->year_model,
+            'interest'        =>   $request->interest,
+            'customer_status' => $request->customer_status,
+            'customer_social' =>$request->customer_social,
+            'car_down'  =>$request->car_down,
+            'installment' => $request->installment,
             
         );
 

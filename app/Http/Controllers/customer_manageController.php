@@ -47,7 +47,10 @@ class customer_manageController extends Controller
             'year_model'        =>   $request->year_model,
             'interest'        =>   $request->interest,
             'customer_status' => $request->customer_status,
-            'sell_name' => $request->sell_name
+            'sell_name' => $request->sell_name,
+            'customer_social' =>$request->customer_social,
+            'car_down'  =>$request->car_down,
+            'installment' => $request->installment,
         );
 
         list_customer::create($form_data);
@@ -94,7 +97,7 @@ class customer_manageController extends Controller
         {
             $request->validate([
                 'customer_name'    =>  'required',
-                'customer_phone'     =>  'required',
+               // 'customer_phone'     =>  'required',
                 // 'image'         =>  'image|max:2048'
             ]);
 
@@ -105,7 +108,7 @@ class customer_manageController extends Controller
         {
             $request->validate([
                 'customer_name'    =>  'required',
-                'customer_phone'     =>  'required'
+              //  'customer_phone'     =>  'required'
             ]);
         }
 
@@ -117,7 +120,10 @@ class customer_manageController extends Controller
             'model'        =>   $request->model,
             'year_model'        =>   $request->year_model,
             'interest'        =>   $request->interest,
-            'customer_status' => $request->customer_status
+            'customer_status' => $request->customer_status,
+            'customer_social' =>$request->customer_social,
+            'car_down'  =>$request->car_down,
+            'installment' => $request->installment,
         );
   
         list_customer::whereId($id)->update($form_data);
