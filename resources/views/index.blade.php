@@ -503,32 +503,32 @@
 									   </div>
 									  </div>
 									  <div class="form-group">
-									   <label class="control-label col-md-12">เบอร์ติดต่อของท่าน :(ไม่ต้องกรอกก็ได้) </label>
+									   <label class="control-label col-md-12">เบอร์ติดต่อของท่าน :(ไม่ใส่ก็ได้) </label>
 									   <div class="col-md-12">
 										<input type="text" name="customer_phone" id="customer_phone" class="form-control" placeholder="">
 									   </div>
 									  </div>
 									  {{--    --}}
 									  <div class="form-group">
-										   <label class="control-label col-md-12"> สะดวกให้ติดต่อทางไลน์หรือเฟสบุ๊ค : </label>
+										   <label class="control-label col-md-12"> สะดวกให้ติดต่อทาง Line ID หรือ Facebook : </label>
 										   <div class="col-md-12">
 												<input type="text" name="customer_social" id="customer_social" class="form-control" placeholder="">
 										   </div>
 									   </div>
 									   <div class="form-group">
-											  <label class="control-label col-md-12"> รุ่นรถที่สนใจ: </label>
+											  <label class="control-label col-md-12"> รุ่นรถที่สนใจ : </label>
 											  <div class="col-md-12">
 												   <input type="text" name="model" id="model" class="form-control" placeholder="">
 											  </div>
 										  </div>
 										  <div class="form-group">
-												<label class="control-label col-md-12"> เงินที่ต้องการดาวน์:(ไม่ต้องกรอกก็ได้) </label>
+												<label class="control-label col-md-12"> เงินที่ต้องการดาวน์ (ไม่ใส่ก็ได้) :</label>
 												<div class="col-md-12">
 													 <input type="text" name="car_down" id="car_donw" class="form-control" placeholder="">
 												</div>
 											</div>
 											<div class="form-group">
-													<label class="control-label col-md-12"> ผ่อนเท่าไรต่อเดือน: </label>
+													<label class="control-label col-md-12"> ผ่อนเท่าไรต่อเดือน (ไม่ใส่ก็ได้) :</label>
 													<div class="col-md-12">
 														 <input type="text" name="installment" id="installment" class="form-control" placeholder="">
 													</div>
@@ -562,7 +562,7 @@
 			$(document).ready(function(){
 			
 				$("#myModal2").modal({backdrop: "static"});
-					  $('.modal-title').text("แบบฟอร์มขอรับโปรโมชั่น ฟรี่ไม่ค่าใช้จ่าย");
+					  $('.modal-title').text("แบบฟอร์มขอรับโปรโมชั่น ฟรีไม่มีค่าใช้จ่าย");
 						 $('#action_button').val("ส่งข้อมูล");
 						 $('#action').val("ส่งข้อมูล");
 						 $('#formModal').appendTo("body").modal('show');
