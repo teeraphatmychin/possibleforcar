@@ -21,8 +21,9 @@
 	        <div >
 				<h5>เราคือโชว์รูมออนไลน์</h5>
 				<h3>ช่วยคุณในการเลือกโปรโมชั่น<em>ที่คุ้มค่าที่สุด</em></h3>
-          		<h6 class="secondary-button">
-	          		<a href="{{route('car-view-grid')}}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
+          		<h6 class="secondary-button btn-lg ">
+					  <a href="{{route('car-view-grid')}}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
+					  
 	          	</h6>
 	        </div>
 	      </div>
@@ -39,9 +40,13 @@
 				<h5>เราคือโชว์รูมออนไลน์ดีที่สุดของประเทศไทย</h5>
 				<h3>กำลังมองหารถคันใหม่อยู่<em></em>?</h3>
 					
-	          	<h6 class="secondary-button">
-	          		<a href="{{route('car-view-grid')}}">ค้นหารถ <i class="fa fa-car"></i></a>
-	          	</h6>
+	          		<h6 class="secondary-button btn-lg">
+
+							<a href="{{route('car-view-grid')}}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
+						</h6>
+				 
+				  <!-- Trigger the modal with a button -->
+				 
 	        </div>
 	      </div>
 	    </div>
@@ -56,9 +61,10 @@
 	        <div>
 				<h5>เราคือโชว์รูมออนไลน์ดีที่สุดของประเทศไทย</h5>
 				<h3>ช่วยเลือกโปรโมชั่นที่คุ้มค่าที่สุด<em>จากทั่วประเทศ</em></h3>
-	          	<h6 class="secondary-button">
-	          		<a href="{{route('car-view-grid')}}">ค้นหารถ <i class="fa fa-car"></i></a>
-	          	</h6>
+	          	 <h6 class="secondary-button btn-lg">
+						<a href="{{route('car-view-grid')}}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
+
+	          	</h6> 
 	        </div>
 	      </div>
 	    </div>
@@ -473,10 +479,128 @@
 		</div>
 	</section>  --}}
 	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal2" role="dialog" >
+																	   
+		<div class="modal-dialog modal-dialog-centered" style="z-index: 9999999999999999999999;">
+		
+		<!-- Modal content-->
+		<div class="modal-content" >
+			<div class="modal-header" ;>
+			<h4 class="modal-title" >สอบถามรถที่ต้องการ</h4>
+			{{--  <button type="button" class="close" data-dismiss="modal">&times;</button>  --}}
+			</div>
+				<div class="modal-body" >
+				
+									<span id="form_result"></span>
+									<form method="post" id="sample_form" class="form-horizontal" enctype="multipart/form-data">
+									 @csrf
+									 <div class="form-group">
+										<label class="control-label col-md-12" >ชื่อของท่าน : </label>
+
+									   <div class="col-md-12">
+										<input type="text" name="customer_name" id="customer_name" class="form-control" placeholder="">
+									   </div>
+									  </div>
+									  <div class="form-group">
+									   <label class="control-label col-md-12">เบอร์ติดต่อของท่าน : </label>
+									   <div class="col-md-12">
+										<input type="text" name="customer_phone" id="customer_phone" class="form-control" placeholder="">
+									   </div>
+									  </div>
+									  {{--    --}}
+									  <div class="form-group">
+										   <label class="control-label col-md-12"> สะดวกให้ติดต่อทางไลน์หรือเฟสบุ๊ค : </label>
+										   <div class="col-md-12">
+												<input type="text" name="customer_social" id="customer_social" class="form-control" placeholder="">
+										   </div>
+									   </div>
+									   <div class="form-group">
+											  <label class="control-label col-md-12"> รุ่นรถที่สนใจ: </label>
+											  <div class="col-md-12">
+												   <input type="text" name="model" id="model" class="form-control" placeholder="">
+											  </div>
+										  </div>
+									  
+			  
+										  <br />
+									  <div class="form-group" align="center">
+									   <input type="hidden" name="action" id="action" />
+									   <input type="hidden" name="hidden_id" id="hidden_id" />
+									   <input type="submit" name="action_button" id="action_button" class="btn btn-success" value="Add" />
+									  </div>
+									</form>
+							
+				</div>
+				<div class="modal-footer">
+						<p> เว็บกำลังเร่งการพัฒนา เราขอขอบคุณที่ท่านที่สนับสนุนเรา    </p>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+	{{--    --}}
+
 	@extends('layout.partials.footer')
 	@extends('layout.partials.footer-scripts')
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+	<script>
+			$('.modal').insertAfter($('body'));
+			$(document).ready(function(){
+			
+				$("#myModal2").modal({backdrop: "static"});
+					  $('.modal-title').text("สนใจโปรโมชั่นของรถ");
+						 $('#action_button').val("ส่งข้อมูล");
+						 $('#action').val("ส่งข้อมูล");
+						 $('#formModal').appendTo("body").modal('show');
+						
+					 
+					
+
+					 $('#sample_form').on('submit', function(event){
+					  event.preventDefault();
+					  if($('#action').val() == 'ส่งข้อมูล')
+					  {
+					   $.ajax({
+						url:"{{ route('customerOrder.store') }}",
+						method:"POST",
+						data: new FormData(this),
+						contentType: false,
+						cache:false,
+						processData: false,
+						dataType:"json",
+						success:function(data)
+						{
+						 var html = '';
+						 if(data.errors)
+						 {
+						  html = '<div class="alert alert-danger">';
+						  for(var count = 0; count < data.errors.length; count++)
+						  {
+						   html += '<p>' + data.errors[count] + '</p>';
+						  }
+						  html += '</div>';
+						 }
+						 if(data.success)
+						 {
+						  html = '<div class="alert alert-success">' + data.success + '</div>';
+						  $('#sample_form')[0].reset();
+						  $('#car_manage_table').DataTable().ajax.reload();
+						 }
+						 $('#form_result').html(html);
+						}
+					   })
+					  }
+					
+				
+		 });
+			  
+	});
+					</script>
+						
+	
 
 	
 </body>
