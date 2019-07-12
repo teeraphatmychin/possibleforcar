@@ -319,7 +319,7 @@ $(document).ready(function(){
   $.ajax({
    url:"ajax-crud/destroy/"+user_id,
    beforeSend:function(){
-    $('#ok_button').text('Deleting...');
+    $('#ok_button').text('กำลังลบ...');
    },
    success:function(data)
    {

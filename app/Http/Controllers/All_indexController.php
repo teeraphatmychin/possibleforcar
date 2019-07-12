@@ -17,28 +17,7 @@ class All_indexController extends Controller
         return view('index',compact('products','byCate','blog_slides'));
     }
 
-    public function store(Request  $request){
-        $rules = array(
-            'customer_name'    =>  'required',
-        );
-        $error = Validator::make($request->all(), $rules);
-        if($error->fails())
-        {
-            return response()->json(['errors' => $error->errors()->all()]);
-        }
-        $form_data = array(
-            'customer_name'     =>  $request->customer_name,
-            'customer_phone'    =>  $request->customer_phone,
-            'customer_line'     =>  $request->customer_line,
-            'brand'    =>           $request->brand,
-            'model'     =>          $request->model,
-            'sell_name'     =>          $request->sell_name,
-            
-        );
-        list_customer::create($form_data);
-        return response()->json(['success' => 'Data Added successfully.']);   
-    }
-
+    
     public function detialpro($id){
         $detail_car=list_car::findOrFail($id);
         $slide_similars=list_car::all();

@@ -544,7 +544,7 @@
 							
 				</div>
 				<div class="modal-left">
-					<p align="center">เว็บกำลังเร่งการพัฒนา เราขอขอบคุณที่ท่านที่สนับสนุนเรา</p>
+					<p align="center">เว็บกำลังเร่งการพัฒนา เราขอขอบคุณท่านที่สนับสนุนเรา</p>
 				</div>
 			</div>
 		
@@ -562,7 +562,7 @@
 			$(document).ready(function(){
 			
 				$("#myModal2").modal({backdrop: "static"});
-					  $('.modal-title').text("สนใจโปรโมชั่นของรถ");
+					  $('.modal-title').text("แบบฟอร์มขอรับโปรโมชั่น ฟรี่ไม่ค่าใช้จ่าย");
 						 $('#action_button').val("ส่งข้อมูล");
 						 $('#action').val("ส่งข้อมูล");
 						 $('#formModal').appendTo("body").modal('show');
