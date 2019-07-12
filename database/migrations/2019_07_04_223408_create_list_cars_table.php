@@ -23,8 +23,8 @@ class CreateListCarsTable extends Migration
             $table->string('image')->nullable();
             $table->string('type')->nullable();
             $table->string('engine')->nullable();
-            $table->string('title')->nullable();
-            $table->string('detail')->nullable();
+            $table->longtext('title')->nullable();
+            $table->longtext('detail')->nullable();
             $table->string('status_car')->nullable();
             $table->timestamps();
         });

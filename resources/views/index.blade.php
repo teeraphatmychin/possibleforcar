@@ -503,7 +503,7 @@
 									   </div>
 									  </div>
 									  <div class="form-group">
-									   <label class="control-label col-md-12">เบอร์ติดต่อของท่าน : </label>
+									   <label class="control-label col-md-12">เบอร์ติดต่อของท่าน :(ไม่ต้องกรอกก็ได้) </label>
 									   <div class="col-md-12">
 										<input type="text" name="customer_phone" id="customer_phone" class="form-control" placeholder="">
 									   </div>
@@ -521,7 +521,18 @@
 												   <input type="text" name="model" id="model" class="form-control" placeholder="">
 											  </div>
 										  </div>
-									  
+										  <div class="form-group">
+												<label class="control-label col-md-12"> เงินที่ต้องการดาวน์:(ไม่ต้องกรอกก็ได้) </label>
+												<div class="col-md-12">
+													 <input type="text" name="customer_social" id="customer_social" class="form-control" placeholder="">
+												</div>
+											</div>
+											<div class="form-group">
+													<label class="control-label col-md-12"> ผ่อนเท่าไรต่อเดือน: </label>
+													<div class="col-md-12">
+														 <input type="text" name="customer_social" id="customer_social" class="form-control" placeholder="">
+													</div>
+												</div>
 			  
 										  <br />
 									  <div class="form-group" align="center">

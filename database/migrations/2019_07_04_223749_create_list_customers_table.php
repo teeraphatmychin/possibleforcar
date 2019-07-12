@@ -20,6 +20,8 @@ class CreateListCustomersTable extends Migration
             $table->string('customer_social')->nullable();
             $table->string('brand')->nullable();
             $table->string('model')->nullable();
+            $table->string('car_down')->nullable();
+            $table->string('installment')->nullable();
             $table->string('customer_status')->nullable();
             $table->string('sell_name')->nullable();
             $table->timestamps();

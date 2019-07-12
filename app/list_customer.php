@@ -10,6 +10,6 @@ class list_customer extends Model
     protected $fillable = [
         'customer_name', 'customer_phone', 'image','id',
         'brand','model','customer_status'
-        ,'customer_line','sell_name'
+        ,'customer_social','sell_name','installment','car_down'
     ];
 }
