@@ -524,13 +524,13 @@
 										  <div class="form-group">
 												<label class="control-label col-md-12"> เงินที่ต้องการดาวน์:(ไม่ต้องกรอกก็ได้) </label>
 												<div class="col-md-12">
-													 <input type="text" name="customer_social" id="customer_social" class="form-control" placeholder="">
+													 <input type="text" name="car_down" id="car_donw" class="form-control" placeholder="">
 												</div>
 											</div>
 											<div class="form-group">
 													<label class="control-label col-md-12"> ผ่อนเท่าไรต่อเดือน: </label>
 													<div class="col-md-12">
-														 <input type="text" name="customer_social" id="customer_social" class="form-control" placeholder="">
+														 <input type="text" name="installment" id="installment" class="form-control" placeholder="">
 													</div>
 												</div>
 			  
