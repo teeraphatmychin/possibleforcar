@@ -67,7 +67,7 @@ class AjaxCrudController extends Controller
 
         $new_name = rand() . '.' . $image->getClientOriginalExtension();
 
-        $image->move(public_path('images'), $new_name);
+        $image->move(public_path('images/allcar/'), $new_name);
 
         $form_data = array(
             'brand'        =>  $request->brand,

@@ -67,7 +67,7 @@
 				</div>
 				<div class="col-md-12">
 					<div class="sub-footer">
-						<p>2017 - 2019 PossibleCar International Dot Com Co., Ltd. ALL Rights Reserved: <a href="#">ข้อตกลงและเงื่ิอนไข</a> <a href="#">นโยบายความเป็นส่วนตัว</a> Version Pi 3.14</p>
+						<p>2017 - 2019 PossibleCar International Dot Com Co., Ltd. ALL Rights Reserved: <a href="#">ข้อตกลงและเงื่อนไข</a> <a href="#">นโยบายความเป็นส่วนตัว</a> Version Pi 3.14</p>
 					</div>
 				</div>
 			</div>

@@ -138,7 +138,7 @@
 									</div>
 									<div class="thumb-inner">
 										{{--  <a href="{{route('detail-car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
-										<a href="{{url('/detail-car',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{$product->image}}" class="img-thumbnail" alt=""></a>
+										<a href="{{url('/detail-car',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{$product->image}}" class="img-fluid" alt=""></a>
 									</div>
 								</div>
 								<div class="down-content">	
