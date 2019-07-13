@@ -147,7 +147,7 @@
 																	  <div class="form-group" align="center">
 																	   <input type="hidden" name="action" id="action" />
 																	   <input type="hidden" name="hidden_id" id="hidden_id" />
-																	   <input type="submit" name="action_button" id="action_button" class="btn btn-warning" value="Add" />
+																	   <input type="submit" name="action_button" id="action_button" class="btn btn-warning" value="ส่งข้อมูล" />
 																	  </div>
 																	</form>
 															

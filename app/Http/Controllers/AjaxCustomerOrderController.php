@@ -76,7 +76,7 @@ class AjaxCustomerOrderController extends Controller
 
         list_customer::create($form_data);
 
-        return response()->json(['success' => 'Data Added successfully.']);
+        return response()->json(['success' => 'ข้อมูลของท่านถูกส่งแล้ว จะมีเจ้าหน้าที่ติดต่อภายใน 24 ชม.']);
     }
 
     /**

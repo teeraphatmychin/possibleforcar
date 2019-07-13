@@ -503,7 +503,7 @@
 									   </div>
 									  </div>
 									  <div class="form-group">
-									   <label class="control-label col-md-12">เบอร์ติดต่อของท่าน :(ไม่ใส่ก็ได้) </label>
+									   <label class="control-label col-md-12">เบอร์ติดต่อของท่าน (ไม่ใส่ก็ได้) :</label>
 									   <div class="col-md-12">
 										<input type="text" name="customer_phone" id="customer_phone" class="form-control" placeholder="">
 									   </div>
@@ -538,7 +538,7 @@
 									  <div class="form-group" align="center">
 									   <input type="hidden" name="action" id="action" />
 									   <input type="hidden" name="hidden_id" id="hidden_id" />
-									   <input type="submit" name="action_button" id="action_button" class="btn btn-success" value="Add" />
+									   <input type="submit" name="action_button" id="action_button" class="btn btn-success" value="ส่งข้อมูล"/>
 									  </div>
 									</form>
 							
@@ -596,7 +596,6 @@
 						 {
 						  html = '<div class="alert alert-success">' + data.success + '</div>';
 						  $('#sample_form')[0].reset();
-						  $('#car_manage_table').DataTable().ajax.reload();
 						 }
 						 $('#form_result').html(html);
 						}
