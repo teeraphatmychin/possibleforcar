@@ -98,7 +98,7 @@
 
 
     {{-- <!-- Google Map -->
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
     <script src=" {{asset('js/jquery.gmap3.min.js')}}"></script>
 
 	<!-- Google Map Init-->

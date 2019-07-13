@@ -7,7 +7,7 @@
                                 <a href="{{url('/detail-car',$postGrid->id)}}">ดิลพิเศษ</a>
                         </div>
                         <div class="thumb-inner">
-                            {{--  <a href="{{route('single_car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
+                            {{--  <a href="{{route('single_car')}}"><img src="https://placehold.it/370x260" alt=""></a>  --}}
                             <a href="{{url('/detail-car',$postGrid->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$postGrid->brand}}/{{$postGrid->model}}/370_260/{{ $postGrid->image }}" class="img-thumbnail" alt=""></a>
 
                         </div>

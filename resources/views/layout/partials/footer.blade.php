@@ -32,12 +32,12 @@
 						<div class="our-gallery">
 							<h2>Our Gallery</h2>
 							<ul>
-								<li><a href="#"><img src="http://placehold.it/70x70" alt=""></a></li>
-								<li><a href="#"><img src="http://placehold.it/70x70" alt=""></a></li>
-								<li><a href="#"><img src="http://placehold.it/70x70" alt=""></a></li>
-								<li><a href="#"><img src="http://placehold.it/70x70" alt=""></a></li>
-								<li><a href="#"><img src="http://placehold.it/70x70" alt=""></a></li>
-								<li><a href="#"><img src="http://placehold.it/70x70" alt=""></a></li>
+								<li><a href="#"><img src="https://placehold.it/70x70" alt=""></a></li>
+								<li><a href="#"><img src="https://placehold.it/70x70" alt=""></a></li>
+								<li><a href="#"><img src="https://placehold.it/70x70" alt=""></a></li>
+								<li><a href="#"><img src="https://placehold.it/70x70" alt=""></a></li>
+								<li><a href="#"><img src="https://placehold.it/70x70" alt=""></a></li>
+								<li><a href="#"><img src="https://placehold.it/70x70" alt=""></a></li>
 							</ul>
 						</div>
 					</div>  --}}

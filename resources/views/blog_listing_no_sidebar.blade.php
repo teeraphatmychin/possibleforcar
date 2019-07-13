@@ -39,7 +39,7 @@
 									<a href="{{route('single_post')}}">20 December</a>
 								</div>
 								<div class="thumb-inner">
-									<a href="{{route('single_post')}}"><img src="http://placehold.it/750x350" alt=""></a>
+									<a href="{{route('single_post')}}"><img src="https://placehold.it/750x350" alt=""></a>
 								</div>
 							</div>
 							<div class="down-content">
@@ -61,7 +61,7 @@
 									<a href="{{route('single_post')}}">20 December</a>
 								</div>
 								<div class="thumb-inner">
-									<a href="{{route('single_post')}}"><img src="http://placehold.it/750x350" alt=""></a>
+									<a href="{{route('single_post')}}"><img src="https://placehold.it/750x350" alt=""></a>
 								</div>
 							</div>
 							<div class="down-content">
@@ -83,7 +83,7 @@
 									<a href="{{route('single_post')}}">20 December</a>
 								</div>
 								<div class="thumb-inner">
-									<a href="{{route('single_post')}}"><img src="http://placehold.it/750x350" alt=""></a>
+									<a href="{{route('single_post')}}"><img src="https://placehold.it/750x350" alt=""></a>
 								</div>
 							</div>
 							<div class="down-content">

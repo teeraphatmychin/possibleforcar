@@ -35,7 +35,7 @@
 				<div class="col-md-8">
 					<div class="single-post">
 						<div class="item">
-							<img src="http://placehold.it/750x390" alt="">
+							<img src="https://placehold.it/750x390" alt="">
 							<div class="down-content">
 								<h4>{{$detail_blog->subject}}</h4>
 								<ul>
@@ -54,7 +54,7 @@
 								<h2>Comments <em>3</em></h2>
 							</div>
 							<div class="comments-content first-comment">
-								<img src="http://placehold.it/100x100" alt="">
+								<img src="https://placehold.it/100x100" alt="">
 								<div class="continue-button">
 									<a href="{{route('single_post')}}">Reply<i class="fa fa-reply"></i></a>
 								</div>
@@ -63,7 +63,7 @@
 								<p>Deep v shabby chic lo-fi cronut ethical art party Austin Truffaut Brooklyn skateboard leggings selfies. Fashion axe 3 wolf moon put a bird on it, meggings.</p>
 							</div>
 							<div class="comments-content second-comment">
-								<img src="http://placehold.it/100x100" alt="">
+								<img src="https://placehold.it/100x100" alt="">
 								<div class="continue-button">
 									<a href="{{route('single_post')}}">Reply<i class="fa fa-reply"></i></a>
 								</div>
@@ -75,7 +75,7 @@
 								<p>Deep v shabby chic lo-fi cronut ethical art party Austin Truffaut Brooklyn skateboard leggings selfies. Fashion axe 3 wolf moon put a bird on it, meggings.</p>
 							</div>
 							<div class="comments-content third-comment">
-								<img src="http://placehold.it/100x100" alt="">
+								<img src="https://placehold.it/100x100" alt="">
 								<div class="continue-button">
 									<a href="{{route('single_post')}}">Reply<i class="fa fa-reply"></i></a>
 								</div>
@@ -162,14 +162,14 @@
 									
 									<li>
 										<a href="{{url('/single_posts',$detail_blog->id)}}">
-											<img src="http://placehold.it/70x70" alt="">
+											<img src="https://placehold.it/70x70" alt="">
 											<h6>$detail_blog->subject</h6>
 											<span>$detail_blog->create_at</span>
 										</a>
 									</li>
 									<li>
 										<a href="{{url('/single_posts',$detail_blog->id)}}">
-											<img src="http://placehold.it/70x70" alt="">
+											<img src="https://placehold.it/70x70" alt="">
 											<h6>$detail_blog->subject</h6>
 											<span>$detail_blog->create_at</span>
 										</a>

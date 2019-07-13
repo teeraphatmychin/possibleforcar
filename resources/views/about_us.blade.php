@@ -94,7 +94,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<img src="http://placehold.it/555x310" alt="">
+							<img src="https://placehold.it/555x310" alt="">
 						</div>
 						<div class="col-md-6">
 							<div class="right-content">
@@ -128,43 +128,43 @@
 						<div class="col-md-12">
 							<div id="owl-clients" class="owl-carousel owl-theme">
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								 <div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>
 								<div class="item">
-									<img src="http://placehold.it/180x120" alt="">
+									<img src="https://placehold.it/180x120" alt="">
 								</div>	 --}}
 							</div>
 						</div>

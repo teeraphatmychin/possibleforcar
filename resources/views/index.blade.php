@@ -15,7 +15,7 @@
 	  <!-- Slide 1 -->
 	  <div class="item">
 	    <div class="img-fill">
-		  {{-- <img src="http://placehold.it/1920x1080" alt=""> --}}
+		  {{-- <img src="https://placehold.it/1920x1080" alt=""> --}}
 		  <img src="{{asset('images/indexcover1.jpg')}}" alt="">
 	      <div class="info">
 	        <div >
@@ -83,7 +83,7 @@
 							{{--  //@if($product->category->status==1)  --}}
 							<div class="item car-item">
 								<div class="thumb-content">
-									{{--  <a href="{{route('detail-car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
+									{{--  <a href="{{route('detail-car')}}"><img src="https://placehold.it/370x260" alt=""></a>  --}}
 									<a href="{{url('/detail-car',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{ $product->image }}" class="img-thumbnail" alt=""  ></a>
 								</div>
 								<div class="down-content">
@@ -137,7 +137,7 @@
 										<a href="{{url('/detail-car',$product->id)}}">มีจำกัด</a>
 									</div>
 									<div class="thumb-inner">
-										{{--  <a href="{{route('detail-car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
+										{{--  <a href="{{route('detail-car')}}"><img src="https://placehold.it/370x260" alt=""></a>  --}}
 										<a href="{{url('/detail-car',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{$product->image}}" class="img-fluid" alt=""></a>
 									</div>
 								</div>
@@ -330,7 +330,7 @@
 										</div>
 							
 										<div class="thumb-inner">
-											<a href="{{route('article-post',$blog_slide->id)}}"><img src="http://placehold.it/370x260" alt=""></a>
+											<a href="{{route('article-post',$blog_slide->id)}}"><img src="https://placehold.it/370x260" alt=""></a>
 										</div>
 									</div>
 									<div class="down-content">
@@ -366,7 +366,7 @@
 				 		<div class="line-dec"></div>
 				  		<p><em>"</em> Integer sed ornare lacus, at convallis velit. Curabitur hendrerit congue convallis. Nunc vel tellus ut metus tincidunt facilisis sit amet et dolor <em>"</em></p>
 				  		<div class="author-rate">
-				  			<img src="http://placehold.it/100x100" alt="">
+				  			<img src="https://placehold.it/100x100" alt="">
 				  			<h4>Antonio Andreas</h4>
 				  			<div class="line-dec2"></div>
 				  			<span>Car Dealer</span>
@@ -383,7 +383,7 @@
 				 		<div class="line-dec"></div>
 				  		<p><em>"</em> Integer sed ornare lacus, at convallis velit. Curabitur hendrerit congue convallis. Nunc vel tellus ut metus tincidunt facilisis sit amet et dolor <em>"</em></p>
 				  		<div class="author-rate">
-				  			<img src="http://placehold.it/100x100" alt="">
+				  			<img src="https://placehold.it/100x100" alt="">
 				  			<h4>John Robertson</h4>
 				  			<div class="line-dec2"></div>
 				  			<span>Sale Agent</span>
@@ -400,7 +400,7 @@
 				 		<div class="line-dec"></div>
 				  		<p><em>"</em> Integer sed ornare lacus, at convallis velit. Curabitur hendrerit congue convallis. Nunc vel tellus ut metus tincidunt facilisis sit amet et dolor <em>"</em></p>
 				  		<div class="author-rate">
-				  			<img src="http://placehold.it/100x100" alt="">
+				  			<img src="https://placehold.it/100x100" alt="">
 				  			<h4>Matias Lucas</h4>
 				  			<div class="line-dec2"></div>
 				  			<span>Mechanic</span>
@@ -417,7 +417,7 @@
 				 		<div class="line-dec"></div>
 				  		<p><em>"</em> Integer sed ornare lacus, at convallis velit. Curabitur hendrerit congue convallis. Nunc vel tellus ut metus tincidunt facilisis sit amet et dolor <em>"</em></p>
 				  		<div class="author-rate">
-				  			<img src="http://placehold.it/100x100" alt="">
+				  			<img src="https://placehold.it/100x100" alt="">
 				  			<h4>Antonio Andreas</h4>
 				  			<div class="line-dec2"></div>
 				  			<span>Car Dealer</span>
@@ -434,7 +434,7 @@
 				 		<div class="line-dec"></div>
 				  		<p><em>"</em> Integer sed ornare lacus, at convallis velit. Curabitur hendrerit congue convallis. Nunc vel tellus ut metus tincidunt facilisis sit amet et dolor <em>"</em></p>
 				  		<div class="author-rate">
-				  			<img src="http://placehold.it/100x100" alt="">
+				  			<img src="https://placehold.it/100x100" alt="">
 				  			<h4>John Robertson</h4>
 				  			<div class="line-dec2"></div>
 				  			<span>Sale Agent</span>
@@ -451,7 +451,7 @@
 				 		<div class="line-dec"></div>
 				  		<p><em>"</em> Integer sed ornare lacus, at convallis velit. Curabitur hendrerit congue convallis. Nunc vel tellus ut metus tincidunt facilisis sit amet et dolor <em>"</em></p>
 				  		<div class="author-rate">
-				  			<img src="http://placehold.it/100x100" alt="">
+				  			<img src="https://placehold.it/100x100" alt="">
 				  			<h4>Matias Lucas</h4>
 				  			<div class="line-dec2"></div>
 				  			<span>Mechanic</span>
@@ -468,7 +468,7 @@
 				 		<div class="line-dec"></div>
 				  		<p><em>"</em> Integer sed ornare lacus, at convallis velit. Curabitur hendrerit congue convallis. Nunc vel tellus ut metus tincidunt facilisis sit amet et dolor <em>"</em></p>
 				  		<div class="author-rate">
-				  			<img src="http://placehold.it/100x100" alt="">
+				  			<img src="https://placehold.it/100x100" alt="">
 				  			<h4>Antonio Andreas</h4>
 				  			<div class="line-dec2"></div>
 				  			<span>Car Dealer</span>

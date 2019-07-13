@@ -6,7 +6,7 @@
 				<a href="{{route('article-post',$blog->id)}}">{{$blog->create_by}}</a>
 			</div>
 			<div class="thumb-inner">
-				<a href="{{route('article-post',$blog->id)}}"><img src="http://placehold.it/370x260" alt=""></a>
+				<a href="{{route('article-post',$blog->id)}}"><img src="https://placehold.it/370x260" alt=""></a>
 			</div>
 		</div>
 		<div class="down-content">

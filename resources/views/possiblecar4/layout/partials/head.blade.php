@@ -6,7 +6,7 @@
 
     <title>@yield('title')</title>
 	{{--  <script src="https://kit.fontawesome.com/37ba0adb83.js"></script>  --}}
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/font-awesome.min.css')}}">

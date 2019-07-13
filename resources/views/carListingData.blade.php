@@ -9,7 +9,7 @@
                                 <a href="{{url('/single_car_test',$postList->id)}}">ดิลพิเศษ</a>
                         </div>
                         <div class="thumb-inner">
-                            {{--  <a href="single_car.html"><img src="http://placehold.it/370x345" alt=""></a>  --}}
+                            {{--  <a href="single_car.html"><img src="https://placehold.it/370x345" alt=""></a>  --}}
                             <a href="{{url('/single_car_test',$postList->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$postList->brand}}/{{$postList->model}}/370_260/{{ $postList->image }}" class="img-thumbnail" alt=""></a>
 
                         </div>

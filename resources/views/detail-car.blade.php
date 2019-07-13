@@ -42,34 +42,34 @@
 							<div class="sp-slides">
 							
 								<div class="sp-slide">
-									{{--  <img class="sp-image" src="http://placehold.it/570x450" alt="" />  --}}
+									{{--  <img class="sp-image" src="https://placehold.it/570x450" alt="" />  --}}
 									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/1.jpg" alt="">	
 								</div>
 
 						        <div class="sp-slide">
-									{{--  <img class="sp-image" src="http://placehold.it/570x450" alt="" />  --}}
+									{{--  <img class="sp-image" src="https://placehold.it/570x450" alt="" />  --}}
 									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/2.jpg" alt="">
 								</div>
 
 								<div class="sp-slide">
-									{{--  <img class="sp-image" src="http://placehold.it/570x450" alt="" />  --}}
+									{{--  <img class="sp-image" src="https://placehold.it/570x450" alt="" />  --}}
 									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/3.jpg" alt="">
 								</div>
 
 								<div class="sp-slide">
-									{{--  <img class="sp-image" src="http://placehold.it/570x450" alt="" />  --}}
+									{{--  <img class="sp-image" src="https://placehold.it/570x450" alt="" />  --}}
 									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/4.jpg" alt="">
 								</div>
 
 								<div class="sp-slide">
-									{{--  <img class="sp-image" src="http://placehold.it/570x450" alt="" />  --}}
+									{{--  <img class="sp-image" src="https://placehold.it/570x450" alt="" />  --}}
 									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/5.jpg" alt="">
 								</div>
 
 							</div>
 
 							<div class="sp-thumbnails">
-								{{--  <img class="sp-thumbnail" src="http://placehold.it/120x80" alt="" />  --}}
+								{{--  <img class="sp-thumbnail" src="https://placehold.it/120x80" alt="" />  --}}
 								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/1.jpg" alt="">
 								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/2.jpg" alt="">
 								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/3.jpg" alt="">
@@ -252,7 +252,7 @@
 								{{--  //@if($product->category->status==1)  --}}
 								<div class="item car-item">
 									<div class="thumb-content">
-									{{--  <a href="{{route('single_car')}}"><img src="http://placehold.it/370x260" alt=""></a>  --}}
+									{{--  <a href="{{route('single_car')}}"><img src="https://placehold.it/370x260" alt=""></a>  --}}
 									<a href="{{url('/single_car_test',$slide_similar->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$slide_similar->brand}}/{{$slide_similar->model}}/370_260/{{ $slide_similar->image }}" class="img-thumbnail" alt=""></a>
 									</div>
 									<div class="down-content">

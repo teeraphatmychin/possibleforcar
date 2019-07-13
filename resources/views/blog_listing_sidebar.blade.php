@@ -38,7 +38,7 @@
 									<a href="{{route('single_post')}}">20 December</a>
 								</div>
 								<div class="thumb-inner">
-									<a href="{{route('single_post')}}"><img src="http://placehold.it/750x350" alt=""></a>
+									<a href="{{route('single_post')}}"><img src="https://placehold.it/750x350" alt=""></a>
 								</div>
 							</div>
 							<div class="down-content">
@@ -60,7 +60,7 @@
 									<a href="{{route('single_post')}}">20 December</a>
 								</div>
 								<div class="thumb-inner">
-									<a href="s{{route('single_post')}}"><img src="http://placehold.it/750x350" alt=""></a>
+									<a href="s{{route('single_post')}}"><img src="https://placehold.it/750x350" alt=""></a>
 								</div>
 							</div>
 							<div class="down-content">
@@ -82,7 +82,7 @@
 									<a href="s{{route('single_post')}}">20 December</a>
 								</div>
 								<div class="thumb-inner">
-									<a href="{{route('single_post')}}"><img src="http://placehold.it/750x350" alt=""></a>
+									<a href="{{route('single_post')}}"><img src="https://placehold.it/750x350" alt=""></a>
 								</div>
 							</div>
 							<div class="down-content">
@@ -156,28 +156,28 @@
 								<ul>
 									<li>
 										<a href="{{route('single_post')}}">
-											<img src="http://placehold.it/70x70" alt="">
+											<img src="https://placehold.it/70x70" alt="">
 											<h6>Pabst Gastropub Synth Edge</h6>
 											<span>January 13, 2019</span>
 										</a>
 									</li>
 									<li>
 										<a href="{{route('single_post')}}">
-											<img src="http://placehold.it/70x70" alt="">
+											<img src="https://placehold.it/70x70" alt="">
 											<h6>Pabst Gastropub Synth Edge</h6>
 											<span>January 13, 2019</span>
 										</a>
 									</li>
 									<li>
 										<a href="{{route('single_post')}}">
-											<img src="http://placehold.it/70x70" alt="">
+											<img src="https://placehold.it/70x70" alt="">
 											<h6>Pabst Gastropub Synth Edge</h6>
 											<span>January 13, 2019</span>
 										</a>
 									</li>
 									<li>
 										<a href="{{route('single_post')}}">
-											<img src="http://placehold.it/70x70" alt="">
+											<img src="https://placehold.it/70x70" alt="">
 											<h6>Pabst Gastropub Synth Edge</h6>
 											<span>January 13, 2019</span>
 										</a>

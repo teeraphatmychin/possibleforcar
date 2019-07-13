@@ -154,11 +154,11 @@
 	</div>	
 	@extends('layout.partials.footer')
 	@extends('layout.partials.footer-scripts')
-<script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+<script src="https://code.jquery.com/jquery-latest.min.js"></script> 
 @extends('layout.partials.footer-scripts')
 
 <div class="ajax-load text-center" style="display:none">
-	<p><img src="http://demo.itsolutionstuff.com/plugin/loader.gif">Loading More</p>
+	<p><img src="https://demo.itsolutionstuff.com/plugin/loader.gif">Loading More</p>
 </div>
 
 <script type="text/javascript">

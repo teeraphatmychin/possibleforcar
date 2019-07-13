@@ -82,28 +82,28 @@
 									<ul>
 										<li>
 											<a href="{{route('single_post')}}">
-												<img src="http://placehold.it/70x70" alt="">
+												<img src="https://placehold.it/70x70" alt="">
 												<h6>Pabst Gastropub Synth Edge</h6>
 												<span>January 13, 2019</span>
 											</a>
 										</li>
 										<li>
 											<a href="{{route('single_post')}}">
-												<img src="http://placehold.it/70x70" alt="">
+												<img src="https://placehold.it/70x70" alt="">
 												<h6>Pabst Gastropub Synth Edge</h6>
 												<span>January 13, 2019</span>
 											</a>
 										</li>
 										<li>
 											<a href="{{route('single_post')}}">
-												<img src="http://placehold.it/70x70" alt="">
+												<img src="https://placehold.it/70x70" alt="">
 												<h6>Pabst Gastropub Synth Edge</h6>
 												<span>January 13, 2019</span>
 											</a>
 										</li>
 										<li>
 											<a href="{{route('single_post')}}">
-												<img src="http://placehold.it/70x70" alt="">
+												<img src="https://placehold.it/70x70" alt="">
 												<h6>Pabst Gastropub Synth Edge</h6>
 												<span>January 13, 2019</span>
 											</a>
