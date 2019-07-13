@@ -44,21 +44,21 @@
 							<form id="contact_form" action="/contact_us" method="POST" enctype="multipart/form-data">
 								<div class="row">
 									<div class=" col-md-4 col-sm-4 col-xs-6">
-										<input type="text" class="blog-search-field" name="name" placeholder="Your name..." value="{{old('name')}}">
+										<input type="text" class="blog-search-field" name="name" placeholder="ชื่อของท่่าน..." value="{{old('name')}}">
 										
 									</div>
 									<div class="col-md-4 col-sm-4 col-xs-6">
-										<input type="text" class="blog-search-field" name="mail" placeholder="Your email..." value="{{old('mail')}}">
+										<input type="text" class="blog-search-field" name="mail" placeholder="อีเมลล์..." value="{{old('mail')}}">
 										
 									</div>
 									<div class="col-md-4 col-sm-4 col-xs-12">
-										<input type="text" class="subject" name="subject" placeholder="Subject..." value="{{old('subject')}}">
+										<input type="text" class="subject" name="subject" placeholder="เรื่องที่สอบถาม..." value="{{old('subject')}}">
 										
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-12 col-sm-12">
-										<textarea id="message" class="input" name="message" placeholder="Message..." value="{{old('message')}}"></textarea>
+										<textarea id="message" class="input" name="message" placeholder="ข้อความ..." value="{{old('message')}}"></textarea>
 										
 									</div>
 								</div>
