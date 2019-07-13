@@ -481,7 +481,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="myModal2" role="dialog" >
 																	   
-		<div class="modal-dialog modal-dialog-centered  modal-dialog-scrollable" style="z-index: 9999999999999999999999;">
+		<div class="modal-dialog modal-dialog-centered model-sm modal-dialog-scrollable" style="z-index: 9999999999999999999999;">
 		
 		<!-- Modal content-->
 		<div class="modal-content" >
