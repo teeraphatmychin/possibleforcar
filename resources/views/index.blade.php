@@ -481,7 +481,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="myModal2" role="dialog" >
 																	   
-		<div class="modal-dialog model-sm modal-dialog-centered">
+		<div class="modal-dialog modal-dialog-scrollable">
 		<!-- Modal content-->
 		<div class="modal-content" >
 			<div class="modal-header" ;>
