@@ -205,12 +205,12 @@
 
 	
 	<!-- Modal -->
-	<div class="modal fade" id="myModal2" role="dialog" tabindex="-1" aria-hidden="true">																   
+	<div class="modal fade" id="myModal2" role="dialog" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">																   
 		<div class="modal-dialog model-sm modal-dialog-centered ">
 		<!-- Modal content-->
 		<div class="modal-content" >
 			<div class="modal-header" ;>
-			<h5 class="modal-title" >สอบถามรถที่ต้องการ</h5>
+			<h5 class="modal-title"  id="exampleModalLongTitle">สอบถามรถที่ต้องการ</h5>
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
 				<div class="modal-body" >
