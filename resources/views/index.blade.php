@@ -481,7 +481,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="myModal2" role="dialog" >
 																	   
-		<div class="modal-dialog model-sm modal-dialog-centered ">
+		<div class="modal-dialog model-sm ">
 		
 		<!-- Modal content-->
 		<div class="modal-content" >
@@ -558,8 +558,6 @@
 
 	<script>
 			$('.modal').insertAfter($('body'));
-			$('body').css('overflow','hidden');
-			$('body').css('position','fixed');
 			$(document).ready(function(){
 			
 				$("#myModal2").modal({backdrop: "static"});
