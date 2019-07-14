@@ -205,7 +205,7 @@
 
 	
 	<!-- Modal -->
-	<div class="modal fade" id="myModal2" role="dialog" tabindex="-1">																   
+	<div class="modal fade" id="myModal2" role="dialog" tabindex="-1" aria-hidden="true">																   
 		<div class="modal-dialog model-sm modal-dialog-centered ">
 		<!-- Modal content-->
 		<div class="modal-content" >
