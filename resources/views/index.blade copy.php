@@ -18,16 +18,12 @@
 			{{--1920x1080--}}
 				<img src="{{asset('images/indexcover1.jpg')}}" alt="">
 				<div class="info">
-					<div class=col-md-6>
+					<div class="col-md-6">
 						<h5>เราคือโชว์รูมออนไลน์</h5>
 						<h3>ช่วยคุณในการเลือกโปรโมชั่น<em>ที่คุ้มค่าที่สุด</em></h3>
 						<h6 class="secondary-button btn-lg ">
 							<a href="{{route('car-view-grid')}}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
-							
 						</h6>
-					</div>
-					<div class=col-md-6>
-						
 					</div>
 				</div>
 			</div>
@@ -94,7 +90,7 @@
 								</div>
 							</div>
 							{{--  //@endif  --}}
-								
+	
 							@endforeach 
 		
 						</div>
@@ -558,7 +554,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 	<script>
+			
 			$('.modal').insertAfter($('body'));
+			
 			$(document).ready(function(){
 			
 				$("#myModal2").modal({backdrop:true});
