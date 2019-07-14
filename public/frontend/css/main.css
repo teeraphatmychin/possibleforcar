@@ -25,6 +25,10 @@ Primary use:    Car Dealer
 -------------------------------------------------------------------*/
 
 /* 01. Main & Elements Starts */
+body.modal-open {
+    overflow: hidden;
+}
+
 body {
     font-family: 'Roboto', sans-serif
 }

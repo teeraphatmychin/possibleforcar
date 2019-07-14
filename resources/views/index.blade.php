@@ -563,7 +563,11 @@
 						 $('#action_button').val("ส่งข้อมูล");
 						 $('#action').val("ส่งข้อมูล");
 						 $('#formModal').appendTo("body").modal('show');
-						 
+						 $("#myModal2").on("show", function () {
+							$("body").addClass("modal-open");
+						  }).on("hidden", function () {
+							$("body").removeClass("modal-open")
+						  });
 
 
 					 $('#sample_form').on('submit', function(event){
