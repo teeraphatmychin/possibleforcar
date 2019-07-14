@@ -558,6 +558,8 @@
 
 	<script>
 			$('.modal').insertAfter($('body'));
+			$('body').css('overflow','hidden');
+			$('body').css('position','fixed');
 			$(document).ready(function(){
 			
 				$("#myModal2").modal({backdrop: "static"});
@@ -565,6 +567,7 @@
 						 $('#action_button').val("ส่งข้อมูล");
 						 $('#action').val("ส่งข้อมูล");
 						 $('#formModal').appendTo("body").modal('show');
+						 
 
 
 					 $('#sample_form').on('submit', function(event){
