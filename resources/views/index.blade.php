@@ -481,7 +481,8 @@
 	<!-- Modal -->
 	<div class="modal fade" id="myModal2" role="dialog" >
 																	   
-		<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-dialog model-sm modal-dialog-centered ">
+		
 		<!-- Modal content-->
 		<div class="modal-content" >
 			<div class="modal-header" ;>
@@ -489,7 +490,6 @@
 			{{--  <button type="button" class="close" data-dismiss="modal">&times;</button>  --}}
 			</div>
 				<div class="modal-body" >
-				
 									<span id="form_result"></span>
 									<form method="post" id="sample_form" class="form-horizontal" enctype="multipart/form-data">
 									 @csrf
