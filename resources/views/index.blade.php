@@ -11,20 +11,21 @@
 <body>
 	
 	@include('layout.partials.nav')
+
 	<div class="Modern-Slider">
 		<!-- Slide 1 -->
 		<div class="item">
 			<div class="img-fill">
-			{{--1920x1080--}}
-				<img src="{{asset('images/indexcover1.jpg')}}" alt="">
+				<img src="{{asset('images/indexcover1.jpg')}}" alt="">{{--1920x1080--}}
 				<div class="info">
 					<div class="row">
-						<h5>เราคือโชว์รูมออนไลน์</h5>
-						<h3>ช่วยคุณในการเลือกโปรโมชั่น<em>ที่คุ้มค่าที่สุด</em></h3>
-						<h6 class="secondary-button btn-lg ">
-							<a href="{{ route('index') }}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
-						</h6>
-					</div>
+								<h5>เราคือโชว์รูมออนไลน์</h5>
+								<h3>ช่วยคุณในการเลือกโปรโมชั่น<em>ที่คุ้มค่าที่สุด</em></h3>
+								<h6 class="secondary-button btn-lg ">
+									<a href="{{ route('index') }}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
+								</h6>
+					
+					</div>			
 				</div>
 			</div>
 		</div>
@@ -67,8 +68,8 @@
 			</div>
 		</div>
 		<!-- // Slide 3 -->  --}}
-	</div>
 
+	</div>
 {{-- /////////////////////////////////////////////////////////////////////// --}}
 	
 
@@ -201,7 +202,44 @@
 				</div>
 			</div>
 		</section>
+		
+				<div class="container">
 
+						<span id="form_result"></span>
+						<form method="post" id="sample_form" class="form-row bt-light" enctype="multipart/form-data">
+							 @csrf
+							 <div class="form-group col-md-6">
+								<label for="customer_name" >ชื่อของท่าน : </label>
+								<input type="text" name="customer_name" id="customer_name" class="form-control form-control-lg" placeholder="">
+							  </div>
+							  <div class="form-group col-md-6">
+								   <label for="customer_phone">เบอร์ติดต่อของท่าน : </label>
+								<input type="text" name="customer_phone" id="customer_phone" class="form-control form-control-lg" placeholder="">
+							  </div>
+							  <div class="form-group col-md-6">
+							   <label for="customer_social"> Line ID หรือ Facebook ของท่าน : </label>
+									<input type="text" name="customer_social" id="customer_social" class="form-control form-control-lg" placeholder="">
+								</div>
+							   <div class="form-group col-md-6">
+								  <label for="model"> รุ่นรถที่สนใจ : </label>
+									   <input type="text" name="model" id="model" class="form-control form-control-lg" placeholder="">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="car_down"> เงินที่ต้องการดาวน์ (ไม่ใส่ก็ได้) :</label>												
+										<input type="text" name="car_down" id="car_donw" class="form-control form-control-lg" placeholder="">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="installment"> ผ่อนเท่าไรต่อเดือน (ไม่ใส่ก็ได้) :</label>													
+									<input type="text" name="installment" id="installment" class="form-control form-control-lg" placeholder="">													
+								</div>
+							<div class="form-group" align="center">
+								<input type="hidden" name="action" id="action" />
+									<input type="hidden" name="hidden_id" id="hidden_id" />
+									<input type="submit" name="action_button" id="action_button" class="btn btn-success" value="ส่งข้อมูล"/>
+							  </div>
+						</form>		  
+				
+			</div>
 
 	
 	<!-- Modal -->
