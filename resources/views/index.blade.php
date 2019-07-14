@@ -104,7 +104,7 @@
 
 
 	
-	{{--  <section>
+	<section>
 		<div class="recent-cars">
 			<div class="container">
 				<div class="recent-car-content">
@@ -155,7 +155,7 @@
 				</div>
 			</div>
 		</div>
-	</section>  --}}
+	</section>
 
 	{{--   
     <section>
@@ -283,7 +283,7 @@
 		</section>
 		--}}
 	
-		{{--  <section>
+		<section>
 			<div class="call-to-action wow fadeIn" data-wow-duration="0.75s">
 				<div class="container">
 					<div class="call-to-action-content">
@@ -348,7 +348,7 @@
 						</div>
 					</div>
 				</div>
-			</section>  --}}
+			</section>
 			
 	{{--  <section>
 		<div class="testimonials">
@@ -477,7 +477,7 @@
 			</div>
 		</div>
 	</section>  --}}
-	{{--    --}}
+	
 	<!-- Modal -->
 	<div class="modal fade" id="myModal2" role="dialog" >
 																	   
@@ -564,6 +564,7 @@
 						 $('#action').val("ส่งข้อมูล");
 						 $('#formModal').appendTo("body").modal('show');
 						 
+
 
 					 $('#sample_form').on('submit', function(event){
 					  event.preventDefault();
