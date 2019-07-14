@@ -23,7 +23,7 @@
 				<div id='cssmenu'>
 					<ul>
 					   	<li><a href='{{ route('index') }}'>หน้าแรก</a></li>
-					   	<li class='active'><a href='{{ route('car-view-grid')}}'>รถทั้งหมด</a>
+					   	{{--  <li class='active'><a href='{{ route('car-view-grid')}}'>รถทั้งหมด</a>  --}}
 					      	{{-- <ul>
 					         	<li><a href='#'>Sidebar</a>
 					            	<ul>
@@ -39,8 +39,8 @@
 					         	</li>
 					         	<li><a href='{{route('single_car')}}'>Single Car</a></li>
 					      	</ul> --}}
-					   	</li>
-					   	<li class='active'><a href='{{route('blog-view-grid')}}'>บทความ</a>
+					   	{{--  </li>  --}}
+					   	{{--  <li class='active'><a href='{{route('blog-view-grid')}}'>บทความ</a>  --}}
 					      	{{-- <ul>
 					         	<li><a href='#'>Sidebar</a>
 					            	<ul>
@@ -56,12 +56,12 @@
 					         	</li>
 					         	<li><a href='{{route('single_post')}}'>Single Post</a></li>
 					      	</ul>		 --}}
-					   </li>
+					   {{--  </li>  --}}
 					   <li><a href='{{route('about_us')}}'>เกี่ยวกับเรา</a></li>
 					   <li><a href='{{route('contact_us')}}'>ติดต่อเรา</a></li>
-					   <li>
+					   {{--  <li>
 					   		<a href="#search"><i class="fa fa-search"></i></a>
-					   </li>
+					   </li>  --}}
 					</ul>
 				</div>
 			</div>
