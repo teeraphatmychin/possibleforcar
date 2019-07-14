@@ -481,8 +481,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="myModal2" role="dialog" >
 																	   
-		<div class="modal-dialog model-sm ">
-		
+		<div class="modal-dialog model-sm modal-dialog-centered">
 		<!-- Modal content-->
 		<div class="modal-content" >
 			<div class="modal-header" ;>
@@ -533,7 +532,6 @@
 													</div>
 												</div>
 			  
-										  <br />
 									  <div class="form-group" align="center">
 									   <input type="hidden" name="action" id="action" />
 									   <input type="hidden" name="hidden_id" id="hidden_id" />
