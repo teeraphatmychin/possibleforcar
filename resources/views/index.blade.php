@@ -18,18 +18,18 @@
 			{{--1920x1080--}}
 				<img src="{{asset('images/indexcover1.jpg')}}" alt="">
 				<div class="info">
-					<div>
+					<div class="row">
 						<h5>เราคือโชว์รูมออนไลน์</h5>
 						<h3>ช่วยคุณในการเลือกโปรโมชั่น<em>ที่คุ้มค่าที่สุด</em></h3>
 						<h6 class="secondary-button btn-lg ">
-							<a href="#">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
+							<a href="{{ route('index') }}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
 						</h6>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- // Slide 1 -->
-		<!-- Slide 2 -->
+		{{--  <!-- Slide 2 -->
 		<div class="item">
 			<div class="img-fill">
 			
@@ -66,7 +66,7 @@
 			</div>
 			</div>
 		</div>
-		<!-- // Slide 3 -->
+		<!-- // Slide 3 -->  --}}
 	</div>
 
 {{-- /////////////////////////////////////////////////////////////////////// --}}
