@@ -25,6 +25,9 @@ Primary use:    Car Dealer
 -------------------------------------------------------------------*/
 
 /* 01. Main & Elements Starts */
+.modal{
+    display: block !important; /* I added this to see the modal, you don't need this */
+}
 
 body {
     font-family: 'Roboto', sans-serif
