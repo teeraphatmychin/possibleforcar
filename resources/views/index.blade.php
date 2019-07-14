@@ -22,7 +22,7 @@
 						<h5>เราคือโชว์รูมออนไลน์</h5>
 						<h3>ช่วยคุณในการเลือกโปรโมชั่น<em>ที่คุ้มค่าที่สุด</em></h3>
 						<h6 class="secondary-button btn-lg ">
-							<a href="{{route('car-view-grid')}}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
+							<a href="#">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
 						</h6>
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 						
 						<h6 class="secondary-button btn-lg">
 
-								<a href="{{route('car-view-grid')}}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
+								<a href="#">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
 							</h6>
 					
 					<!-- Trigger the modal with a button -->
@@ -60,8 +60,7 @@
 					<h5>เราคือโชว์รูมออนไลน์ดีที่สุดของประเทศไทย</h5>
 					<h3>ช่วยเลือกโปรโมชั่นที่คุ้มค่าที่สุด<em>จากทั่วประเทศ</em></h3>
 					<h6 class="secondary-button btn-lg">
-							<a href="{{route('car-view-grid')}}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
-
+							<a href="#">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
 					</h6> 
 				</div>
 			</div>
