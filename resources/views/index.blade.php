@@ -486,7 +486,7 @@
 		<!-- Modal content-->
 		<div class="modal-content" >
 			<div class="modal-header" ;>
-			<h4 class="modal-title" >สอบถามรถที่ต้องการ</h4>
+			<h5 class="modal-title" >สอบถามรถที่ต้องการ</h5>
 			{{--  <button type="button" class="close" data-dismiss="modal">&times;</button>  --}}
 			</div>
 				<div class="modal-body" >
@@ -502,14 +502,14 @@
 									   </div>
 									  </div>
 									  <div class="form-group">
-									   <label class="control-label col-md-12">เบอร์ติดต่อของท่าน (ไม่ใส่ก็ได้) :</label>
+									   <label class="control-label col-md-12">เบอร์ติดต่อของท่าน : </label>
 									   <div class="col-md-12">
 										<input type="text" name="customer_phone" id="customer_phone" class="form-control" placeholder="">
 									   </div>
 									  </div>
 									  {{--    --}}
 									  <div class="form-group">
-										   <label class="control-label col-md-12"> สะดวกให้ติดต่อทาง Line ID หรือ Facebook : </label>
+										   <label class="control-label col-md-12"> Line ID หรือ Facebook ของท่าน : </label>
 										   <div class="col-md-12">
 												<input type="text" name="customer_social" id="customer_social" class="form-control" placeholder="">
 										   </div>
