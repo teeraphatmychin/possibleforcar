@@ -18,7 +18,7 @@
 			{{--1920x1080--}}
 				<img src="{{asset('images/indexcover1.jpg')}}" alt="">
 				<div class="info">
-					<div class="col-md-6">
+					<div>
 						<h5>เราคือโชว์รูมออนไลน์</h5>
 						<h3>ช่วยคุณในการเลือกโปรโมชั่น<em>ที่คุ้มค่าที่สุด</em></h3>
 						<h6 class="secondary-button btn-lg ">
@@ -85,7 +85,7 @@
 									<a href="{{url('/detail-car',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{ $product->image }}" class="img-thumbnail" alt=""  ></a>
 								</div>
 								<div class="down-content">
-									<a href="{{url('/detail-car',$product->id)}}"><h4>{{$product->brand}}<p>   </p> {{$product->model}}</h4></a>
+									<a href="{{url('/detail-car',$product->id)}}"><h4>{{$product->brand}} {{$product->model}}</h4></a>
 									{{--  <span>{{$product->price}}บาท</span>  --}}
 								</div>
 							</div>
@@ -106,15 +106,16 @@
     <section>
 			<div class="features-search-section">
 				<div class="container">
-					<div class="row">
+					<div align="center"><h1>บริการของเราคือ</h1></div>
+					<div class="row">	
 						<div class="col-md-12">
 							<div class="row">
 								<div class="col-md-3">
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-car"></i>
 											<div class="text-content">
-											<h6>คุณกำลังตัดสินใจซื้อรถ &amp;</h6>
-											<p>รู้หรือไม่ โชว์รูมรถและเซลล์จากคนละที่ให้ข้อเสนอและราคาที่ไม่เหมือนกัน</p>
+											<h6>คุณไม่ต้องไปหลายโชว์รูมด้วยตัวเอง</h6>
+											<p>เพียงแค่สมัครออนไลน์กับเรา (ฟรี)</p>
 										
 										</div>
 									</div>
@@ -123,8 +124,8 @@
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-search"></i>
 											<div class="text-content">
-											<h6>ข้อดีที่เลือกใช้บริการเรา</h6>
-											<p>ติดต่อหนึ่งครั้งเสมือนติดต่อ 100 กว่าคน 1000 กว่าโปรโมชั่น</p>
+											<h6>เรามีโปรโมชั่นรถให้คุณ (ฟรี)</h6>
+											<p>กว่า 100 โชว์รูม 1000 กว่าโปรโมชั่น</p>
 										</div>
 									</div>
 								</div>
@@ -132,8 +133,8 @@
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-users"></i>
 											<div class="text-content">
-											<h6>เราจะช่วยให้คุณเลือกซื้อรถให้คุ้มค่าที่สุด</h6>
-											<p>เรามีข้อมูลโชว์รูมและเซลล์ที่จะให้ข้อเสนอ ราคา ของแถม ที่ดีและคุ้มค่าที่สุดให้กับคุณ</p>
+											<h6>เจ้าหน้าจะเสนอโปรโมชั่น</h6>
+											<p>มีข้อเสนอ ราคา ของแถม ที่คุ้มค่าที่สุดให้กับคุณ</p>
 										</div>
 									</div>
 								</div>
@@ -141,8 +142,8 @@
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-globe"></i>
 											<div class="text-content">
-											<h6>คุณไม่ต้องไปหลายโชว์รูมด้วยตัวเอง</h6>
-											<p>คุณแค่รอมีเจ้าหน้าที่เสนอโปรโมชั่น แล้วเลือกข้อเสนอที่ดีทีสุด</p>
+											<h6>คุณเลือกข้อเสนอที่ดีทีสุด</h6>
+											<p>หรือให้เราคัดเลือกแล้วติดต่อคุณ</p>
 										</div>
 									</div>
 								</div>
