@@ -71,34 +71,7 @@
 	</div>
 
 {{-- /////////////////////////////////////////////////////////////////////// --}}
-	<section class="top-slider-features wow fadeIn" data-wow-duration="1.5s">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="slider-top-features">
-						<div id="owl-top-features" class="owl-carousel owl-theme">
-							@foreach($products as $product)
-							{{--  //@if($product->category->status==1)  --}}
-							<div class="item car-item">
-								<div class="thumb-content">
-									{{--  <a href="{{route('detail-car')}}"><img src="https://placehold.it/370x260" alt=""></a>  --}}
-									<a href="{{url('/detail-car',$product->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$product->brand}}/{{$product->model}}/370_260/{{ $product->image }}" class="img-thumbnail" alt=""  ></a>
-								</div>
-								<div class="down-content">
-									<a href="{{url('/detail-car',$product->id)}}"><h4>{{$product->brand}} {{$product->model}}</h4></a>
-									{{--  <span>{{$product->price}}บาท</span>  --}}
-								</div>
-							</div>
-							{{--  //@endif  --}}
 	
-							@endforeach 
-		
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 
 
