@@ -109,7 +109,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-md-3">
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-car"></i>
 											<div class="text-content">
@@ -119,7 +119,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-6">
+								<div class="col-md-3">
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-search"></i>
 											<div class="text-content">
@@ -128,7 +128,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-6">
+								<div class="col-md-3">
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-users"></i>
 											<div class="text-content">
@@ -137,7 +137,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-6">
+								<div class="col-md-3">
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-globe"></i>
 											<div class="text-content">
