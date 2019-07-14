@@ -205,10 +205,8 @@
 
 	
 	<!-- Modal -->
-	<div class="modal fade" id="myModal2" role="dialog" >
-																	   
+	<div class="modal fade" id="myModal2" role="dialog" tabindex="-1">																   
 		<div class="modal-dialog model-sm modal-dialog-centered ">
-		
 		<!-- Modal content-->
 		<div class="modal-content" >
 			<div class="modal-header" ;>
