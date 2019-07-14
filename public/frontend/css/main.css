@@ -25,20 +25,6 @@ Primary use:    Car Dealer
 -------------------------------------------------------------------*/
 
 /* 01. Main & Elements Starts */
-body.modal-open {
-    overflow: hidden;
-    position: fixed;
-}
-body.viewport-lg {
-    position: absolute; 
-}
-body {
-   
-    overflow-x: hidden;
-    overflow-y: scroll !important;
-}
-
-
 body {
     font-family: 'Roboto', sans-serif
 }

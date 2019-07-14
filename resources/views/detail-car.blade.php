@@ -103,7 +103,7 @@
 							<div class="similar-info">
 									{{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">สนใจโปรโมชั่นนี้</button>		 --}}
 									<!-- Trigger the modal with a button -->
-									<button type="button" class="btn btn-primary" id="myBtn2">สนใจโปรโมชั่นนี้</button>
+									<button type="button" class="btn btn-success" id="myBtn2">สนใจโปรโมชั่นนี้</button>
 									<!-- Modal -->
 									<div class="modal fade" id="myModal2" role="dialog" >
 																									   
@@ -210,9 +210,9 @@
 					<div class="col-md-4 wow fadeInUp" data-wow-duration="1s">
 						<div class="item">
 							<div class="sep-section-heading">
-								<h2>รายละเอียดรถ <em></em></h2>
+								<h2></h2>
 							</div>
-							<p>{{$detail_car->detail}}</p>
+							<p></p>
 							<div class="contact-info">
 								<div class="row">
 									<div class="phone col-md-12 col-sm-6 col-xs-6">
