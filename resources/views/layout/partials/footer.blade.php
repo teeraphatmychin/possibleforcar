@@ -1,22 +1,21 @@
 <footer>
 		<div class="container">
-			<div class="row">
-				
+			<div class="row">		
 				<div class="col-md-2">
 					<div class="footer-item">
-						<div class="what-offer">
+						{{--  <div class="what-offer">
 							<h2>รถยนต์</h2>
 							<ul>
 								<li><a href="#">รถป้ายแดง</a></li>
 								<li><a href="#">รถมือสอง</a></li>
 								<li><a href="#">รีไฟแนนซ์รถ</a></li>
 							</ul>
-						</div>
+						</div>  --}}
 					</div>
 				</div>
 				<div class="col-md-2">
 					<div class="footer-item">
-						<div class="need-help">
+						{{--  <div class="need-help">
 							<h2>about us</h2>
 							<ul>
 								<li><a href="#">ร่วมงาน</a></li>
@@ -24,7 +23,7 @@
 								<li><a href="#">คำถามที่พบบ่อย</a></li>
 								
 							</ul>
-						</div>
+						</div>  --}}
 					</div>
 				</div>
 				<div class="col-md-3">
@@ -46,7 +45,6 @@
 						<div class="footer-item">
 							<div class="about-us">
 								<h2>เกี่ยวกับเรา</h2>
-								<p></p>
 								<ul>
 									<li><a href="https://www.facebook.com/Possible-Car-844450752587638/"><i class="fa fa-facebook"></i></a></li>
 									<li><a href="#"><i class="fa fa-youtube"></i></a></li>
@@ -66,7 +64,7 @@
 					</div>  --}}
 				</div>
 				<div class="col-md-12">
-					<div class="sub-footer">
+					<div class="sub-footer" style="padding:5px;">
 						<p>2019 PossibleCar International Dot Com Co., Ltd. ALL Rights Reserved: <a href="#">ข้อตกลงและเงื่อนไข</a> <a href="#">นโยบายความเป็นส่วนตัว</a> Version Pi 3.14</p>
 					</div>
 				</div>
