@@ -118,7 +118,6 @@
 	
 
 
-
  
     <section>
 		<div class="features-search-section">
