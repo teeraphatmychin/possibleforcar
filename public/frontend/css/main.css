@@ -985,7 +985,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
             position: relative;
         }
         .img-fill{
-            min-height: 1200px;
+            min-height: 1700px;
             display:block;
             position: relative;
 
