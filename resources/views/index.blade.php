@@ -123,7 +123,7 @@
 				<div class="row" >
 					<div class="col-md-12" align="center">
 						<h3  style="color:white;">หากท่านไม่สะดวกกรอกข้อมูล 	<a href="https://line.me/R/ti/p/%40521syyfm"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0" align="center"></a>
-						หรือแอดไลน์ <em>@521syyfm</em></h3>
+						</h3>
 					</div>
 				</div>
 			</div>
