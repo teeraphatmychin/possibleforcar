@@ -33,24 +33,29 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware(['auth','a
 Route::get('/welcome', function () {
     return view('welcome');
 });
-Route::resource('customerOrder', 'AjaxCustomerOrderController');
+Route::resource('customerOrder', 'AjaxCustomerOrderController')->middleware(['auth','auth.admin']);
 Route::post('customerOrder/update', 'AjaxCustomerOrderController@update')->name('customerOrder.update');
+Route::get('customerOrder/destroy/{id}', 'AjaxCustomerOrderController@destroy')->middleware(['auth','auth.admin']);
 Route::get('/', 'All_indexController@shop')->name('index');
-Route::get('about_us', 'All_indexController@about_us')->name('about_us');
-Route::get('contact_us', 'All_indexController@contact_us')->name('contact_us');
-Route::get('blog-view-grid', 'LoadMoreController@blogPost')->name('blog-view-grid');
+
+Route::resource('saleManage', 'AjaxSaleManageController')->middleware(['auth','auth.admin']);
+Route::post('saleManage/update', 'AjaxSaleManageController@update')->name('saleManage.update');
+Route::get('saleManage/destroy/{id}', 'AjaxSaleManageController@destroy')->middleware(['auth','auth.admin']);
+//Route::get('about_us', 'All_indexController@about_us')->name('about_us');
+//Route::get('contact_us', 'All_indexController@contact_us')->name('contact_us');
+//Route::get('blog-view-grid', 'LoadMoreController@blogPost')->name('blog-view-grid');
 // Route::get('/blog_grid_sidebar', 'LoadMoreController@blogPost')->name('blog_grid_sidebar');
 // Route::get('/blog_listing_no_sidebar', 'UserController@blog_listing_no_sidebar')->name('blog_listing_no_sidebar');
 // Route::get('/blog_listing_sidebar', 'UserController@blog_listing_sidebar')->name('blog_listing_sidebar');
-Route::get('car-view-grid', 'LoadMoreController@gridLoad')->name('car-view-grid');
+//Route::get('car-view-grid', 'LoadMoreController@gridLoad')->name('car-view-grid');
 // Route::get('/car_grid_sidebar', 'LoadMoreController@myPost')->name('car_grid_sidebar');
-Route::get('car-view-list', 'LoadMoreController@listLoad')->name('car-view-list');
+//Route::get('car-view-list', 'LoadMoreController@listLoad')->name('car-view-list');
 // Route::get('/car_listing_sidebar', 'LoadMoreController@myPost')->name('car_listing_sidebar');
 //Route::get('/indexs', 'Indexcontroller@shop')->name('indexs');
 // Route::get('/single_car', 'UserController@single_car')->name('single_car');
-Route::get('detail-car/{id}', 'All_indexController@detialpro')->name('detail-car');
+//Route::get('detail-car/{id}', 'All_indexController@detialpro')->name('detail-car');
 // Route::get('/single_post', 'UserController@single_post')->name('single_post');
-Route::get('frontend.article-post/{id}', 'All_indexController@detialpro_blog')->name('article-post');
+//Route::get('frontend.article-post/{id}', 'All_indexController@detialpro_blog')->name('article-post');
 
 ////////////////////////////backend///////////////////////////////
 // Route::get('backend_admin/index',function(){

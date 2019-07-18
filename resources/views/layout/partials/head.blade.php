@@ -41,3 +41,8 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 {{--    --}}
+	<!--  Google -->
+	<meta name=”keywords” content=”รวมโปรโมชั่น,ซื้อรถ,Toyota,Honda,Isuzu,Mazda,Mitsubishi,Nissan,Ford,Chevrolet,Benz,BMW,MG,Volvo” />
+	<meta name="description" content="รวมโปรโมชั่นรถ 2019 รวมรถทุกรุ่น ซื้อรถ ขายรถ ราคาดี">
+
+	<meta http-equiv=”content-language” content=”th”/>

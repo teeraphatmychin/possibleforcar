@@ -52,11 +52,17 @@
                             <a class="nav-link" href="{{url('customer_crud')}}">Manage Customer</a>
                         </li>
                         <li class="nav-item">
+                                <a class="nav-link" href="{{url('customerOrder')}}">Manage Customer</a>
+                            </li>
+                        <li class="nav-item">
                             <a  class="nav-link" href="{{url('ajax-crud')}}">Manage Car</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('car_crud')}}">Manage Car</a>
                         </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{url('saleManage')}}">Manage Sale</a>
+                            </li>
                         @endhasrole
                         @impersonate
                         <li class="nav-item">

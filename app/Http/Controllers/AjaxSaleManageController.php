@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\list_car;
-use App\list_customer;
+use App\list_sale;
+
 use Validator;
-class AjaxCustomerOrderController extends Controller
+class AjaxSaleManageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +19,7 @@ class AjaxCustomerOrderController extends Controller
         
         if(request()->ajax())
         {  
-            return datatables()->of(list_customer::latest()->get())
+            return datatables()->of(list_sale::latest()->get())
                     ->addColumn('action', function($data){
                         $button = '<button type="button" name="edit" id="'.$data->id.'" class="edit btn btn-primary btn-sm">Edit</button>';
                         $button .= '&nbsp;&nbsp;';
@@ -30,7 +30,7 @@ class AjaxCustomerOrderController extends Controller
                     ->rawColumns(['action'])
                     ->make(true);
         }
-        return view('customer_manage');
+        return view('sale_manage');
        
        
    
@@ -55,7 +55,7 @@ class AjaxCustomerOrderController extends Controller
     public function store(Request $request)
     {
         $rules = array(
-            'customer_name'    =>  'required',
+            'sale_name'    =>  'required',
             
            
         );
@@ -67,15 +67,12 @@ class AjaxCustomerOrderController extends Controller
         }
 
         $form_data = array(
-            'customer_name'       =>   $request->customer_name,
-            'customer_phone'        =>   $request->customer_phone,
-            'brand'        =>   $request->brand,
-            'model'        =>   $request->model,
-            'customer_status' => $request->customer_status,
-            'customer_social' =>$request->customer_social,
-            'car_down'  =>$request->car_down,
-            'installment' => $request->installment,
-            'sell_name' => $request->sell_name,
+            'sale_name'       =>   $request->sale_name,
+            'sale_phone'        =>   $request->sale_phone,
+            'sale_social' =>$request->customer_social,
+            'showroom'  =>$request->showroom,
+            'province' => $request->province,
+    
             
         );
 
@@ -105,7 +102,7 @@ class AjaxCustomerOrderController extends Controller
     {
         if(request()->ajax())
         {
-            $data = list_customer::findOrFail($id);
+            $data = list_sale::findOrFail($id);
             return response()->json(['data' => $data]);
         }
     }
@@ -121,7 +118,7 @@ class AjaxCustomerOrderController extends Controller
     {
         
         $rules = array(
-            'customer_name'    =>  'required',
+            'sale_name'    =>  'required',
             
            
         );
@@ -133,19 +130,16 @@ class AjaxCustomerOrderController extends Controller
         }
 
         $form_data = array(
-            'customer_name'       =>   $request->customer_name,
-            'customer_phone'        =>   $request->customer_phone,
-            'brand'        =>   $request->brand,
-            'model'        =>   $request->model,
-            'customer_status' => $request->customer_status,
-            'customer_social' =>$request->customer_social,
-            'car_down'  =>$request->car_down,
-            'installment' => $request->installment,
-            'sell_name' => $request->sell_name,
+            'sale_name'       =>   $request->sale_name,
+            'sale_phone'        =>   $request->sale_phone,
+            'sale_social' =>$request->customer_social,
+            'showroom'  =>$request->showroom,
+            'province' => $request->province,
+    
             
         );
 
-        list_customer::create($form_data);
+        list_sale::create($form_data);
 
         return response()->json(['success' => 'ข้อมูลของท่านถูกส่งแล้ว จะมีเจ้าหน้าที่ติดต่อภายใน 24 ชม.']);
     }
@@ -158,7 +152,7 @@ class AjaxCustomerOrderController extends Controller
      */
     public function destroy($id)
     {
-        $data = list_customer::findOrFail($id);
+        $data = list_sale::findOrFail($id);
         $data->delete();
     }
 }
