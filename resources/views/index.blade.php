@@ -34,7 +34,7 @@
 										<form method="post" id="sample_form" class="form-row bt-light" enctype="multipart/form-data">
 												@csrf
 												<div class="form-group col-md-6">
-													<label for="customer_name" >่อของท่าน : </label>
+													<label for="customer_name" >ชื่อของท่าน : </label>
 													<input type="text" name="customer_name" id="customer_name" class="form-control form-control-lg" placeholder="">
 												</div>
 												<div class="form-group col-md-6">
