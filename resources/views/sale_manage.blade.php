@@ -21,15 +21,15 @@
                                            <table class="table table-bordered table-striped" id="sale_manage_table">
                                                <thead>
                                                    <tr>
-                                                       <th width="5%">sale_name</th>
-                                                       <th width="5%">sale_phone</th>
-                                                       <th width="5%">ID_line</th>
+                                                       <th width="5%">id</th>
+                                                       <th width="5%">Name</th>
+                                                       <th width="5%">Phone</th>
+                                                       <th width="5%">Social</th>
                                                        <th width="5%">Showroom</th>
                                                        <th width="5%">Province</th>
-                                                       <th width="5%">Image</th>
                                                        <th width="5%">Created</th>
                                                        <th width="5%">Updated</th>
-                                                       <th width="5%">Action</th>
+                                                       <th width="10%">Action</th>
                                                    </tr>
                                                </thead>
                                            </table>
@@ -131,6 +131,10 @@
           url: "{{ route('saleManage.index') }}",
          },
          columns:[
+            {
+                data: 'id',
+                name: 'id'
+              },
           {
             data: 'sale_name',
             name: 'sale_name'
