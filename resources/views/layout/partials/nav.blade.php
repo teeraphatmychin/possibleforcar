@@ -1,4 +1,4 @@
-<div class="preloader">
+	<div class="preloader">
         <div class="preloader-bounce">
             <span></span>
             <span></span>
@@ -18,11 +18,11 @@
 		<div id="main-header" class="main-header">
 			<div class="container clearfix">
 				<div class="logo">
-					<a href="{{ route('index') }}"></a>
+					<a href='{{route('index')}}'></a>
 				</div>
 				<div id='cssmenu'>
 					<ul>
-					   	<li><a href='{{ route('index') }}'>หน้าแรก</a></li>
+					   	{{--  <li><a href='{{ route('index') }}'>หน้าแรก</a></li>  --}}
 					   	{{--  <li class='active'><a href='{{ route('car-view-grid')}}'>รถทั้งหมด</a>  --}}
 					      	{{-- <ul>
 					         	<li><a href='#'>Sidebar</a>
@@ -57,8 +57,11 @@
 					         	<li><a href='{{route('single_post')}}'>Single Post</a></li>
 					      	</ul>		 --}}
 					   {{--  </li>  --}}
-					   <li><a href='{{route('about_us')}}'>เกี่ยวกับเรา</a></li>
-					   <li><a href='{{route('contact_us')}}'>ติดต่อเรา</a></li>
+					   
+						{{--  <li><a href='{{url('//nav.cx/be4OWG8')}}'>สอบถามผ่านแชท</a></li>  --}}
+						<li><a href="{{url('//nav.cx/be4OWG8')}}">สอบถามผ่านแชท <i class="far fa-comment-dots"></i></a></li>
+						{{--  <li><a href='{{route('about_us')}}'>เกี่ยวกับเรา</a></li>  --}}
+					   
 					   {{--  <li>
 					   		<a href="#search"><i class="fa fa-search"></i></a>
 					   </li>  --}}

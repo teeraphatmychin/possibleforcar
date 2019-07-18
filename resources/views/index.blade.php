@@ -21,7 +21,7 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-md-6 col-ms-1">
-								<h5 align="center">เราคือโชว์รูมออนไลน์</h5>
+								<h5 >เราคือโชว์รูมออนไลน์</h5>
 								<h3>ช่วยคุณในการเลือกโปรโมชั่น<em>ที่คุ้มค่าที่สุด</em></h3>
 								{{--  <h6 class="secondary-button btn-lg ">
 									<a href="{{ route('index') }}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
@@ -60,7 +60,7 @@
 													<div class="form-group col-md-12">
 														<input type="hidden" name="action" id="action" />
 														<input type="hidden" name="hidden_id" id="hidden_id" />
-														<input type="submit" style="border-radius: 10px;" name="action_button" id="action_button" class="btn btn-success" value="ส่งข้อมูล"/>
+														<input type="submit" style="border-radius: 5px;" name="action_button" id="action_button" class="btn btn-success btn-block" value="ส่งข้อมูล"/>
 													</div>
 												
 										</form>	
@@ -115,7 +115,22 @@
 
 	</div>
 {{-- /////////////////////////////////////////////////////////////////////// --}}
-	
+
+<section>
+	<div class="call-to-action wow fadeIn" data-wow-duration="0.75s">
+		<div class="container">
+			<div class="call-to-action-content">
+				<div class="row" >
+					<div class="col-md-12" align="center">
+						<h3  style="color:white;">หากท่านไม่สะดวกกรอกข้อมูล <em> </em>	<a href="//nav.cx/be4OWG8"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0" align="center"></a>
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 
  
@@ -148,7 +163,7 @@
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-users"></i>
 										<div class="text-content">
-											<h6>เจ้าหน้าจะเสนอโปรโมชั่น</h6>
+											<h6>เจ้าหน้าจะเสนอโปรโมชั่นต่างๆ</h6>
 											<p>มีข้อเสนอ ราคา ของแถม ที่คุ้มค่าที่สุดให้กับคุณ</p>
 										</div>
 									</div>
@@ -157,7 +172,7 @@
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-globe"></i>
 										<div class="text-content">
-											<h6>คุณเลือกข้อเสนอที่ดีทีสุด</h6>
+											<h6>คุณเลือกข้อเสนอที่ดีทีสุดสำหรับคุณ</h6>
 											<p>หรือให้เราคัดเลือกแล้วติดต่อคุณ</p>
 										</div>
 									</div>

@@ -357,13 +357,13 @@ section {
     margin-bottom: 80px
 }
 
-@media (max-width:991px) {
+@media (max-width:767px) {
     .page-heading {
         margin-bottom: 30px
     }
 }
 
-@media (max-width:991px) {
+@media (max-width:767px) {
     .page-heading .heading-content-bg .heading-content {
         text-align: center
     }
@@ -955,8 +955,9 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 
     .img-fill {
         width: 100%;
+        min-height: 100%;
         display: block;
-        overflow: hidden;
+        overflow: visible;
         position: relative;
         text-align: center
     }
@@ -970,37 +971,26 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         font-size: 18px;
         padding: 30px;
       }
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 767px) {
         /* For mobile phones: */
         .info-center{
             top: 9%;
             display: inline-block;
             position: absolute;
-            min-height: 100%;
+            max-height: 100%;
+            overflow: visible;
             
         }
-        .item{
-            min-height: 100%;
-            display:block;
-            position: relative;
-        }
-        .img-fill{
-            min-height: 1700px;
-            display:block;
-            position: relative;
-
-        }
-        
-        
+       
+         
       }
-
-      /* chinchin */
+      /* end chinchin */
     .img-fill img {
         min-height: 100%;
         min-width: 100%;
         position: relative;
         display: inline-block;
-        max-width: none
+        
     }
 
     *,
@@ -1046,8 +1036,8 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
     }
 
     .Modern-Slider .item .info>div {
-        display: inline-block!important;
-        vertical-align: middle
+        display: block!important;
+        vertical-align: middle;
     }
 
     .Modern-Slider .NextArrow {
@@ -1277,7 +1267,8 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         display: block;
         overflow: hidden;
         margin: 0;
-        padding: 0
+        padding: 0;
+        height: 1200px;
     }
 
     .slick-list:focus {
@@ -1341,9 +1332,13 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         border: 1px solid transparent
     }
 
-    @media (max-width:991px) {
-    .Modern-Slider .item .img-fill .info {
-           line-height: 100vh
+    @media (max-width:767px) {
+    .Modern-Slider  {
+           overflow: visible;
+           position: relative;
+           min-height:100% !important;
+           display: block;
+           
         }
     }
 
@@ -1584,7 +1579,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         border-right: 3px solid #fff
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .on-grids .car-item .down-content ul li,
         .recent-cars .car-item .down-content ul li {
             width: 23%
@@ -1686,7 +1681,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         background-size: cover
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .on-listing .car-item .thumb-content .thumb-inner img {
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
@@ -1699,7 +1694,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         padding: 30px 30px 30px 0px
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .on-listing .car-item .down-content {
             padding: 30px
         }
@@ -1738,7 +1733,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         border-right: 3px solid #fff
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .on-listing .car-item .down-content ul li {
             width: 23%
         }
@@ -1807,7 +1802,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         font-weight: 700
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .single-car .car-details h4 {
             margin-top: 30px
         }
@@ -1888,7 +1883,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         color: #333333
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .more-details .item .contact-info {
             margin-top: 20px
         }
@@ -1899,7 +1894,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         margin-bottom: 15px
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .more-details .item .contact-info .phone {
             margin-bottom: 20px
         }
@@ -1924,7 +1919,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         color: #1e1e1e
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .more-details .item .contact-info span {
             text-align: center
         }
@@ -2095,7 +2090,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         margin-bottom: 60px
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .latest-news {
             margin-bottom: 0px
         }
@@ -2109,7 +2104,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         text-align: left
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .latest-news .item {
             margin-bottom: 30px
         }
@@ -2667,7 +2662,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         color: #1e1e1e
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .contact-content .send-message {
             margin-bottom: 30px;
             padding-bottom: 30px;
@@ -2687,7 +2682,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         border: 1px solid #eee
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .contact-content .send-message input {
             margin-bottom: 30px
         }
@@ -2716,7 +2711,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         border-color: #f4c23d
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .contact-content .send-message textarea {
             margin-top: 0px
         }
@@ -2739,10 +2734,10 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         border-radius: 5px;
         -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-        padding: 40px
+        padding: 10px
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .call-to-action .call-to-action-content {
             text-align: center
         }
@@ -2757,7 +2752,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         color: #fff
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .call-to-action .call-to-action-content p {
             padding-bottom: 20px
         }
@@ -2773,7 +2768,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         float: right
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .call-to-action .call-to-action-content .secondary-button {
             float: none
         }
@@ -2800,7 +2795,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         color: #fff
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .service-item {
             margin-bottom: 30px
         }
@@ -2838,15 +2833,15 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         margin-top: -310px
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         section.top-slider-features {
             display: none
         }
     }
     
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .features-search-section {
-            margin-top: 30px
+            margin-top: 10px
         }
     }
 
@@ -2864,7 +2859,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         border-top: 3px solid #f4c23d
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .features-search-section .search-content {
             margin-top: 25px
         }
@@ -2940,7 +2935,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         background-color: transparent
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .features-search-section .search-content .search-form select {
             margin-bottom: 15px
         }
@@ -2967,7 +2962,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         margin-left: 30px
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .sidebar-widgets {
             margin-left: 0px;
             margin-top: 40px;
@@ -3015,7 +3010,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         border-top: 3px solid #f4c23d
     }
 
-    @media (max-width:991px) {
+    @media (max-width:767px) {
         .sidebar-widgets .sidebar-widget .search-content {
             margin-top: 30px
         }
@@ -3461,16 +3456,17 @@ footer {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 60px 15px 0px 15px
+    padding: 30px 15px 0px 15px
 }
 
-@media (max-width:991px) {
+@media (max-width:767px) {
     footer {
-        margin-top: 30px
+        margin-top: 10px;
+        padding : 10px ;
     }
 }
 
-@media (max-width:991px) {
+@media (max-width:767px) {
     footer .footer-item {
         margin-bottom: 60px
     }
@@ -3665,7 +3661,7 @@ footer .sub-footer p a:hover {
     color: #fff
 }
 
-@media (max-width:991px) {
+@media (max-width:767px) {
     footer .sub-footer {
         margin-top: 0px
     }
