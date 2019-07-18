@@ -977,7 +977,6 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
             top: 9%;
             display: inline-block;
             position: absolute;
-            max-height: 100%;
             overflow: visible;
             
         }
@@ -1310,7 +1309,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
     .slick-slide {
         display: none;
         float: left;
-        height: 100%;
+       
         min-height: 1px
     }
 
