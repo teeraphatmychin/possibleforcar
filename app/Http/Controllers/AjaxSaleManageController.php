@@ -78,7 +78,7 @@ class AjaxSaleManageController extends Controller
 
         list_sale::create($form_data);
 
-        return response()->json(['success' => 'ข้อมูลของท่านถูกส่งแล้ว จะมีเจ้าหน้าที่ติดต่อภายใน 24 ชม.']);
+        return response()->json(['success' => 'ข้อมูลได้ถูกสร้างแล้ว']);
     }
 
     /**
@@ -141,7 +141,7 @@ class AjaxSaleManageController extends Controller
 
         list_sale::create($form_data);
 
-        return response()->json(['success' => 'ข้อมูลของท่านถูกส่งแล้ว จะมีเจ้าหน้าที่ติดต่อภายใน 24 ชม.']);
+        return response()->json(['success' => 'ข้อมูลได้ถูกอัดเดทแล้ว']);
     }
 
     /**
