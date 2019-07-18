@@ -163,7 +163,7 @@
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-users"></i>
 										<div class="text-content">
-											<h6>เจ้าหน้าจะเสนอโปรโมชั่นต่างๆ</h6>
+											<h6>เจ้าหน้าที่จะเสนอโปรโมชั่นต่างๆ</h6>
 											<p>มีข้อเสนอ ราคา ของแถม ที่คุ้มค่าที่สุดให้กับคุณ</p>
 										</div>
 									</div>
@@ -260,7 +260,28 @@
 			</div>
 	</section>
 		
-	
+	<!-- Modal -->
+	<div id="success_tic" class="modal fade" role="dialog">
+  		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<a class="close" href="#" data-dismiss="modal">&times;</a>
+				<div class="page-body">
+					<div class="head">  
+						<h5 style="margin-top:5px;">ข้อมูลของท่านถูกส่งแล้ว จะมีเจ้าหน้าที่ติดต่อภายใน 24 ชม.</h5>
+						<p>ขอขอบคุณที่ท่านติดต่อเรา เราจะเร่งพัฒนาให้ดียิ่งขึ้น</p>
+					</div>
+					<h1 style="text-align:center;">
+						<div class="checkmark-circle">
+							<div class="background"></div>
+							<div class="checkmark draw"></div>
+						</div>
+					<h1>
+				</div>
+			</div>
+    	</div>
+  	</div>
+
 	
 	<!-- Modal -->
 	<div class="modal fade" id="myModal2" role="dialog" >	   
@@ -343,10 +364,11 @@
 			$('#action_button').val("ส่งข้อมูล");
 			$('#action').val("ส่งข้อมูล");
 			$('#formModal').appendTo("body").modal('show');
-						 
+				 
 
 			$('#sample_form').on('submit', function(event){
 				event.preventDefault();
+				
 				if($('#action').val() == 'ส่งข้อมูล')
 				{
 					$.ajax({
@@ -370,14 +392,18 @@
 						  	html += '</div>';
 						 	}
 						 	if(data.success)
-						 	{
-						  		html = '<div class="alert alert-success">' + data.success + '</div>';
-						  		$('#sample_form')[0].reset();
+						 	{	
+								$("#success_tic").modal({backdrop:true});
+						  		//html = '<div class="alert alert-success">' + data.success + '</div>';
+								$('#sample_form')[0].reset();
+								  
 						 	}
-						 	$('#form_result').html(html);
+							$('#form_result').html(html);
+							 
 						}
 					})
-				}			
+				}	
+						
 		 	});
 			  
 		});
