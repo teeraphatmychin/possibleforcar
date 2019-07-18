@@ -21,9 +21,10 @@
                                            <table class="table table-bordered table-striped" id="customer_manage_table">
                                                <thead>
                                                    <tr>
-                                                       <th width="5%">customer_name</th>
-                                                       <th width="5%">customer_phone</th>
-                                                       <th width="5%">customer_social</th>
+                                                        <th width="5%">ID</th>
+                                                       <th width="5%">name</th>
+                                                       <th width="5%">phone</th>
+                                                       <th width="5%">social</th>
                                                        <th width="5%">brand</th>
                                                        <th width="5%">model</th>
                                                        <th width="5%">car_down</th>
@@ -157,6 +158,10 @@
           url: "{{ route('customerOrder.index') }}",
          },
          columns:[
+            {
+                data: 'id',
+                name: 'id'
+              },
           {
             data: 'customer_name',
             name: 'customer_name'
