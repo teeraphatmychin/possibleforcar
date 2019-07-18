@@ -262,9 +262,9 @@
 		
 	<!-- Modal -->
 	<div id="success_tic" class="modal fade" role="dialog">
-  		<div class="modal-dialog modal-lg modal-dialog-centered">
+  		<div class="modal-dialog modal-dialog-centered">
 			<!-- Modal content-->
-			<div class="modal-content">
+			<div class="modal-body">
 				<a class="close" href="#" data-dismiss="modal">&times;</a>
 				<div class="page-body">
 					<div class="head">  
