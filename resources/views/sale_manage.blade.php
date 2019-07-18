@@ -62,7 +62,7 @@
                    </div>
                   </div>
                   <div class="form-group">
-                        <label class="control-label col-md-4">customer_phone : </label>
+                        <label class="control-label col-md-4">Phone : </label>
                         <div class="col-md-8">
                           <input type="text" name="sale_phone" id="sale_phone" class="form-control" />
                         </div>
