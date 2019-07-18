@@ -21,19 +21,19 @@
                                            <table class="table table-bordered table-striped" id="customer_manage_table">
                                                <thead>
                                                    <tr>
-                                                        <th width="5%">ID</th>
+                                                       <th width="1%">ID</th>
                                                        <th width="5%">name</th>
                                                        <th width="5%">phone</th>
                                                        <th width="5%">social</th>
-                                                       <th width="5%">brand</th>
-                                                       <th width="5%">model</th>
-                                                       <th width="5%">car_down</th>
-                                                       <th width="5%">installment</th>
-                                                       <th width="5%">customer_status</th>
-                                                       <th width="5%">sell_name</th>
+                                                       <th width="3%">brand</th>
+                                                       <th width="10%">model</th>
+                                                       <th width="3%">car_down</th>
+                                                       <th width="3%">installment</th>
+                                                       <th width="3%">customer_status</th>
+                                                       <th width="3%">sell_name</th>
                                                        <th width="5%">Created</th>
                                                        <th width="5%">Updated</th>
-                                                       <th width="5%">Action</th>
+                                                       <th width="10%">Action</th>
                                                    </tr>
                                                </thead>
                                            </table>
