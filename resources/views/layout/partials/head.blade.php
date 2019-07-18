@@ -43,5 +43,5 @@
 {{--    --}}
 	<!--  Google -->
 	<meta name=”keywords” content=”รวมโปรโมชั่นรถ,ซื้อรถ,ขายรถ,Toyota,Honda,Isuzu,Mazda,Mitsubishi,Nissan,Ford,Chevrolet,Benz,BMW,MG,Volvo,เปรียบเทียบรถ” />
-	<meta name="description" content="รวมโปรโมชั่นรถ 2019 รวมรถทุกรุ่น ซื้อรถ ขายรถ ราคาดี">
+	<meta name="description" content="โปรโมชั่นรถล่าสุด 2019 ข้อเสนอสุดพิเศษ พบกับข้อเสนอสุดพิเศษ">
 	<meta http-equiv=”content-language” content=”th”/>

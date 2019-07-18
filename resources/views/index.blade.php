@@ -27,7 +27,7 @@
 									<a href="{{ route('index') }}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
 								</h6>	  --}}
 							</div>
-							<div class="col-md-6 col-ms-1 bg-light" style="border-radius: 10px;">
+							<div class="col-md-6 col-md-2 bg-light" style="border-radius: 10px;">
 									<div class="container" style="align-content: center;">
 											<span id="form_result"></span>
 											 <h3 style="color:black">รับโปรโมชั่น ฟรีไม่มีค่าใช้จ่าย</h3>
