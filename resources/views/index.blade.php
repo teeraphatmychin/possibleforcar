@@ -21,7 +21,7 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-md-6 col-ms-1">
-								<h5 >เราคือโชว์รูมออนไลน์</h5>
+								<h5>เราคือโชว์รูมออนไลน์</h5>
 								<h3>ช่วยคุณในการเลือกโปรโมชั่น<em>ที่คุ้มค่าที่สุด</em></h3>
 								{{--  <h6 class="secondary-button btn-lg ">
 									<a href="{{ route('index') }}">เลือกโปรโมชั่น<i class="fa fa-car"></i></a>
@@ -30,7 +30,7 @@
 							<div class="col-md-6 col-ms-1 bg-light" style="border-radius: 10px;">
 									<div class="container" style="align-content: center;">
 											<span id="form_result"></span>
-											 <h3 style="color:black">ขอรับโปรโมชั่น ฟรีไม่มีค่าใช้จ่าย</h3>
+											 <h3 style="color:black">รับโปรโมชั่น ฟรีไม่มีค่าใช้จ่าย</h3>
 										<form method="post" id="sample_form" class="form-row bt-light" enctype="multipart/form-data">
 												@csrf
 												<div class="form-group col-md-6">
