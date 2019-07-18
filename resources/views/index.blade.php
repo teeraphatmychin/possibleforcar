@@ -30,7 +30,7 @@
 							<div class="col-md-6 col-ms-1 bg-light" style="border-radius: 10px;">
 									<div class="container" style="align-content: center;">
 											<span id="form_result"></span>
-											 <h3 style="color:black">แบบฟอร์มขอรับโปรโมชั่น ฟรีไม่มีค่าใช้จ่าย</h3>
+											 <h4 style="color:black">ขอรับโปรโมชั่น ฟรีไม่มีค่าใช้จ่าย</h4>
 										<form method="post" id="sample_form" class="form-row bt-light" enctype="multipart/form-data">
 												@csrf
 												<div class="form-group col-md-6">
