@@ -59,7 +59,7 @@
 					   {{--  </li>  --}}
 					   
 						{{--  <li><a href='{{url('//nav.cx/be4OWG8')}}'>สอบถามผ่านแชท</a></li>  --}}
-						<li><a href="{{url('//nav.cx/be4OWG8')}}">สอบถามผ่านแชท <i class="far fa-comment-dots"></i></a></li>
+						<li><a href="https://line.me/R/ti/p/%40521syyfm">สอบถามผ่านแชท <i class="far fa-comment-dots"></i></a></li>
 						{{--  <li><a href='{{route('about_us')}}'>เกี่ยวกับเรา</a></li>  --}}
 					   
 					   {{--  <li>
