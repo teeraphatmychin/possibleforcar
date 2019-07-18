@@ -4,7 +4,7 @@
 <![endif]-->
 <html lang="en-US">
 <head>
-		@section('title','รวมโปรโมชั่นรถ ฟรีดาวน์ mazda honda toyota ')
+		@section('title','รวมโปรโมชั่นรถ mazda honda toyota ')
 		@include('layout.partials.head')
 		
 </head>
