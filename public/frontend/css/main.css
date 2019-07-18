@@ -1268,7 +1268,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         overflow: hidden;
         margin: 0;
         padding: 0;
-        height: 1200px;
+
     }
 
     .slick-list:focus {
@@ -1337,8 +1337,15 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
            overflow: visible;
            position: relative;
            min-height:100% !important;
-           display: block;
-           
+           display: block;  
+        }
+        .slick-list {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            min-height: 1300px;
         }
     }
 

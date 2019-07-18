@@ -122,7 +122,7 @@
 			<div class="call-to-action-content">
 				<div class="row" >
 					<div class="col-md-12" align="center">
-						<h3  style="color:white;">หากท่านไม่สะดวกกรอกข้อมูล <em> </em>	<a href="//nav.cx/be4OWG8"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0" align="center"></a>
+						<h3  style="color:white;">หากท่านไม่สะดวกกรอกข้อมูล <em> </em>	<a href="https://nav.cx/be4OWG8"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0" align="center"></a>
 						</h3>
 					</div>
 				</div>
