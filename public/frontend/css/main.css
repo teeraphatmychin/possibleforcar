@@ -3819,3 +3819,14 @@ footer .sub-footer p a:hover {
    }
    
    /* 05. End Success modal test */
+
+   /* 06. aceessory      */
+
+   .flex-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .flex-container > div {
+    text-align: center;
+  }

@@ -134,8 +134,8 @@
 
     <section>
 		<div class="features-search-section">
-			<div class="container">
-				<div align="center"><h1>บริการของเราคือ</h1></div>
+				<div align="center"><h1>บริการทาง Possible Car</h1></div>
+				<div class="container">
 					<div class="row">	
 						<div class="col-md-12">
 							<div class="row">
@@ -143,8 +143,8 @@
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-car"></i>
 											<div class="text-content">
-												<h6>คุณไม่ต้องไปหลายโชว์รูมด้วยตัวเอง</h6>
-												<p>เพียงแค่สมัครออนไลน์กับเรา (ฟรี)</p>
+												<h6>เรามีโปรโมชั่นรถให้คุณ</h6>
+												<p>เพียงแค่กรอกข้อมูลกับเรา (ฟรี)</p>
 											</div>
 									</div>
 								</div>
@@ -152,8 +152,8 @@
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-search"></i>
 										<div class="text-content">
-											<h6>เรามีโปรโมชั่นรถให้คุณ (ฟรี)</h6>
-											<p>กว่า 100 โชว์รูม 1000 กว่าโปรโมชั่น</p>
+											<h6>กว่า 100 โชว์รูม 1000 กว่าโปรโมชั่น</h6>
+											<p>จากเซลล์มีคุณภาพ ที่คัดสรรอย่างดีเพื่อคุณ</p>
 										</div>
 									</div>
 								</div>
@@ -161,8 +161,8 @@
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-users"></i>
 										<div class="text-content">
-											<h6>เจ้าหน้าที่จะเสนอโปรโมชั่นต่างๆ</h6>
-											<p>มีข้อเสนอ ราคา ของแถม ที่คุ้มค่าที่สุดให้กับคุณ</p>
+											<h6>เลือกข้อเสนอและเซลล์ที่ชอบ</h6>
+											<p>ยังไม่พอเท่านี้! คุณยังสามารถต่อรองข้อเสนอได้อีก</p>
 										</div>
 									</div>
 								</div>
@@ -170,8 +170,8 @@
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
 										<i class="fa fa-globe"></i>
 										<div class="text-content">
-											<h6>คุณเลือกข้อเสนอที่ดีทีสุดสำหรับคุณ</h6>
-											<p>หรือให้เราคัดเลือกแล้วติดต่อคุณ</p>
+											<h6>คุณไม่ต้องไปหลายโชว์รูมด้วยตัวเอง เพียงแค่</h6>
+											<p>รับข้อมูลจากเราได้ทุกที่ ทุกเวลา 24 ชม.</p>
 										</div>
 									</div>
 								</div>
