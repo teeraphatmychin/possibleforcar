@@ -47,7 +47,7 @@ p {
 }
 
 section {
-    padding: 80px 0px 0px 0px
+    padding: 50px 0px 0px 0px
 }
 
 .primary-button a {
@@ -1343,7 +1343,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
             overflow: hidden;
             margin: 0;
             padding: 0;
-            min-height: 1400px;
+            min-height: 1200px;
         }
     }
 
@@ -2731,7 +2731,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
     /* 03.05. Features Starts */
 
     .call-to-action {
-        margin-top: -30px
+        margin-top: -10px
     }
 
     .call-to-action .call-to-action-content {
@@ -2866,7 +2866,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 
     @media (max-width:767px) {
         .features-search-section .search-content {
-            margin-top: 25px
+            margin-top: 20px
         }
     }
 
