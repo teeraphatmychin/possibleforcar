@@ -116,24 +116,22 @@
 	</div>
 {{-- /////////////////////////////////////////////////////////////////////// --}}
 
-<section>
-	<div class="call-to-action wow fadeIn" data-wow-duration="0.75s">
-		<div class="container">
-			<div class="call-to-action-content">
-				<div class="row" >
-					<div class="col-md-12" align="center">
-						<h3  style="color:white;">หากท่านไม่สะดวกกรอกข้อมูล 	<a href="https://line.me/R/ti/p/%40521syyfm"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0" align="center"></a>
-						</h3>
+	<section>
+		<div class="call-to-action wow fadeIn" data-wow-duration="0.75s">
+			<div class="container">
+				<div class="call-to-action-content">
+					<div class="row" >
+						<div class="col-md-12" align="center">
+							<h3  style="color:white;">หากท่านไม่สะดวกกรอกข้อมูล <a href="https://line.me/R/ti/p/%40521syyfm"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0" align="center"></a>
+							</h3>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
 
-
- 
     <section>
 		<div class="features-search-section">
 			<div class="container">
