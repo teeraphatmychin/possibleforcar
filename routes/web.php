@@ -33,9 +33,9 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware(['auth','a
 Route::get('/welcome', function () {
     return view('welcome');
 });
-Route::resource('customerOrder', 'AjaxCustomerOrderController')->middleware(['auth','auth.admin']);
+Route::resource('customerOrder', 'AjaxCustomerOrderController');
 Route::post('customerOrder/update', 'AjaxCustomerOrderController@update')->name('customerOrder.update');
-Route::get('customerOrder/destroy/{id}', 'AjaxCustomerOrderController@destroy')->middleware(['auth','auth.admin']);
+//Route::get('customerOrder/destroy/{id}', 'AjaxCustomerOrderController@destroy')->middleware(['auth','auth.admin']);
 Route::get('/', 'All_indexController@shop')->name('index');
 
 Route::resource('saleManage', 'AjaxSaleManageController')->middleware(['auth','auth.admin']);

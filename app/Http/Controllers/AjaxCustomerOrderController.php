@@ -17,20 +17,14 @@ class AjaxCustomerOrderController extends Controller
     public function index()
     {   
         
+        //$detail_car=list_car::findOrFail($id);
+        $slide_similars=list_car::all();
+        
         if(request()->ajax())
         {  
-            return datatables()->of(list_customer::latest()->get())
-                    ->addColumn('action', function($data){
-                        $button = '<button type="button" name="edit" id="'.$data->id.'" class="edit btn btn-primary btn-sm">Edit</button>';
-                        $button .= '&nbsp;&nbsp;';
-                        $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm">Delete</button>';
-                        return $button;
-                    })
-                    
-                    ->rawColumns(['action'])
-                    ->make(true);
+           // $detail_car=list_car::findOrFail($id);        
         }
-        return view('customer_manage');
+        return view('detailtemp-car',compact('slide_similars'));
        
        
    
@@ -71,11 +65,12 @@ class AjaxCustomerOrderController extends Controller
             'customer_phone'        =>   $request->customer_phone,
             'brand'        =>   $request->brand,
             'model'        =>   $request->model,
+            'year_model'        =>   $request->year_model,
+            'interest'        =>   $request->interest,
             'customer_status' => $request->customer_status,
             'customer_social' =>$request->customer_social,
             'car_down'  =>$request->car_down,
             'installment' => $request->installment,
-            'sell_name' => $request->sell_name,
             
         );
 
@@ -103,11 +98,7 @@ class AjaxCustomerOrderController extends Controller
      */
     public function edit($id)
     {
-        if(request()->ajax())
-        {
-            $data = list_customer::findOrFail($id);
-            return response()->json(['data' => $data]);
-        }
+        
     }
 
     /**
@@ -119,35 +110,7 @@ class AjaxCustomerOrderController extends Controller
      */
     public function update(Request $request)
     {
-        
-        $rules = array(
-            'customer_name'    =>  'required',
-            
-           
-        );
-        $error = Validator::make($request->all(), $rules);
-
-        if($error->fails())
-        {
-            return response()->json(['errors' => $error->errors()->all()]);
-        }
-
-        $form_data = array(
-            'customer_name'       =>   $request->customer_name,
-            'customer_phone'        =>   $request->customer_phone,
-            'brand'        =>   $request->brand,
-            'model'        =>   $request->model,
-            'customer_status' => $request->customer_status,
-            'customer_social' =>$request->customer_social,
-            'car_down'  =>$request->car_down,
-            'installment' => $request->installment,
-            'sell_name' => $request->sell_name,
-            
-        );
-
-        list_customer::create($form_data);
-
-        return response()->json(['success' => 'ข้อมูลของท่านถูกส่งแล้ว จะมีเจ้าหน้าที่ติดต่อภายใน 24 ชม.']);
+       
     }
 
     /**
@@ -158,8 +121,7 @@ class AjaxCustomerOrderController extends Controller
      */
     public function destroy($id)
     {
-        $data = list_customer::findOrFail($id);
-        $data->delete();
+       
     }
 }
 
