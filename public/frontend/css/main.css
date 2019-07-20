@@ -3830,3 +3830,24 @@ footer .sub-footer p a:hover {
   .flex-container > div {
     text-align: center;
   }
+/* counter */
+  .wrapper { width: 980px; margin: 30px auto; position: relative;}
+  .counter { background-color: #ffffff; padding: 20px 0; border-radius: 5px;}
+  .count-title { font-size: 40px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
+  .count-text { font-size: 13px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
+  .counter:hover i {  background-color: #2959ad; color: #fff}
+  .counter i {
+    font-size: 24px;
+    color: #1e1e1e;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #f4c23d;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s
+}
