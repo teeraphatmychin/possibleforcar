@@ -271,28 +271,28 @@
 				<div class="col">
 					<div class="counter">
 					  	<i class="fas fa-medal"></i>
-					  	<h2 class="timer count-title count-number" data-to="2520" data-speed="5000"></h2>
+					  	<h2 class="timer count-title count-number" data-to="2520" data-speed="6000"></h2>
 					   	<h6 class="count-text ">กว่าโปรโมชั่นมากมายให้เลือก</h6>
 					</div>
 				</div>
 				<div class="col">
 					<div class="counter">
 						<i class="far fa-thumbs-up"></i>
-						<h2 class="timer count-title count-number" data-to="51" data-speed="2000"></h2>
+						<h2 class="timer count-title count-number" data-to="57" data-speed="4000"></h2>
 					  	<h6 class="count-text ">คนที่เลือกใช้บริการเรา</h6>
 					</div>
 				</div>
 				<div class="col">
 					<div class="counter">
 						<i class="fas fa-file-export"></i>
-						<h2 class="timer count-title count-number" data-to="257" data-speed="2000"></h2>
+						<h2 class="timer count-title count-number" data-to="286" data-speed="4000"></h2>
 						<h6 class="count-text ">กว่าโปรโมชั่นที่เสนอไปแล้ว</h6>
 					</div>
 				</div>
 				<div class="col">
 					<div class="counter">
 						<i class="	far fa-user"></i>
-						<h2 class="timer count-title count-number" data-to="126" data-speed="2000"></h2>
+						<h2 class="timer count-title count-number" data-to="126" data-speed="4000"></h2>
 						<h6 class="count-text ">กว่าเจ้าหน้าที่ ที่พร้อมให้บริการคุณ</h6>
 					</div>
 				</div>
