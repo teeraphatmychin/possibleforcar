@@ -15,15 +15,15 @@
 				</div>
 				<div class="col-md-2">
 					<div class="footer-item">
-						{{--  <div class="need-help">
-							<h2>about us</h2>
+						<div class="need-help">
+							<h2>เกี่ยกับเรา</h2>
 							<ul>
-								<li><a href="#">ร่วมงาน</a></li>
-								<li><a href="#">บล็อก</a></li>
-								<li><a href="#">คำถามที่พบบ่อย</a></li>
+								<li><a href="#">ร่วมงานกับเรา</a></li>
+								{{--  <li><a href="#">บล็อก</a></li>
+								<li><a href="#">คำถามที่พบบ่อย</a></li>  --}}
 								
 							</ul>
-						</div>  --}}
+						</div>
 					</div>
 				</div>
 				<div class="col-md-3">

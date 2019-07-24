@@ -3832,10 +3832,14 @@ footer .sub-footer p a:hover {
   }
 /* counter */
   .wrapper { width: 980px; margin: 30px auto; position: relative;}
-  .counter { background-color: #ffffff; padding: 20px 0; border-radius: 5px;}
+  .counter { background-color: #ffffff; padding: 20px 0; border-radius: 5px;  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15); border-bottom: 3px solid transparent; -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;}
   .count-title { font-size: 40px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
   .count-text { font-size: 13px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
   .counter:hover i {  background-color: #2959ad; color: #fff}
+  .counter:hover {border-bottom: 3px solid #2959ad}
   .counter i {
     font-size: 24px;
     color: #1e1e1e;

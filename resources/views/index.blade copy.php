@@ -89,10 +89,8 @@
 									<span>{{$product->price}}บาท</span>
 								</div>
 							</div>
-							{{--  //@endif  --}}
-	
-							@endforeach 
-		
+							{{--  //@endif  --}}	
+							@endforeach 		
 						</div>
 					</div>
 				</div>

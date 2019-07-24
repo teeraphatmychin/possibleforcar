@@ -4,8 +4,9 @@
 <![endif]-->
 <html lang="en-US">
 <head>
-		@section('title','รวมโปรโมชั่นรถ mazda honda toyota ')
 		@include('layout.partials.head')
+		@section('title','รวมโปรโมชั่นรถ mazda honda toyota ')
+		
 		
 </head>
 <body>
@@ -115,7 +116,6 @@
 
 	</div>
 {{-- /////////////////////////////////////////////////////////////////////// --}}
-
 	<section>
 		<div class="call-to-action wow fadeIn" data-wow-duration="0.75s">
 			<div class="container">
@@ -132,6 +132,57 @@
 	</section>
 
 
+	<section>
+		<div class="container-fluid" style="padding:10px">
+		<div class="container">     
+			<div class="row">
+				<div class="col-sm-6">
+					<div align="center"><h3>ซื้อรถด้วยตนเอง</h3></div><br>
+					<img src="{{asset('images/buyMyself.jpg')}}" alt="">{{--150x150--}}
+					<h5>เดินทางไปยังโชว์รูมต่างๆเพื่อเปรียบเทียบโปรโมชั่น เสียเงินและเวลา ไม่สะดวกในการติดตาม</h5><br>
+				</div>
+				<div class="col-sm-6 ">
+					<div align="center"><h3>ใช้บริการทางเรา</h3></div><br>
+					<img src="{{asset('images/byPossiblecar.jpg')}}" alt="">{{--150x150--}}
+					<h5>เรารวมโปรโมชั่นรถให้คุณกว่า 100 โชว์รูม 1000 กว่าโปรโมชั่น คุณไม่ต้องไปหลายโชว์รูมด้วยตัวเอง(เพียงแค่กรอกข้อมูลกับเรา)</h5><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<img src="{{asset('images/financeMyself.jpg')}}" alt="">{{--150x150--}}
+					<h5>ปกติทางโชว์รูมจะจัดไฟแนนซ์ให้กับท่านโดยที่คุณไม่มีสิทธ์ในการเลือกไฟแนนซ์กับธนาคารและข้อเสนอ</h5><br>
+				</div>
+				<div class="col-sm-6">
+					<img src="{{asset('images/financeByPossiblecar.jpg')}}" alt="">{{--150x150--}}
+					<h5>เราเปรียบเทียบโปรโมชั่นของทุกธนาคารแล้ว คุณสามารถเลือกไฟแนนซ์กับธนาคารและโปรโมชั่นไหนก็ได้</h5><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<img src="{{asset('images/difficult.jpg')}}" alt="">{{--150x150--}}
+					<h5>การทำไฟแนนซ์ ยุ่งยากในการจัดเอกสารและอาจมีค่าใช้จ่ายบางอย่าง</h5><br>
+				</div>
+				<div class="col-sm-6">
+					<img src="{{asset('images/easy.jpg')}}" alt="">{{--150x150--}}
+					<h5>ทางเราดำเนินเอกสารให้หลายๆที่ให้ฟรี อีกทั้งรู้ผลอนุมัติคร่าวๆได้ทันที</h5><br>
+				</div>
+			</div>
+			<div class="row">
+					<div class="col-sm-6 ">
+						<img src="{{asset('images/uncomfort.jpg')}}" alt="">{{--150x150--}}
+						<h5>อาจเป็นการซื้อที่เสียเวลาและยุ่งยากสำหรับคุณ</h5><br>
+					</div>
+					<div class="col-sm-6 ">
+						<img src="{{asset('images/comfort.jpg')}}" alt="">{{--150x150--}}
+						<h5>ซื้อรถง่าย ประหยัด คุ้มค่า สะดวกสะบายสำหรับคุณ</h5><br>
+					</div>
+				</div>
+		</div>
+		</div>
+	</section>
+
+	
+{{--  
     <section>
 		<div class="features-search-section">
 				<div align="center"><h1>บริการทาง Possible Car</h1></div>
@@ -252,14 +303,14 @@
 									</div>
 								</div>
 							</div>
-						</div>  --}}
+						</div>  
 					</div>
 				</div>
 			</div>
-	</section>
+	</section>  --}}
 
-	<section>
-		<div class="container">
+	<section class="bg-light" style="padding:20px">
+		<div class="container ">
 			<div class="row">
 			<br/>
 				<div class="col text-center">
@@ -278,14 +329,14 @@
 				<div class="col">
 					<div class="counter">
 						<i class="far fa-thumbs-up"></i>
-						<h2 class="timer count-title count-number" data-to="58" data-speed="4000"></h2>
+						<h2 class="timer count-title count-number" data-to="67" data-speed="4000"></h2>
 					  	<h6 class="count-text ">คนที่เลือกใช้บริการเรา</h6>
 					</div>
 				</div>
 				<div class="col">
 					<div class="counter">
 						<i class="fas fa-file-export"></i>
-						<h2 class="timer count-title count-number" data-to="291" data-speed="6000"></h2>
+						<h2 class="timer count-title count-number" data-to="336" data-speed="6000"></h2>
 						<h6 class="count-text ">กว่าโปรโมชั่นที่เสนอไปแล้ว</h6>
 					</div>
 				</div>
