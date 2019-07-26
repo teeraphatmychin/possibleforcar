@@ -132,7 +132,54 @@
 	</section>
 
 
-	
+	<section>
+			<div class="container-fluid" style="padding:10px">
+			<div class="container">     
+				<div class="row">
+					<div class="col-sm-6">
+						<div align="center"><h3>ซื้อรถด้วยตนเอง</h3></div><br>
+						<img src="{{asset('images/buyMyself.jpg')}}" alt="">{{--150x150--}}
+						<h5>เดินทางไปยังโชว์รูมต่างๆเพื่อเปรียบเทียบโปรโมชั่น เสียเงินและเวลา ไม่สะดวกในการติดตาม</h5><br>
+					</div>
+					<div class="col-sm-6 ">
+						<div align="center"><h3>ใช้บริการทางเรา</h3></div><br>
+						<img src="{{asset('images/byPossiblecar.jpg')}}" alt="">{{--150x150--}}
+						<h5>เรารวมโปรโมชั่นรถให้คุณกว่า 100 โชว์รูม 1000 กว่าโปรโมชั่น คุณไม่ต้องไปหลายโชว์รูมด้วยตัวเอง(เพียงแค่กรอกข้อมูลกับเรา)</h5><br>
+					</div>
+				</div>
+				{{--  <div class="row">
+					<div class="col-sm-6">
+						<img src="{{asset('images/financeMyself.jpg')}}" alt="">
+						<h5>ปกติทางโชว์รูมจะจัดไฟแนนซ์ให้กับท่านโดยที่คุณไม่มีสิทธ์ในการเลือกไฟแนนซ์กับธนาคารและข้อเสนอ</h5><br>
+					</div>
+					<div class="col-sm-6">
+						<img src="{{asset('images/financeByPossiblecar.jpg')}}" alt="">
+						<h5>เราเปรียบเทียบโปรโมชั่นของทุกธนาคารแล้ว คุณสามารถเลือกไฟแนนซ์กับธนาคารและโปรโมชั่นไหนก็ได้</h5><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="{{asset('images/difficult.jpg')}}" alt="">
+						<h5>การทำไฟแนนซ์ ยุ่งยากในการจัดเอกสารและอาจมีค่าใช้จ่ายบางอย่าง</h5><br>
+					</div>
+					<div class="col-sm-6">
+						<img src="{{asset('images/easy.jpg')}}" alt="">
+						<h5>ทางเราดำเนินเอกสารให้หลายๆที่ให้ฟรี อีกทั้งรู้ผลอนุมัติคร่าวๆได้ทันที</h5><br>
+					</div>
+				</div> --}}
+				<div class="row">
+					<div class="col-sm-6 ">
+							<img src="{{asset('images/uncomfort.jpg')}}" alt="">
+							<h5>อาจเป็นการซื้อที่เสียเวลาและยุ่งยากสำหรับคุณ</h5><br>
+						</div>
+						<div class="col-sm-6 ">
+							<img src="{{asset('images/comfort.jpg')}}" alt="">
+							<h5>ซื้อรถง่าย ประหยัด คุ้มค่า สะดวกสะบายสำหรับคุณ</h5><br>
+					</div>
+				</div> 
+			</div>
+			</div>
+		</section>
 
 	
 
@@ -145,7 +192,8 @@
 							<div class="row">
 								<div class="col-md-3">
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
-										<i class="fa fa-car"></i>
+										<img src="{{asset('images/byPossiblecar.jpg')}}" alt=""  width="150" height="150" align="middle" class="mx-auto d-block">{{--150x150--}}
+										{{--  <i class="fa fa-car"></i>  --}}
 											<div class="text-content">
 												<h6>เรามีโปรโมชั่นรถให้คุณ</h6>
 												<p>เพียงแค่กรอกข้อมูลกับเรา (ฟรี)</p><br>
@@ -154,7 +202,8 @@
 								</div>
 								<div class="col-md-3">
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
-										<i class="fa fa-search"></i>
+										<img src="{{asset('images/service1.jpg')}}" alt=""  width="150" height="150" align="middle" class="mx-auto d-block">{{--150x150--}}
+										{{--  <i class="fa fa-search"></i>  --}}
 										<div class="text-content">
 											<h6>กว่า 100 โชว์รูม 1000 กว่าโปรโมชั่น</h6>
 											<p>จากเซลล์มีคุณภาพ ที่คัดสรรอย่างดีเพื่อคุณ</p>
@@ -163,7 +212,8 @@
 								</div>
 								<div class="col-md-3">
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
-										<i class="fa fa-users"></i>
+										<img src="{{asset('images/service3.jpg')}}" alt=""  width="150" height="150"  align="middle" class="mx-auto d-block">{{--150x150--}}
+										{{--  <i class="fa fa-users"></i>  --}}
 										<div class="text-content">
 											<h6>เลือกข้อเสนอและเซลล์ที่ชอบ</h6>
 											<p>ยังไม่พอเท่านี้! คุณยังสามารถต่อรองข้อเสนอได้อีก</p>
@@ -172,7 +222,8 @@
 								</div>
 								<div class="col-md-3">
 									<div class="service-item wow fadeIn" data-wow-duration="0.75s">
-										<i class="fa fa-globe"></i>
+										<img src="{{asset('images/service4.jpg')}}" alt=""  width="150" height="150"  align="middle" class="mx-auto d-block">{{--150x150--}}
+										{{--  <i class="fa fa-globe"></i>  --}}
 										<div class="text-content">
 											<h6>คุณไม่ต้องไปหลายโชว์รูมด้วยตัวเอง เพียงแค่</h6>
 											<p>รับข้อมูลจากเราได้ทุกที่ ทุกเวลา 24 ชม.</p>
