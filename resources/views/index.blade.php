@@ -138,12 +138,12 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<div align="center"><h3>ซื้อรถด้วยตนเอง</h3></div><br>
-						<img src="{{asset('images/buyMyself.jpg')}}" alt="">{{--150x150--}}
+						<img src="{{asset('images/buyMyself.jpg')}}" alt="" width="400" height="400" align="middle" class="mx-auto d-block">{{--150x150--}}
 						<h5>เดินทางไปยังโชว์รูมต่างๆเพื่อเปรียบเทียบโปรโมชั่น เสียเงินและเวลา ไม่สะดวกในการติดตาม</h5><br>
 					</div>
 					<div class="col-sm-6 ">
 						<div align="center"><h3>ใช้บริการทางเรา</h3></div><br>
-						<img src="{{asset('images/byPossiblecar.jpg')}}" alt="">{{--150x150--}}
+						<img src="{{asset('images/byPossiblecar.jpg')}}" alt="" width="400" height="400" align="middle" class="mx-auto d-block">{{--150x150--}}
 						<h5>เรารวมโปรโมชั่นรถให้คุณกว่า 100 โชว์รูม 1000 กว่าโปรโมชั่น คุณไม่ต้องไปหลายโชว์รูมด้วยตัวเอง(เพียงแค่กรอกข้อมูลกับเรา)</h5><br>
 					</div>
 				</div>
@@ -333,14 +333,14 @@
 				<div class="col">
 					<div class="counter">
 						<i class="far fa-thumbs-up"></i>
-						<h2 class="timer count-title count-number" data-to="67" data-speed="4000"></h2>
+						<h2 class="timer count-title count-number" data-to="79" data-speed="4000"></h2>
 					  	<h6 class="count-text ">คนที่เลือกใช้บริการเรา</h6>
 					</div>
 				</div>
 				<div class="col">
 					<div class="counter">
 						<i class="fas fa-file-export"></i>
-						<h2 class="timer count-title count-number" data-to="336" data-speed="6000"></h2>
+						<h2 class="timer count-title count-number" data-to="395" data-speed="6000"></h2>
 						<h6 class="count-text ">กว่าโปรโมชั่นที่เสนอไปแล้ว</h6>
 					</div>
 				</div>
