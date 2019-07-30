@@ -4,8 +4,9 @@
 <![endif]-->
 <html lang="en-US">
 <head>
-		@include('layout.partials.head')
 		@section('title','รวมโปรโมชั่นรถ mazda honda toyota ')
+		@include('layout.partials.head')
+		
 		
 		
 </head>
