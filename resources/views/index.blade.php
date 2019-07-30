@@ -333,14 +333,14 @@
 				<div class="col">
 					<div class="counter">
 						<i class="far fa-thumbs-up"></i>
-						<h2 class="timer count-title count-number" data-to="79" data-speed="4000"></h2>
+						<h2 class="timer count-title count-number" data-to="87" data-speed="4000"></h2>
 					  	<h6 class="count-text ">คนที่เลือกใช้บริการเรา</h6>
 					</div>
 				</div>
 				<div class="col">
 					<div class="counter">
 						<i class="fas fa-file-export"></i>
-						<h2 class="timer count-title count-number" data-to="395" data-speed="6000"></h2>
+						<h2 class="timer count-title count-number" data-to="435" data-speed="6000"></h2>
 						<h6 class="count-text ">กว่าโปรโมชั่นที่เสนอไปแล้ว</h6>
 					</div>
 				</div>
