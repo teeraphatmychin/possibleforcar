@@ -7,11 +7,8 @@
 		@section('title','รวมโปรโมชั่นรถ mazda honda toyota ')
 		@include('layout.partials.head')
 		
-		
-		
 </head>
-<body>
-	
+<body>	
 	@include('layout.partials.nav')
 
 	<div class="Modern-Slider">
@@ -334,14 +331,14 @@
 				<div class="col">
 					<div class="counter">
 						<i class="far fa-thumbs-up"></i>
-						<h2 class="timer count-title count-number" data-to="87" data-speed="4000"></h2>
+						<h2 class="timer count-title count-number" data-to="102" data-speed="4000"></h2>
 					  	<h6 class="count-text ">คนที่เลือกใช้บริการเรา</h6>
 					</div>
 				</div>
 				<div class="col">
 					<div class="counter">
 						<i class="fas fa-file-export"></i>
-						<h2 class="timer count-title count-number" data-to="435" data-speed="6000"></h2>
+						<h2 class="timer count-title count-number" data-to="513" data-speed="6000"></h2>
 						<h6 class="count-text ">กว่าโปรโมชั่นที่เสนอไปแล้ว</h6>
 					</div>
 				</div>
