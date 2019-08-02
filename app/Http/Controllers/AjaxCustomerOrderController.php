@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\list_car;
+
 use App\list_customer;
 use Validator;
 class AjaxCustomerOrderController extends Controller
@@ -17,16 +17,20 @@ class AjaxCustomerOrderController extends Controller
     public function index()
     {   
         
-        //$detail_car=list_car::findOrFail($id);
-        $slide_similars=list_car::all();
-        
         if(request()->ajax())
         {  
-           // $detail_car=list_car::findOrFail($id);        
+            return datatables()->of(list_customer::latest()->get())
+                    ->addColumn('action', function($data){
+                        $button = '<button type="button" name="edit" id="'.$data->id.'" class="edit btn btn-primary btn-sm">Edit</button>';
+                        $button .= '&nbsp;&nbsp;';
+                        $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm">Delete</button>';
+                        return $button;
+                    })
+                    
+                    ->rawColumns(['action'])
+                    ->make(true);
         }
-        return view('detailtemp-car',compact('slide_similars'));
-       
-       
+        return view('customer_manage');
    
     }
 
@@ -98,7 +102,11 @@ class AjaxCustomerOrderController extends Controller
      */
     public function edit($id)
     {
-        
+        if(request()->ajax())
+        {
+            $data = list_customer::findOrFail($id);
+            return response()->json(['data' => $data]);
+        }
     }
 
     /**
@@ -110,7 +118,35 @@ class AjaxCustomerOrderController extends Controller
      */
     public function update(Request $request)
     {
-       
+        $rules = array(
+            'customer_name'    =>  'required',
+            
+           
+        );
+        $error = Validator::make($request->all(), $rules);
+
+        if($error->fails())
+        {
+            return response()->json(['errors' => $error->errors()->all()]);
+        }
+
+        $form_data = array(
+            'customer_name'       =>   $request->customer_name,
+            'customer_phone'        =>   $request->customer_phone,
+            'brand'        =>   $request->brand,
+            'model'        =>   $request->model,
+            'year_model'        =>   $request->year_model,
+            'interest'        =>   $request->interest,
+            'customer_status' => $request->customer_status,
+            'customer_social' =>$request->customer_social,
+            'car_down'  =>$request->car_down,
+            'installment' => $request->installment,
+            
+        );
+
+        list_customer::create($form_data);
+
+        return response()->json(['success' => 'ข้อมูลของท่านถูกส่งแล้ว จะมีเจ้าหน้าที่ติดต่อภายใน 24 ชม.']);
     }
 
     /**
@@ -121,7 +157,8 @@ class AjaxCustomerOrderController extends Controller
      */
     public function destroy($id)
     {
-       
+        $data = list_customer::findOrFail($id);
+        $data->delete();  
     }
 }
 
