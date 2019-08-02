@@ -12,43 +12,37 @@
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         </head>
         <body>
-                <div class="container-fluid">
-                                       <div align="right">
-                                       <button type="button" name="create_record" id="create_record" class="btn btn-success btn-sm">Create Record</button>
-                                       </div>
-                                       <br />
-                                       <div class="table-responsive">
-                                           <table class="table table-bordered table-striped" id="customer_manage_table">
-                                               <thead>
-                                                   <tr>
-                                                       <th width="1%">ID</th>
-                                                       <th width="5%">name</th>
-                                                       <th width="5%">phone</th>
-                                                       <th width="5%">social</th>
-                                                       <th width="3%">brand</th>
-                                                       <th width="10%">model</th>
-                                                       <th width="3%">car_down</th>
-                                                       <th width="3%">installment</th>
-                                                       <th width="3%">customer_status</th>
-                                                       <th width="3%">sell_name</th>
-                                                       <th width="5%">Created</th>
-                                                       <th width="5%">Updated</th>
-                                                       <th width="10%">Action</th>
-                                                   </tr>
-                                               </thead>
-                                           </table>
-                                       </div>
-                                       <br />
-                                       <br />
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
+            <div class="container-fluid">
+                <div align="right">
+                    <button type="button" name="create_record" id="create_record" class="btn btn-success btn-sm">Create Record</button>
                 </div>
-           </body>
-       </html>
+                 <br />
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped" id="customer_manage_table">
+                        <thead>
+                            <tr>
+                                <th width="1%">ID</th>
+                                <th width="5%">name</th>
+                                <th width="5%">phone</th>
+                                <th width="5%">social</th>
+                                <th width="3%">brand</th>
+                                <th width="10%">model</th>
+                                <th width="3%">car_down</th>
+                                <th width="3%">installment</th>
+                                <th width="3%">customer_status</th>
+                                <th width="3%">sell_name</th>
+                                <th width="5%">Created</th>
+                                <th width="5%">Updated</th>
+                                <th width="10%">Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <br />
+                <br />
+            </div>
+        </body>
+</html>
        <div id="formModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
          <div class="modal-content">
