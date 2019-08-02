@@ -12,7 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
  </head>
  <body>
- 
+        <div class="container-fluid">
                                 <div align="right">
                                 <button type="button" name="create_record" id="create_record" class="btn btn-success btn-sm">Create Record</button>
                                 </div>
@@ -41,6 +41,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </body>
 </html>
 <div id="formModal" class="modal fade" role="dialog">
