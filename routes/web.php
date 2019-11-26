@@ -53,7 +53,7 @@ Route::get('car-view-list', 'LoadMoreController@listLoad')->name('car-view-list'
 Route::get('/car_listing_sidebar', 'LoadMoreController@myPost')->name('car_listing_sidebar');
 //Route::get('/indexs', 'Indexcontroller@shop')->name('indexs');
 // Route::get('/single_car', 'UserController@single_car')->name('single_car');
-//Route::get('detail-car/{id}', 'All_indexController@detialpro')->name('detail-car');
+Route::get('detail-car/{id}', 'All_indexController@detialpro')->name('detail-car');
 //Route::get('/single_post', 'UserController@single_post')->name('single_post');
 //Route::get('frontend.article-post/{id}', 'All_indexController@detialpro_blog')->name('article-post');
 
