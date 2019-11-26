@@ -29,7 +29,7 @@
 		<div class="container">
 			<div class="recent-car-content">
 				
-					@include('carListingData')	
+					{{--  @include('carListingData')	  --}}
 				
 			</div>
 		</div>
