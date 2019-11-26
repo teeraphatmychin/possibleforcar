@@ -6,18 +6,18 @@
                 <div class="col-md-5">
                     <div class="thumb-content">
                         <div class="car-banner">
-                                <a href="{{url('/single_car_test',$postList->id)}}">ดิลพิเศษ</a>
+                                <a href="{{url('/detail_car',$postList->id)}}">ดิลพิเศษ</a>
                         </div>
                         <div class="thumb-inner">
                             {{--  <a href="single_car.html"><img src="https://placehold.it/370x345" alt=""></a>  --}}
-                            <a href="{{url('/single_car_test',$postList->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$postList->brand}}/{{$postList->model}}/370_260/{{ $postList->image }}" class="img-thumbnail" alt=""></a>
+                            <a href="{{url('/detail_car',$postList->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$postList->brand}}/{{$postList->model}}/370_260/{{ $postList->image }}" class="img-thumbnail" alt=""></a>
 
                         </div>
                     </div>
                 </div>
                 <div class="col-md-5">
                      <div class="down-content">
-                        <a href="{{url('/single_car_test',$postList->id)}}"><h4>{{$postList->brand}} {{$postList->model}}</h4></a>
+                        <a href="{{url('/detail_car',$postList->id)}}"><h4>{{$postList->brand}} {{$postList->model}}</h4></a>
                         <span> เริ่มต้น {{$postList->price}} บาท</span>
                         <div class="line-dec"></div>
                         <p> {{ str_limit( $postList->detail, 90)}}</p>

@@ -49,7 +49,7 @@ Route::get('blog-view-grid', 'LoadMoreController@blogPost')->name('blog-view-gri
 // Route::get('/blog_listing_sidebar', 'UserController@blog_listing_sidebar')->name('blog_listing_sidebar');
 Route::get('car-view-grid', 'LoadMoreController@gridLoad')->name('car-view-grid');
 // Route::get('/car_grid_sidebar', 'LoadMoreController@myPost')->name('car_grid_sidebar');
-Route::get('car-view-list', 'LoadMoreController@listLoad')->name('car-view-list');
+Route::get('car-view-list','LoadMoreController@listLoad')->name('car-view-list');
 Route::get('/car_listing_sidebar', 'LoadMoreController@myPost')->name('car_listing_sidebar');
 //Route::get('/indexs', 'Indexcontroller@shop')->name('indexs');
 // Route::get('/single_car', 'UserController@single_car')->name('single_car');
