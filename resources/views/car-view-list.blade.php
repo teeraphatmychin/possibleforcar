@@ -29,7 +29,7 @@
 		<div class="container">
 			<div class="recent-car-content">
 				
-					{{--  @include('carListingData')	  --}}
+					@include('carListingData')	
 				
 			</div>
 		</div>
@@ -64,14 +64,14 @@
 	                $('.ajax-load').show();
 	            }
 	        })
-	        .done(function(data)
+	        .done(function(car_listingData)
 	        {
-	            if(data.html == " "){
+	            if(car_listingData.html == " "){
 	                $('.ajax-load').html("No more records found");
 	                return;
 	            }
 	            $('.ajax-load').hide();
-	            $("#post_data").append(data.html);
+	            $("#post_data").append(car_listingData.html);
 	        })
 	        .fail(function(jqXHR, ajaxOptions, thrownError)
 	        {
