@@ -47,14 +47,14 @@ Route::get('saleManage/destroy/{id}', 'AjaxSaleManageController@destroy')->middl
 // Route::get('/blog_grid_sidebar', 'LoadMoreController@blogPost')->name('blog_grid_sidebar');
 // Route::get('/blog_listing_no_sidebar', 'UserController@blog_listing_no_sidebar')->name('blog_listing_no_sidebar');
 // Route::get('/blog_listing_sidebar', 'UserController@blog_listing_sidebar')->name('blog_listing_sidebar');
-//Route::get('car-view-grid', 'LoadMoreController@gridLoad')->name('car-view-grid');
+Route::get('car-view-grid', 'LoadMoreController@gridLoad')->name('car-view-grid');
 // Route::get('/car_grid_sidebar', 'LoadMoreController@myPost')->name('car_grid_sidebar');
-//Route::get('car-view-list', 'LoadMoreController@listLoad')->name('car-view-list');
-// Route::get('/car_listing_sidebar', 'LoadMoreController@myPost')->name('car_listing_sidebar');
+Route::get('car-view-list', 'LoadMoreController@listLoad')->name('car-view-list');
+Route::get('/car_listing_sidebar', 'LoadMoreController@myPost')->name('car_listing_sidebar');
 //Route::get('/indexs', 'Indexcontroller@shop')->name('indexs');
 // Route::get('/single_car', 'UserController@single_car')->name('single_car');
 //Route::get('detail-car/{id}', 'All_indexController@detialpro')->name('detail-car');
-// Route::get('/single_post', 'UserController@single_post')->name('single_post');
+//Route::get('/single_post', 'UserController@single_post')->name('single_post');
 //Route::get('frontend.article-post/{id}', 'All_indexController@detialpro_blog')->name('article-post');
 
 ////////////////////////////backend///////////////////////////////
