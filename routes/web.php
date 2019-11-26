@@ -43,7 +43,7 @@ Route::post('saleManage/update', 'AjaxSaleManageController@update')->name('saleM
 Route::get('saleManage/destroy/{id}', 'AjaxSaleManageController@destroy')->middleware(['auth','auth.admin']);
 //Route::get('about_us', 'All_indexController@about_us')->name('about_us');
 //Route::get('contact_us', 'All_indexController@contact_us')->name('contact_us');
-//Route::get('blog-view-grid', 'LoadMoreController@blogPost')->name('blog-view-grid');
+Route::get('blog-view-grid', 'LoadMoreController@blogPost')->name('blog-view-grid');
 // Route::get('/blog_grid_sidebar', 'LoadMoreController@blogPost')->name('blog_grid_sidebar');
 // Route::get('/blog_listing_no_sidebar', 'UserController@blog_listing_no_sidebar')->name('blog_listing_no_sidebar');
 // Route::get('/blog_listing_sidebar', 'UserController@blog_listing_sidebar')->name('blog_listing_sidebar');
