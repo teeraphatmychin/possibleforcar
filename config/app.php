@@ -163,6 +163,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+   
 
         /*
          * Package Service Providers...
@@ -230,7 +232,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Datatables' => Yajra\Datatables\Facades\Datatable::class,
-
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
 
