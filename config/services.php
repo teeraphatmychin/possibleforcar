@@ -44,4 +44,18 @@ return [
         ],
     ],
 
+    'google' => [
+        'client_id' => '82855665968-qggi853m6scs20qufgu2e0daqn0gv89a.apps.googleusercontent.com',
+        'client_secret' => 'xWav9CyZypEU7nei_7a5ZFYq',
+        'redirect' => 'http://localhost:8000/auth/google/callback',
+    ],
+
+    'facebook' => [
+        'client_id' => '2009848285827329',
+        'client_secret' => '863147a61ff890f70adc6a31b326fdc5',
+        'redirect' => 'https://www.possiblecar.com/callback/facebook',
+    ],
+
+    
+
 ];

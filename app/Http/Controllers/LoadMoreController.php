@@ -34,6 +34,6 @@ class LoadMoreController extends Controller
     		$view = view('carListingData',compact('postLists'))->render();
             return response()->json(['html'=>$view]);
         }
-    	return view('car-view-grid',compact('postLists'));
+    	return view('car-view-list',compact('postLists'));
     }
 }

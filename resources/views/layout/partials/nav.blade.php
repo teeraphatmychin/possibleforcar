@@ -65,6 +65,11 @@
 					   {{--  <li>
 					   		<a href="#search"><i class="fa fa-search"></i></a>
 					   </li>  --}}
+					   <li>
+
+					    <a href="{{ url('/auth/redirect/facebook') }}" class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</a>
+ 
+						</li>
 					</ul>
 				</div>
 			</div>

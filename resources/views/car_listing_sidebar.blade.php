@@ -33,7 +33,6 @@
 					<div class="row">
 						<div class="col-md-8" id="post-data">
 							<div class="row">
-								
 								@include('data')
 							</div>
 						</div>

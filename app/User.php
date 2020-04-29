@@ -15,10 +15,10 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
-
+    // protected $fillable = [
+    //     'name', 'email', 'password', 'google_id',
+    // ];
+        protected $fillable = ['name', 'email', 'password', 'provider', 'provider_id' ];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -46,4 +46,8 @@ class User extends Authenticatable
     public function hasAnyRole($role){
         return null !==$this->roles()->where('name',$role)->first();
     }
+    public function socialProviders(){
+        return $this->hasMany(SocialProvider::class);
+    }
+
 }

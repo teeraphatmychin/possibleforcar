@@ -64,14 +64,14 @@
 	                $('.ajax-load').show();
 	            }
 	        })
-	        .done(function(car_listingData)
+	        .done(function(data)
 	        {
-	            if(car_listingData.html == " "){
+	            if(data.html == " "){
 	                $('.ajax-load').html("No more records found");
 	                return;
 	            }
 	            $('.ajax-load').hide();
-	            $("#post_data").append(car_listingData.html);
+	            $("#post_data").append(data.html);
 	        })
 	        .fail(function(jqXHR, ajaxOptions, thrownError)
 	        {

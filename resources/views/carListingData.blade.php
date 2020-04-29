@@ -6,7 +6,7 @@
                 <div class="col-md-5">
                     <div class="thumb-content">
                         <div class="car-banner">
-                                <a href="{{url('/detail_car',$postList->id)}}">ดิลพิเศษ</a>
+                                <a href="{{url('/detail_car',$postList->id)}}">ดิลพิเศษ<span class="badge">5</span></a>
                         </div>
                         <div class="thumb-inner">
                             {{--  <a href="single_car.html"><img src="https://placehold.it/370x345" alt=""></a>  --}}

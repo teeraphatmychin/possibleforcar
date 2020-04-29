@@ -7,6 +7,7 @@
 		
 		@section('title','รายละเอียดรถ')
 		@include('layout.partials.head')
+	
 </head>
 <body>
 	
@@ -21,8 +22,8 @@
 					<div class="heading-content-bg wow fadeIn" data-wow-delay="0.75s" data-wow-duration="1s">
 						<div class="row">
 							<div class="heading-content col-md-12">
-								<p><a href="{{route('index')}}">Homepage</a> / <em> Cars</em> / <em> Car Details</em></p>
-								<h2>Car <em>Details</em></h2>
+								<p><a href="{{route('index')}}">หน้าแรก</a> / <em> โปรโมชั่นรถยนต์</em> / <em> รายละเอียดรถยนต์</em></p>
+								<h2>สเป็ค <em>รถยนต์</em></h2>
 								
 							</div>
 						</div>
@@ -169,7 +170,128 @@
 			</div>
 		</div>
 	</div>
-
+{{--    --}}
+	<section>
+			<div class="container">
+				<form id="frmAdd" name="frmAdd" method="post" action="">
+					<ul class="nav nav-tabs">
+						<li class="nav-item"><a class="nav-link active" href="#CalTab1" data-toggle="tab">เงินดาวน์ (%)</a></li>
+						<li class="nav-item"><a class="nav-link" href="#CalTab2" data-toggle="tab">เงินดาวน์ (บาท)</a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content" >
+						<div id="CalTab1" class="tab-pane fade  active in">
+							<div class="form-main">
+								<div class="form-group">
+									<label for="price1">ราคารถ/บาท</label>
+									<input type="text" class="form-control" id="price1" placeholder="โปรดระบุ" required >
+								</div>
+							
+							<div class="form-group">
+								<label for="down_percent1">จำนวนเงินดาวน์/เปอร์เซ็นต์ (%)</label>
+								<input type="number" class="form-control " id="down_percent1" placeholder="โปรดระบุ">
+							</div>	
+					
+							
+							<div class="form-group">
+								<label for="pernum1">จำนวนงวด</label>
+								<select name="pernum1" id="pernum1" class="form-control ">
+									<option value="12">12 งวด (1 ปี)</option>
+									<option value="24">24 งวด (2 ปี)</option>
+									<option value="36">36 งวด (3 ปี)</option>
+									<option value="48">48 งวด (4 ปี)</option>
+									<option value="60">60 งวด (5 ปี)</option>
+									<option value="72">72 งวด (6 ปี)</option>
+								</select>
+							</div>
+					
+							<div class="form-group">
+								<label for="Interest1">ดอกเบี้ย/%ต่อปี</label>
+								<input type="number" class="form-control " id="Interest1" placeholder="โปรดระบุ">
+							</div>
+						</div> <!-- /form-main -->
+		
+						<div class="row">
+							<div class="form-group col-md-4">
+								<label for="down_baht1">เป็นเงินดาวน์/บาท</label>
+								<input type="text" class="form-control " id="down_baht1" placeholder="..." disabled="">
+							</div>		
+						
+							<div class="form-group col-md-4">
+								<label for="price_remain1">ยอดจัดไฟแนนซ์</label>
+								<input type="text" class="form-control " id="price_remain1" placeholder="..." disabled="">
+							</div>	
+							
+							<div class="form-group has-success col-md-4">
+								<label for="pay_month1">ค่างวดต่อเดือน/บาท</label>
+								<input type="text" class="form-control " id="pay_month1" placeholder="..." disabled="">
+							</div>
+						</div> <!-- /row -->
+					<button type="button" class="btn btn-success btn-lg" onclick="calCar1();" >คำนวณ</button>
+					<button type="reset" class="btn btn-default btn-lg">ล้างข้อมูล</button>
+			
+		
+				</div><!-- /CalTab1 -->
+			<div id="CalTab2" class="tab-pane fade">
+		
+				<div class="form-main">
+					<div class="form-group">
+						<label for="price2">ราคารถ/บาท</label>
+						<input type="text" class="form-control" id="price2" placeholder="โปรดระบุ" required  >
+					</div>
+					
+					<div class="form-group">
+						<label for="down_baht2">จำนวนเงินดาวน์/บาท</label>
+						<input type="text" class="form-control " id="down_baht2" placeholder="โปรดระบุ">
+					</div>	
+					
+					<div class="form-group">
+						<label for="pernum2">จำนวนงวด</label>
+						<select name="pernum1" id="pernum2" class="form-control ">
+								<option value="12">12 งวด (1 ปี)</option>
+								<option value="24">24 งวด (2 ปี)</option>
+								<option value="36">36 งวด (3 ปี)</option>
+								<option value="48">48 งวด (4 ปี)</option>
+								<option value="60">60 งวด (5 ปี)</option>
+								<option value="72">72 งวด (6 ปี)</option>
+							  </select>
+					</div>
+					
+					<div class="form-group">
+						<label for="Interest2">ดอกเบี้ย/%ต่อปี</label>
+						<input type="number" class="form-control " id="Interest2" placeholder="โปรดระบุ">
+					</div>
+				</div> <!-- /form-main -->
+		
+				<div class="row">
+					<div class="form-group col-md-4">
+						<label for="down_percent2">เป็นเปอร์เซ็นต์เงินดาวน์/%</label>
+						<input type="text" class="form-control " id="down_percent2" placeholder="..." disabled="">
+					</div>		
+					
+					<div class="form-group col-md-4">
+						<label for="price_remain2">ยอดจัดไฟแนนซ์</label>
+						<input type="text" class="form-control " id="price_remain2" placeholder="..." disabled="">
+					</div>	
+					
+					<div class="form-group has-success col-md-4">
+						<label for="pay_month2">ค่างวดต่อเดือน/บาท</label>
+						<input type="text" class="form-control " id="pay_month2" placeholder="..." disabled="">
+					</div>
+				</div> <!-- /row -->
+			
+			  <button type="button" class="btn btn-success btn-lg" onclick="calCar2();" >คำนวณ</button>
+			  <button type="reset" class="btn btn-default btn-lg">ล้างข้อมูล</button>	
+			</div><!-- /CalTab2 -->
+		
+		
+		
+		</div> <!-- /myTabContent -->
+		  
+		</form>
+		
+		
+			</div>
+	</section>
 	<section>
 		<div class="more-details">
 			<div class="container">
@@ -185,7 +307,7 @@
 					<div class="col-md-4">
 						<div class="item wow fadeInUp" data-wow-duration="0.75s">
 							<div class="sep-section-heading">
-								<h2>Additional <em>Features</em></h2>
+								<h2>ข้อเสนิ <em>Features</em></h2>
 							</div>
 							<div class="info-list">
 								<ul>
@@ -268,6 +390,8 @@
 				</div>
 			</div>
 		</section>
+		{{--  //////////////////////////////////////////////////////////////////  --}}
+		
 	
 	@extends('layout.partials.footer')
 	@extends('layout.partials.footer-scripts')
@@ -324,7 +448,13 @@
 		 });
 			  
 	});
-					</script>
+	//
+
+
+</script>
+
+	
+
 						
 	
 </body>
