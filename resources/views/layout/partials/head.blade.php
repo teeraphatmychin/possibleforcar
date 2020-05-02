@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/main.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
+
 	<!-- Slider Pro Css -->
 	<link rel="stylesheet" href="{{asset('frontend/css/sliderPro.css')}}">
 	<!-- Owl Carousel Css -->
@@ -19,6 +21,9 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/flaticon.css')}}">
 	<!-- Animated Css -->
 	<link rel="stylesheet" href="{{asset('frontend/css/animated.css')}}">
+	
+
+    <!-- Custom-->
 
 	<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>

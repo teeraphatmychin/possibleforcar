@@ -163,7 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         Laravel\Socialite\SocialiteServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,
+       
    
 
         /*
@@ -233,7 +233,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Datatables' => Yajra\Datatables\Facades\Datatable::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        
 
 
 
