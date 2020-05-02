@@ -75,8 +75,8 @@ class LoginController extends Controller
     }
             
     ////end google
-    ////facebook
+    ////social login
         
-    ////end facebook
+    ////end social login
    
 }

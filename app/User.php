@@ -46,8 +46,6 @@ class User extends Authenticatable
     public function hasAnyRole($role){
         return null !==$this->roles()->where('name',$role)->first();
     }
-    public function socialProviders(){
-        return $this->hasMany(SocialProvider::class);
-    }
+    
 
 }
