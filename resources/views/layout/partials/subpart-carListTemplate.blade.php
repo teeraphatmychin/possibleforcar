@@ -43,14 +43,14 @@
     <div class="ps-section--features-product ps-section masonry-root pt-100 pb-100">
       <div class="ps-container">
         <div class="ps-section__header mb-50">
-          <h3 class="ps-section__title" data-mask="features">- Features Products</h3>
+          <h3 class="ps-section__title" data-mask="features">- รถใหม่ ถูก ผ่อนสบาย</h3>
           <ul class="ps-masonry__filter">
             <li class="current"><a href="#" data-filter="*">All <sup>8</sup></a></li>
             <li><a href="#" data-filter=".Toyota">Toyota <sup>1</sup></a></li>
             <li><a href="#" data-filter=".Honda">Honda <sup>1</sup></a></li>
-            <li><a href="#" data-filter=".men">Men <sup>1</sup></a></li>
-            <li><a href="#" data-filter=".women">Women <sup>1</sup></a></li>
-            <li><a href="#" data-filter=".kids">Kids <sup>4</sup></a></li>
+            <li><a href="#" data-filter=".Mazda">Mazda <sup>1</sup></a></li>
+            <li><a href="#" data-filter=".Nissan">Nissan <sup>1</sup></a></li>
+            <li><a href="#" data-filter=".Isuzu">Isuzu <sup>4</sup></a></li>
           </ul>
         </div>
         <div class="ps-section__content pb-50">
@@ -75,9 +75,9 @@
                           <option value="2">5</option>
                         </select>
                       </div>
-                      <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
+                      <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Toyota Yaris</a>
                         <p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
-                          <del>£220</del> £ 120</span>
+                          <del>฿489,000</del> ฿409,0000</span>
                       </div>
                     </div>
                   </div>
