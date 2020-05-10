@@ -182,7 +182,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\BladeExtrasServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,
+        
 
 
     ],
@@ -238,7 +238,7 @@ return [
         'Datatables' => Yajra\Datatables\Facades\Datatable::class,
         
 
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        
 
 
 
