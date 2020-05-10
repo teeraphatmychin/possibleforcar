@@ -67,7 +67,7 @@
 					   </li>  --}}
 					   <li>
 
-					    <a href="{{ url('/redirect')}}" class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</a>
+					    <a href="{{ url('/auth/redirect/facebook') }}" class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</a>
  
 						</li>
 					</ul>
