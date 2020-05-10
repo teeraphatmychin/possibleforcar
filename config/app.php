@@ -199,7 +199,7 @@ return [
     */
 
     'aliases' => [
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
@@ -238,7 +238,7 @@ return [
         'Datatables' => Yajra\Datatables\Facades\Datatable::class,
         
 
-        
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
 
 
