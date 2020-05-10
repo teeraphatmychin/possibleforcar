@@ -1,0 +1,9 @@
+Yaris
+Entry - 539,000
+Mid - 589,000
+High - 649,000
+
+Yaris ATIV
+Entry - 529,000
+Mid - 579,000
+High - 649,000

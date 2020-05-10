@@ -172,7 +172,7 @@
 				</div> --}}
 				<div class="row">
 					<div class="col-sm-6 ">
-							<img src="{{asset('images/uncomfort.jpg')}}" alt="">
+							<img src="{{asset('images/uncomfort.jpg')}}" alt="" style = "height: 183px; width: 275px;">
 							<h5>อาจเป็นการซื้อที่เสียเวลาและยุ่งยากสำหรับคุณ</h5><br>
 						</div>
 						<div class="col-sm-6 ">

@@ -26,9 +26,9 @@
 			</div>
 		</div>
 	</div>
-////////////
+{{--  ////////////  --}}
 	@include('subpart-car-view-grid')
-////////////
+{{--  ////////////  --}}
 	<div class="on-grids wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
 		<div class="container">
 			<div class="recent-car-content">

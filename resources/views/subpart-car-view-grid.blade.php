@@ -36,13 +36,13 @@
                     <aside class="wedget__categories poroduct--cat">
                         <h3 class="wedget__title">Product Categories</h3>
                         <ul>
-                            <li><a href="#">Toyota <span>(3)</span></a></li>
-                            <li><a href="#">Mazda <span>(4)</span></a></li>
-                            <li><a href="#">Honda <span>(6)</span></a></li>
-                            <li><a href="#">Isuzu <span>(7)</span></a></li>
-                            <li><a href="#">Nissan <span>(8)</span></a></li>
-                            <li><a href="#">BMW <span>(9)</span></a></li>
-                            <li><a href="#">Benz <span>(13)</span></a></li>
+                            <li><a href="#">Toyota <span>(4)</span></a></li>
+                            <li><a href="#">Mazda <span>(0)</span></a></li>
+                            <li><a href="#">Honda <span>(0)</span></a></li>
+                            <li><a href="#">Isuzu <span>(0)</span></a></li>
+                            <li><a href="#">Nissan <span>(0)</span></a></li>
+                            <li><a href="#">BMW <span>(0)</span></a></li>
+                            <li><a href="#">Benz <span>(0)</span></a></li>
                             
                         </ul>
                     </aside>
@@ -108,6 +108,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div class="tab__container">
                     <div class="shop-grid tab-pane fade show active" id="nav-grid" role="tabpanel">
                         <div class="row">
@@ -259,6 +261,7 @@
                                 </div>
                             </div>
                             <!-- End Single Product -->
+                            
                             {{-- <!-- Start Single Product -->
                             <div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
                                 <div class="product__thumb">
