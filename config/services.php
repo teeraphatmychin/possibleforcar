@@ -53,7 +53,7 @@ return [
     'facebook' => [
         'client_id' => '2009848285827329',
         'client_secret' => '863147a61ff890f70adc6a31b326fdc5',
-        'redirect' => 'http://localhost:8000/callback/facebook',
+        'redirect' => 'http://localhost:8000' . 'login/facebook/callback',
         // 'redirect' => 'https://www.possiblecar.com/callback/facebook',
     ],
 
