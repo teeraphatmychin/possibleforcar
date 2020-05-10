@@ -148,7 +148,7 @@
                                 </div>
                             </div>
                             <!-- End Single Product -->
-                            <!-- Start Single Product -->
+                             <!-- Start Single Product -->
                             <div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
                                 <div class="product__thumb">
                                     <a class="first__img" href="single-product.html"><img src="images/books/3.jpg" alt="product image"></a>
@@ -259,7 +259,7 @@
                                 </div>
                             </div>
                             <!-- End Single Product -->
-                            <!-- Start Single Product -->
+                            {{-- <!-- Start Single Product -->
                             <div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
                                 <div class="product__thumb">
                                     <a class="first__img" href="single-product.html"><img src="images/books/11.jpg" alt="product image"></a>
@@ -554,7 +554,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- End Single Product -->
+                            <!-- End Single Product -->  --}}
                         </div>
                         <ul class="wn__pagination">
                             <li class="active"><a href="#">1</a></li>
@@ -573,7 +573,7 @@
                                     <a class="second__img animation1" href="single-product.html"><img src="images/product/2.jpg" alt="product images"></a>
                                 </div>
                                 <div class="content">
-                                    <h2><a href="single-product.html">Ali Smith</a></h2>
+                                    <h2><a href="single-product.html">Toyota Altis</a></h2>
                                     <ul class="rating d-flex">
                                         <li class="on"><i class="fa fa-star-o"></i></li>
                                         <li class="on"><i class="fa fa-star-o"></i></li>
@@ -583,8 +583,8 @@
                                         <li><i class="fa fa-star-o"></i></li>
                                     </ul>
                                     <ul class="prize__box">
-                                        <li>฿111.00</li>
-                                        <li class="old__prize">฿220.00</li>
+                                        <li>฿฿800,000</li>
+                                        <li class="old__prize">฿839,000</li>
                                     </ul>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
                                     <ul class="cart__action d-flex">
@@ -603,7 +603,7 @@
                                     <a class="second__img animation1" href="single-product.html"><img src="images/product/4.jpg" alt="product images"></a>
                                 </div>
                                 <div class="content">
-                                    <h2><a href="single-product.html">Blood In Water</a></h2>
+                                    <h2><a href="single-product.html">Toyota Revo</a></h2>
                                     <ul class="rating d-flex">
                                         <li class="on"><i class="fa fa-star-o"></i></li>
                                         <li class="on"><i class="fa fa-star-o"></i></li>
@@ -613,8 +613,8 @@
                                         <li><i class="fa fa-star-o"></i></li>
                                     </ul>
                                     <ul class="prize__box">
-                                        <li>฿111.00</li>
-                                        <li class="old__prize">฿220.00</li>
+                                        <li>฿฿600,000</li>
+                                        <li class="old__prize">฿฿690,000</li>
                                     </ul>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
                                     <ul class="cart__action d-flex">
@@ -633,7 +633,7 @@
                                     <a class="second__img animation1" href="single-product.html"><img src="images/product/6.jpg" alt="product images"></a>
                                 </div>
                                 <div class="content">
-                                    <h2><a href="single-product.html">Madeness Overated</a></h2>
+                                    <h2><a href="single-product.html">Toyota Fortuner</a></h2>
                                     <ul class="rating d-flex">
                                         <li class="on"><i class="fa fa-star-o"></i></li>
                                         <li class="on"><i class="fa fa-star-o"></i></li>
@@ -643,8 +643,8 @@
                                         <li><i class="fa fa-star-o"></i></li>
                                     </ul>
                                     <ul class="prize__box">
-                                        <li>฿111.00</li>
-                                        <li class="old__prize">฿220.00</li>
+                                        <li>฿1,300,000</li>
+                                        <li class="old__prize">฿1,719,000</li>
                                     </ul>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
                                     <ul class="cart__action d-flex">
@@ -663,7 +663,7 @@
                                     <a class="second__img animation1" href="single-product.html"><img src="images/product/6.jpg" alt="product images"></a>
                                 </div>
                                 <div class="content">
-                                    <h2><a href="single-product.html">Watching You</a></h2>
+                                    <h2><a href="single-product.html">Toyota Yaris</a></h2>
                                     <ul class="rating d-flex">
                                         <li class="on"><i class="fa fa-star-o"></i></li>
                                         <li class="on"><i class="fa fa-star-o"></i></li>
@@ -673,8 +673,8 @@
                                         <li><i class="fa fa-star-o"></i></li>
                                     </ul>
                                     <ul class="prize__box">
-                                        <li>฿111.00</li>
-                                        <li class="old__prize">฿220.00</li>
+                                        <li>฿409,000</li>
+                                        <li class="old__prize">฿489,000</li>
                                     </ul>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
                                     <ul class="cart__action d-flex">
@@ -687,7 +687,7 @@
                             </div>
                             <!-- End Single Product -->
                             <!-- Start Single Product -->
-                            <div class="list__view mt--40">
+                            {{--  <div class="list__view mt--40">
                                 <div class="thumb">
                                     <a class="first__img" href="single-product.html"><img src="images/product/5.jpg" alt="product images"></a>
                                     <a class="second__img animation1" href="single-product.html"><img src="images/product/9.jpg" alt="product images"></a>
@@ -714,7 +714,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- End Single Product -->
+                            <!-- End Single Product -->  --}}
                         </div>
                     </div>
                 </div>

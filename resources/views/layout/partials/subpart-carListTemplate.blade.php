@@ -46,8 +46,8 @@
           <h3 class="ps-section__title" data-mask="features">- Features Products</h3>
           <ul class="ps-masonry__filter">
             <li class="current"><a href="#" data-filter="*">All <sup>8</sup></a></li>
-            <li><a href="#" data-filter=".nike">Nike <sup>1</sup></a></li>
-            <li><a href="#" data-filter=".adidas">Adidas <sup>1</sup></a></li>
+            <li><a href="#" data-filter=".Toyota">Toyota <sup>1</sup></a></li>
+            <li><a href="#" data-filter=".Honda">Honda <sup>1</sup></a></li>
             <li><a href="#" data-filter=".men">Men <sup>1</sup></a></li>
             <li><a href="#" data-filter=".women">Women <sup>1</sup></a></li>
             <li><a href="#" data-filter=".kids">Kids <sup>4</sup></a></li>
