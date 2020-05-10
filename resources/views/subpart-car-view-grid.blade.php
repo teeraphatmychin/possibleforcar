@@ -121,10 +121,10 @@
                                     </div>
                                 </div>
                                 <div class="product__content content--center">
-                                    <h4><a href="single-product.html">robin parrish</a></h4>
+                                    <h4><a href="single-product.html">Toyota Altis</a></h4>
                                     <ul class="prize d-flex">
-                                        <li>฿35.00</li>
-                                        <li class="old_prize">฿35.00</li>
+                                        <li>฿800,000</li>
+                                        <li class="old_prize">฿839,000</li>
                                     </ul>
                                     <div class="action">
                                         <div class="actions_inner">
@@ -158,10 +158,10 @@
                                     </div>
                                 </div>
                                 <div class="product__content content--center">
-                                    <h4><a href="single-product.html">The Remainng</a></h4>
+                                    <h4><a href="single-product.html">Toyota Fortuner</a></h4>
                                     <ul class="prize d-flex">
-                                        <li>฿35.00</li>
-                                        <li class="old_prize">฿35.00</li>
+                                        <li>฿1,300,000</li>
+                                        <li class="old_prize">฿1,719,000</li>
                                     </ul>
                                     <div class="action">
                                         <div class="actions_inner">
@@ -195,10 +195,10 @@
                                     </div>
                                 </div>
                                 <div class="product__content content--center">
-                                    <h4><a href="single-product.html">Lando</a></h4>
+                                    <h4><a href="single-product.html">Toyota Revo</a></h4>
                                     <ul class="prize d-flex">
-                                        <li>฿35.00</li>
-                                        <li class="old_prize">฿50.00</li>
+                                        <li>฿600,000</li>
+                                        <li class="old_prize">฿690,000</li>
                                     </ul>
                                     <div class="action">
                                         <div class="actions_inner">
@@ -232,10 +232,10 @@
                                     </div>
                                 </div>
                                 <div class="product__content content--center">
-                                    <h4><a href="single-product.html">Doctor Wldo</a></h4>
+                                    <h4><a href="single-product.html">Toyota Yaris</a></h4>
                                     <ul class="prize d-flex">
-                                        <li>฿35.00</li>
-                                        <li class="old_prize">฿35.00</li>
+                                        <li>฿409,000</li>
+                                        <li class="old_prize">฿489,000</li>
                                     </ul>
                                     <div class="action">
                                         <div class="actions_inner">
