@@ -161,8 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,
-
+       
 
        
        
@@ -183,6 +182,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\BladeExtrasServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+
 
     ],
 
