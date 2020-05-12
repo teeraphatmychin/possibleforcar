@@ -11,19 +11,19 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bbootstrap 4 -->
-  {{--<link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="{{  asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
   <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
   <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="{{ asset('plugins/jqvmap/jqvmap.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
   <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">  --}}
+  <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css') }}">  --}}
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
@@ -70,7 +70,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="{{ asset('dist/img/user1-128x128.jpg') }}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -86,7 +86,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="{{ asset('dist/img/user8-128x128.jpg') }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -102,7 +102,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="{{ asset('dist/img/user3-128x128.jpg') }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -168,7 +168,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Alexander Pierce</a>
@@ -864,10 +864,10 @@
                       <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                     </div>
                     <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
+                    <img class="direct-chat-img" src="{{ asset('dist/img/user1-128x128.jpg') }}" alt="message user image">
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
-                      Is this template really for free? That's unbelievable!
+                      Is this template really for free? That s unbelievable!
                     </div>
                     <!-- /.direct-chat-text -->
                   </div>
@@ -880,7 +880,7 @@
                       <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                     </div>
                     <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
+                    <img class="direct-chat-img" src="{{ asset('dist/img/user3-128x128.jpg') }}" alt="message user image">
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
                       You better believe it!
@@ -896,7 +896,7 @@
                       <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                     </div>
                     <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
+                    <img class="direct-chat-img" src="{{ asset('dist/img/user1-128x128.jpg') }}" alt="message user image">
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
                       Working with AdminLTE on a great new app! Wanna join?
@@ -912,7 +912,7 @@
                       <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                     </div>
                     <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
+                    <img class="direct-chat-img" src="{{ asset('dist/img/user3-128x128.jpg') }}" alt="message user image">
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
                       I would love to.
@@ -929,7 +929,7 @@
                   <ul class="contacts-list">
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="dist/img/user1-128x128.jpg">
+                        <img class="contacts-list-img" src="{{ asset('dist/img/user1-128x128.jpg') }}">
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -944,7 +944,7 @@
                     <!-- End Contact Item -->
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="dist/img/user7-128x128.jpg">
+                        <img class="contacts-list-img" src="{{ asset('dist/img/user7-128x128.jpg') }}">
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -959,14 +959,14 @@
                     <!-- End Contact Item -->
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="dist/img/user3-128x128.jpg">
+                        <img class="contacts-list-img" src="{{ asset('dist/img/user3-128x128.jpg') }}">
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
                             Nadia Jolie
                             <small class="contacts-list-date float-right">2/20/2015</small>
                           </span>
-                          <span class="contacts-list-msg">I'll call you back at...</span>
+                          <span class="contacts-list-msg">I ll call you back at...</span>
                         </div>
                         <!-- /.contacts-list-info -->
                       </a>
@@ -974,7 +974,7 @@
                     <!-- End Contact Item -->
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="dist/img/user5-128x128.jpg">
+                        <img class="contacts-list-img" src="{{ asset('dist/img/user5-128x128.jpg') }}">
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -989,7 +989,7 @@
                     <!-- End Contact Item -->
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="dist/img/user6-128x128.jpg">
+                        <img class="contacts-list-img" src="{{ asset('dist/img/user6-128x128.jpg') }}">
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -1004,7 +1004,7 @@
                     <!-- End Contact Item -->
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="dist/img/user8-128x128.jpg">
+                        <img class="contacts-list-img" src="{{ asset('dist/img/user8-128x128.jpg') }}g">
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -1339,7 +1339,7 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src= "{{ asset ('js/app.js')}}" type="text/javascript"></script>
+<script src= "{{ asset('js/app.js')}}" type="text/javascript"></script>
 //<script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 //<script src="plugins/jquery-ui/jquery-ui.min.js"></script>

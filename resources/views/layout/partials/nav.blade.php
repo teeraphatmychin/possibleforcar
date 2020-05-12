@@ -67,7 +67,7 @@
 					   </li>  --}}
 					   <li>
 
-					    <a href="{{ url('login/facebook') }}" ><i class="fa fa-facebook"></i> Login / SignIn</a>
+					    <a href="{{ url('login/facebook/callback') }}" ><i class="fa fa-facebook"></i> Login / SignIn</a>
  
 						</li>
 					</ul>

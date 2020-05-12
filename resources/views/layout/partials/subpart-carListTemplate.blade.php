@@ -163,7 +163,7 @@
     </div>
   
 
-
+{{--  
     <div class="ps-section--sale-off ps-section pt-80 pb-40">
       <div class="ps-container">
         <div class="ps-section__header mb-50">
@@ -353,7 +353,7 @@
         </div>
       </div>
     </div>
-   
+     --}}
    
     
     
