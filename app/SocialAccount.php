@@ -8,7 +8,7 @@ class SocialAccount extends Model
 {
     //
    
-    protected $fillable = ['user_id', 'provider_user_id', 'provider'];
+    protected $fillable = ['user_id', 'provider_user_id', 'provider','avatar','name','email'];
     
     public function user()
     {
