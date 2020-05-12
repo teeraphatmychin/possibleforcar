@@ -1,8 +1,9 @@
 <?php
+
+namespace App\Http\Controllers\Auth;
 use Socialite;
 use App\User;
 use App\SocialAccounts;
-namespace App\Http\Controllers\Auth;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
