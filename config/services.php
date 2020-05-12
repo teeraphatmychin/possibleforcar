@@ -57,6 +57,5 @@ return [
         // 'redirect' => 'https://www.possiblecar.com/callback/facebook',
     ],
 
-    
 
 ];
