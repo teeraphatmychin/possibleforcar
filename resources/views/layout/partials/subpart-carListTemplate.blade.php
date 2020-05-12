@@ -409,14 +409,15 @@
             <!-- End Single Slide -->
         </div>  --}}
         <!-- End Slider area -->
+        {{--  แถวแรก  --}}
 		<!-- Start BEst Seller Area -->
 		<section class="wn__product__area brown--color pt--80  pb--30">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2">New <span class="color--theme">Products</span></h2>
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p>
+							<h2 class="title__be--2">รถยนต์ <span class="color--theme">รุ่นใหม่ล่าสุด</span></h2>
+							<p>เช็คราคาและสเปครถยนต์ อัพเดทล่าสุด ที่นี่ที่เดียว พร้อมอัพเดตเรื่องราว ทุกความเคลื่อนไหว ของรถยนต์ทุกรุ่นได้ที่นี่</p>
 						</div>
 					</div>
 				</div>
@@ -433,10 +434,10 @@
 								</div>
 							</div>
 							<div class="product__content content--center">
-								<h4><a href="single-product.html">robin parrish</a></h4>
+								<h4><a href="single-product.html">Toyota</a></h4>
 								<ul class="prize d-flex">
-									<li>$35.00</li>
-									<li class="old_prize">$35.00</li>
+									<li>1,000,000 บาท</li>
+									<li class="old_prize">$1,800,000</li>
 								</ul>
 								<div class="action">
 									<div class="actions_inner">
@@ -472,7 +473,7 @@
 								</div>
 							</div>
 							<div class="product__content content--center">
-								<h4><a href="single-product.html">The Remainng</a></h4>
+								<h4><a href="single-product.html">ISUZU</a></h4>
 								<ul class="prize d-flex">
 									<li>$35.00</li>
 									<li class="old_prize">$35.00</li>
@@ -511,7 +512,7 @@
 								</div>
 							</div>
 							<div class="product__content content--center">
-								<h4><a href="single-product.html">Bowen Greenwood</a></h4>
+								<h4><a href="single-product.html">HONDA</a></h4>
 								<ul class="prize d-flex">
 									<li>$40.00</li>
 									<li class="old_prize">$35.00</li>
@@ -550,10 +551,10 @@
 								</div>
 							</div>
 							<div class="product__content content--center">
-								<h4><a href="single-product.html">Lando</a></h4>
+								<h4><a href="single-product.html">BMW</a></h4>
 								<ul class="prize d-flex">
-									<li>$35.00</li>
-									<li class="old_prize">$50.00</li>
+									<li>1,500,000</li>
+									<li class="old_prize">2,000,000</li>
 								</ul>
 								<div class="action">
 									<div class="actions_inner">
@@ -682,15 +683,16 @@
 				</div>
 			</div>
 		</section>  --}}
-		<!-- End NEwsletter Area -->
+    <!-- End NEwsletter Area -->
+    {{--  แถวสอง  --}}
 		<!-- Start Best Seller Area -->
 		<section class="wn__bestseller__area bg--white pt--80  pb--30">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2">All <span class="color--theme">Products</span></h2>
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p>
+							<h2 class="title__be--2">รถยนต์ <span class="color--theme">ทุ่กรุ่น ทุ่กแบรนด์</span></h2>
+							<p>อัพเดทล่าสุด ที่นี่ที่เดียว พร้อมอัพเดตเรื่องราว ทุกความเคลื่อนไหว ของรถยนต์ทุกรุ่นได้ที่นี่</p>
 						</div>
 					</div>
 				</div>
@@ -698,10 +700,10 @@
 					<div class="col-md-12 col-lg-12 col-sm-12">
 						<div class="product__nav nav justify-content-center" role="tablist">
                             <a class="nav-item nav-link active" data-toggle="tab" href="#nav-all" role="tab">ALL</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-biographic" role="tab">BIOGRAPHIC</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-adventure" role="tab">ADVENTURE</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-children" role="tab">CHILDREN</a>
-                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-cook" role="tab">COOK</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-Toyota" role="tab">Toyota</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-Honda" role="tab">Honda</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-Isuzu" role="tab">Isuzu</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-BMW" role="tab">BMW</a>
                         </div>
 					</div>
 				</div>
@@ -1113,7 +1115,7 @@
 					</div>
 					<!-- End Single Tab Content -->
 					<!-- Start Single Tab Content -->
-					<div class="row single__tab tab-pane fade" id="nav-biographic" role="tabpanel">
+					<div class="row single__tab tab-pane fade" id="nav-Toyota" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							<div class="single__product">
 								<!-- Start Single Product -->
@@ -1519,7 +1521,7 @@
 					</div>
 					<!-- End Single Tab Content -->
 					<!-- Start Single Tab Content -->
-					<div class="row single__tab tab-pane fade" id="nav-adventure" role="tabpanel">
+					<div class="row single__tab tab-pane fade" id="nav-Honda" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							<div class="single__product">
 								<!-- Start Single Product -->
@@ -1925,7 +1927,7 @@
 					</div>
 					<!-- End Single Tab Content -->
 					<!-- Start Single Tab Content -->
-					<div class="row single__tab tab-pane fade" id="nav-children" role="tabpanel">
+					<div class="row single__tab tab-pane fade" id="nav-Isuzu" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							<div class="single__product">
 								<!-- Start Single Product -->
@@ -2331,7 +2333,7 @@
 					</div>
 					<!-- End Single Tab Content -->
 					<!-- Start Single Tab Content -->
-					<div class="row single__tab tab-pane fade" id="nav-cook" role="tabpanel">
+					<div class="row single__tab tab-pane fade" id="nav-BMW" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							<div class="single__product">
 								<!-- Start Single Product -->
@@ -2813,8 +2815,8 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center pb--50">
-							<h2 class="title__be--2">Best <span class="color--theme">Seller </span></h2>
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered lebmid alteration in some ledmid form</p>
+							<h2 class="title__be--2">รถยนต์ <span class="color--theme">ยอดขายถล่มทลาย </span></h2>
+							<p>เป็นเจ้าของได้แล้ววันนี้กับรถยนต์สุดฮิต</p>
 						</div>
 					</div>
 				</div>
