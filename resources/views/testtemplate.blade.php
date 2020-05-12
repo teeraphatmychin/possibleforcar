@@ -1,51 +1,41 @@
-
-
+<!doctype html>
+<html class="no-js" lang="zxx">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Shop-Grid | Bookshop Responsive Bootstrap4 Template</title>
+	<title>Home | Bookshop Responsive Bootstrap4 Template</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Favicons -->
-	<link rel="shortcut icon" href="{{asset('frontend/template-boighor/images/favicon.ico')}}">
-	<link rel="apple-touch-icon" href="{{asset('frontend/template-boighor/images/icon.png')}}">
+	<link rel="shortcut icon" href="{{ asset('frontend/boighor/boighors/images/favicon.ico')}}">
+	<link rel="apple-touch-icon" href="{{ asset('frontend/boighor/boighors/images/icon.png')}}">
 
 	<!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> 
 
 	<!-- Stylesheets -->
-	 <link rel="stylesheet" href="{{asset('frontend/template-boighor/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{asset('frontend/template-boighor/css/plugins.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/template-boighor/style.css')}}">  
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
- 
-
+	<link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/css/plugins.css') }}">
+	<link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/style.css') }}">
 
 	<!-- Cusom css -->
-   <link rel="stylesheet" href="{{asset('frontend/template-boighor/css/custom.css')}}">
-
- 
+   <link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/css/custom.css')}}">
 
 	<!-- Modernizer js -->
-    {{--  <script src="{{asset('fontend/template-boighor/js/vendor/modernizr-3.5.0.min.js"></script>  --}}
-    
-   
-
-  
-
-    
-
+	<script src="{{ asset('frontend/boighor/boighors/js/vendor/modernizr-3.5.0.min.js') }}"></script>
 </head>
 <body>
-	
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
 
 	<!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">
 		<!-- Header -->
-		<header id="wn__header" class="header__area header__absolute sticky__header">
+		{{--  <header id="wn__header" class="header__area header__absolute sticky__header">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
@@ -126,8 +116,8 @@
 										<ul class="item item02">
 											<li class="title">More For Kids</li>
 											<li><a href="shop-grid.html">B&N Educators</a></li>
-											<li><a href="shop-grid.html">B&N Kids Club</a></li>
-											<li><a href="shop-grid.html">Kids Music</a></li>
+											<li><a href="shop-grid.html">B&N Kids' Club</a></li>
+											<li><a href="shop-grid.html">Kids' Music</a></li>
 											<li><a href="shop-grid.html">Toys & Games</a></li>
 											<li><a href="shop-grid.html">Hoodies</a></li>
 										</ul>
@@ -362,10 +352,10 @@
 	            </div>
 	            <!-- Mobile Menu -->	
 			</div>		
-		</header>
+		</header>  --}}
 		<!-- //Header -->
 		<!-- Start Search Popup -->
-		<div class="brown--color box-search-content search_active block-bg close__top">
+		{{--  <div class="brown--color box-search-content search_active block-bg close__top">
 			<form id="search_mini_form" class="minisearch" action="#">
 				<div class="field__search">
 					<input type="text" placeholder="Search entire store here...">
@@ -377,10 +367,10 @@
 			<div class="close__wrap">
 				<span>close</span>
 			</div>
-		</div>
+		</div>  --}}
 		<!-- End Search Popup -->
         <!-- Start Slider area -->
-        <div class="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
+        {{--  <div class="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
         	<!-- Start Single Slide -->
 	        <div class="slide animation__style10 bg-image--1 fullscreen align__center--left">
 	            <div class="container">
@@ -417,7 +407,7 @@
 	            </div>
             </div>
             <!-- End Single Slide -->
-        </div>
+        </div>  --}}
         <!-- End Slider area -->
 		<!-- Start BEst Seller Area -->
 		<section class="wn__product__area brown--color pt--80  pb--30">
@@ -672,7 +662,7 @@
 		</section>
 		<!-- Start BEst Seller Area -->
 		<!-- Start NEwsletter Area -->
-		<section class="wn__newsletter__area bg-image--2">
+		{{--  <section class="wn__newsletter__area bg-image--2">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7 offset-lg-5 col-md-12 col-12 ptb--150">
@@ -691,7 +681,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>  --}}
 		<!-- End NEwsletter Area -->
 		<!-- Start Best Seller Area -->
 		<section class="wn__bestseller__area bg--white pt--80  pb--30">
@@ -2751,7 +2741,7 @@
 		</section>
 		<!-- Start BEst Seller Area -->
 		<!-- Start Recent Post Area -->
-		<section class="wn__recent__post bg--gray ptb--80">
+		{{--  <section class="wn__recent__post bg--gray ptb--80">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -2815,7 +2805,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>  --}}
 		<!-- End Recent Post Area -->
 		<!-- Best Sale Area -->
 		<section class="best-seel-area pt--80 pb--60">
@@ -3058,7 +3048,7 @@
 		</section>
 		<!-- Best Sale Area Area -->
 		<!-- Footer Area -->
-		<footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+		{{--  <footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
 			<div class="footer-static-top">
 				<div class="container">
 					<div class="row">
@@ -3110,7 +3100,7 @@
 					</div>
 				</div>
 			</div>
-		</footer>
+		</footer>  --}}
 		<!-- //Footer Area -->
 		<!-- QUICKVIEW PRODUCT -->
 		<div id="quickview-wrapper">
@@ -3196,13 +3186,13 @@
 		<!-- END QUICKVIEW PRODUCT -->
 	</div>
 	<!-- //Main wrapper -->
-    <!-- JS Files -->
 
-    <script src ="{{mix('js/app.js')}}"></script>
-     <script src="{{asset('frontend/template-boighor/js/vendor/jquery-3.2.1.min.js') }}"></script>
-    <script src="{{asset('frontend/template-boighor/js/popper.min.js') }}"></script>
-    <script src="{{asset('frontend/template-boighor/js/bootstrap.min.js') }}"></script>
-    <script src="{{asset('frontend/template-boighor/js/plugins.js') }}"></script>
-    <script src="{{asset('frontend/template-boighor/js/active.js') }}"></script>  
+	<!-- JS Files -->
+	<script src="{{ asset('frontend/boighor/boighors/js/vendor/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ asset('frontend/boighor/boighors/js/popper.min.js') }}"></script>
+	<script src="{{ asset('frontend/boighor/boighors/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('frontend/boighor/boighors/js/plugins.js') }}"></script>
+	<script src="{{ asset('frontend/boighor/boighors/js/active.js') }}"></script>
 	
 </body>
+</html>
