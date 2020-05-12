@@ -67,7 +67,7 @@
 					   </li>  --}}
 					   <li>
 
-					    <a href="{{ url('login/facebook') }}" class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</a>
+					    <a href="{{ url('login/facebook') }}" ><i class="fa fa-facebook"></i> Login / SignIn</a>
  
 						</li>
 					</ul>

@@ -17,10 +17,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	{{--  <link rel="stylesheet" href="{{asset('frontend/template-boighor/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/template-boighor/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/template-boighor/css/plugins.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/template-boighor/style.css')}}">  --}}
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('frontend/template-boighor/style.css')}}">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
  
 
 
@@ -3198,11 +3198,11 @@
 	<!-- //Main wrapper -->
     <!-- JS Files -->
 
-    <script src ="{{asset ('js/app.js')}}"></script>
-    {{--  <script src="{{asset('frontend/template-boighor/js/vendor/jquery-3.2.1.min.js') }}"></script>
+    <script src ="{{mix('js/app.js')}}"></script>
+     <script src="{{asset('frontend/template-boighor/js/vendor/jquery-3.2.1.min.js') }}"></script>
     <script src="{{asset('frontend/template-boighor/js/popper.min.js') }}"></script>
     <script src="{{asset('frontend/template-boighor/js/bootstrap.min.js') }}"></script>
     <script src="{{asset('frontend/template-boighor/js/plugins.js') }}"></script>
-    <script src="{{asset('frontend/template-boighor/js/active.js') }}"></script>  --}}
+    <script src="{{asset('frontend/template-boighor/js/active.js') }}"></script>
 	
 </body>

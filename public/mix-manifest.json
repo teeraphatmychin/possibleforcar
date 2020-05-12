@@ -1,10 +1,4 @@
 {
-    "/frontend/js/app.js": "/frontend/js/app.js",
-    "/frontend/js/maps/app.js": "/frontend/js/maps/app.js",
-    "/frontend/js/min/app.js": "/frontend/js/min/app.js",
-    "/frontend/template-boighor/js/app.js": "/frontend/template-boighor/js/app.js",
-    "/frontend/template-boighor/js/vendor/app.js": "/frontend/template-boighor/js/vendor/app.js",
-    "/frontend/template-skytheme/js/app.js": "/frontend/template-skytheme/js/app.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css"
 }

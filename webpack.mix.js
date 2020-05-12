@@ -14,17 +14,10 @@ let mix = require('laravel-mix');
 
     mix
         .js('resources/js/app.js', 'public/js')
-        .js('resources/js/app.js', 'public/frontend/template-boighor/js')
-        .js('resources/js/app.js', 'public/frontend/template-boighor/js/vendor')
-        .js('resources/js/app.js', 'public/frontend/template-skytheme/js')
-        .js('resources/js/app.js', 'public/frontend/js')
-        .js('resources/js/app.js', 'public/frontend/js/maps')
-        .js('resources/js/app.js', 'public/frontend/js/min')
+       
 
-        
         .sass('resources/sass/app.scss', 'public/css')
-        
-
+       
     ;  
         
 

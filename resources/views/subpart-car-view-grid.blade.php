@@ -726,3 +726,11 @@
         </div>
     </div>
 </div>
+
+ {{--  <script src ="{{mix('js/app.js')}}"></script>
+     <script src="{{asset('frontend/template-boighor/js/vendor/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{asset('frontend/template-boighor/js/popper.min.js') }}"></script>
+    <script src="{{asset('frontend/template-boighor/js/bootstrap.min.js') }}"></script>
+    <script src="{{asset('frontend/template-boighor/js/plugins.js') }}"></script>
+    <script src="{{asset('frontend/template-boighor/js/active.js') }}"></script>  --}}
+	
