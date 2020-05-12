@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/main.css')}}">
+	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 	<!-- Slider Pro Css -->
 	<link rel="stylesheet" href="{{asset('frontend/css/sliderPro.css')}}">

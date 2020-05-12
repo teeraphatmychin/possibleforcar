@@ -1,5 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -19,7 +18,9 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="{{asset('frontend/template-boighor/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/template-boighor/css/plugins.css')}}">
-	<link rel="stylesheet" href="{{asset('frontend/template-boighor/style.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/template-boighor/style.css')}}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 
 	<!-- Cusom css -->
    <link rel="stylesheet" href="{{asset('frontend/template-boighor/css/custom.css')}}">
@@ -148,13 +149,13 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+
                             <!-- End Single Product -->
                              <!-- Start Single Product -->
                             <div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
                                 <div class="product__thumb">
-                                    <a class="first__img" href="single-product.html"><img src="images/books/3.jpg" alt="product image"></a>
-                                    <a class="second__img animation1" href="single-product.html"><img src="images/books/4.jpg" alt="product image"></a>
+                                    <a class="first__img" href="https://www.google.com"><img src="https://placehold.it/800x800" alt="product image"></a>
+                                    <a class="second__img animation1" href="https://www.google.com"><img src="images/byPossiblecar.jpg" alt="product image"></a>
                                     <div class="hot__box color--2">
                                         <span class="hot-label">HOT</span>
                                     </div>

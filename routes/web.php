@@ -11,6 +11,7 @@
 |
 */
 
+
 ////////////////////////////backend////////////////////////////////
 // Route::get('/admin',function(){
 //     return 'you are admin';
@@ -84,6 +85,11 @@ Route::get('detail-car/{id}', 'All_indexController@detialpro')->name('detail-car
 
 // Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes(['register' => false]);
+
+
+Route::get('testtemplate', function () {
+    return view('testtemplate');
+});
 
 
 // google
