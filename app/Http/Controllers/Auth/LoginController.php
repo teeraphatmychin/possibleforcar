@@ -44,43 +44,75 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-   
-    //BEGIN SOCIALITE
+
     public function redirectToProvider($provider = 'facebook')
     {
-       return Socialite::driver($provider)->redirect();
+        return Socialite::driver($provider)->redirect();
     }
+
     public function handleProviderCallback($provider = 'facebook')
     {
-       $providerUser = Socialite::driver($provider)->user();
-       $user = $this->createOrGetUser($provider, $providerUser);
-       auth()->login($user);
-       return redirect()->to('/home');
+        $providerUser = Socialite::driver($provider)->user();
+            
+        $user = $this->createOrGetUser($provider, $providerUser);
+        auth()->login($user);
+
+        return redirect()->to('/home');
     }
+
     public function createOrGetUser($provider, $providerUser)
     {
+        /** Get Social Account */
         $account = SocialAccount::whereProvider($provider)
-                 ->whereProviderUserId($providerUser->getId())
-                 ->first();
+            ->whereProviderUserId($providerUser->getId())
+            ->first();
+
         if ($account) {
             return $account->user;
         } else {
-            $user = User::whereEmail($providerUser->getEmail())->first();
-            if (!$user) {
-                $user = User::create([
-                  'email' => $providerUser->getEmail(),
-                  'name' => $providerUser->getName(),
-                  'password' => md5(rand(1,10000)),
-                ]);
-            }
+
+            /** Get user detail */
+            $userDetail = Socialite::driver($provider)->userFromToken($providerUser->token);
+
+            /** Create new account */
             $account = new SocialAccount([
                 'provider_user_id' => $providerUser->getId(),
-                'provider' => 'facebook'
+                'provider' => $provider,
             ]);
+
+            /** Get email or not */
+            $email = !empty($providerUser->getEmail()) ? $providerUser->getEmail() : $providerUser->getId() . '@' . $provider . '.com';
+
+            /** Get User Auth */
+            if (auth()->check()) {
+                $user = auth()->user();
+            }else{
+                $user = User::whereEmail($email)->first();
+            }
+
+            if (!$user) {
+                /** Get Avatar */
+                $image = $provider . "_" . $providerUser->getId() . ".png";
+                $imagePath = public_path(config('app.media.directory') . "users/avatar/" . $image);
+                file_put_contents($imagePath, file_get_contents($providerUser->getAvatar()));
+
+
+                /** Create User */
+                $user = User::create([
+                    'email' => $email,
+                    'name' => $providerUser->getName(),
+                    'username' => $providerUser->getId(),
+                    'avatar' => $image,
+                    'password' => bcrypt(rand(1000, 9999)),
+                ]);
+
+            }
+
+            /** Attach User & Social Account */
             $account->user()->associate($user);
             $account->save();
+
             return $user;
         }
     }
-    //END SOCIALITE
 }
