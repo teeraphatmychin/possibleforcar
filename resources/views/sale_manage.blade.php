@@ -32,7 +32,7 @@
                     <div align="right">
                         <button type="button" name="create_record" id="create_record" class="btn btn-success btn-sm">Create Record</button>
                     </div>
-                    <br />
+                    
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped" id="sale_manage_table">
                             <thead>
@@ -52,8 +52,7 @@
                     </div>
                 </div>
             </div>                     
-        </body>
-    </html>
+    
        <div id="formModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
          <div class="modal-content">
@@ -129,8 +128,17 @@
                </div>
            </div>
        </div>
-       
-       
+    </body>
+    </html>
+     
+    <!-- jQuery -->
+    {{-- <script src="{{ asset('frontend/adminlte/plugins/jquery/jquery.min.js')}}"></script> --}}
+    <!-- Bootstrap 4 -->
+    <script src="{{ asset('frontend/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <!-- AdminLTE App -->
+    <script src="{{ asset('frontend/adminlte/dist/js/adminlte.min.js')}}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{{ asset('frontend/adminlte/dist/js/demo.js')}}"></script>
        <script>
        $(document).ready(function(){
        
@@ -304,11 +312,7 @@
        
        });
        </script>
-       <!-- jQuery -->
-<script src="{{ asset('frontend/adminlte/plugins/jquery/jquery.min.js')}}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('frontend/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('frontend/adminlte/dist/js/adminlte.min.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{ asset('frontend/adminlte/dist/js/demo.js')}}"></script>
+
+   
+
+

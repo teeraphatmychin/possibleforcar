@@ -19,9 +19,6 @@
      
 
 
-	
-
-
 	@extends('admin.layout.footer')
 
 	

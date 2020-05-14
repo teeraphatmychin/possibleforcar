@@ -160,6 +160,16 @@
     </div>
 </div>
 @endsection
+</body>
+</html>
+<!-- jQuery -->
+{{-- <script src="{{ asset('frontend/adminlte/plugins/jquery/jquery.min.js')}}"></script> --}}
+<!-- Bootstrap 4 -->
+<script src="{{ asset('frontend/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!-- AdminLTE App -->
+<script src="{{ asset('frontend/adminlte/dist/js/adminlte.min.js')}}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{ asset('frontend/adminlte/dist/js/demo.js')}}"></script>
 
 <script>
 $(document).ready(function(){
@@ -346,13 +356,3 @@ $(document).ready(function(){
 });
 </script>
 
-<!-- jQuery -->
-<script src="{{ asset('frontend/adminlte/plugins/jquery/jquery.min.js')}}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('frontend/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('frontend/adminlte/dist/js/adminlte.min.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{ asset('frontend/adminlte/dist/js/demo.js')}}"></script>
-</body>
-</html>
