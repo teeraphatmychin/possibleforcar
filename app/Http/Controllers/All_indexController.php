@@ -44,4 +44,6 @@ class All_indexController extends Controller
     {
         return view('about_us');
     }
+
+    
 }
