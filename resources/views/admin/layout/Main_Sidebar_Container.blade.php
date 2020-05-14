@@ -1,3 +1,5 @@
+
+
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
@@ -53,6 +55,45 @@
             </li>
           </ul>
         </li>
+        {{-- ===================================================================== --}}
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-copy"></i>
+            <p>
+              ชินชิน เครื่องมือ
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">4</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="{{url('ajax-crud')}}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>จัดการรถ</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{url('saleManage')}}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>จัดการเซลล์</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{url('customerOrder')}}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>ลูกค้า</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{route('admin.users.index')}}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>สิทธ์ใช้งาน</p>
+              </a>
+            </li>
+          
+          </ul>
+        </li>
+        {{--  --}}
         <li class="nav-item">
           <a href="{{ route('widgets') }}" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
@@ -542,31 +583,7 @@
             <p>Informational</p>
           </a>
         </li>
-        <li class="nav-header">shin custom</li>
-        <li class="nav-item">
-          <a href="{{url('ajax-crud')}}" class="nav-link">
-            <i class="nav-icon far fa-circle text-danger"></i>
-            <p class="text">จัดการรถ</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="{{url('saleManage')}}" class="nav-link">
-            <i class="nav-icon far fa-circle text-warning"></i>
-            <p>จัดการเซลล์</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="{{url('customerOrder')}}" class="nav-link">
-            <i class="nav-icon far fa-circle text-warning"></i>
-            <p>ลูกค้า</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="{{route('admin.users.index')}}" class="nav-link">
-            <i class="nav-icon far fa-circle text-warning"></i>
-            <p>สิทธ์ใช้งาน</p>
-          </a>
-        </li>
+        
       </ul>
     </nav>
     <!-- /.sidebar-menu -->

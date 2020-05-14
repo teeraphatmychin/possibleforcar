@@ -1,3 +1,4 @@
+@extends('admin.index')
 
 
 <html>
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
  </head>
+ @section('content')
  <body>
         <div class="container-fluid">
                                 <div align="right">
@@ -148,7 +150,7 @@
         </div>
     </div>
 </div>
-
+@endsection
 
 <script>
 $(document).ready(function(){
