@@ -11,35 +11,47 @@
          <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
          <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+         {{--  --}}
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="{{ asset('frontend/adminlte/plugins/fontawesome-free/css/all.min.css')}}">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{{ asset('frontend/adminlte/dist/css/adminlte.min.css')}}">
+        <!-- Google Font: Source Sans Pro -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+         {{--  --}}
         </head>
         @section('content')
-        <body>
-            <div class="container-fluid">
-                <div align="right">
-                    <button type="button" name="create_record" id="create_record" class="btn btn-success btn-sm">Create Record</button>
-               </div>
-                <br />
-                <div class="table-responsive">
-                    <table class="table table-bordered table-striped" id="sale_manage_table">
-                        <thead>
-                            <tr>
-                                <th width="1%">ID</th>
-                                <th width="5%">Name</th>
-                                <th width="5%">Phone</th>
-                                <th width="5%">Social</th>
-                                <th width="5%">Showroom</th>
-                                <th width="5%">Province</th>
-                                <th width="5%">Created</th>
-                                <th width="5%">Updated</th>
-                                <th width="10%">Action</th>
-                            </tr>
-                        </thead>
-                    </table>
+        <body class="hold-transition sidebar-mini">
+            <div class="wrapper">
+                <div class="content-wrapper">
+                    <div align="right">
+                        <button type="button" name="create_record" id="create_record" class="btn btn-success btn-sm">Create Record</button>
+                    </div>
+                    <br />
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped" id="sale_manage_table">
+                            <thead>
+                                <tr>
+                                    <th width="1%">ID</th>
+                                    <th width="5%">Name</th>
+                                    <th width="5%">Phone</th>
+                                    <th width="5%">Social</th>
+                                    <th width="5%">Showroom</th>
+                                    <th width="5%">Province</th>
+                                    <th width="5%">Created</th>
+                                    <th width="5%">Updated</th>
+                                    <th width="10%">Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
-                <br />
-                <br />
-            </div>
-                                   
+            </div>                     
         </body>
     </html>
        <div id="formModal" class="modal fade" role="dialog">
@@ -292,4 +304,11 @@
        
        });
        </script>
-       
+       <!-- jQuery -->
+<script src="{{ asset('frontend/adminlte/plugins/jquery/jquery.min.js')}}"></script>
+<!-- Bootstrap 4 -->
+<script src="{{ asset('frontend/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!-- AdminLTE App -->
+<script src="{{ asset('frontend/adminlte/dist/js/adminlte.min.js')}}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{ asset('frontend/adminlte/dist/js/demo.js')}}"></script>
