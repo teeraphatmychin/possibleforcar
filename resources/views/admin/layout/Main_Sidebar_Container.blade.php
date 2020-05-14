@@ -208,7 +208,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="p{{ route('buttons')}}" class="nav-link">
+              <a href="{{ route('buttons')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Buttons</p>
               </a>
