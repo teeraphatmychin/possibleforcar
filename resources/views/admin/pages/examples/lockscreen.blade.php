@@ -16,11 +16,12 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+
 <body class="hold-transition lockscreen">
 <!-- Automatic element centering -->
 <div class="lockscreen-wrapper">
   <div class="lockscreen-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href="{{ route('Dashboard2') }}"><b>Admin</b>LTE</a>
   </div>
   <!-- User name -->
   <div class="lockscreen-name">John Doe</div>
@@ -51,12 +52,9 @@
     Enter your password to retrieve your session
   </div>
   <div class="text-center">
-    <a href="login.html">Or sign in as a different user</a>
+    <a href="{{ route('login') }}">Or sign in as a different user</a>
   </div>
-  <div class="lockscreen-footer text-center">
-    Copyright &copy; 2014-2019 <b><a href="http://adminlte.io" class="text-black">AdminLTE.io</a></b><br>
-    All rights reserved
-  </div>
+  
 </div>
 <!-- /.center -->
 

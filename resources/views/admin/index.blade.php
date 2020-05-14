@@ -11,7 +11,7 @@
 </head>
 	
 	@include('admin.layout.nav')
-	@include('admin.layout.Main_Sidebar_Container')
+	@include('admin.layout.main_sidebar_container')
 	
 	{{-- @section('content_header') --}}
 	@yield('content')		

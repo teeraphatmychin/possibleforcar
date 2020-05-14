@@ -1,3 +1,5 @@
+@extends('admin.index')
+
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -18,10 +20,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+@section('content')
 <body class="hold-transition sidebar-collapse layout-top-nav">
 <div class="wrapper">
 
-  <!-- Navbar -->
+  {{-- <!-- Navbar -->
   <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
       <a href="../../index3.html" class="navbar-brand">
@@ -747,7 +750,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-  </aside>
+  </aside> --}}
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -847,18 +850,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </aside>
   <!-- /.control-sidebar -->
 
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-    <div class="float-right d-none d-sm-inline">
-      Anything you want
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
+  
 </div>
 <!-- ./wrapper -->
-
+@endsection
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->

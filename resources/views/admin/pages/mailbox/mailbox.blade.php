@@ -1,3 +1,5 @@
+@extends('admin.index')
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,9 +19,10 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+@section('content')
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-  <!-- Navbar -->
+  {{-- <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
@@ -691,7 +694,7 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-  </aside>
+  </aside> --}}
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -716,7 +719,7 @@
     <section class="content">
       <div class="row">
         <div class="col-md-3">
-          <a href="compose.html" class="btn btn-primary btn-block mb-3">Compose</a>
+          <a href="{{ route('compose') }}" class="btn btn-primary btn-block mb-3">Compose</a>
 
           <div class="card">
             <div class="card-header">
@@ -847,7 +850,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -861,7 +864,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -875,7 +878,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read-mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -889,7 +892,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read-mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -903,7 +906,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -917,7 +920,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -931,7 +934,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -945,7 +948,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -959,7 +962,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -973,7 +976,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -987,7 +990,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -1001,7 +1004,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -1015,7 +1018,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -1029,7 +1032,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -1043,7 +1046,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -1089,13 +1092,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.4
-    </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-    reserved.
-  </footer>
+  
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -1104,7 +1101,7 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+@endsection
 <!-- jQuery -->
 <script src="{{ asset('frontend/adminlte/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
@@ -1151,6 +1148,6 @@
   })
 </script>
 <!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+<script src="{{ asset('frontend/adminlte/dist/js/demo.js') }}"></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+@extends('admin.index')
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,10 +18,11 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+@section('content')
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
-  <!-- Navbar -->
+  {{-- <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
@@ -699,7 +702,7 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-  </aside>
+  </aside> --}}
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -775,16 +778,16 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar2.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar3.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar04.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar04.png') }}">
                               </li>
                           </ul>
                       </td>
@@ -834,10 +837,10 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar2.png') }}">
                               </li>
                           </ul>
                       </td>
@@ -887,13 +890,13 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar2.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar3.png') }}">
                               </li>
                           </ul>
                       </td>
@@ -943,16 +946,16 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar2.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar3.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar04.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar04.png') }}g">
                               </li>
                           </ul>
                       </td>
@@ -1002,13 +1005,13 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar04.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar04.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar5.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar5.png') }}">
                               </li>
                           </ul>
                       </td>
@@ -1058,16 +1061,15 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar2.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
-                              </li>
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar3.png') }}">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar04.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar04.png') }}">
                               </li>
                           </ul>
                       </td>
@@ -1117,10 +1119,10 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar04.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar04.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar5.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar5.png') }}">
                               </li>
                           </ul>
                       </td>
@@ -1170,14 +1172,13 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar3.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar04.png">
-                              </li>
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar04.png') }}">
                           </ul>
                       </td>
                       <td class="project_progress">
@@ -1226,16 +1227,16 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar3.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar04.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar04.png') }}">
                               </li>
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar5.png">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('fontend/adminlte/dist/img/avatar5.png') }}">
                               </li>
                           </ul>
                       </td>
@@ -1281,14 +1282,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.4
-    </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-    reserved.
-  </footer>
-
+ 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -1296,7 +1290,7 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+@endsection
 <!-- jQuery -->
 <script src="{{ asset('frontend/adminlte/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
