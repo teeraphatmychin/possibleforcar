@@ -3,10 +3,10 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
-  <a href="manage_index3" class="brand-link">
-    <img src="{{ asset('frontend/adminlte/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+  <a href="{{ route('Dashboard3') }}" class="brand-link">
+    <img src="{{ asset('frontend/images/logo_white.png') }}" alt="AdminLTE Logo" 
          style="opacity: .8">
-    <span class="brand-text font-weight-light">Admin Possiblecar</span>
+    <span class="brand-text font-weight-light">Admin</span>
   </a>
 
   <!-- Sidebar -->
@@ -311,7 +311,7 @@
         </li>
         <li class="nav-header">EXAMPLES</li>
         <li class="nav-item">
-          <a href="{{ route('calendar')}}'" class="nav-link">
+          <a href="{{ route('calendar')}}" class="nav-link">
             <i class="nav-icon far fa-calendar-alt"></i>
             <p>
               Calendar
@@ -455,7 +455,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="legacy_user_menu')}}" class="nav-link">
+              <a href="{{ route ('legacy_user_menu')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Legacy User Menu</p>
               </a>

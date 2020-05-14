@@ -18,6 +18,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+@section('content')
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   {{-- <!-- Navbar -->
@@ -1306,7 +1307,7 @@
 <!-- bs-custom-file-input -->
 <script src="{{ asset('frontend/adminlte//plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('frontend/adminlte//dist/js/adminlte.min.js"></script>
+<script src="{{ asset('frontend/adminlte//dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('frontend/adminlte//dist/js/demo.js')}}"></script>
 <script type="text/javascript">

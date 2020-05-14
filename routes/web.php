@@ -46,7 +46,7 @@ Route::get('/n500', 'HomeController@n500')->name('n500')->middleware(['auth','au
 Route::get('/blank', 'HomeController@blank')->name('blank')->middleware(['auth','auth.admin']);
 Route::get('/contacts', 'HomeController@contacts')->name('contacts')->middleware(['auth','auth.admin']);
 Route::get('/e_commerce','HomeController@e_commerce')->name('e_commerce')->middleware(['auth','auth.admin']);
-Route::get('/forgot_password','HomeController@forgot_password')->name('forgot_password')->middleware(['auth','auth.admin']);
+Route::get('/forgot_password2','HomeController@forgot_password')->name('forgot_password')->middleware(['auth','auth.admin']);
 Route::get('/invoice', 'HomeController@invoice')->name('invoice')->middleware(['auth','auth.admin']);
 Route::get('/invoice_print', 'HomeController@invoice_print')->name('invoice_print')->middleware(['auth','auth.admin']);
 Route::get('/language_menu', 'HomeController@language_menu')->name('language_menu')->middleware(['auth','auth.admin']);

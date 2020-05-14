@@ -707,7 +707,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('Dashboard') }}">Home</a></li>
               <li class="breadcrumb-item active">Inbox</li>
             </ol>
           </div>
@@ -878,7 +878,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="{{ route('read-mail') }}">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -892,7 +892,7 @@
                       </div>
                     </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="{{ route('read-mail') }}">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="{{ route('read_mail') }}">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>

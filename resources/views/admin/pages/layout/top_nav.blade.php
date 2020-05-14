@@ -1,4 +1,3 @@
-@extends('admin.index')
 
 <!DOCTYPE html>
 <!--

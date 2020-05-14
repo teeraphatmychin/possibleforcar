@@ -37,26 +37,26 @@ class HomeController extends Controller
     public function chartjs() {return view('admin.pages.charts.chartjs');}
     public function flot() {return view('admin.pages.charts.flot');}
     public function inline() {return view('admin.pages.charts.inline');}
-    public function n404() {return view('admin.pages.example.404');}
-    public function n500() {return view('admin.pages.example.500');}
-    public function blank() {return view('admin.pages.example.blank');}
-    public function contacts() {return view('admin.pages.example.contacts');}
-    public function e_commerce() {return view('admin.pages.example.e_commerce');}
-    public function forgot_password() {return view('admin.pages.example.forgot_password');}
-    public function invoice() { return view('admin.pages.example.invoice');}
-    public function invoice_print() {return view('admin.pages.example.invoice_print');}
-    public function language_menu() {return view('admin.pages.example.language_menu');}
-    public function legacy_user_menu() {return view('admin.pages.example.legacy_user_menu');}
-    public function lockscreen() {return view('admin.pages.example.lockscreen');}
-    public function lobin() {return view('admin.pages.example.lobin');}
-    public function pace() {return view('admin.pages.example.pace');}
-    public function profile() {return view('admin.pages.example.profile');}
-    public function project_add() {return view('admin.pages.example.project_add');}
-    public function project_detail() {return view('admin.pages.example.project_detail');}
-    public function project_edit() {return view('admin.pages.example.project_edit');}
-    public function projects() {return view('admin.pages.example.projects');}
-    public function recover_password() {return view('admin.pages.example.recover_password');}
-    public function register() {return view('admin.pages.example.register');}
+    public function n404() {return view('admin.pages.examples.404');}
+    public function n500() {return view('admin.pages.examples.500');}
+    public function blank() {return view('admin.pages.examples.blank');}
+    public function contacts() {return view('admin.pages.examples.contacts');}
+    public function e_commerce() {return view('admin.pages.examples.e_commerce');}
+    public function forgot_password() {return view('admin.pages.examples.forgot_password');}
+    public function invoice() { return view('admin.pages.examples.invoice');}
+    public function invoice_print() {return view('admin.pages.examples.invoice_print');}
+    public function language_menu() {return view('admin.pages.examples.language_menu');}
+    public function legacy_user_menu() {return view('admin.pages.examples.legacy_user_menu');}
+    public function lockscreen() {return view('admin.pages.examples.lockscreen');}
+    public function lobin() {return view('admin.pages.examples.lobin');}
+    public function pace() {return view('admin.pages.examples.pace');}
+    public function profile() {return view('admin.pages.examples.profile');}
+    public function project_add() {return view('admin.pages.examples.project_add');}
+    public function project_detail() {return view('admin.pages.examples.project_detail');}
+    public function project_edit() {return view('admin.pages.examples.project_edit');}
+    public function projects() {return view('admin.pages.examples.projects');}
+    public function recover_password() {return view('admin.pages.examples.recover_password');}
+    public function register() {return view('admin.pages.examples.register');}
     public function advanced() {return view('admin.pages.forms.advanced');}
     public function editors() {return view('admin.pages.forms.editors');}
     public function general() {return view('admin.pages.forms.general');}
