@@ -29,7 +29,7 @@ class AjaxCrudController extends Controller
                     ->rawColumns(['action'])
                     ->make(true);
         }
-        return view('blog_manage');
+        return view('admin.blog_manage');
     }
 
     /**
@@ -70,7 +70,7 @@ class AjaxCrudController extends Controller
         //$image->move(public_path('images'), $new_name);
 
         $form_data = array(
-            'subject'        =>  $request->subject,
+            'subject'       =>  $request->subject,
             'title'         =>  $request->title,
             //'image'             =>  $new_name,
             'article' => $request->article,

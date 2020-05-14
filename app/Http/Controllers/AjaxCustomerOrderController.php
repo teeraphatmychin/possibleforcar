@@ -30,7 +30,7 @@ class AjaxCustomerOrderController extends Controller
                     ->rawColumns(['action'])
                     ->make(true);
         }
-        return view('customer_manage');
+        return view('admin.customer_manage');
    
     }
 

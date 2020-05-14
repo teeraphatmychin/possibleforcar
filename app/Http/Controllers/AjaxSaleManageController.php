@@ -30,7 +30,7 @@ class AjaxSaleManageController extends Controller
                     ->rawColumns(['action'])
                     ->make(true);
         }
-        return view('sale_manage');
+        return view('admin.sale_manage');
        
        
    

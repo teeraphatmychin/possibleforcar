@@ -29,7 +29,7 @@ class AjaxCrudController extends Controller
                     ->rawColumns(['action'])
                     ->make(true);
         }
-        return view('car_manage');
+        return view('admin.car_manage');
     }
 
     /**

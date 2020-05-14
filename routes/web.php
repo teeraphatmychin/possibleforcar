@@ -171,6 +171,8 @@ Route::prefix('login')->group(function () {
 });
 
 
+Route::resource('posts', 'PostController');
+
 
 
 
