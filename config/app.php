@@ -184,7 +184,6 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\BladeExtrasServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
         
 
 
@@ -242,11 +241,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Datatables' => Yajra\Datatables\Facades\Datatable::class,
 
-        'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class,
+       
 
-        'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class,
+       
 
     ],
 
