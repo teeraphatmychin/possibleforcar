@@ -929,14 +929,16 @@
 	        				</div>
 	        				<div class="shop-grid tab-pane fade" id="nav-list" role="tabpanel">
 	        					<div class="list__view__wrapper">
-	        						<!-- Start Single Product -->
+									<!-- Start Single Product -->
+									{{--  จุดเริ่ม  --}}
+									@foreach($posts2 as $post2)
 	        						<div class="list__view">
 	        							<div class="thumb">
-	        								<a class="first__img" href="single-product.html"><img src="images/product/1.jpg" alt="product images"></a>
-	        								<a class="second__img animation1" href="single-product.html"><img src="images/product/2.jpg" alt="product images"></a>
+	        								<a class="first__img" href="{{url('/detail-car',$post2->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->brand}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
+	        								<a class="second__img animation1" href="{{url('/detail-car',$post2->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->brand}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
 	        							</div>
 	        							<div class="content">
-	        								<h2><a href="single-product.html">Ali Smith</a></h2>
+	        								<h2><a href="single-product.html">Blood In Water</a></h2>
 	        								<ul class="rating d-flex">
 	        									<li class="on"><i class="fa fa-star-o"></i></li>
 	        									<li class="on"><i class="fa fa-star-o"></i></li>
@@ -946,8 +948,8 @@
 	        									<li><i class="fa fa-star-o"></i></li>
 	        								</ul>
 	        								<ul class="prize__box">
-	        									<li>$111.00</li>
-	        									<li class="old__prize">$220.00</li>
+	        									<li>{{ $post2->price }}</li>
+	        									<li class="old__prize">{{ $post2->price}}</li>
 	        								</ul>
 	        								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
 	        								<ul class="cart__action d-flex">
@@ -957,9 +959,10 @@
 	        								</ul>
 
 	        							</div>
-	        						</div>
+									</div>
+									@endforeach
 	        						<!-- End Single Product -->
-	        						<!-- Start Single Product -->
+	        						{{--  <!-- Start Single Product -->
 	        						<div class="list__view mt--40">
 	        							<div class="thumb">
 	        								<a class="first__img" href="single-product.html"><img src="images/product/2.jpg" alt="product images"></a>
@@ -1077,7 +1080,7 @@
 	        								</ul>
 	        							</div>
 	        						</div>
-	        						<!-- End Single Product -->
+	        						<!-- End Single Product -->  --}}
 	        					</div>
 	        				</div>
         				</div>

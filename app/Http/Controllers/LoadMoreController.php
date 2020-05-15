@@ -16,7 +16,8 @@ class LoadMoreController extends Controller
             return response()->json(['html'=>$view]);
         }
         $posts = list_car::paginate(12);
-    	return view('car-view-grid',compact('postGrids','posts'));
+        $posts2 = list_car::paginate(4);
+    	return view('car-view-grid',compact('postGrids','posts','posts2'));
     }
     public function blogPost(Request $request)
     {
