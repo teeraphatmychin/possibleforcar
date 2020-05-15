@@ -2,13 +2,14 @@
 
 
 namespace App\Http\Controllers;
-
+use App\Post;
+use App\list_car;
 
 class PagesController extends Controller{
 
-    public function getIndes(){
-        $posts=Post::orderBy('created_at','desc')->limit(4)->get();
-        return view ('posts.index')-withPosts($posts);
+    public function getIndex(){
+        $posts=list_car::orderBy('created_at','desc')->limit(10)->get();
+        return view ('pages.index')->withPosts($posts);
     }
     public function getAbout(){
         $first ='shin';

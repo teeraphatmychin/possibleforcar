@@ -13,8 +13,9 @@ class All_indexController extends Controller
         
         $products=list_car::all();
         $blog_slides=list_blog::all();
+        $posts=list_car::paginate(8);
         $byCate="";
-        return view('index',compact('products','byCate','blog_slides'));
+        return view('index',compact('products','byCate','blog_slides','posts'));
     }
 
     

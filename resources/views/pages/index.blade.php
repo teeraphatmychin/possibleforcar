@@ -34,8 +34,8 @@
 
 	<!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">
-		<!-- Header -->
-		{{--  <header id="wn__header" class="header__area header__absolute sticky__header">
+		{{--  <!-- Header -->
+		  <!-- <header id="wn__header" class="header__area header__absolute sticky__header">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
@@ -352,7 +352,7 @@
 	            </div>
 	            <!-- Mobile Menu -->	
 			</div>		
-		</header>  --}}
+		</header>   -->  --}}
 		<!-- //Header -->
 		<!-- Start Search Popup -->
 		{{--  <div class="brown--color box-search-content search_active block-bg close__top">
@@ -423,21 +423,26 @@
 				</div>
 				<!-- Start Single Tab Content -->
 				<div class="furniture--4 border--round arrows_style owl-carousel owl-theme row mt--50">
+					
 					<!-- Start Single Product important shinshin-->
+					@foreach($posts as $post)
+					{{--  <a href="{{url('/detail-car',$postGrid->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$postGrid->brand}}/{{$postGrid->model}}/370_260/{{ $postGrid->image }}" class="img-thumbnail" alt=""></a>  --}}
+
+					
 					<div class="product product__style--3">
 						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="product__thumb">
-								<a class="first__img" href="single-product.html"><img src="images/books/1.jpg" alt="product image"></a>
-								<a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a>
+								<a class="first__img" href="{{url('/detail-car',$post->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->brand}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
+								<a class="second__img animation1" href="{{url('/detail-car',$post->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->brand}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
 								<div class="hot__box">
 									<span class="hot-label">BEST SALLER</span>
 								</div>
 							</div>
 							<div class="product__content content--center">
-								<h4><a href="single-product.html">Toyota</a></h4>
+								<h4><a href="single-product.html">{{$post->brand}}</a></h4>
 								<ul class="prize d-flex">
-									<li>1,000,000 บาท</li>
-									<li class="old_prize">$1,800,000</li>
+									<li>{{$post->price}}</li>
+									<li class="old_prize">${{$post->price}}</li>
 								</ul>
 								<div class="action">
 									<div class="actions_inner">
@@ -657,7 +662,7 @@
 						</div>
 						<!-- Start Single Product -->
 					</div>  --}}
-					
+					@endforeach
 				</div>
 				<!-- End Single Tab Content -->
 			</div>
@@ -714,6 +719,7 @@
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							<div class="single__product">
 								<!-- Start Single Product -->
+								{{--  จุดเริ่ม  --}}
 								<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 									<div class="product product__style--3">
 										<div class="product__thumb">
@@ -3124,7 +3130,7 @@
 		                        </div>
 		                        <!-- end product images -->
 		                        <div class="product-info">
-		                            <h1>Simple Fabric Bags</h1>
+		                            <h1>{{ $post->brand }}</h1>
 		                            <div class="rating__and__review">
 		                                <ul class="rating">
 		                                    <li><span class="ti-star"></span></li>
@@ -3139,8 +3145,8 @@
 		                            </div>
 		                            <div class="price-box-3">
 		                                <div class="s-price-box">
-		                                    <span class="new-price">$17.20</span>
-		                                    <span class="old-price">$45.00</span>
+		                                    <span class="new-price">{{ $post->price }}</span>
+		                                    <span class="old-price">{{ $post->price }}</span>
 		                                </div>
 		                            </div>
 		                            <div class="quick-desc">

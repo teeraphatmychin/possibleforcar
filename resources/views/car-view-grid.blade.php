@@ -29,7 +29,8 @@
 {{--  ////////////  --}}
 	@include('sub-shopgrid')
 {{--  ////////////  --}}
-	<div class="on-grids wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
+{{--  load more  --}}
+	{{--  <div class="on-grids wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
 		<div class="container">
 			<div class="recent-car-content">
 				<div class="row">
@@ -43,7 +44,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>  --}}
+	{{--  end load more  --}}
 
 
 

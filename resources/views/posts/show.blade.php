@@ -45,6 +45,11 @@
                             {!! Form::close() !!} 
                     </div>  
                 </div> 
+                <div class="row">
+                    <div class="col-md-12">
+                        {{ html::linkRoute('posts.index','See All post',array(),['class'=>btn btn-default brn-block]) }}
+                    </div>
+                </div>
             </div>
         </div>
 

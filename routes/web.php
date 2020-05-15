@@ -156,7 +156,8 @@ Auth::routes(['register' => false]);
 
 Route::resource('categories', 'CetagoryController',['except'=>['create']]);
 Route::resource('tags', 'TagController',['except'=>['create']]);
-
+Route::resource('posts', 'PostController');
+Route::get('pages', 'PagesController@getIndex');
 
 
 
@@ -169,9 +170,6 @@ Route::prefix('login')->group(function () {
     Route::get('/{provider}', 'Auth\LoginController@redirectToProvider')->name('login.provider');
     Route::get('/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('login.provider.callback');
 });
-
-
-Route::resource('posts', 'PostController');
 
 
 
