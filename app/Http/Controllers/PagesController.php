@@ -7,7 +7,8 @@ namespace App\Http\Controllers;
 class PagesController extends Controller{
 
     public function getIndes(){
-
+        $posts=Post::orderBy('created_at','desc')->limit(4)->get();
+        return view ('posts.index')-withPosts($posts);
     }
     public function getAbout(){
         $first ='shin';
