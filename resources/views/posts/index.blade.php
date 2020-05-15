@@ -18,18 +18,38 @@
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
           <div class="row">
-              <div class="col-md-10">
-                <h5>create post</h5>
-                    <h5>{{ $post->title }}</h5>
-                    <p>{{ $post->body }}</p>
+              <div class="col-md-8">
+                <h5>All post</h5>
+                    
               </div>
-        <div class="col-md-2">
-                 <a href="{{ route('posts.create') }}" class="btn brn-primary btn-block">Edit</a>               
+                <div class="col-md-4">
+                <a href"{{ route('posts.create') }}" class="btn btn-primary  btn-block">create post</a>
+                </div>
+{{--  class="{{ Request::is('/') ? "active" :"" }}"  --}}
+{{--  class="{{ Request::is('about') ? "active" :"" }}"  --}}
             </div>
-        </div>
-
-
-      </div>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>body</th>
+                        <th>created_at</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        @foreach($post as $posts)
+                            <tr>
+                            <th>{{ $posts->id }}</th>
+                            <td>{{ $posts->title }}</td>
+                            <td>{{ substr($posts->body ,0,100)}}{{ strlen($posts->body)>50 ? "..." : "" }}</td>
+                            <td>{{ date('M  j, Y', strtotime($posts->created_at)) }}</td>
+                            <td><a href="{{ route('posts.show',$posts->id) }}" class="btn btn-default">View</a><a href="{{ route('posts.edit',$posts->id) }}" class="btn btn-default">Edit</a></td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
     </div>
 
 @endsection

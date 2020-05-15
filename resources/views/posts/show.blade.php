@@ -19,7 +19,7 @@
       <div class="content-wrapper">
           <div class="row">
               <div class="col-md-8">
-                <h5>create post</h5>
+                <h5> post {{ $post->id }}</h5>
                     <h5>{{ $post->title }}</h5>
                     <p>{{ $post->body }}</p>
               </div>
@@ -35,11 +35,14 @@
                 </dl>  
                 <div class="row">
                     <div class="col-sm-6">
-                        
-                        <a href="{{ route('posts.edit') }}" class="btn brn-primary btn-block">Edit</a>
+                        {!! Html::linkRoute('posts.edit','Edit',array($post->id),array('class'=>'btn btn-primary btn-block')) !!}
+
+                        {{--  <a href="#" class="btn brn-primary btn-block">Edit</a>  --}}
                     </div>
                     <div class="col-sm-6">
-                        <a href="{{ route('posts.destroy') }}" class="btn brn-danger btn-block">Delete</a>
+                        {{--  <a href="#" class="btn brn-danger btn-block">Delete</a>  --}}
+                        {!! Html::linkRoute('posts.destroy','Delete',array($post->id),array('class'=>'btn btn-danger btn-block')) !!}
+
 
                     </div>  
                 </div> 
