@@ -153,11 +153,15 @@ Route::get('detail-car/{id}', 'All_indexController@detialpro')->name('detail-car
 Auth::routes(['register' => false]);
 
 ////
-
+Route::group(['middleware' => ['auth','auth.admin']], function () {
+    Route::get('blog/{slug}',['as'=> 'blog.single','uses'=>'BlogController@getSingle'])->where('slug','[\w\d\-\_]+');
+    Route::get('blog',['uses'=>'BlogController@getIndex', 'as'=> 'blog.index']);
+});
 Route::resource('categories', 'CetagoryController',['except'=>['create']]);
 Route::resource('tags', 'TagController',['except'=>['create']]);
 Route::resource('posts', 'PostController');
 Route::get('pages', 'PagesController@getIndex');
+Route::resource('categories', 'CategoryController',['except'=>['create']]);
 
 
 

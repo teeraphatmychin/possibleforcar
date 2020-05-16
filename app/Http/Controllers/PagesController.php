@@ -9,6 +9,7 @@ class PagesController extends Controller{
 
     public function getIndex(){
         $posts=list_car::orderBy('created_at','desc')->limit(10)->get();
+        
         return view ('pages.index')->withPosts($posts);
     }
     public function getAbout(){

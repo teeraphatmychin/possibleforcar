@@ -16,42 +16,57 @@
      
     
       <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-          <div class="row">
-            {!! Form::model($post,['route'=>['posts.update',$post->id],'method'=>'PUT']) !!}
-              <div class="col-md-8">
-                {!! Form::label('title','Title:') !!}
-                {!! Form::text('title',null,['class'=>'form-controll']) !!}
-                {!! Form::label('body','Body:') !!}
-                {!! Form::textarea('body',null,['class'=>'form-controll']) !!}
-              </div>
-                <div class="col-md-4">
-                    <div class="well">
-                        <dl class="dl-horizontal">
-                            <dt>Craate at:</dt>
-                            <dt>{{date('M ,j y , h:ia' ,strtotime($post->created_at)) }}</dt>
-                        </dl>   
-                        <dl class="dl-horizontal">
-                            <dt>Last update:</dt>
-                            <dt>{{ date('M ,j y , h:ia' ,strtotime($post->updated_at ))}}</dt>
-                        </dl>  
-                        <div class="row">
-                            <div class="col-sm-6">
-                                
-                                {{--  <a href="#" class="btn brn-primary btn-block">Edit</a>  --}}
-                                {!! Html::linkRoute('posts.show','Cancel',array($post->id),array('class'=>'btn btn-danger btn-block')) !!}
+<div class="content-wrapper">
+    <div class="row">
+		{!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT']) !!}
+		<div class="col-md-8">
+			{{ Form::label('title', 'Title:') }}
+			{{ Form::text('title', null, ["class" => 'form-control input-lg']) }}
 
-                            </div>
-                            <div class="col-sm-6">
-                                {{--  <a href="#" class="btn brn-danger btn-block">Delete</a>  --}}
-                                {{ Form::submit('save chang',['class','btn btn-success btn-block']) }}
-                                {{--  {!! Html::linkRoute('posts.update','Save change',array($post->id),array('class'=>'btn btn-success btn-block')) !!}  --}}
-                            </div>  
-                        </div> 
-                    </div>
-                </div>
+			{{ Form::label('slug', 'Slug:', ['class' => 'form-spacing-top']) }}
+			{{ Form::text('slug', null, ['class' => 'form-control']) }}
+
+			{{ Form::label('category_id', "Category:", ['class' => 'form-spacing-top']) }}
+			{{ Form::select('category_id', $categories, null, ['class' => 'form-control']) }}
+
+			{{ Form::label('tags', 'Tags:', ['class' => 'form-spacing-top']) }}
+			{{ Form::select('tags[]', $tags, null, ['class' => 'form-control select2-multi', 'multiple' => 'multiple']) }}
+			
+			{{ Form::label('body', "Body:", ['class' => 'form-spacing-top']) }}
+			{{ Form::textarea('body', null, ['class' => 'form-control']) }}
+		</div>
+
+		<div class="col-md-4">
+			<div class="well">
+				<dl class="dl-horizontal">
+					<dt>Created At:</dt>
+					<dd>{{ date('M j, Y h:ia', strtotime($post->created_at)) }}</dd>
+				</dl>
+
+				<dl class="dl-horizontal">
+					<dt>Last Updated:</dt>
+					<dd>{{ date('M j, Y h:ia', strtotime($post->updated_at)) }}</dd>
+				</dl>
+				<hr>
+				<div class="row">
+					<div class="col-sm-6">
+						{!! Html::linkRoute('posts.show', 'Cancel', array($post->id), array('class' => 'btn btn-danger btn-block')) !!}
+					</div>
+					<div class="col-sm-6">
+						{{ Form::submit('Save Changes', ['class' => 'btn btn-success btn-block']) }}
+					</div>
+				</div>
+
+			</div>
+		</div>
+		{!! Form::close() !!}
+	</div>	<!-- end of .row (form) -->
 
 
+
+
+
+	
       </div>
     </div>
 
@@ -66,3 +81,8 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('frontend/adminlte/dist/js/demo.js')}}"></script>
 <!-- Page specific script -->
+
+<script type="text/javascript">
+	$('.select2-multi').select2();
+	$('.select2-multi').select2().val({!! json_encode($post->tags()->getRelatedIds()) !!}).trigger('change');
+</script>

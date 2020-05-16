@@ -3,25 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Tag;
+use App\Category;
 use Session;
-
-class TagController extends Controller
+class CategoryController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construc(){
-        $this->middleware('auth');
-    }
-
     public function index()
     {
         //
-        $tags = Tag::all();
-        return view('tags.index')->withTags($tags);
+        
+        $categories = Category::all();
+        return view('categories.index')->withCategories($categories);
     }
 
     /**
@@ -32,7 +31,6 @@ class TagController extends Controller
     public function create()
     {
         //
-       
     }
 
     /**
@@ -44,14 +42,18 @@ class TagController extends Controller
     public function store(Request $request)
     {
         //
-        $this->validate($request, array('name' => 'required|max:255'));
-        $tag = new Tag;
-        $tag->name = $request->name;
-        $tag->save();
 
-        Session::flash('success', 'New Tag was successfully created!');
+        $this->validate($request, array(
+            'name' => 'required|max:255'
+            ));
 
-        return redirect()->route('tags.index');
+        $category = new Category;
+
+        $category->name = $request->name;
+        $category->save();
+
+        Session::flash('success', 'New Category has been created');
+
     }
 
     /**
@@ -64,6 +66,7 @@ class TagController extends Controller
     {
         //
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -74,6 +77,7 @@ class TagController extends Controller
     {
         //
     }
+
     /**
      * Update the specified resource in storage.
      *
