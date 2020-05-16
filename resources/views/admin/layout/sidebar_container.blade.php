@@ -60,16 +60,22 @@
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
             <p>
-              ชินชิน เครื่องมือ
+              ชินชิน เครื่องมือ</p>
               <i class="fas fa-angle-left right"></i>
               <span class="badge badge-info right">4</span>
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{url('ajax-crud')}}" class="nav-link">
+              <a href="{{route('tags.index')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>จัดการรถ</p>
+                <p>manage tag</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{route('categories.index')}}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>manage category</p>
               </a>
             </li>
             <li class="nav-item">

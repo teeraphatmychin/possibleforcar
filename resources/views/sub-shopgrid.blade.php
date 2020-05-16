@@ -396,13 +396,10 @@
         					<aside class="wedget__categories poroduct--cat">
         						<h3 class="wedget__title">Product Categories</h3>
         						<ul>
-        							<li><a href="#">Toyota <span>(4)</span></a></li>
-									<li><a href="#">Mazda <span>(0)</span></a></li>
-									<li><a href="#">Honda <span>(0)</span></a></li>
-									<li><a href="#">Isuzu <span>(0)</span></a></li>
-									<li><a href="#">Nissan <span>(0)</span></a></li>
-									<li><a href="#">BMW <span>(0)</span></a></li>
-									<li><a href="#">Benz <span>(0)</span></a></li>
+									@foreach($postCategories as $postCategory)
+									<li><a href="#">{{ $postCategory->name }}<span>(4)</span></a></li>
+									@endforeach
+									
         						</ul>
         					</aside>
         					<aside class="wedget__categories pro--range">
@@ -428,13 +425,9 @@
         					<aside class="wedget__categories poroduct--tag">
         						<h3 class="wedget__title">Product Tags</h3>
         						<ul>
-        							<li><a href="#">Toyota </a></li>
-									<li><a href="#">Mazda </a></li>
-									<li><a href="#">Honda </a></li>
-									<li><a href="#">Isuzu </a></li>
-									<li><a href="#">Nissan </a></li>
-									<li><a href="#">BMW </a></li>
-									<li><a href="#">Benz </a></li>
+									@foreach($postTags as $postTag)
+        							<li><a href="#">{{ $postTag->name }}</a></li>
+									@endforeach
         						</ul>
         					</aside>
         					<aside class="wedget__categories sidebar--banner">

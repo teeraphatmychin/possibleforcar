@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\list_car;
 use App\list_blog;
+use App\Category;
+use App\Tag;
 class LoadMoreController extends Controller
 {
     //
@@ -17,7 +19,9 @@ class LoadMoreController extends Controller
         }
         $posts = list_car::paginate(12);
         $posts2 = list_car::paginate(4);
-    	return view('car-view-grid',compact('postGrids','posts','posts2'));
+        $postCategories=Category::all();
+        $postTags=Category::all();
+    	return view('car-view-grid',compact('postGrids','posts','posts2','postCategories','postTags'));
     }
     public function blogPost(Request $request)
     {
