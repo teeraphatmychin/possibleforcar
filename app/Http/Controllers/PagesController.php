@@ -4,24 +4,52 @@
 namespace App\Http\Controllers;
 use App\Post;
 use App\list_car;
+use Mail;
 
 class PagesController extends Controller{
 
-    public function getIndex(){
-        $posts=list_car::orderBy('created_at','desc')->limit(10)->get();
-        
-        return view ('pages.index')->withPosts($posts);
-    }
-    public function getAbout(){
-        $first ='shin';
-        $last =' shin';
-        $fullname = $first ." ". $last;
-        $email="dkjflsdfj.com";
-        $data['email'];
-        $data['name'];
-        //return view('pages.about')->withfullname($fullname)->withEmail($email)->withdata($data);
-    }
-    public function getContect(){
+    public function getIndex() {
+		$posts = Post::orderBy('created_at', 'desc')->limit(4)->get();
+		return view('pages.welcome')->withPosts($posts);
+	}
 
-    }
+	public function getAbout() {
+		$first = 'Alex';
+		$last = 'Curtis';
+
+		$fullname = $first . " " . $last;
+		$email = 'alex@jacurtis.com';
+		$data = [];
+		$data['email'] = $email;
+		$data['fullname'] = $fullname;
+		return view('pages.about')->withData($data);
+	}
+
+	public function getContact() {
+		return view('pages.contact');
+	}
+
+	public function postContact(Request $request) {
+		$this->validate($request, [
+			'email' => 'required|email',
+			'subject' => 'min:3',
+			'message' => 'min:10']);
+
+		$data = array(
+			'email' => $request->email,
+			'subject' => $request->subject,
+			'bodyMessage' => $request->message
+			);
+
+		Mail::send('emails.contact', $data, function($message) use ($data){
+			$message->from($data['email']);
+			$message->to('teeraphatmychin@gmail.com');
+			$message->subject($data['subject']);
+		});
+
+		Session::flash('success', 'Your Email was Sent!');
+
+		return redirect('/');
+	}
+
 }

@@ -20,50 +20,39 @@
       <div class="content-wrapper">
         <div class="row">
             <div class="col-md-8">
-              <h5>Tag</h5>
-                  
-            </div>
-              <div class="col-md-4">
-              {{-- <a href="{{ route('categories.create') }}" class="btn btn-primary btn-block">create category</a> --}}
-              </div>
-                
-          </div>
-          <div class="row">
-            <div class="col-md-8">
-              <table class="table">
-                  <thead>
-                      <th>id</th>
-                      <th>name</th>
-                      <th>created_at</th>
-                      <th></th>
-                  </thead>
-                  <tbody>
-                      @foreach($tags as $tag)
-                          <tr>
-                          <th>{{ $tag->id }}</th>
-                          <td>{{ $tag->name }}</td>
-                          <td>{{ date('M  j, Y', strtotime($tag->created_at)) }}</td>
-                         {{--  <td>{{ substr($posts->body ,0,100)}}{{ strlen($posts->body)>50 ? "..." : "" }}</td>
-                          
-                          <td><a href="{{ route('posts.show',$posts->id) }}" class="btn btn-default">View</a><a href="{{ route('posts.edit',$posts->id) }}" class="btn btn-default">Edit</a></td>
-                         --}} 
+                <h1>Tags</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
                         </tr>
-                      @endforeach
-                  </tbody>
-              </table>
-             </div>
-                <div class="col-md-3">
-                    {!! Form::open(['route'=>'tags.store','method'=>'POST']) !!}
+                    </thead>
+    
+                    <tbody>
+                        @foreach ($tags as $tag)
+                        <tr>
+                            <th>{{ $tag->id }}</th>
+                            <td><a href="{{ route('tags.show', $tag->id) }}">{{ $tag->name }}</a></td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div> <!-- end of .col-md-8 -->
+    
+            <div class="col-md-3">
+                <div class="well">
+                    {!! Form::open(['route' => 'tags.store', 'method' => 'POST']) !!}
                         <h2>New Tag</h2>
-                        {{  Form::label('name', 'Name :')  }}
-                        {{  Form::text('name', null ,['class' =>'form-control']) }}
-                        {{  Form::submit('Create New tag', ['class'=>'btn btn-success btn-block'])  }}
+                        {{ Form::label('name', 'Name:') }}
+                        {{ Form::text('name', null, ['class' => 'form-control']) }}
+    
+                        {{ Form::submit('Create New Tag', ['class' => 'btn btn-primary btn-block btn-h1-spacing']) }}
+                    
                     {!! Form::close() !!}
                 </div>
-          </div>
-          <div class="text-center">
-              {{--  {{ $post->links()}}  --}}
-          </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
