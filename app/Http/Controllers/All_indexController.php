@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Post;
+
 use App\list_car;
 use App\list_blog;
 use App\list_customer;
 use App\Category;
-use App\Post;
 use Illuminate\Http\Request;
 
 class All_indexController extends Controller
@@ -24,7 +25,7 @@ class All_indexController extends Controller
 
     
     public function detialpro($id){
-        $detail_car=list_car::findOrFail($id);
+        $detail_car=Post::findOrFail($id);
         $slide_similars=list_car::all();
        
         //$imagesGalleries=ImageGallery_model::where('products_id',$id)->get();

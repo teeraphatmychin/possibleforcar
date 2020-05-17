@@ -7,6 +7,8 @@ use App\list_car;
 use App\list_blog;
 use App\Category;
 use App\Tag;
+use App\Post;
+
 class LoadMoreController extends Controller
 {
     //
