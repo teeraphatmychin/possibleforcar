@@ -58,8 +58,8 @@
 					<div class="product product__style--3">
 						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="product__thumb">
-								<a class="first__img" href="{{url('/detail-car',$post->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->brand}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
-								<a class="second__img animation1" href="{{url('/detail-car',$post->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->brand}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
+								<a class="first__img" href="{{url('/detail-car',$post->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
+								<a class="second__img animation1" href="{{url('/detail-car',$post->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
 								<div class="hot__box">
 									<span class="hot-label">BEST SALLER</span>
 								</div>
