@@ -125,7 +125,7 @@
 										<div class="product__content content--center">
 											<h4><a href="{{url('/detail-car',$post->id)}}">{{ $post->category_id }}</a></h4>
 											<ul class="prize d-flex">
-												<li>${{ $post->category_id->name }}</li>
+												<li>${{ $post->category_id}}</li>
 												<li class="old_prize">${{ $post->price }}</li>
 											</ul>
 											<div class="action">
