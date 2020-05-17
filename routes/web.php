@@ -164,6 +164,9 @@ Route::get('pages', 'PagesController@getIndex');
 Route::resource('categories', 'CategoryController',['except'=>['create']]);
 
 
+Route::post('comments/{post_id}',['admin'=>'CommentsController@store','as' => 'comments.store']);
+
+
 
 // google
 Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
