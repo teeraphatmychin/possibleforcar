@@ -17,6 +17,14 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('body');
+            $table->string('model');
+            $table->string('year_model')->nullable();
+            $table->string('price')->nullable();
+            $table->string('sum_price')->nullable();
+            $table->string('image')->nullable();
+            $table->string('type')->nullable();
+            $table->string('engine')->nullable();
+            $table->string('status_car')->nullable();
             $table->timestamps();
         });
     }
