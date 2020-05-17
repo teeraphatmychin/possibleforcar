@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/css/plugins.css') }}">
 	<link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/style.css') }}">
 	<!-- Cusom css -->
-   <link rel="stylesheet" href="css/custom.css">
+   <link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/css/custom.css}}">
 
 	<!-- Modernizer js -->
 	<script src="{{ asset('frontend/boighor/boighors/js/vendor/modernizr-3.5.0.min.js')}}"></script>
