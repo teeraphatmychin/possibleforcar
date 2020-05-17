@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "@ttskch/select2-bootstrap4-theme": "^1.4.0",
+        "laravel-collection": "^1.2.2",
         "parsleyjs": "^2.9.2"
     }
 }
