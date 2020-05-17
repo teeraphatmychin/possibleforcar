@@ -190,7 +190,7 @@
 	        									<li>{{ $post2->price }}</li>
 	        									<li class="old__prize">{{ $post2->price}}</li>
 	        								</ul>
-											<p>{{ substr($post->detail, 0, 50) }}{{ strlen($post->detail) > 50 ? "..." : "" }}}</p>
+											<p>{{ substr($post2->detail, 0, 50) }}{{ strlen($post2->detail) > 50 ? "..." : "" }}</p>
 											{{--   substr($post->detail, 0, 50) }}{{ strlen($post->detail) > 50 ? "..." : "" }}  --}}
 	        								<ul class="cart__action d-flex">
 	        									<li class="cart"><a href="cart.html">Add to cart</a></li>
