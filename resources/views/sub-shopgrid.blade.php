@@ -123,7 +123,7 @@
 											</div>
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="{{url('/detail-car',$post->id)}}">{{ $post->category_id->name }}</a></h4>
+											<h4><a href="{{url('/detail-car',$post->id)}}">{{ $post->$category_id->name }}</a></h4>
 											<ul class="prize d-flex">
 												<li>${{ $post->category_id->name }}</li>
 												<li class="old_prize">${{ $post->price }}</li>
