@@ -16,12 +16,12 @@ class AddToSlugToUsers extends Migration
 
         Schema::table('posts', function (Blueprint $table) {
             //
-            $table->string('slug')->unique()->after('body');
+            $table->string('slug')->unique()->after('body')->nullable();
            
         });
         Schema::table('list_cars', function (Blueprint $table) {
             //
-            $table->string('slug')->unique()->after('model');
+            $table->string('slug')->unique()->after('model')->nullable();
            
         });
         

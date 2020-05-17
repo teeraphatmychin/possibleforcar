@@ -32,7 +32,7 @@
         <div class="wrapper">
             <div class="content-wrapper">
                                 <div align="right">
-                                <button type="button" name="create_record" id="create_record" class="btn btn-success btn-sm">Create Record</button>
+                                <button type="button" name="create_record" id="create_record" tabindex="-1" class="btn btn-success btn-sm">Create Record</button>
                                 </div>
                                 <br />
                                 <div class="table-responsive">

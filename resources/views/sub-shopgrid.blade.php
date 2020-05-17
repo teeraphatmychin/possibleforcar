@@ -126,7 +126,7 @@
 											<h4><a href="{{url('/detail-car',$post->id)}}">{{ $post->brand }}</a></h4>
 											<ul class="prize d-flex">
 												<li>${{ $post->brand }}</li>
-												<li class="old_prize">${{ $post->brand }}</li>
+												<li class="old_prize">${{ $post->price }}</li>
 											</ul>
 											<div class="action">
 												<div class="actions_inner">
@@ -231,7 +231,7 @@
 		                        </div>
 		                        <!-- end product images -->
 		                        <div class="product-info">
-		                            <h1>Simple Fabric Bags</h1>
+		                            <h1>{{ $posts->title }}s</h1>
 		                            <div class="rating__and__review">
 		                                <ul class="rating">
 		                                    <li><span class="ti-star"></span></li>

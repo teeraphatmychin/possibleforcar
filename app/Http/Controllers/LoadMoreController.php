@@ -12,16 +12,18 @@ class LoadMoreController extends Controller
     //
     public function gridLoad(Request $request)
     {   
-        $postGrids = list_car::paginate(6);
-    	if ($request->ajax()) {
-    		$view = view('data',compact('postGrids'))->render();
-            return response()->json(['html'=>$view]);
-        }
+        // $postGrids = list_car::paginate(6);
+    	// if ($request->ajax()) {
+    	// 	$view = view('data',compact('postGrids'))->render();
+        //     return response()->json(['html'=>$view]);
+        // }
+        //$posts = list_car::paginate(12);
+        $categories = Category::all();
         $posts = list_car::paginate(12);
         $posts2 = list_car::paginate(4);
-        $postCategories=Category::all();
-        $postTags=Category::all();
-    	return view('car-view-grid',compact('postGrids','posts','posts2','postCategories','postTags'));
+        
+        
+    	return view('car-view-grid',compact('categories','posts','posts2'));
     }
     public function blogPost(Request $request)
     {

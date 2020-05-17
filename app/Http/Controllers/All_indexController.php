@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\list_car;
 use App\list_blog;
 use App\list_customer;
+use App\Category;
+use App\Post;
 use Illuminate\Http\Request;
 
 class All_indexController extends Controller
@@ -14,9 +16,10 @@ class All_indexController extends Controller
         $products=list_car::all();
         $blog_slides=list_blog::all();
         $posts=list_car::paginate(8);
-
+        $postCategories=Category::all();
+        $postcars=Post::all();
         $byCate="";
-        return view('index',compact('products','byCate','blog_slides','posts'));
+        return view('index',compact('products','byCate','blog_slides','posts','postCategories','postcars'));
     }
 
     
