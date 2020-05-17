@@ -177,6 +177,10 @@ return [
         App\Providers\BladeExtrasServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
         
+        
+        Collective\Html\HtmlServiceProvider::class,
+
+
 
 
 
@@ -232,7 +236,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Datatables' => Yajra\Datatables\Facades\Datatable::class,
-
+        
+        'Form' => 'Collective\Html\FormFacade',
+  'Html' => 'Collective\Html\HtmlFacade',
        
 
        
