@@ -13,9 +13,9 @@ class All_indexController extends Controller
     //
     public function shop(){
         
-        $products=list_car::all();
+        $products=Post::all();
         $blog_slides=list_blog::all();
-        $posts=list_car::paginate(8);
+        $posts=Post::paginate(8);
         $postCategories=Category::all();
         $postcars=Post::all();
         $byCate="";
