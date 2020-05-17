@@ -153,14 +153,15 @@
 		        					<!-- End Single Product -->
 	        						
 		        
-	        					</div>
-	        					<ul class="wn__pagination">
+								</div>
+								{!! $posts->links() !!}
+	        					{{--  <ul class="wn__pagination">
 	        						<li class="active"><a href="#">1</a></li>
 	        						<li><a href="#">2</a></li>
 	        						<li><a href="#">3</a></li>
 	        						<li><a href="#">4</a></li>
 	        						<li><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
-	        					</ul>
+	        					</ul>  --}}
 							</div>
 							
 
@@ -189,7 +190,8 @@
 	        									<li>{{ $post2->price }}</li>
 	        									<li class="old__prize">{{ $post2->price}}</li>
 	        								</ul>
-	        								<p>{{ $post2->detail }}</p>
+											<p>{{ substr($post->detail, 0, 50) }}{{ strlen($post->detail) > 50 ? "..." : "" }}}</p>
+											{{--   substr($post->detail, 0, 50) }}{{ strlen($post->detail) > 50 ? "..." : "" }}  --}}
 	        								<ul class="cart__action d-flex">
 	        									<li class="cart"><a href="cart.html">Add to cart</a></li>
 	        									<li class="wishlist"><a href="cart.html"></a></li>
