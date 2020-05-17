@@ -24,34 +24,29 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
+                                <th>Title</th>
+                                <th>category</th>
+                                <th></th>
                             </tr>
                         </thead>
-        
                         <tbody>
-                            @foreach ($categories as $category)
+                            @foreach ($category->posts as $post)
                             <tr>
-                                <th>{{ $category->id }}</th>
-                                <td><a href="{{ route('categories.show', $category->id) }}">{{ $category->name }}</td>
-                                    
+                                <th>{{ $post->id }}</th>
+                                <td>{{ $post->title }}</td>
+                                <td>@foreach ($post->category as $category)
+                                        <span class="label label-default"></span>
+                                    @endforeach
+                                    </td>
+                                <td><a href="{{ route('posts.show', $post->id ) }}" class="btn btn-default btn-block">View</a></td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
+                    
                 </div> <!-- end of .col-md-8 -->
         
-                <div class="col-md-3">
-                    <div class="well">
-                        {!! Form::open(['route' => 'categories.store', 'method' => 'POST']) !!}
-                            <h2>New Category</h2>
-                            {{ Form::label('name', 'Name:') }}
-                            {{ Form::text('name', null, ['class' => 'form-control']) }}
-        
-                            {{ Form::submit('Create New Category', ['class' => 'btn btn-primary btn-block btn-h1-spacing']) }}
-                        
-                        {!! Form::close() !!}
-                    </div>
-                </div>
+               
             </div>
 
         </div>

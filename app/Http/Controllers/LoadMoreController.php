@@ -24,8 +24,9 @@ class LoadMoreController extends Controller
         $posts = Post::paginate(12);
         $posts2 = Post::paginate(4);
         $postTags =Tag::all();
-        
-    	return view('car-view-grid',compact('categories','posts','posts2','postTags'));
+        $posttests=Category::find($id)->posts;
+
+    	return view('car-view-grid',compact('categories','posts','posts2','postTags','posttests'));
     }
     public function blogPost(Request $request)
     {
