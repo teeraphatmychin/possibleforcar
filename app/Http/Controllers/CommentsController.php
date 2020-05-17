@@ -34,7 +34,7 @@ class CommentsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request ,$post_id)
     {
         //
         $this->validate($request, array(
@@ -43,18 +43,17 @@ class CommentsController extends Controller
             'comment' => 'required|min:5|max:2000'
             ));
 
-        $post =Post::find($post->id);
-        $post = new Comment();
-
+        $post =Post::find($post_id);
+        $comment = new Comment();
         $comment->name = $request->name;
         $comment->email = $request->email;
         $comment->comment = $request->comment;
         $comment->approved = true;
-        $comment->$post->associate($post);
+        $comment->post()->associate($post);
         $comment->save();
 
         Session::flash('success', 'Comment has been created');
-            return redirect()->route('blog.single', [$post->slug]);
+        return redirect()->route('blog.single', [$post->slug]);
     }
 
     /**

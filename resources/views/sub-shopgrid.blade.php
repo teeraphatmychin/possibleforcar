@@ -44,7 +44,7 @@
         						<h3 class="wedget__title">Product Categories</h3>
         						<ul>
 									@foreach($categories as $category)
-									<li><a href="{{ route('category.show',$category->id) }}">{{ $category->name }}<span>(4)</span></a></li>
+									<li><a href="#">{{ $category->name }}<span>({{ $category->posts()->count() }})</span></a></li>
 									@endforeach
 									
         						</ul>

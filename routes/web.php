@@ -165,7 +165,7 @@ Route::get('pages', 'PagesController@getIndex');
 Route::resource('categories', 'CategoryController',['except'=>['create']]);
 
 
-Route::post('comments/{post_id}',['admin'=>'CommentsController@store','as' => 'comments.store']);
+Route::post('comments/{post_id}',['uses'=>'CommentsController@store','as' => 'comments.store']);
 
 
 
@@ -181,6 +181,5 @@ Route::prefix('login')->group(function () {
 
 
 
-Route::get('blog-view-grid', 'LoadMoreController@blogPost')->name('blog-view-grid');
 
 

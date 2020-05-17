@@ -1,8 +1,7 @@
 
-{{--  <? php $titleTag =htmlspecialchars($post->title); ?>
+{{--  <? php $titleTag = htmlspecialchars($post->title); ?>
 @section('title' "| $titleTag")  --}}
-@extends('admin.index')
-@section('title' ,'|new post')
+
 <head>
 <link rel="stylesheet" href="{{ asset('frontend/adminlte/plugins/fontawesome-free/css/all.min.css')}}">
 <!-- Ekko Lightbox -->
@@ -12,50 +11,46 @@
 <!-- Theme style -->
 <link rel="stylesheet" href="{{ asset('frontend/adminlte/dist/css/adminlte.min.css')}}">
 </head>
-@section('content')
-<body class="hold-transition sidebar-mini">
-    <div class="wrapper">
-     
-    
-      <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+
+ 
     <h1>{{ $post->title }}</h1>
     <h1>{{ $post->body }}</h1>
     <p>Post in: {{ $post->category->name }}</p>
 
     <div class="row">
-        @foreach($post->comments as comment)
-            <p>{{ $comment->name }}</p>
-            <p>{{ $comment->comment }}</p>
+        @foreach($post->comments as $comment)
+            <p><strong> Name:</strong> {{ $comment->name }}</p>
+            <p><strong>Comment:</strong><br/> {{ $comment->comment }}</p>
         @endforeach
     </div>
+
+
     <div class="row">
-        <div class="comment-form">
+        <div class="col-md-8 col-md-offset-2">
             {{ Form::open(['route'=>['comments.store',$post->id], 'method'=>'POST']) }}
+            <div class="row">    
                 <div class="col-md-6">
-                {{ Form::label('name',"Name") }}
-                {{ Form::text('name',null,['class'=>'form-control']) }}
+                    {{ Form::label('name',"Name") }}
+                    {{ Form::text('name',null,['class'=>'form-control']) }}
                 </div>
                 <div class="col-md-6">
-                    {{ Form::label('email','email:') }}
+                    {{ Form::label('email','Email:') }}
                     {{ Form::text('email',null,['class'=>'form-control']) }}
-                    </div>
-                    <div class="col-md-12">
-                        {{ Form::label('comment',"Name") }}
-                        {{ Form::textarea('comment',null,['class'=>'form-control']) }}
-                        {{ Form::submit('Add comment',['class'=>'btn btn-success btn-block']) }}
-                    </div>
+                </div>
+                <div class="col-md-12">
+                    {{ Form::label('comment',"Comment") }}
+                    {{ Form::textarea('comment',null,['class'=>'form-control']) }}
+                    {{ Form::submit('Add comment',['class'=>'btn btn-success btn-block']) }}
+                </div>    
+            </div>
             {{ Form::close() }}
         </div>
-
-
     </div>
 
 
-</div>
-</div>
+
     @endsection
-</body>
+
 <!-- jQuery -->
 <script src="{{ asset('frontend/adminlte/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap -->
