@@ -13,9 +13,9 @@
 </head>
 
  
-    <h1>{{ $post->title }}</h1>
-    <h1>{{ $post->body }}</h1>
-    <p>Post in: {{ $post->category->name }}</p>
+    <h1>{{$post->title}}</h1>
+    <h1>{{$post->body}}</h1>
+    <p>Post in: {{$post->category->name}}</p>
 
     <div class="row">
         @foreach($post->comments as $comment)
@@ -49,7 +49,6 @@
 
 
 
-    @endsection
 
 <!-- jQuery -->
 <script src="{{ asset('frontend/adminlte/plugins/jquery/jquery.min.js')}}"></script>
