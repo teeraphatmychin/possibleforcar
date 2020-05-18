@@ -125,10 +125,11 @@
 				<div class="tab__container mt--60">
 					<!-- Start Single Tab Content -->
 					<div class="row single__tab tab-pane fade show active" id="nav-all" role="tabpanel">
+						@foreach($postcars as $postcar)
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							
 								<div class="single__product">
-									@foreach($postcars as $postcar)
+									
 									<!-- Start Single Product -->
 									{{--  จุดเริ่ม =================================================================  --}}
 									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
@@ -208,10 +209,11 @@
 										</div>
 									</div>
 									<!-- Start Single Product -->
-									@endforeach
+									
 								</div>
-							
+								
 						</div>
+						@endforeach
 					</div>
 					<!-- End Single Tab Content -->
 
