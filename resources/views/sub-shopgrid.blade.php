@@ -126,7 +126,7 @@
 										<div class="product__content content--center">
 											<h4><a href="{{ route('blog.single', $post->slug) }}"></a>{{ $post->model }}</h4>
 											<ul class="prize d-flex">
-												<li>฿{ $post->category_id}}</li>
+												<li>฿{{  $post->category_id }}</li>
 												<li class="old_prize">{{ $post->price }}</li>
 											</ul>
 											<div class="action">
@@ -174,11 +174,11 @@
 									@foreach($posts2 as $post2)
 	        						<div class="list__view">
 	        							<div class="thumb">
-	        								<a class="first__img" href="{{ route('blog.single', $post->slug)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
-	        								<a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
+	        								<a class="first__img" href="{{ route('blog.single', $post2->slug)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
+	        								<a class="second__img animation1" href="{{ route('blog.single', $post2->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
 	        							</div>
 	        							<div class="content">
-	        								<h2><a href="{{ route('blog.single', $post->slug) }}"></a>{{ $post2->model}}</h2>
+	        								<h2><a href="{{ route('blog.single', $post2->slug) }}"></a>{{ $post2->model}}</h2>
 	        								<ul class="rating d-flex">
 	        									<li class="on"><i class="fa fa-star-o"></i></li>
 	        									<li class="on"><i class="fa fa-star-o"></i></li>
@@ -248,8 +248,8 @@
 		                            </div>
 		                            <div class="price-box-3">
 		                                <div class="s-price-box">
-		                                    <span class="new-price">฿{{ $post2->price }}</span>
-		                                    <span class="old-price">฿{{ $post2->price }}</span>
+		                                    <span class="new-price">฿{{ $post->price }}</span>
+		                                    <span class="old-price">฿{{ $post->price }}</span>
 		                                </div>
 		                            </div>
 		                            <div class="quick-desc">
