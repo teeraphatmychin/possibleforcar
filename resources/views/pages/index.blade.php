@@ -126,8 +126,9 @@
 					<!-- Start Single Tab Content -->
 					<div class="row single__tab tab-pane fade show active" id="nav-all" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
-							@foreach($postcars as $postcar)
+							
 								<div class="single__product">
+									@foreach($postcars as $postcar)
 									<!-- Start Single Product -->
 									{{--  จุดเริ่ม =================================================================  --}}
 									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
@@ -207,8 +208,9 @@
 										</div>
 									</div>
 									<!-- Start Single Product -->
+									@endforeach
 								</div>
-							@endforeach
+							
 						</div>
 					</div>
 					<!-- End Single Tab Content -->
@@ -1868,7 +1870,7 @@
 				@foreach($postcars as $postcar)
 				<div class="product product__style--3">
 					<div class="product__thumb">
-						<a class="first__img" href="single-product.html"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
+						<a class="first__img" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
 					</div>
 					<div class="product__content content--center">
 						<div class="action">
