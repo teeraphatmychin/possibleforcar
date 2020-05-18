@@ -127,87 +127,87 @@
 					<div class="row single__tab tab-pane fade show active" id="nav-all" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							@foreach($postcars as $postcar)
-							<div class="single__product">
-								<!-- Start Single Product -->
-								{{--  จุดเริ่ม =================================================================  --}}
-								<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-									<div class="product product__style--3">
-										<div class="product__thumb">
-											<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
-											<a class="second__img animation1" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
+								<div class="single__product">
+									<!-- Start Single Product -->
+									{{--  จุดเริ่ม =================================================================  --}}
+									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+										<div class="product product__style--3">
+											<div class="product__thumb">
+												<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
+												<a class="second__img animation1" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
+												<div class="hot__box">
+													<span class="hot-label">BEST SALER</span>
+												</div>
 											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="{{ route('blog.single', $postcar->slug) }}l"></a>{{ $postcar->model }}</h4>
-											<ul class="prize d-flex">
-												<li>฿{{ $postcar->price }}</li>
-												<li class="old_prize">{{ $postcar->price }}</li>
-											</ul>
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+											<div class="product__content content--center content--center">
+												<h4><a href="{{ route('blog.single', $postcar->slug) }}l"></a>{{ $postcar->model }}</h4>
+												<ul class="prize d-flex">
+													<li>฿{{ $postcar->price }}</li>
+													<li class="old_prize">{{ $postcar->price }}</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
+															<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="product__hover--content">
+													<ul class="rating d-flex">
+														<li class="on"><i class="fa fa-star-o"></i></li>
+														<li class="on"><i class="fa fa-star-o"></i></li>
+														<li class="on"><i class="fa fa-star-o"></i></li>
+														<li><i class="fa fa-star-o"></i></li>
+														<li><i class="fa fa-star-o"></i></li>
 													</ul>
 												</div>
 											</div>
-											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
-											</div>
 										</div>
 									</div>
-								</div>
-								<!-- Start Single Product -->
-								<!-- Start Single Product -->
-								<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-									<div class="product product__style--3">
-										<div class="product__thumb">
-											<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
-											<a class="second__img animation1" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}g" alt="product image"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
+									<!-- Start Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+										<div class="product product__style--3">
+											<div class="product__thumb">
+												<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
+												<a class="second__img animation1" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}g" alt="product image"></a>
+												<div class="hot__box">
+													<span class="hot-label">BEST SALER</span>
+												</div>
 											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="{{ route('blog.single', $postcar->slug) }}"></a>{{ $postcar->model }}</h4>
-											<ul class="prize d-flex">
-												<li>฿{{ $postcar->price }}</li>
-												<li class="old_prize">{{ $postcar->price }}</li>
-											</ul>
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+											<div class="product__content content--center content--center">
+												<h4><a href="{{ route('blog.single', $postcar->slug) }}"></a>{{ $postcar->model }}</h4>
+												<ul class="prize d-flex">
+													<li>฿{{ $postcar->price }}</li>
+													<li class="old_prize">{{ $postcar->price }}</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
+															<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="product__hover--content">
+													<ul class="rating d-flex">
+														<li class="on"><i class="fa fa-star-o"></i></li>
+														<li class="on"><i class="fa fa-star-o"></i></li>
+														<li class="on"><i class="fa fa-star-o"></i></li>
+														<li><i class="fa fa-star-o"></i></li>
+														<li><i class="fa fa-star-o"></i></li>
 													</ul>
 												</div>
 											</div>
-											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
-											</div>
 										</div>
 									</div>
+									<!-- Start Single Product -->
 								</div>
-								<!-- Start Single Product -->
-							</div>
 							@endforeach
 						</div>
 					</div>

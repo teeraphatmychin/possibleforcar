@@ -126,7 +126,7 @@
 										<div class="product__content content--center">
 											<h4><a href="{{ route('blog.single', $post->slug) }}"></a>{{ $post->model }}</h4>
 											<ul class="prize d-flex">
-												<li>฿{{  $post->category_id }}</li>
+												<li>฿{{  $post->price }}</li>
 												<li class="old_prize">{{ $post->price }}</li>
 											</ul>
 											<div class="action">
