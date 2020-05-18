@@ -212,6 +212,11 @@
 						</div>
 					</div>
 					<!-- End Single Tab Content -->
+
+
+					{{--    --}}
+					
+
 					<!-- Start Single Tab Content -->
 					<div class="row single__tab tab-pane fade" id="nav-toyota" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
@@ -617,7 +622,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- End Single Tab Content -->
+					{{--  <!-- End Single Tab Content -->
 					<!-- Start Single Tab Content -->
 					<div class="row single__tab tab-pane fade" id="nav-Honda" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
@@ -1835,7 +1840,13 @@
 							</div>
 						</div>
 					</div>
-					<!-- End Single Tab Content -->
+					<!-- End Single Tab Content -->  --}}
+
+
+
+
+
+
 				</div>
 			</div>
 		</section>

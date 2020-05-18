@@ -18,9 +18,11 @@ class All_indexController extends Controller
         $blog_slides=list_blog::all();
         $posts=Post::paginate(8);
         $postCategories=Category::all();
+        $postCategories2=Category::all();
+
         $postcars=Post::all();
         $byCate="";
-        return view('index',compact('products','byCate','blog_slides','posts','postCategories','postcars'));
+        return view('index',compact('products','byCate','blog_slides','posts','postCategories','postcars','postCategories2'));
     }
 
     
