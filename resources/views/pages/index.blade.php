@@ -58,17 +58,17 @@
 					<div class="product product__style--3">
 						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="product__thumb">
-								<a class="first__img" href="{{ route('blog.single', $post->slug) }}">"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
-								<a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}">"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
+								<a class="first__img" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
+								<a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
 								<div class="hot__box">
 									<span class="hot-label">BEST SALLER</span>
 								</div>
 							</div>
 							<div class="product__content content--center">
-								<h4><a href="single-product.html">{{$post->brand}}</a></h4>
+								<h4><a href="{{ route('blog.single', $post->slug) }}"></a>{{$post->model}}</h4>
 								<ul class="prize d-flex">
-									<li>{{$post->price}}</li>
-									<li class="old_prize">${{$post->price}}</li>
+									<li>฿{{$post->price}}</li>
+									<li class="old_prize">{{$post->price}}</li>
 								</ul>
 								<div class="action">
 									<div class="actions_inner">
@@ -133,16 +133,16 @@
 								<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 									<div class="product product__style--3">
 										<div class="product__thumb">
-											<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}">"><img src="{{ route('blog.single', $postcar->slug) }}">"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
-											<a class="second__img animation1" href="{{ route('blog.single', $postcar->slug) }}">"><img src="images/books/2.jpg" alt="product image"></a>
+											<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
+											<a class="second__img animation1" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
 											<div class="hot__box">
 												<span class="hot-label">BEST SALER</span>
 											</div>
 										</div>
 										<div class="product__content content--center content--center">
-											<h4><a href="single-product.html">{{ $postcar->price }}</a></h4>
+											<h4><a href="{{ route('blog.single', $postcar->slug) }}l"></a>{{ $postcar->model }}</h4>
 											<ul class="prize d-flex">
-												<li>${{ $postcar->price }}</li>
+												<li>฿{{ $postcar->price }}</li>
 												<li class="old_prize">{{ $postcar->price }}</li>
 											</ul>
 											<div class="action">
@@ -172,17 +172,17 @@
 								<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 									<div class="product product__style--3">
 										<div class="product__thumb">
-											<a class="first__img" href="single-product.html"><img src="images/books/3.jpg" alt="product image"></a>
-											<a class="second__img animation1" href="single-product.html"><img src="images/books/9.jpg" alt="product image"></a>
+											<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
+											<a class="second__img animation1" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}g" alt="product image"></a>
 											<div class="hot__box">
 												<span class="hot-label">BEST SALER</span>
 											</div>
 										</div>
 										<div class="product__content content--center content--center">
-											<h4><a href="single-product.html">Ghost</a></h4>
+											<h4><a href="{{ route('blog.single', $postcar->slug) }}"></a>{{ $postcar->model }}</h4>
 											<ul class="prize d-flex">
-												<li>$50.00</li>
-												<li class="old_prize">$35.00</li>
+												<li>฿{{ $postcar->price }}</li>
+												<li class="old_prize">{{ $postcar->price }}</li>
 											</ul>
 											<div class="action">
 												<div class="actions_inner">

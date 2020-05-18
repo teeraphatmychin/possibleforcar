@@ -50,9 +50,9 @@
                                 <th>{{ $post->id }}</th>
                                 <td>{{ $post->title }}</td>
                                 <td>
-                                    @foreach($post->categories as $category)
+                                    {{--  @foreach($post->categories as $category)
                                         <span class="label label-default">{{$category->name}}</span>
-                                    @endforeach
+                                    @endforeach  --}}
                                     </td>
                                 <td><a href="{{ route('posts.show', $post->id ) }}" class="btn btn-default btn-xs">View</a></td>
                             </tr>
