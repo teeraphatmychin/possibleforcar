@@ -117,17 +117,17 @@
 	        						<!-- Start Single Product -->
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
-											<a class="first__img" href="{{ route('blog.single', $post->slug) }}">"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
-											<a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}">"><img src="images/books/2.jpg" alt="product image"></a>
+											<a class="first__img" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
+											<a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}"><img src="images/books/2.jpg" alt="product image"></a>
 											<div class="hot__box">
 												<span class="hot-label">BEST SALLER</span>
 											</div>
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="{{ route('blog.single', $post->slug) }}">">{{ $post->category_id }}</a></h4>
+											<h4><a href="{{ route('blog.single', $post->slug) }}"></a>{{ $post->model }}</h4>
 											<ul class="prize d-flex">
-												<li>${{ $post->category_id}}</li>
-												<li class="old_prize">${{ $post->price }}</li>
+												<li>฿{ $post->category_id}}</li>
+												<li class="old_prize">{{ $post->price }}</li>
 											</ul>
 											<div class="action">
 												<div class="actions_inner">
@@ -201,7 +201,8 @@
 
 	        							</div>
 									</div>
-									
+									@endforeach
+
 	        						<!-- End Single Product -->
 	        						
 	        					</div>
@@ -296,7 +297,6 @@
 		</div>
 		<!-- END QUICKVIEW PRODUCT -->
 		</div>
-		@endforeach
 		<!-- //Main wrapper -->
 
 		<!-- JS Files -->
