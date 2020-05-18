@@ -174,11 +174,11 @@
 									@foreach($posts2 as $post2)
 	        						<div class="list__view">
 	        							<div class="thumb">
-	        								<a class="first__img" href="{{ route('blog.single', $post->slug) }}">"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
-	        								<a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}">"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
+	        								<a class="first__img" href="{{ route('blog.single', $post->slug)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
+	        								<a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
 	        							</div>
 	        							<div class="content">
-	        								<h2><a href="single-product.html">{{ $post2->category_id}}</a></h2>
+	        								<h2><a href="{{ route('blog.single', $post->slug) }}"></a>{{ $post2->model}}</h2>
 	        								<ul class="rating d-flex">
 	        									<li class="on"><i class="fa fa-star-o"></i></li>
 	        									<li class="on"><i class="fa fa-star-o"></i></li>
@@ -188,7 +188,7 @@
 	        									<li><i class="fa fa-star-o"></i></li>
 	        								</ul>
 	        								<ul class="prize__box">
-	        									<li>{{ $post2->price }}</li>
+	        									<li>฿{{ $post2->price }}</li>
 	        									<li class="old__prize">{{ $post2->price}}</li>
 	        								</ul>
 											<p>{{ substr($post2->detail, 0, 50) }}</p>
@@ -201,7 +201,7 @@
 
 	        							</div>
 									</div>
-									@endforeach
+									
 	        						<!-- End Single Product -->
 	        						
 	        					</div>
@@ -232,7 +232,7 @@
 		                        </div>
 		                        <!-- end product images -->
 		                        <div class="product-info">
-		                            <h1>title</h1>
+		                            <h1>{{ $post->title }}</h1>
 		                            <div class="rating__and__review">
 		                                <ul class="rating">
 		                                    <li><span class="ti-star"></span></li>
@@ -247,8 +247,8 @@
 		                            </div>
 		                            <div class="price-box-3">
 		                                <div class="s-price-box">
-		                                    <span class="new-price">$17.20</span>
-		                                    <span class="old-price">$45.00</span>
+		                                    <span class="new-price">฿{{ $post2->price }}</span>
+		                                    <span class="old-price">฿{{ $post2->price }}</span>
 		                                </div>
 		                            </div>
 		                            <div class="quick-desc">
@@ -296,6 +296,7 @@
 		</div>
 		<!-- END QUICKVIEW PRODUCT -->
 		</div>
+		@endforeach
 		<!-- //Main wrapper -->
 
 		<!-- JS Files -->
