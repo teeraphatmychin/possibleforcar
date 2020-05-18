@@ -63,6 +63,13 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->slug = $request->slug;
         $post->category_id = $request->category_id;
+        $post->model = $request->model;
+        $post->year_model = $request->year_model;
+        $post->price = $request->price;
+        $post->image = $request->image;
+        $post->type = $request->type;
+        $post->engine = $request->engine;
+        $post->status_car = $request->status_car;
         $post->body = $request->body;
 
         $post->save();
