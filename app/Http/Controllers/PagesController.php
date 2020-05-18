@@ -10,7 +10,7 @@ class PagesController extends Controller{
 
     public function getIndex() {
 		$posts = Post::orderBy('created_at', 'desc')->limit(4)->get();
-		return view('pages.index')->withPosts($posts);
+		return view('pages.welcome')->withPosts($posts);
 	}
 
 	public function getAbout() {
@@ -22,7 +22,7 @@ class PagesController extends Controller{
 		$data = [];
 		$data['email'] = $email;
 		$data['fullname'] = $fullname;
-		// return view('pages.about')->withData($data);
+		return view('pages.about')->withData($data);
 	}
 
 	public function getContact() {

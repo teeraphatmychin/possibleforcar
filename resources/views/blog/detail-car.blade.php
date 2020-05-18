@@ -44,45 +44,45 @@
 							
 								<div class="sp-slide">
 									{{--  <img class="sp-image" src="https://placehold.it/570x450" alt="" />  --}}
-									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/1.jpg" alt="">	
+									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->category_id}}/{{$detail_car->model}}/570_450/1.jpg" alt="">	
 								</div>
 
 						        <div class="sp-slide">
 									{{--  <img class="sp-image" src="https://placehold.it/570x450" alt="" />  --}}
-									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/2.jpg" alt="">
+									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->category_id}}/{{$detail_car->model}}/570_450/2.jpg" alt="">
 								</div>
 
 								<div class="sp-slide">
 									{{--  <img class="sp-image" src="https://placehold.it/570x450" alt="" />  --}}
-									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/3.jpg" alt="">
+									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->category_id}}/{{$detail_car->model}}/570_450/3.jpg" alt="">
 								</div>
 
 								<div class="sp-slide">
 									{{--  <img class="sp-image" src="https://placehold.it/570x450" alt="" />  --}}
-									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/4.jpg" alt="">
+									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->category_id}}/{{$detail_car->model}}/570_450/4.jpg" alt="">
 								</div>
 
 								<div class="sp-slide">
 									{{--  <img class="sp-image" src="https://placehold.it/570x450" alt="" />  --}}
-									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/570_450/5.jpg" alt="">
+									<img class="sp-image" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->category_id}}/{{$detail_car->model}}/570_450/5.jpg" alt="">
 								</div>
 
 							</div>
 
 							<div class="sp-thumbnails">
 								{{--  <img class="sp-thumbnail" src="https://placehold.it/120x80" alt="" />  --}}
-								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/1.jpg" alt="">
-								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/2.jpg" alt="">
-								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/3.jpg" alt="">
-								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/4.jpg" alt="">
-								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->brand}}/{{$detail_car->model}}/120_80/5.jpg"lt="">								
+								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->category_id}}/{{$detail_car->model}}/120_80/1.jpg" alt="">
+								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->category_id}}/{{$detail_car->model}}/120_80/2.jpg" alt="">
+								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->category_id}}/{{$detail_car->model}}/120_80/3.jpg" alt="">
+								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->category_id}}/{{$detail_car->model}}/120_80/4.jpg" alt="">
+								<img class="sp-thumbnail" src="{{ URL::to('/') }}/images/allcar/{{$detail_car->category_id}}/{{$detail_car->model}}/120_80/5.jpg"lt="">								
 							</div>
 					    </div>
 					</div>
 					<div class="col-md-6">
 						<div class="car-details">
 							<a href="{{url('/single_car',$detail_car->id)}}"><h4></h4></a>
-							<h4>{{$detail_car->brand }} {{ $detail_car->model}}</h4>
+							<h4>{{$detail_car->category_id }} {{ $detail_car->model}}</h4>
 							<span>{{$detail_car->price}} บาท</span>
 							
 							<div class="container">
@@ -113,7 +113,7 @@
 										<!-- Modal content-->
 										<div class="modal-content" >
 											<div class="modal-header" ;>
-											<h4 class="modal-title" >{{$detail_car->brand}} {{$detail_car->model}}</h4>
+											<h4 class="modal-title" >{{$detail_car->category_id}} {{$detail_car->model}}</h4>
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
 											</div>
 												<div class="modal-body" >
@@ -375,7 +375,7 @@
 								<div class="item car-item">
 									<div class="thumb-content">
 									{{--  <a href="{{route('single_car')}}"><img src="https://placehold.it/370x260" alt=""></a>  --}}
-									<a href="{{url('/single_car_test',$slide_similar->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$slide_similar->brand}}/{{$slide_similar->model}}/370_260/{{ $slide_similar->image }}" class="img-thumbnail" alt=""></a>
+									<a href="{{url('/single_car_test',$slide_similar->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$slide_similar->category_id}}/{{$slide_similar->model}}/370_260/{{ $slide_similar->image }}" class="img-thumbnail" alt=""></a>
 									</div>
 									<div class="down-content">
 										<a href="{{url('/single_car_test',$slide_similar->id)}}"><h4>{{$slide_similar->model}}</h4></a>
