@@ -78,7 +78,7 @@ class PostController extends Controller
 
         Session::flash('success', 'The blog post was successfully save!');
 
-        return redirect()->route('posts.show', $post->id);
+        return redirect()->route('posts.index', $post->id);
     }
 
     /**
