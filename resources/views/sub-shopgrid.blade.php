@@ -117,14 +117,14 @@
 	        						<!-- Start Single Product -->
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
-											<a class="first__img" href="{{url('/detail-car',$post->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
-											<a class="second__img animation1" href="{{url('/detail-car',$post->id)}}"><img src="images/books/2.jpg" alt="product image"></a>
+											<a class="first__img" href="{{ route('blog.single', $post->slug) }}">"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
+											<a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}">"><img src="images/books/2.jpg" alt="product image"></a>
 											<div class="hot__box">
 												<span class="hot-label">BEST SALLER</span>
 											</div>
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="{{url('/detail-car',$post->id)}}">{{ $post->category_id }}</a></h4>
+											<h4><a href="{{ route('blog.single', $post->slug) }}">">{{ $post->category_id }}</a></h4>
 											<ul class="prize d-flex">
 												<li>${{ $post->category_id}}</li>
 												<li class="old_prize">${{ $post->price }}</li>
@@ -174,8 +174,8 @@
 									@foreach($posts2 as $post2)
 	        						<div class="list__view">
 	        							<div class="thumb">
-	        								<a class="first__img" href="{{url('/detail-car',$post2->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
-	        								<a class="second__img animation1" href="{{url('/detail-car',$post2->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
+	        								<a class="first__img" href="{{ route('blog.single', $post->slug) }}">"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
+	        								<a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}">"><img src="{{ URL::to('/') }}/images/allcar/{{$post2->category_id}}/{{$post2->model}}/370_260/{{ $post2->image }}" alt="product images"></a>
 	        							</div>
 	        							<div class="content">
 	        								<h2><a href="single-product.html">{{ $post2->category_id}}</a></h2>
