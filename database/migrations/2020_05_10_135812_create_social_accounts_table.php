@@ -15,7 +15,6 @@ class CreateSocialAccountsTable extends Migration
     {
         Schema::create('social_accounts', function (Blueprint $table) {
             $table->bigincrements('id');
-            $table->integer('user_id');
             $table->string('provider');
             $table->string('provider_user_id');  
             $table->unsignedBigInteger('user_id'); 
