@@ -46,6 +46,20 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 {{--    --}}
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167101586-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167101586-1');
+</script>
+
+
 	<!--  Google -->
 	<meta name=”keywords” content=”รวมโปรโมชั่นรถ,ซื้อรถ,ขายรถ,Toyota,Honda,Isuzu,Mazda,Mitsubishi,Nissan,Ford,Chevrolet,Benz,BMW,MG,Volvo,เปรียบเทียบรถ” />
 	<meta name="description" content="โปรโมชั่นรถล่าสุด 2019 ข้อเสนอสุดพิเศษ พบกับข้อเสนอสุดพิเศษ">
