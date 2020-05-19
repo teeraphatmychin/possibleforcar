@@ -52,7 +52,11 @@
 {{--  <div class="ajax-load text-center" style="display:none">
 	<p><img src="https://demo.itsolutionstuff.com/plugin/loader.gif">Loading More</p>
 </div>  --}}
-{{--  
+{{--    --}}
+</body>
+</html>
+
+
 /*  <script type="text/javascript">
 	var page = 1;
 	$(window).scroll(function() {
@@ -86,6 +90,4 @@
 	              alert('server not responding...');
 	        });
 	}
-</script>  */  --}}
-</body>
-</html>
+</script>  */
