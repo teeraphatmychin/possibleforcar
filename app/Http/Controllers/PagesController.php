@@ -28,6 +28,14 @@ class PagesController extends Controller{
 	public function getContact() {
 		return view('pages.contact');
 	}
+	public function getWishlist($id) {
+		$posts = Post::find($id);
+		return view('pages.wishlist')->withPosts($posts);
+	}
+	public function getCart($id) {
+		$posts = Post::find($id);
+		return view('pages.cart')->withPosts($posts);
+	}
 
 	public function postContact(Request $request) {
 		$this->validate($request, [

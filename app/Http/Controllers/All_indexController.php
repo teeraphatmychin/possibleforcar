@@ -23,19 +23,19 @@ class All_indexController extends Controller
         $postcars=Post::all();
         $postcarsback=Post::all();
         $postcar2s=Post::all()->where('title', '=', 'toyota');
-        $postcar2sback=Post::all()->where('title', '=', 'toyota');
+        $postcar2sback=Post::all()->where('title', '=', 'toyota')->sortByDesc('id');
         $postcar3s=Post::all()->where('title', '=', 'honda');
-        $postcar3sback=Post::all()->where('title', '=', 'honda');
+        $postcar3sback=Post::all()->where('title', '=', 'honda')->sortByDesc('id');
         $postcar4s=Post::all()->where('title', '=', 'mitsubishi');
-        $postcar4sback=Post::all()->where('title', '=', 'mitsubishi');
+        $postcar4sback=Post::all()->where('title', '=', 'mitsubishi')->sortByDesc('id');
         $postcar5s=Post::all()->where('title', '=', 'ford');
-        $postcar5sback=Post::all()->where('title', '=', 'ford');
+        $postcar5sback=Post::all()->where('title', '=', 'ford')->sortByDesc('id');
         $postcar6s=Post::all()->where('title', '=', 'mazda');
-        $postcar6sback=Post::all()->where('title', '=', 'mazda');
+        $postcar6sback=Post::all()->where('title', '=', 'mazda')->sortByDesc('id');
         $postcar7s=Post::all()->where('title', '=', 'mg');
-        $postcar7sback=Post::all()->where('title', '=', 'mg');
+        $postcar7sback=Post::all()->where('title', '=', 'mg')->sortByDesc('id');
         $postcar8s=Post::all()->where('title', '=', 'nissan');
-        $postcar8sback=Post::all()->where('title', '=', 'nissan');
+        $postcar8sback=Post::all()->where('title', '=', 'nissan')->sortByDesc('id');
         $byCate="";
         return view('pages.index',compact('products','byCate','posts','postCategories','postcars','postcarsback','postCategories2','postcar2s','postcar2sback','postcar3s','postcar3sback','postcar4s','postcar4sback','postcar5s','postcar5sback'
         ,'postcar6s','postcar6sback' ,'postcar7s','postcar7sback','postcar8s','postcar8sback' )); 

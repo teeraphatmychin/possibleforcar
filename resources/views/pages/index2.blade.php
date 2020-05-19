@@ -35,68 +35,7 @@
 	
         {{--  แถวแรก  finish--}}
 		<!-- Start BEst Seller Area -->
-		<section class="wn__product__area brown--color pt--80  pb--30">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section__title text-center">
-							<h2 class="title__be--2">รถยนต์ <span class="color--theme">รุ่นใหม่ล่าสุด</span></h2>
-							<p>เช็คราคาและสเปครถยนต์ อัพเดทล่าสุด ที่นี่ที่เดียว พร้อมอัพเดตเรื่องราว ทุกความเคลื่อนไหว ของรถยนต์ทุกรุ่นได้ที่นี่</p>
-						</div>
-					</div>
-				</div>
-				<!-- Start Single Tab Content -->
-				<div class="furniture--4 border--round arrows_style owl-carousel owl-theme row mt--50">
-					
-					<!-- Start Single Product important shinshin-->
-					@foreach($posts as $post)
-					{{--  <a href="{{url('/detail-car',$postGrid->id)}}"><img src="{{ URL::to('/') }}/images/allcar/{{$postGrid->brand}}/{{$postGrid->model}}/370_260/{{ $postGrid->image }}" class="img-thumbnail" alt=""></a>  --}}
-
-					
-					<div class="product product__style--3">
-						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="product__thumb">
-								<a class="first__img" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
-								<a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
-								<div class="hot__box">
-									<span class="hot-label">BEST SALLER</span>
-								</div>
-							</div>
-							<div class="product__content content--center">
-								<h4><a href="{{ route('blog.single', $post->slug) }}"></a>{{$post->model}}</h4>
-								<ul class="prize d-flex">
-									<li>฿{{$post->price}}</li>
-									<li class="old_prize">{{$post->price}}</li>
-								</ul>
-								<div class="action">
-									<div class="actions_inner">
-										<ul class="add_to_links">
-											<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-											<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-											<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-											<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="product__hover--content">
-									<ul class="rating d-flex">
-										<li class="on"><i class="fa fa-star-o"></i></li>
-										<li class="on"><i class="fa fa-star-o"></i></li>
-										<li class="on"><i class="fa fa-star-o"></i></li>
-										<li><i class="fa fa-star-o"></i></li>
-										<li><i class="fa fa-star-o"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					
-					@endforeach
-				</div>
-				<!-- End Single Tab Content -->
-			</div>
-		</section>
+		
 	
     {{--  แถวสอง  --}}
 		<!-- Start Best Seller Area -->
@@ -127,7 +66,6 @@
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							@foreach($postcars as $postcar)
 							<div class="single__product">
-								
 								<!-- Start Single Product -->
 								<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 									<div class="product product__style--3">
@@ -147,8 +85,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="cart" href="{{ route('cart',$postcar->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
+														<li><a class="wishlist" href="{{ route('wishlist',$postcar->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -170,49 +108,8 @@
 								
 							</div>
 							@endforeach
-							@foreach($postcarsback  as $postcarback)
-								<div class="single__product">
-									<!-- Start Single Product -->
-									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-										<div class="product product__style--3">
-											<div class="product__thumb">
-												<a class="first__img" href="{{ route('blog.single', $postcarback->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcarback->category_id}}/{{$postcarback->model}}/370_260/{{ $postcarback->image }}" alt="product image"></a>
-												<a class="second__img animation1" href="{{ route('blog.single', $postcarback->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcarback->category_id}}/{{$postcarback->model}}/370_260/{{ $postcarback->image }}" alt="product image"></a>
-												<div class="hot__box">
-													<span class="hot-label">BEST SALLER</span>
-												</div>
-											</div>
-											<div class="product__content content--center">
-												<h4><a href="single-product.html">฿{{ $postcarback->model }}</a></h4>
-												<ul class="prize d-flex">
-													<li>฿{{ $postcarback->price }}</li>
-													<li class="old_prize">฿{{ $postcarback->price }}</li>
-												</ul>
-												<div class="action">
-													<div class="actions_inner">
-														<ul class="add_to_links">
-															<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-															<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="product__hover--content">
-													<ul class="rating d-flex">
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Start Single Product -->	
-								</div>
-							@endforeach
+							
+							
 							
 						</div>
 						
@@ -247,8 +144,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="cart" href="{{ route('cart',$postcar2->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
+														<li><a class="wishlist" href="{{ route('wishlist',$postcar2->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -269,49 +166,7 @@
 								<!-- Start Single Product -->		
 							</div>
 							@endforeach
-							@foreach($postcar2sback  as $postcar2back)
-								<div class="single__product">
-									<!-- Start Single Product -->
-									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-										<div class="product product__style--3">
-											<div class="product__thumb">
-												<a class="first__img" href="{{ route('blog.single', $postcar2back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar2back->category_id}}/{{$postcar2back->model}}/370_260/{{ $postcar2back->image }}" alt="product image"></a>
-												<a class="second__img animation1" href="{{ route('blog.single', $postcar2back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar2back->category_id}}/{{$postcar2back->model}}/370_260/{{ $postcar2back->image }}" alt="product image"></a>
-												<div class="hot__box">
-													<span class="hot-label">BEST SALLER</span>
-												</div>
-											</div>
-											<div class="product__content content--center">
-												<h4><a href="single-product.html"></a>{{ $postcar2back->model }}</h4>
-												<ul class="prize d-flex">
-													<li>฿{{ $postcar2back->price }}</li>
-													<li class="old_prize">฿{{ $postcar2back->price }}</li>
-												</ul>
-												<div class="action">
-													<div class="actions_inner">
-														<ul class="add_to_links">
-															<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-															<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="product__hover--content">
-													<ul class="rating d-flex">
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Start Single Product -->	
-								</div>
-							@endforeach
+							
 							
 						</div>
 					</div>
@@ -341,8 +196,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="cart" href="{{ route('cart',$postcar3->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
+														<li><a class="wishlist" href="{{ route('wishlist',$postcar3->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -385,8 +240,8 @@
 												<div class="action">
 													<div class="actions_inner">
 														<ul class="add_to_links">
-															<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-															<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+															<li><a class="cart" href="{{ route('route') }}"><i class="bi bi-shopping-bag4"></i></a></li>
+															<li><a class="wishlist" href="{{ route('wishlist') }}"><i class="bi bi-shopping-cart-full"></i></a></li>
 															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 														</ul>
@@ -436,8 +291,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="cart" href="{{ route('cart',$postcar4->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
+														<li><a class="wishlist" href="{{ route('wishlist',$postcar4->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -459,49 +314,7 @@
 								
 							</div>
 							@endforeach
-							@foreach($postcar4sback  as $postcar4back)
-								<div class="single__product">
-									<!-- Start Single Product -->
-									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-										<div class="product product__style--3">
-											<div class="product__thumb">
-												<a class="first__img" href="{{ route('blog.single', $postcar4back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar4back->category_id}}/{{$postcar4back->model}}/370_260/{{ $postcar4back->image }}" alt="product image"></a>
-												<a class="second__img animation1" href="{{ route('blog.single', $postcar4back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar4back->category_id}}/{{$postcar4back->model}}/370_260/{{ $postcar4back->image }}" alt="product image"></a>
-												<div class="hot__box">
-													<span class="hot-label">BEST SALLER</span>
-												</div>
-											</div>
-											<div class="product__content content--center">
-												<h4><a href="single-product.html"></a>{{ $postcar4back->model }}</h4>
-												<ul class="prize d-flex">
-													<li>฿{{ $postcar4back->price }}</li>
-													<li class="old_prize">฿{{ $postcar4back->price }}</li>
-												</ul>
-												<div class="action">
-													<div class="actions_inner">
-														<ul class="add_to_links">
-															<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-															<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="product__hover--content">
-													<ul class="rating d-flex">
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Start Single Product -->	
-								</div>
-							@endforeach
+							
 							
 						</div>
 					</div>
@@ -531,8 +344,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="cart" href="{{ route('cart',$postcar5->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
+														<li><a class="wishlist" href="{{ route('wishlist',$postcar5->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -554,49 +367,7 @@
 								
 							</div>
 							@endforeach
-							@foreach($postcar5sback  as $postcar5back)
-								<div class="single__product">
-									<!-- Start Single Product -->
-									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-										<div class="product product__style--3">
-											<div class="product__thumb">
-												<a class="first__img" href="{{ route('blog.single', $postcar5back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar5back->category_id}}/{{$postcar5back->model}}/370_260/{{ $postcar5back->image }}" alt="product image"></a>
-												<a class="second__img animation1" href="{{ route('blog.single', $postcar5back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar5back->category_id}}/{{$postcar5back->model}}/370_260/{{ $postcar5back->image }}" alt="product image"></a>
-												<div class="hot__box">
-													<span class="hot-label">BEST SALLER</span>
-												</div>
-											</div>
-											<div class="product__content content--center">
-												<h4><a href="single-product.html"></a>{{ $postcar5back->model }}</h4>
-												<ul class="prize d-flex">
-													<li>฿{{ $postcar5back->price }}</li>
-													<li class="old_prize">฿{{ $postcar5back->price }}</li>
-												</ul>
-												<div class="action">
-													<div class="actions_inner">
-														<ul class="add_to_links">
-															<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-															<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="product__hover--content">
-													<ul class="rating d-flex">
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Start Single Product -->	
-								</div>
-							@endforeach
+							
 							
 						</div>
 					</div>
@@ -626,8 +397,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="cart" href="{{ route('cart',$postcar6->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
+														<li><a class="wishlist" href="{{ route('wishlist',$postcar6->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -649,49 +420,7 @@
 								
 							</div>
 							@endforeach
-							@foreach($postcar6sback  as $postcar6back)
-								<div class="single__product">
-									<!-- Start Single Product -->
-									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-										<div class="product product__style--3">
-											<div class="product__thumb">
-												<a class="first__img" href="{{ route('blog.single', $postcar6back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar6back->category_id}}/{{$postcar6back->model}}/370_260/{{ $postcar6back->image }}" alt="product image"></a>
-												<a class="second__img animation1" href="{{ route('blog.single', $postcar6back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar6back->category_id}}/{{$postcar6back->model}}/370_260/{{ $postcar6back->image }}" alt="product image"></a>
-												<div class="hot__box">
-													<span class="hot-label">BEST SALLER</span>
-												</div>
-											</div>
-											<div class="product__content content--center">
-												<h4><a href="single-product.html"></a>{{ $postcar6back->model }}</h4>
-												<ul class="prize d-flex">
-													<li>฿{{ $postcar6back->price }}</li>
-													<li class="old_prize">฿{{ $postcar6back->price }}</li>
-												</ul>
-												<div class="action">
-													<div class="actions_inner">
-														<ul class="add_to_links">
-															<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-															<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="product__hover--content">
-													<ul class="rating d-flex">
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Start Single Product -->	
-								</div>
-							@endforeach
+							
 							
 						</div>
 					</div>
@@ -722,8 +451,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="cart" href="{{ route('cart',$postcar7->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
+														<li><a class="wishlist" href="{{ route('wishlist',$postcar7->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -745,49 +474,7 @@
 								
 							</div>
 							@endforeach
-							@foreach($postcar7sback  as $postcar7back)
-								<div class="single__product">
-									<!-- Start Single Product -->
-									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-										<div class="product product__style--3">
-											<div class="product__thumb">
-												<a class="first__img" href="{{ route('blog.single', $postcar7back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar7back->category_id}}/{{$postcar7back->model}}/370_260/{{ $postcar7back->image }}" alt="product image"></a>
-												<a class="second__img animation1" href="{{ route('blog.single', $postcar7back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar7back->category_id}}/{{$postcar7back->model}}/370_260/{{ $postcar7back->image }}" alt="product image"></a>
-												<div class="hot__box">
-													<span class="hot-label">BEST SALLER</span>
-												</div>
-											</div>
-											<div class="product__content content--center">
-												<h4><a href="single-product.html"></a>{{ $postcar7back->model}}</h4>
-												<ul class="prize d-flex">
-													<li>฿{{ $postcar7back->price }}</li>
-													<li class="old_prize">฿{{ $postcar7back->price }}</li>
-												</ul>
-												<div class="action">
-													<div class="actions_inner">
-														<ul class="add_to_links">
-															<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-															<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="product__hover--content">
-													<ul class="rating d-flex">
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Start Single Product -->	
-								</div>
-							@endforeach
+							
 							
 						</div>
 					</div>
@@ -817,8 +504,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="cart" href="{{ route('cart',$postcar8->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
+														<li><a class="wishlist" href="{{ route('wishlist',$postcar8->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -840,49 +527,7 @@
 								
 							</div>
 							@endforeach
-							@foreach($postcar8sback  as $postcar8back)
-								<div class="single__product">
-									<!-- Start Single Product -->
-									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-										<div class="product product__style--3">
-											<div class="product__thumb">
-												<a class="first__img" href="{{ route('blog.single', $postcar8back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar8back->category_id}}/{{$postcar8back->model}}/370_260/{{ $postcar8back->image }}" alt="product image"></a>
-												<a class="second__img animation1" href="{{ route('blog.single', $postcar8back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar8back->category_id}}/{{$postcar8back->model}}/370_260/{{ $postcar8back->image }}" alt="product image"></a>
-												<div class="hot__box">
-													<span class="hot-label">BEST SALLER</span>
-												</div>
-											</div>
-											<div class="product__content content--center">
-												<h4><a href="single-product.html"></a>{{ $postcar8back->model }}</h4>
-												<ul class="prize d-flex">
-													<li>฿{{ $postcar8back->price }}</li>
-													<li class="old_prize">฿{{ $postcar8back->price }}</li>
-												</ul>
-												<div class="action">
-													<div class="actions_inner">
-														<ul class="add_to_links">
-															<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-															<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="product__hover--content">
-													<ul class="rating d-flex">
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Start Single Product -->	
-								</div>
-							@endforeach
+						
 							
 						</div>
 					</div>
@@ -909,14 +554,14 @@
 				@foreach($postcars as $postcar)
 				<div class="product product__style--3">
 					<div class="product__thumb">
-						<a class="first__img" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
+						<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
 					</div>
 					<div class="product__content content--center">
 						<div class="action">
 							<div class="actions_inner">
 								<ul class="add_to_links">
-									<li><a class="cart" href="cart.html"><i class="bi bi-shopping-bag4"></i></a></li>
-									<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+									<li><a class="cart" href="{{ route('cart',$postcar->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
+									<li><a class="wishlist" href="{{ route('wishlist',$postcar->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
 									<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 									<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 								</ul>

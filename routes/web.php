@@ -164,6 +164,8 @@ Route::resource('categories', 'CetagoryController',['except'=>['create']]);
 Route::resource('tags', 'TagController',['except'=>['create']]);
 Route::resource('posts', 'PostController');
 Route::get('pages', 'PagesController@getIndex');
+Route::get('cart/{id}', 'PagesController@getCart');
+Route::get('wishlist/{id}', 'PagesController@getWishlist');
 Route::resource('categories', 'CategoryController',['except'=>['create']]);
 
 
