@@ -15,14 +15,15 @@ class All_indexController extends Controller
     public function shop(){
         
         $products=Post::all();
-        $blog_slides=list_blog::all();
+        //$blog_slides=list_blog::all();
         $posts=Post::paginate(8);
         $postCategories=Category::all();
         $postCategories2=Category::all();
 
         $postcars=Post::all();
+        $postcar2s=Post::all()->where('title', '=', 'toyota');
         $byCate="";
-        return view('index',compact('products','byCate','blog_slides','posts','postCategories','postcars','postCategories2'));
+        return view('pages.index',compact('products','byCate','posts','postCategories','postcars','postCategories2','postcar2s'));
     }
 
     
@@ -46,11 +47,11 @@ class All_indexController extends Controller
     
     public function contact_us()
     {
-        return view('contact_us');
+        return view('pages.contact_us');
     }
     public function about_us()
     {
-        return view('about_us');
+        return view('pages.about_us');
     }
 
     
