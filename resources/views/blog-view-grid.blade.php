@@ -53,7 +53,7 @@
 	<p><img src="https://demo.itsolutionstuff.com/plugin/loader.gif">Loading More</p>
 </div>
 
-<script type="text/javascript">
+/*  <script type="text/javascript">
 	var page = 1;
 	$(window).scroll(function() {
 	    if($(window).scrollTop() + $(window).height() >= $(document).height()-50) {
@@ -86,6 +86,6 @@
 	              alert('server not responding...');
 	        });
 	}
-</script>
+</script>  */
 </body>
 </html>
