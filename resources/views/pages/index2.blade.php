@@ -85,8 +85,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="{{ route('cart',$postcar->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="{{ route('wishlist',$postcar->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
+														{{--  <li><a class="cart" href="{{ route('cart',$postcar->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
+														{{--  <li><a class="wishlist" href="{{ route('wishlist',$postcar->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -144,8 +144,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="{{ route('cart',$postcar2->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="{{ route('wishlist',$postcar2->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
+														{{--  <li><a class="cart" href="{{ route('cart',$postcar2->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
+														{{--  <li><a class="wishlist" href="{{ route('wishlist',$postcar2->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -196,8 +196,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="{{ route('cart',$postcar3->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="{{ route('wishlist',$postcar3->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
+														{{--  <li><a class="cart" href="{{ route('cart',$postcar3->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
+														{{--  <li><a class="wishlist" href="{{ route('wishlist',$postcar3->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -240,8 +240,8 @@
 												<div class="action">
 													<div class="actions_inner">
 														<ul class="add_to_links">
-															<li><a class="cart" href="{{ route('route') }}"><i class="bi bi-shopping-bag4"></i></a></li>
-															<li><a class="wishlist" href="{{ route('wishlist') }}"><i class="bi bi-shopping-cart-full"></i></a></li>
+															{{--  <li><a class="cart" href="{{ route('route') }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
+															{{--  <li><a class="wishlist" href="{{ route('wishlist') }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
 															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 														</ul>
@@ -291,8 +291,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="{{ route('cart',$postcar4->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="{{ route('wishlist',$postcar4->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
+														{{--  <li><a class="cart" href="{{ route('cart',$postcar4->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
+														{{--  <li><a class="wishlist" href="{{ route('wishlist',$postcar4->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -344,8 +344,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="{{ route('cart',$postcar5->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="{{ route('wishlist',$postcar5->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
+														{{--  <li><a class="cart" href="{{ route('cart',$postcar5->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
+														{{--  <li><a class="wishlist" href="{{ route('wishlist',$postcar5->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -397,8 +397,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="{{ route('cart',$postcar6->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="{{ route('wishlist',$postcar6->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
+														{{--  <li><a class="cart" href="{{ route('cart',$postcar6->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
+														{{--  <li><a class="wishlist" href="{{ route('wishlist',$postcar6->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -451,8 +451,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="{{ route('cart',$postcar7->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="{{ route('wishlist',$postcar7->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
+														{{--  <li><a class="cart" href="{{ route('cart',$postcar7->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
+														{{--  <li><a class="wishlist" href="{{ route('wishlist',$postcar7->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -504,8 +504,8 @@
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" href="{{ route('cart',$postcar8->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
-														<li><a class="wishlist" href="{{ route('wishlist',$postcar8->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
+														{{--  <li><a class="cart" href="{{ route('cart',$postcar8->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
+														{{--  <li><a class="wishlist" href="{{ route('wishlist',$postcar8->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
 														<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -560,8 +560,8 @@
 						<div class="action">
 							<div class="actions_inner">
 								<ul class="add_to_links">
-									<li><a class="cart" href="{{ route('cart',$postcar->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>
-									<li><a class="wishlist" href="{{ route('wishlist',$postcar->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>
+									{{--  <li><a class="cart" href="{{ route('cart',$postcar->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
+									{{--  <li><a class="wishlist" href="{{ route('wishlist',$postcar->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
 									<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 									<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 								</ul>

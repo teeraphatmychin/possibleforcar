@@ -164,9 +164,9 @@ Route::resource('categories', 'CetagoryController',['except'=>['create']]);
 Route::resource('tags', 'TagController',['except'=>['create']]);
 Route::resource('posts', 'PostController');
 Route::get('pages', 'PagesController@getIndex');
-Route::get('cart/{id}', 'PagesController@getCart');
-Route::get('wishlist/{id}', 'PagesController@getWishlist');
 Route::resource('categories', 'CategoryController',['except'=>['create']]);
+Route::get('cart/{id}', 'PagesController@getCart')->name('cart');
+Route::get('wishlist/{id}', 'PagesController@getWishlist')->name('wishist');
 
 
 Route::post('comments/{post_id}',['uses'=>'CommentsController@store','as' => 'comments.store']);
