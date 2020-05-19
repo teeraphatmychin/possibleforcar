@@ -125,14 +125,15 @@
 				<div class="tab__container mt--60">
 					<!-- Start Single Tab Content -->
 					<div class="row single__tab tab-pane fade show active" id="nav-all" role="tabpanel">
-						@foreach($postcars as $postcar)
+					
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							
 								<div class="single__product">
-									
+									@foreach($postcars as $postcar)
 									<!-- Start Single Product -->
 									{{--  จุดเริ่ม =================================================================  --}}
 									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+										
 										<div class="product product__style--3">
 											<div class="product__thumb">
 												<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
@@ -169,22 +170,24 @@
 											</div>
 										</div>
 									</div>
+									@endforeach
 									<!-- Start Single Product -->
 									<!-- Start Single Product -->
+									@foreach($postcars2->$postcars)
 									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 										<div class="product product__style--3">
 											<div class="product__thumb">
-												<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
-												<a class="second__img animation1" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}g" alt="product image"></a>
+												<a class="first__img" href="{{ route('blog.single', $postcar2->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar2->category_id}}/{{$postcar2->model}}/370_260/{{ $postcar2->image }}" alt="product image"></a>
+												<a class="second__img animation1" href="{{ route('blog.single', $postcar2->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar2->category_id}}/{{$postcar2->model}}/370_260/{{ $postcar2->image }}g" alt="product image"></a>
 												<div class="hot__box">
 													<span class="hot-label">BEST SALER</span>
 												</div>
 											</div>
 											<div class="product__content content--center content--center">
-												<h4><a href="{{ route('blog.single', $postcar->slug) }}"></a>{{ $postcar->model }}</h4>
+												<h4><a href="{{ route('blog.single', $postcar2->slug) }}"></a>{{ $postcar2->model }}</h4>
 												<ul class="prize d-flex">
-													<li>฿{{ $postcar->price }}</li>
-													<li class="old_prize">{{ $postcar->price }}</li>
+													<li>฿{{ $postcar2->price }}</li>
+													<li class="old_prize">{{ $postcar2->price }}</li>
 												</ul>
 												<div class="action">
 													<div class="actions_inner">
@@ -208,12 +211,11 @@
 											</div>
 										</div>
 									</div>
-									<!-- Start Single Product -->
-									
+									@endforeach
+									<!-- Start Single Product -->									
 								</div>
-								
 						</div>
-						@endforeach
+						
 					</div>
 					<!-- End Single Tab Content -->
 
