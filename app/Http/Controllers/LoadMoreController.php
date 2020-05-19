@@ -26,7 +26,7 @@ class LoadMoreController extends Controller
         
         $postTags =Tag::all();
 
-    	return view('pages.car-view-grid',compact('categories','posts2','postTags'));
+    	return view('pages.car-view-grid',compact('categories','posts2','postTags','posts'));
     }
     public function blogPost(Request $request)
     {
