@@ -268,8 +268,7 @@
 										</div>
 									</div>
 								</div>
-								<!-- Start Single Product -->
-								
+								<!-- Start Single Product -->		
 							</div>
 							@endforeach
 							@foreach($postcar2sback  as $postcar2back)
@@ -336,7 +335,7 @@
 											</div>
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="{{ route('blog.single', $postcar3->slug) }}">{{ $postcar3->model }}</a></h4>
+											<h4><a href="{{ route('blog.single', $postcar3->slug) }}"></a>{{ $postcar3->model }}</h4>
 											<ul class="prize d-flex">
 												<li>฿{{ $postcar3->price }}</li>
 												<li class="old_prize">฿{{ $postcar3->price }}</li>
@@ -380,7 +379,7 @@
 												</div>
 											</div>
 											<div class="product__content content--center">
-												<h4><a href="single-product.html">฿{{ $postcar3back->model }}</a></h4>
+												<h4><a href="single-product.html"></a>{{ $postcar3back->model }}</h4>
 												<ul class="prize d-flex">
 													<li>฿{{ $postcar3back->price }}</li>
 													<li class="old_prize">{{ $postcar3back->price }}</li>
@@ -431,7 +430,7 @@
 											</div>
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="{{ route('blog.single', $postcar4->slug) }}">{{ $postcar4->model }}</a></h4>
+											<h4><a href="{{ route('blog.single', $postcar4->slug) }}"></a>{{  $postcar4->model  }}</h4>
 											<ul class="prize d-flex">
 												<li>฿{{ $postcar4->price }}</li>
 												<li class="old_prize">฿{{ $postcar4->price }}</li>
@@ -665,7 +664,7 @@
 												</div>
 											</div>
 											<div class="product__content content--center">
-												<h4><a href="single-product.html">฿{{ $postcar6back->model }}</a></h4>
+												<h4><a href="single-product.html"></a>{{ $postcar6back->model }}</h4>
 												<ul class="prize d-flex">
 													<li>฿{{ $postcar6back->price }}</li>
 													<li class="old_prize">฿{{ $postcar6back->price }}</li>
@@ -812,7 +811,7 @@
 											</div>
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="{{ route('blog.single', $postcar8->slug) }}">{{ $postcar8->title }}</a></h4>
+											<h4><a href="{{ route('blog.single', $postcar8->slug) }}"></a>{{ $postcar8->model }}</h4>
 											<ul class="prize d-flex">
 												<li>฿{{ $postcar8->price }}</li>
 												<li class="old_prize">฿{{ $postcar8->price }}</li>
@@ -856,7 +855,7 @@
 												</div>
 											</div>
 											<div class="product__content content--center">
-												<h4><a href="single-product.html"></a>฿{{ $postcar8back->model }}</h4>
+												<h4><a href="single-product.html"></a>{{ $postcar8back->model }}</h4>
 												<ul class="prize d-flex">
 													<li>฿{{ $postcar8back->price }}</li>
 													<li class="old_prize">฿{{ $postcar8back->price }}</li>
