@@ -49,10 +49,10 @@
 	<script src="https://code.jquery.com/jquery-latest.min.js"></script> 
 @extends('layout.partials.footer-scripts')
 
-<div class="ajax-load text-center" style="display:none">
+{{--  <div class="ajax-load text-center" style="display:none">
 	<p><img src="https://demo.itsolutionstuff.com/plugin/loader.gif">Loading More</p>
-</div>
-
+</div>  --}}
+{{--  
 /*  <script type="text/javascript">
 	var page = 1;
 	$(window).scroll(function() {
@@ -86,6 +86,6 @@
 	              alert('server not responding...');
 	        });
 	}
-</script>  */
+</script>  */  --}}
 </body>
 </html>
