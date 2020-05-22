@@ -1,0 +1,9 @@
+body .hwcCustomization .bg-bm-main2:hover,
+body .hwcCustomization .bg-bm-main1:hover,
+body .hwcCustomization .bg-bm-main1 {background: #ffd503; color: #705f5f;}
+body .hwcCustomization .waterMarkNoBor {border-color: #ffd503;}
+body .hwcCustomization a {text-decoration: none; color: #705f5f;}
+body hoverBG div div {height: auto!important;}
+body .hwcCustomization .btnYellowForSearch:Hover,
+body .hwcCustomization .btnYellowForSearch {background:url(/auto/Image/btnSearch.html) no-repeat 0px center !important;}
+body .form-group {overflow:hidden!important;}

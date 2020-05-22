@@ -1,0 +1,19 @@
+html, body {overflow-x: hidden;}
+body .myContent #SearchTabs,
+body .hwcCustomization .height60pxForSearch {display: none!important;}
+body .nowrap {white-space: nowrap;}
+body .hwcCustomization .txtSearch {height: 92px; line-height: 2;}
+@media screen and (max-width: 987px){
+  body .widget-link ul li {width: 47%;}
+  body .hwcCustomization .txtSearch {}
+}
+@media screen and (max-width: 677px){
+  body .hwcCustomization .txtSearch {font-size: 2.5em;}
+}
+@media screen and (max-width: 500px){
+  body .cars-story .readmore {position:relative; left: 0px; top: 0px;}
+  body .hwcCustomization .txtSearch {font-size: 2em;}
+}
+@media screen and (max-width: 420px){
+  body .hwcCustomization .txtSearch {font-size: .9em;}
+}

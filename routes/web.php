@@ -100,6 +100,10 @@ Route::get('/starter', 'HomeController@starter')->name('starter')->middleware(['
 Route::get('/welcome', function () {
     return view('welcome');
 });
+Route::get('/calculator', function () {
+    return view('calculator');
+});
+
 Route::resource('customerOrder', 'AjaxCustomerOrderController');
 Route::post('customerOrder/update', 'AjaxCustomerOrderController@update')->name('customerOrder.update');
 //Route::get('customerOrder/destroy/{id}', 'AjaxCustomerOrderController@destroy')->middleware(['auth','auth.admin']);
@@ -167,7 +171,6 @@ Route::get('pages', 'PagesController@getIndex');
 Route::resource('categories', 'CategoryController',['except'=>['create']]);
 Route::get('cart/{id}', 'PagesController@getCart')->name('cart');
 Route::get('wishlist/{id}', 'PagesController@getWishlist')->name('wishist');
-
 
 Route::post('comments/{post_id}',['uses'=>'CommentsController@store','as' => 'comments.store']);
 
