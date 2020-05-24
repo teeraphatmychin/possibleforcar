@@ -24,7 +24,9 @@ class CreatePostsTable extends Migration
             $table->string('image')->nullable();
             $table->string('type')->nullable();
             $table->string('engine')->nullable();
+            $table->string('conditions')->nullable();
             $table->string('status_car')->nullable();
+            $table->unsignedbigInteger('post_by_id')->nullable();
             $table->timestamps();
         });
     }

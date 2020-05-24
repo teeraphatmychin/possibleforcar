@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\list_car;
 use App\list_blog;
 use App\Category;
@@ -20,11 +21,16 @@ class LoadMoreController extends Controller
         //     return response()->json(['html'=>$view]);
         // }
         //$posts = list_car::paginate(12);
+           
+        
+
         $categories = Category::all();
         $posts = Post::paginate(12);
         $posts2 = Post::paginate(4);
-        
         $postTags =Tag::all();
+
+
+
 
     	return view('pages.car-view-grid',compact('categories','posts2','postTags','posts'));
     }

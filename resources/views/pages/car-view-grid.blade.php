@@ -27,7 +27,7 @@
 		</div>
 	</div>
 {{--  ////////////  --}}
-	@include('sub-shopgrid')
+	@include('pages.sub-shopgrid')
 {{--  ////////////  --}}
 {{--  load more  --}}
 	{{--  <div class="on-grids wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">

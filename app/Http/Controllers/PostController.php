@@ -24,8 +24,23 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('id', 'desc')->paginate(7);
-        return view('posts.index')->withPosts($posts);
+        
+
+        if(request()->ajax())
+        {  
+            return datatables()->of(Post::latest()->get())
+                    ->addColumn('action', function($data){
+                        $button = '<button type="button" name="edit" id="'.$data->id.'" class="edit btn btn-primary btn-sm">Edit</button>';
+                        $button .= '&nbsp;&nbsp;';
+                        $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm">Delete</button>';
+                        return $button;
+                    })
+                    
+                    ->rawColumns(['action'])
+                    ->make(true);
+        }
+
+        return view('posts.index');
     }
 
     /**

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\list_car;
+use App\post;
 use Validator;
 class AjaxCrudController extends Controller
 {
@@ -18,7 +18,7 @@ class AjaxCrudController extends Controller
         //
         if(request()->ajax())
         {  
-            return datatables()->of(list_car::latest()->get())
+            return datatables()->of(post::latest()->get())
                     ->addColumn('action', function($data){
                         $button = '<button type="button" name="edit" id="'.$data->id.'" class="edit btn btn-primary btn-sm">Edit</button>';
                         $button .= '&nbsp;&nbsp;';
@@ -29,7 +29,7 @@ class AjaxCrudController extends Controller
                     ->rawColumns(['action'])
                     ->make(true);
         }
-        return view('admin.car_manage');
+        return view('posts.index');
     }
 
     /**
@@ -51,7 +51,7 @@ class AjaxCrudController extends Controller
     public function store(Request $request)
     {
         $rules = array(
-            'brand'    =>  'required',
+            'title'    =>  'required',
             'model'     =>  'required',
             'image'         =>  'required|image|max:2048'
         );
@@ -70,7 +70,7 @@ class AjaxCrudController extends Controller
         $image->move(public_path('images/allcar/'), $new_name);
 
         $form_data = array(
-            'brand'        =>  $request->brand,
+            'title'        =>  $request->title,
             'model'         =>  $request->model,
             'image'             =>  $new_name,
             'year_model' => $request->year_model,
@@ -78,11 +78,11 @@ class AjaxCrudController extends Controller
             'type' => $request->type,
             'engine' => $request->engine,
             'detail' => $request->detail,
-            'title' => $request->title,
+            'body' => $request->body,
             'status_car' => $request->status_car
         );
 
-        list_car::create($form_data);
+        post::create($form_data);
 
         return response()->json(['success' => 'Data Added successfully.']);
     }
@@ -108,7 +108,7 @@ class AjaxCrudController extends Controller
     {
         if(request()->ajax())
         {
-            $data = list_car::findOrFail($id);
+            $data = post::findOrFail($id);
             return response()->json(['data' => $data]);
         }
     }
@@ -127,7 +127,7 @@ class AjaxCrudController extends Controller
         if($image != '')
         {
             $rules = array(
-                'brand'    =>  'required',
+                'title'    =>  'required',
                 'model'     =>  'required',
                 'image'         =>  'image|max:2048'
             );
@@ -143,7 +143,7 @@ class AjaxCrudController extends Controller
         else
         {
             $rules = array(
-                'brand'    =>  'required',
+                'title'    =>  'required',
                 'model'     =>  'required',
                 
             );
@@ -157,7 +157,7 @@ class AjaxCrudController extends Controller
         }
 
         $form_data = array(
-            'brand'       =>   $request->brand,
+            'title'       =>   $request->title,
             'model'        =>   $request->model,
             'image'            =>   $image_name,
             'year_model' => $request->year_model,
@@ -165,10 +165,10 @@ class AjaxCrudController extends Controller
             'type' => $request->type,
             'engine' => $request->engine,
             'detail' => $request->detail,
-            'title' => $request->title,
+            'body' => $request->body,
             'status_car' => $request->status_car,
         );
-        list_car::whereId($request->hidden_id)->update($form_data);
+        post::whereId($request->hidden_id)->update($form_data);
 
         return response()->json(['success' => 'Data is successfully updated']);
     }
@@ -181,7 +181,7 @@ class AjaxCrudController extends Controller
      */
     public function destroy($id)
     {
-        $data = list_car::findOrFail($id);
+        $data = post::findOrFail($id);
         $data->delete();
     }
 }

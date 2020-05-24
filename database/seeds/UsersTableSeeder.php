@@ -19,12 +19,14 @@ class UsersTableSeeder extends Seeder
         $authorRole = Role::where('name','author')->first();
         $userRole = Role::where('name','user')->first();
 
-        $admin =User::create([
+        
+        $superAdmin =User::create([
             'name' => 'chin',
             'email' => 'teeraphatmychin@gmail.com',
             'password' => bcrypt('chinchin')
 
         ]);
+
         $admin =User::create([
             'name' => 'possiblecar.4',
             'email' => 'possiblecar.4@gmail.com',
@@ -44,10 +46,12 @@ class UsersTableSeeder extends Seeder
 
         ]);
 
+        
+        $superAdmin->roles()->attach($adminRole);
         $admin->roles()->attach($adminRole);
         $author->roles()->attach($authorRole);
         $user->roles()->attach($userRole);
 
-        // factory(App\User::class, 1)->create();
+        // factory(App\User::class, 10)->create();
     }
 }

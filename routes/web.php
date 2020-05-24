@@ -24,85 +24,91 @@ Route::resource('car_crud','car_manageController')->middleware(['auth','auth.adm
  Route::post('ajax-crud/update', 'AjaxCrudController@update')->name('ajax-crud.update')->middleware(['auth','auth.admin']);
  Route::get('ajax-crud/destroy/{id}', 'AjaxCrudController@destroy')->middleware(['auth','auth.admin']);
 
-Route::namespace('Admin')->prefix('admin')->middleware(['auth','auth.admin'])->name('admin.')->group(function(){
-     Route::resource('/users','UserController',['except' => ['show','create','store']]);
-     Route::get('/impersonate/user/{id}','ImpersonateController@index')->name('impersonate');
- });
+// Route::namespace('Admin')->prefix('admin')->middleware(['auth','auth.admin'])->name('admin.')->group(function(){
+//      Route::resource('/users','UserController',['except' => ['show','create','store']]);
+//      Route::get('/impersonate/user/{id}','ImpersonateController@index')->name('impersonate');
+//      Route::get('/admin/impersonate/destroy','Admin\ImpersonateController@destroy')->name('admin.impersonate.destroy');
 
-Route::get('/admin/impersonate/destroy','Admin\ImpersonateController@destroy')->name('admin.impersonate.destroy');
-Route::get('/home', 'HomeController@index')->name('home')->middleware(['auth','auth.admin']);
+// });
+Route::get('/Dashboard', 'HomeController@Dashboard')->name('Dashboard');
+Route::get('/Dashboard2', 'HomeController@Dashboard2')->name('Dashboard2');
+Route::get('/Dashboard3', 'HomeController@Dashboard3')->name('Dashboard3');
+Route::get('/calendar', 'HomeController@calendar')->name('calendar');
+Route::get('/gallery', 'HomeController@gallery')->name('gallery');
+Route::get('/widgets', 'HomeController@widgets')->name('widgets');
+Route::get('/chartjs', 'HomeController@chartjs')->name('chartjs');
+Route::get('/flot', 'HomeController@flot')->name('flot');
+Route::get('/inline', 'HomeController@inline')->name('inline');
+Route::get('/n404', 'HomeController@n404')->name('n404');
+Route::get('/n500', 'HomeController@n500')->name('n500');
+Route::get('/blank', 'HomeController@blank')->name('blank');
+Route::get('/contacts', 'HomeController@contacts')->name('contacts');
+Route::get('/e_commerce','HomeController@e_commerce')->name('e_commerce');
+Route::get('/forgot_password2','HomeController@forgot_password')->name('forgot_password');
+Route::get('/invoice', 'HomeController@invoice')->name('invoice');
+Route::get('/invoice_print', 'HomeController@invoice_print')->name('invoice_print');
+Route::get('/language_menu', 'HomeController@language_menu')->name('language_menu');
+Route::get('/legacy_user_menu', 'HomeController@legacy_user_menu')->name('legacy_user_menu');
+Route::get('/lockscreen', 'HomeController@lockscreen')->name('lockscreen');
+Route::get('/lobin', 'HomeController@lobin')->name('lobin');
+Route::get('/pace', 'HomeController@pace')->name('pace');
+Route::get('/profile', 'HomeController@profile')->name('profile');
+Route::get('/project_add','HomeController@project_add')->name('project_add');
+Route::get('/project_detail', 'HomeController@project_detail')->name('project_detail');
+Route::get('/project_edit', 'HomeController@project_edit')->name('project_edit');
+Route::get('/projects', 'HomeController@projects')->name('projects');
+Route::get('/recover_password','HomeController@recover_password')->name('recover_password');
+Route::get('/register', 'HomeController@register')->name('register');
+Route::get('/advanced', 'HomeController@advanced')->name('advanced');
+Route::get('/editors', 'HomeController@editors')->name('editors');
+Route::get('/general', 'HomeController@general')->name('general');
+Route::get('/validation', 'HomeController@validation')->name('validation');
+Route::get('/boxed', 'HomeController@boxed')->name('boxed');
+Route::get('/collapsed_sidebar', 'HomeController@collapsed_sidebar')->name('collapsed_sidebar');
+Route::get('/fixed_footer', 'HomeController@fixed_footer')->name('fixed_footer');
+Route::get('/fixed_topnav', 'HomeController@fixed_topnav')->name('fixed_topnav');
+Route::get('/fixed_sidebar', 'HomeController@fixed_sidebar')->name('fixed_sidebar');
 
-Route::get('/Dashboard', 'HomeController@Dashboard')->name('Dashboard')->middleware(['auth','auth.admin']);
-Route::get('/Dashboard3', 'HomeController@Dashboard3')->name('Dashboard3')->middleware(['auth','auth.admin']);
-Route::get('/Dashboard2', 'HomeController@Dashboard2')->name('Dashboard2')->middleware(['auth','auth.admin']);
-Route::get('/calendar', 'HomeController@calendar')->name('calendar')->middleware(['auth','auth.admin']);
-Route::get('/gallery', 'HomeController@gallery')->name('gallery')->middleware(['auth','auth.admin']);
-Route::get('/widgets', 'HomeController@widgets')->name('widgets')->middleware(['auth','auth.admin']);
-Route::get('/chartjs', 'HomeController@chartjs')->name('chartjs')->middleware(['auth','auth.admin']);
-Route::get('/flot', 'HomeController@flot')->name('flot')->middleware(['auth','auth.admin']);
-Route::get('/inline', 'HomeController@inline')->name('inline')->middleware(['auth','auth.admin']);
-Route::get('/n404', 'HomeController@n404')->name('n404')->middleware(['auth','auth.admin']);
-Route::get('/n500', 'HomeController@n500')->name('n500')->middleware(['auth','auth.admin']);
-Route::get('/blank', 'HomeController@blank')->name('blank')->middleware(['auth','auth.admin']);
-Route::get('/contacts', 'HomeController@contacts')->name('contacts')->middleware(['auth','auth.admin']);
-Route::get('/e_commerce','HomeController@e_commerce')->name('e_commerce')->middleware(['auth','auth.admin']);
-Route::get('/forgot_password2','HomeController@forgot_password')->name('forgot_password')->middleware(['auth','auth.admin']);
-Route::get('/invoice', 'HomeController@invoice')->name('invoice')->middleware(['auth','auth.admin']);
-Route::get('/invoice_print', 'HomeController@invoice_print')->name('invoice_print')->middleware(['auth','auth.admin']);
-Route::get('/language_menu', 'HomeController@language_menu')->name('language_menu')->middleware(['auth','auth.admin']);
-Route::get('/legacy_user_menu', 'HomeController@legacy_user_menu')->name('legacy_user_menu')->middleware(['auth','auth.admin']);
-Route::get('/lockscreen', 'HomeController@lockscreen')->name('lockscreen')->middleware(['auth','auth.admin']);
-Route::get('/lobin', 'HomeController@lobin')->name('lobin')->middleware(['auth','auth.admin']);
-Route::get('/pace', 'HomeController@pace')->name('pace')->middleware(['auth','auth.admin']);
-Route::get('/profile', 'HomeController@profile')->name('profile')->middleware(['auth','auth.admin']);
-Route::get('/project_add','HomeController@project_add')->name('project_add')->middleware(['auth','auth.admin']);
-Route::get('/project_detail', 'HomeController@project_detail')->name('project_detail')->middleware(['auth','auth.admin']);
-Route::get('/project_edit', 'HomeController@project_edit')->name('project_edit')->middleware(['auth','auth.admin']);
-Route::get('/projects', 'HomeController@projects')->name('projects')->middleware(['auth','auth.admin']);
-Route::get('/recover_password','HomeController@recover_password')->name('recover_password')->middleware(['auth','auth.admin']);
-Route::get('/register', 'HomeController@register')->name('register')->middleware(['auth','auth.admin']);
-Route::get('/advanced', 'HomeController@advanced')->name('advanced')->middleware(['auth','auth.admin']);
-Route::get('/editors', 'HomeController@editors')->name('editors')->middleware(['auth','auth.admin']);
-Route::get('/general', 'HomeController@general')->name('general')->middleware(['auth','auth.admin']);
-Route::get('/validation', 'HomeController@validation')->name('validation')->middleware(['auth','auth.admin']);
-Route::get('/boxed', 'HomeController@boxed')->name('boxed')->middleware(['auth','auth.admin']);
-Route::get('/collapsed_sidebar', 'HomeController@collapsed_sidebar')->name('collapsed_sidebar')->middleware(['auth','auth.admin']);
-Route::get('/fixed_footer', 'HomeController@fixed_footer')->name('fixed_footer')->middleware(['auth','auth.admin']);
-Route::get('/fixed_topnav', 'HomeController@fixed_topnav')->name('fixed_topnav')->middleware(['auth','auth.admin']);
-Route::get('/fixed_sidebar', 'HomeController@fixed_sidebar')->name('fixed_sidebar')->middleware(['auth','auth.admin']);
+Route::get('/top_nav_sidebar', 'HomeController@top_nav_sidebar')->name('top_nav_sidebar');
+Route::get('/top_nav', 'HomeController@top_nav')->name('top_nav');
+Route::get('/compose', 'HomeController@compose')->name('compose');
+Route::get('/mailbox', 'HomeController@mailbox')->name('mailbox');
+Route::get('/read_mail', 'HomeController@read_mail')->name('read_mail');
 
-Route::get('/top_nav_sidebar', 'HomeController@top_nav_sidebar')->name('top_nav_sidebar')->middleware(['auth','auth.admin']);
-Route::get('/top_nav', 'HomeController@top_nav')->name('top_nav')->middleware(['auth','auth.admin']);
-Route::get('/compose', 'HomeController@compose')->name('compose')->middleware(['auth','auth.admin']);
-Route::get('/mailbox', 'HomeController@mailbox')->name('mailbox')->middleware(['auth','auth.admin']);
-Route::get('/read_mail', 'HomeController@read_mail')->name('read_mail')->middleware(['auth','auth.admin']);
+Route::get('/data', 'HomeController@data')->name('data');
+Route::get('/jsgrid','HomeController@jsgrid')->name('jsgrid');
+Route::get('/simple', 'HomeController@simple')->name('simple');
 
-Route::get('/data', 'HomeController@data')->name('data')->middleware(['auth','auth.admin']);
-Route::get('/jsgrid','HomeController@jsgrid')->name('jsgrid')->middleware(['auth','auth.admin']);
-Route::get('/simple', 'HomeController@simple')->name('simple')->middleware(['auth','auth.admin']);
+Route::get('/buttons', 'HomeController@buttons')->name('buttons');
+Route::get('/gerneral', 'HomeController@gerneral')->name('gerneral');
 
-Route::get('/buttons', 'HomeController@buttons')->name('buttons')->middleware(['auth','auth.admin']);
-Route::get('/gerneral', 'HomeController@gerneral')->name('gerneral')->middleware(['auth','auth.admin']);
+Route::get('/icons', 'HomeController@icons')->name('icons');
+Route::get('/modals', 'HomeController@modals')->name('modals');
+Route::get('/navbar', 'HomeController@navbar')->name('navbar');
+Route::get('/ribbons', 'HomeController@ribbons')->name('ribbons');
+Route::get('/sliders', 'HomeController@sliders')->name('sliders');
+Route::get('/timeline', 'HomeController@timeline')->name('timeline');
+Route::get('/starter', 'HomeController@starter')->name('starter');
 
-Route::get('/icons', 'HomeController@icons')->name('icons')->middleware(['auth','auth.admin']);
-Route::get('/modals', 'HomeController@modals')->name('modals')->middleware(['auth','auth.admin']);
-Route::get('/navbar', 'HomeController@navbar')->name('navbar')->middleware(['auth','auth.admin']);
-Route::get('/ribbons', 'HomeController@ribbons')->name('ribbons')->middleware(['auth','auth.admin']);
-Route::get('/sliders', 'HomeController@sliders')->name('sliders')->middleware(['auth','auth.admin']);
-Route::get('/timeline', 'HomeController@timeline')->name('timeline')->middleware(['auth','auth.admin']);
-Route::get('/starter', 'HomeController@starter')->name('starter')->middleware(['auth','auth.admin']);
 
+ 
+
+ Route::get('/home', 'HomeController@index')->name('home')->middleware(['auth','auth.admin']);
 
 
 
 
 ///////////////////////////frontend///////////////////////////////
 Route::get('/welcome', function () {
-    return view('welcome');
+    return view('pages.welcome');
 });
 Route::get('/calculator', function () {
     return view('calculator');
 });
+
+
+Route::post('filter', 'filterController@index')->name('filter');
+
 
 Route::resource('customerOrder', 'AjaxCustomerOrderController');
 Route::post('customerOrder/update', 'AjaxCustomerOrderController@update')->name('customerOrder.update');
@@ -171,14 +177,12 @@ Route::get('pages', 'PagesController@getIndex');
 Route::resource('categories', 'CategoryController',['except'=>['create']]);
 Route::get('cart/{id}', 'PagesController@getCart')->name('cart');
 Route::get('wishlist/{id}', 'PagesController@getWishlist')->name('wishist');
-
 Route::post('comments/{post_id}',['uses'=>'CommentsController@store','as' => 'comments.store']);
 
 
+//Route::match(['get', 'post'],'/products-filter', 'ProductsController@filter');
 
-// google
-Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+
 
 //facebook
 Route::prefix('login')->group(function () {

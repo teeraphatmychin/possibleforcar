@@ -1,4 +1,11 @@
+@guest
+@extend('user.Dashboard')
+@endguest
+
+@hasrole('admin')
 @extends('admin.Dashboard')
+@endhasrole
+
 
 @section('content')
 <div class="container">

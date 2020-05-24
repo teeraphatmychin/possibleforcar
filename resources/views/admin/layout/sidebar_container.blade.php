@@ -17,13 +17,14 @@
         <img src="{{ asset('frontend/adminlte/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block">shin shin</a>
+        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
       </div>
     </div>
 
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
         <li class="nav-item has-treeview menu-open">
@@ -56,16 +57,8 @@
           </ul>
         </li>
         {{-- ===================================================================== --}}
-        <li class="nav-item has-treeview">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
-            <p>
-              ชินชิน เครื่องมือ</p>
-              <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right">4</span>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
+        @hasrole('admin')
+        
             <li class="nav-item">
               <a href="{{route('tags.index')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -97,9 +90,19 @@
               </a>
             </li>
           
-          </ul>
-        </li>
+          
+        
+        @endhasrole
         {{--  --}}
+        <li class="nav-item">
+          <a href="{{ route('posts.index') }}" class="nav-link">
+            <i class="nav-icon fas fa-th"></i>
+            <p>
+              จัดการโพสต์รถ
+              <span class="right badge badge-danger">New</span>
+            </p>
+          </a>
+        </li>
         <li class="nav-item">
           <a href="{{ route('widgets') }}" class="nav-link">
             <i class="nav-icon fas fa-th"></i>

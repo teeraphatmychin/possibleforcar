@@ -45,9 +45,8 @@
         						<h3 class="wedget__title">Product Categories</h3>
         						<ul>
 									@foreach($categories as $category)
-									<li><a href="#">{{ $category->name }}<span>({{ $category->posts()->count() }})</span></a></li>
+									<li><input type="checkbox" class="common_selector brand" value="{{ $category->name }}">{{ $category->name }}<span>({{ $category->posts()->count() }})</span></a></li>
 									@endforeach
-									
         						</ul>
         					</aside>
         					<aside class="wedget__categories pro--range">
@@ -59,7 +58,11 @@
         						            <div class="slider__range--output">
         						                <div class="price__output--wrap">
         						                    <div class="price--output">
-        						                        <span>ราคา :</span><input type="text" id="amount" readonly="">
+															<input type="hidden" id="hidden_minimum_price" value="0" />
+															<input type="hidden" id="hidden_maximum_price" value="3000000" />
+															<p id="price_show">1000 - 65000</p>
+                   											<div id="price_range"></div>
+        						                        	<span>ราคา :</span><input type="text" id="amount" readonly="">
         						                    </div>
         						                    <div class="price--filter">
         						                        <a href="#">Filter</a>
@@ -95,16 +98,15 @@
 			                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-grid" role="tab"><i class="fa fa-th"></i></a>
 			                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-list" role="tab"><i class="fa fa-list"></i></a>
 			                        </div>
-			                        <p>Showing 1–12 of 40 results</p>
+			                        <p>Showing {{ $posts->count() }}–12 of {{ $posts->count() }} results</p>
 			                        <div class="orderby__wrapper">
 			                        	<span>Sort By</span>
-			                        	<select class="shot__byselect">
-			                        		<option>Default sorting</option>
-			                        		<option>HeadPhone</option>
-			                        		<option>Furniture</option>
-			                        		<option>Jewellery</option>
-			                        		<option>Handmade</option>
-			                        		<option>Kids</option>
+			                        	<select class="shot__byselect" onchange="myFunction()">
+			                        		<option>ค่าเริ่มต้น</option>
+			                        		<option>โปรโมชั่นล่าสุด</option>
+			                        		<option>ถูกที่สุด</option>
+			                        		<option>รุ่นใหม่</option>
+		
 			                        	</select>
 			                        </div>
 		                        </div>
@@ -112,7 +114,7 @@
         				</div>
         				<div class="tab__container">
 	        				<div class="shop-grid tab-pane fade show active" id="nav-grid" role="tabpanel">
-	        					<div class="row">
+	        					<div class="row filter_data">
 									@foreach($posts as $post)
 	        						<!-- Start Single Product -->
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
@@ -150,7 +152,92 @@
 											</div>
 										</div>
 									</div>
-									@endforeach
+
+										
+									<!-- QUICKVIEW PRODUCT -->
+									<div id="quickview-wrapper">
+										<!-- Modal -->
+										<div class="modal fade" id="productmodal" tabindex="-1" role="dialog">
+											<div class="modal-dialog modal__container" role="document">
+												<div class="modal-content">
+													<div class="modal-header modal__header">
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+													</div>
+													<div class="modal-body">
+														<div class="modal-product">
+															<!-- Start product images -->
+															<div class="product-images">
+																<div class="main-image images">
+																	<img alt="big images" src="images/product/big-img/1.jpg">
+																</div>
+															</div>
+															<!-- end product images -->
+															<div class="product-info">
+																<h1>{{ $post->title }}</h1>
+																<div class="rating__and__review">
+																	<ul class="rating">
+																		<li><span class="ti-star"></span></li>
+																		<li><span class="ti-star"></span></li>
+																		<li><span class="ti-star"></span></li>
+																		<li><span class="ti-star"></span></li>
+																		<li><span class="ti-star"></span></li>
+																	</ul>
+																	<div class="review">
+																		<a href="#">4 customer reviews</a>
+																	</div>
+																</div>
+																<div class="price-box-3">
+																	<div class="s-price-box">
+																		<span class="new-price">฿{{ $post->price }}</span>
+																		<span class="old-price">฿{{ $post->price }}</span>
+																	</div>
+																</div>
+																<div class="quick-desc">
+																	Designed for simplicity and made from high quality materials. Its sleek geometry and material combinations creates a modern look.
+																</div>
+																<div class="select__color">
+																	<h2>Select color</h2>
+																	<ul class="color__list">
+																		<li class="red"><a title="Red" href="#">Red</a></li>
+																		<li class="gold"><a title="Gold" href="#">Gold</a></li>
+																		<li class="orange"><a title="Orange" href="#">Orange</a></li>
+																		<li class="orange"><a title="Orange" href="#">Orange</a></li>
+																	</ul>
+																</div>
+																<div class="select__size">
+																	<h2>Select size</h2>
+																	<ul class="color__list">
+																		<li class="l__size"><a title="L" href="#">L</a></li>
+																		<li class="m__size"><a title="M" href="#">M</a></li>
+																		<li class="s__size"><a title="S" href="#">S</a></li>
+																		<li class="xl__size"><a title="XL" href="#">XL</a></li>
+																		<li class="xxl__size"><a title="XXL" href="#">XXL</a></li>
+																	</ul>
+																</div>
+																<div class="social-sharing">
+																	<div class="widget widget_socialsharing_widget">
+																		<h3 class="widget-title-modal">Share this product</h3>
+																		<ul class="social__net social__net--2 d-flex justify-content-start">
+																			<li class="facebook"><a href="#" class="rss social-icon"><i class="zmdi zmdi-rss"></i></a></li>
+																			<li class="linkedin"><a href="#" class="linkedin social-icon"><i class="zmdi zmdi-linkedin"></i></a></li>
+																			<li class="pinterest"><a href="#" class="pinterest social-icon"><i class="zmdi zmdi-pinterest"></i></a></li>
+																			<li class="tumblr"><a href="#" class="tumblr social-icon"><i class="zmdi zmdi-tumblr"></i></a></li>
+																		</ul>
+																	</div>
+																</div>
+																<div class="addtocart-btn">
+																	<a href="#">Add to cart</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- END QUICKVIEW PRODUCT -->
+
+								@endforeach
 		        					<!-- End Single Product -->
 	        						
 		        
@@ -213,89 +300,7 @@
         	</div>
         </div>
         <!-- End Shop Page -->
-		
-		<!-- QUICKVIEW PRODUCT -->
-		<div id="quickview-wrapper">
-		    <!-- Modal -->
-		    <div class="modal fade" id="productmodal" tabindex="-1" role="dialog">
-		        <div class="modal-dialog modal__container" role="document">
-		            <div class="modal-content">
-		                <div class="modal-header modal__header">
-		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		                </div>
-		                <div class="modal-body">
-		                    <div class="modal-product">
-		                        <!-- Start product images -->
-		                        <div class="product-images">
-		                            <div class="main-image images">
-		                                <img alt="big images" src="images/product/big-img/1.jpg">
-		                            </div>
-		                        </div>
-		                        <!-- end product images -->
-		                        <div class="product-info">
-		                            <h1>{{ $post->title }}</h1>
-		                            <div class="rating__and__review">
-		                                <ul class="rating">
-		                                    <li><span class="ti-star"></span></li>
-		                                    <li><span class="ti-star"></span></li>
-		                                    <li><span class="ti-star"></span></li>
-		                                    <li><span class="ti-star"></span></li>
-		                                    <li><span class="ti-star"></span></li>
-		                                </ul>
-		                                <div class="review">
-		                                    <a href="#">4 customer reviews</a>
-		                                </div>
-		                            </div>
-		                            <div class="price-box-3">
-		                                <div class="s-price-box">
-		                                    <span class="new-price">฿{{ $post->price }}</span>
-		                                    <span class="old-price">฿{{ $post->price }}</span>
-		                                </div>
-		                            </div>
-		                            <div class="quick-desc">
-		                                Designed for simplicity and made from high quality materials. Its sleek geometry and material combinations creates a modern look.
-		                            </div>
-		                            <div class="select__color">
-		                                <h2>Select color</h2>
-		                                <ul class="color__list">
-		                                    <li class="red"><a title="Red" href="#">Red</a></li>
-		                                    <li class="gold"><a title="Gold" href="#">Gold</a></li>
-		                                    <li class="orange"><a title="Orange" href="#">Orange</a></li>
-		                                    <li class="orange"><a title="Orange" href="#">Orange</a></li>
-		                                </ul>
-		                            </div>
-		                            <div class="select__size">
-		                                <h2>Select size</h2>
-		                                <ul class="color__list">
-		                                    <li class="l__size"><a title="L" href="#">L</a></li>
-		                                    <li class="m__size"><a title="M" href="#">M</a></li>
-		                                    <li class="s__size"><a title="S" href="#">S</a></li>
-		                                    <li class="xl__size"><a title="XL" href="#">XL</a></li>
-		                                    <li class="xxl__size"><a title="XXL" href="#">XXL</a></li>
-		                                </ul>
-		                            </div>
-		                            <div class="social-sharing">
-		                                <div class="widget widget_socialsharing_widget">
-		                                    <h3 class="widget-title-modal">Share this product</h3>
-		                                    <ul class="social__net social__net--2 d-flex justify-content-start">
-		                                        <li class="facebook"><a href="#" class="rss social-icon"><i class="zmdi zmdi-rss"></i></a></li>
-		                                        <li class="linkedin"><a href="#" class="linkedin social-icon"><i class="zmdi zmdi-linkedin"></i></a></li>
-		                                        <li class="pinterest"><a href="#" class="pinterest social-icon"><i class="zmdi zmdi-pinterest"></i></a></li>
-		                                        <li class="tumblr"><a href="#" class="tumblr social-icon"><i class="zmdi zmdi-tumblr"></i></a></li>
-		                                    </ul>
-		                                </div>
-		                            </div>
-		                            <div class="addtocart-btn">
-		                                <a href="#">Add to cart</a>
-		                            </div>
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<!-- END QUICKVIEW PRODUCT -->
+	
 		</div>
 		<!-- //Main wrapper -->
 
@@ -308,4 +313,56 @@
 		<script src="{{ asset('frontend/boighor/boighors/js/plugins.js') }}"></script>
 		<script src="{{ asset('frontend/boighor/boighors/js/active.js') }}"></script>
 	</body>
+
+	
 	</html>
+	$(document).ready(function(){
+		filter_data();
+		function filter_data()
+		{
+			$('.filter_data').html('<div id="loading" style="" ></div>');
+			var action = 'fetch_data';
+			var minimum_price = $('#hidden_minimum_price').val();
+			var maximum_price = $('#hidden_maximum_price').val();
+			var title = get_filter('title');
+			$.ajax({
+				url:"{{ route('filter') }}",
+				method:"POST",
+				data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, title:title, brand:brand},
+				success:function(data){
+					$('.filter_data').html(data);
+				}
+			});
+		}
+	
+		function get_filter(class_name)
+		{
+			var filter = [];
+			$('.'+class_name+':checked').each(function(){
+				filter.push($(this).val());
+			});
+			return filter;
+		}
+	
+		$('.common_selector').click(function(){
+			filter_data();
+		});
+	
+		$('#price_range').slider({
+			range:true,
+			min:0,
+			max:3000000,
+			values:[0000, 3000000],
+			step:500,
+			stop:function(event, ui)
+			{
+				$('#price_show').html(ui.values[0] + ' - ' + ui.values[1]);
+				$('#hidden_minimum_price').val(ui.values[0]);
+				$('#hidden_maximum_price').val(ui.values[1]);
+				filter_data();
+			}
+		});
+	
+	});
+	</script>
+	

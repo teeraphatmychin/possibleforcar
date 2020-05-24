@@ -19,7 +19,7 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th scope="col">Nam</th>
+              <th scope="col">Name</th>
               <th scope="col">Email</th>
               <th scope="col">Role</th>
               <th scope="col">Action</th>
