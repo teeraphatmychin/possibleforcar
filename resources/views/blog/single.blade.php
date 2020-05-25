@@ -270,7 +270,7 @@
 	                        	<div class="pro__tab_label tab-pane fade" id="nav-calculator" role="tabpanel">
 									<div class="calculator__attribute">
 										<div class="review__ratings__type d-flex">
-											@include('calculator')
+											@include('pages.calculator')
 										</div>
 									</div>
 	                        	</div>
