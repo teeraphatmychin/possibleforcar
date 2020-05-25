@@ -6,25 +6,47 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
-// use Auth;
-// use Session;
-// use Image;
-// use App\Category;
-// use App\Product;
-// use App\ProductsAttribute;
-// use App\ProductsImage;
-// use App\Coupon;
-// use App\User;
-// use App\Country;
-// use App\DeliveryAddress;
-// use App\Order;
-// use App\OrdersProduct;
-// use DB;
-use Post;
-use Category;
+use Auth;
+use Session;
+use Image;
+use App\User;
+use DB;
+use App\Post;
+use App\Category;
+use App\Tag;
 
 class ProductsController extends Controller
 {
+
+
+    public function gridLoad(Request $request)
+    {   
+        // $postGrids = list_car::paginate(6);
+    	// if ($request->ajax()) {
+    	// 	$view = view('data',compact('postGrids'))->render();
+        //     return response()->json(['html'=>$view]);
+        // }
+        //$posts = list_car::paginate(12);
+        
+
+       
+        //////
+        
+
+        $categories = Category::all();
+        $posts = Post::paginate(12);
+        $posts2 = Post::paginate(4);
+        $postTags =Tag::all();
+        
+
+
+
+    	return view('testtemplate',compact('categories','posts2','postTags','posts'));
+    }
+
+
+
+
 	public function addProduct(Request $request){
 
 		if($request->isMethod('post')){
@@ -61,7 +83,7 @@ class ProductsController extends Controller
             }else{
                 $product->care = '';
             }
-            if(empty($data['status'])){
+            if(empty($data['status_car'])){
                 $status='0';
             }else{
                 $status='1';
@@ -128,314 +150,12 @@ class ProductsController extends Controller
 		return view('admin.products.add_product')->with(compact('categories_drop_down','sleeveArray','patternArray'));
 	}
 
-	public function editProduct(Request $request,$id=null){
-
-		if($request->isMethod('post')){
-			$data = $request->all();
-			/*echo "<pre>"; print_r($data); die;*/
-
-            if(empty($data['status'])){
-                $status='0';
-            }else{
-                $status='1';
-            }
-
-            if(empty($data['feature_item'])){
-                $feature_item='0';
-            }else{
-                $feature_item='1';
-            }
-
-            if(!empty($data['sleeve'])){
-                $sleeve = $data['sleeve'];
-            }else{
-                $sleeve = '';
-            }
-
-            if(!empty($data['pattern'])){
-                $pattern = $data['pattern'];
-            }else{
-                $pattern = '';
-            }
-
-			// Upload Image
-            if($request->hasFile('image')){
-            	$image_tmp = Input::file('image');
-                if ($image_tmp->isValid()) {
-                    // Upload Images after Resize
-                    $extension = $image_tmp->getClientOriginalExtension();
-	                $fileName = rand(111,99999).'.'.$extension;
-                    $large_image_path = 'images/backend_images/product/large'.'/'.$fileName;
-                    $medium_image_path = 'images/backend_images/product/medium'.'/'.$fileName;
-                    $small_image_path = 'images/backend_images/product/small'.'/'.$fileName;
-
-	                Image::make($image_tmp)->save($large_image_path);
- 					Image::make($image_tmp)->resize(600, 600)->save($medium_image_path);
-     				Image::make($image_tmp)->resize(300, 300)->save($small_image_path);
-
-                }
-            }else if(!empty($data['current_image'])){
-            	$fileName = $data['current_image'];
-            }else{
-            	$fileName = '';
-            }
-
-            // Upload Video
-            if($request->hasFile('video')){
-                $video_tmp = Input::file('video');
-                $video_name = $video_tmp->getClientOriginalName();
-                $video_path = 'videos/';
-                $video_tmp->move($video_path,$video_name);
-                $videoName = $video_name;
-            }else if(!empty($data['current_video'])){
-                $videoName = $data['current_video'];
-            }else{
-                $videoName = '';
-            }
-
-            if(empty($data['description'])){
-            	$data['description'] = '';
-            }
-
-            if(empty($data['care'])){
-                $data['care'] = '';
-            }
-
-			Product::where(['id'=>$id])->update(['feature_item'=>$feature_item,'status'=>$status,'category_id'=>$data['category_id'],'product_name'=>$data['product_name'],
-				'product_code'=>$data['product_code'],'product_color'=>$data['product_color'],'description'=>$data['description'],'care'=>$data['care'],'price'=>$data['price'],'weight'=>$data['weight'],'image'=>$fileName,'video'=>$videoName,'sleeve'=>$sleeve,'pattern'=>$pattern]);
-
-			return redirect()->back()->with('flash_message_success', 'Product has been edited successfully');
-		}
-
-		// Get Product Details start //
-		$productDetails = Product::where(['id'=>$id])->first();
-		// Get Product Details End //
-
-		// Categories drop down start //
-		$categories = Category::where(['parent_id' => 0])->get();
-
-		$categories_drop_down = "<option value='' disabled>Select</option>";
-		foreach($categories as $cat){
-			if($cat->id==$productDetails->category_id){
-				$selected = "selected";
-			}else{
-				$selected = "";
-			}
-			$categories_drop_down .= "<option value='".$cat->id."' ".$selected.">".$cat->name."</option>";
-			$sub_categories = Category::where(['parent_id' => $cat->id])->get();
-			foreach($sub_categories as $sub_cat){
-				if($sub_cat->id==$productDetails->category_id){
-					$selected = "selected";
-				}else{
-					$selected = "";
-				}
-				$categories_drop_down .= "<option value='".$sub_cat->id."' ".$selected.">&nbsp;&nbsp;--&nbsp;".$sub_cat->name."</option>";
-			}
-		}
-		// Categories drop down end //
-
-        $sleeveArray = array('Full Sleeve','Half Sleeve','Short Sleeve','Sleeveless');
-
-        $patternArray = array('Checked','Plain','Printed','Self','Solid');
-
-		return view('admin.products.edit_product')->with(compact('productDetails','categories_drop_down','sleeveArray','patternArray'));
-	}
-
-	public function deleteProductImage($id){
-
-		// Get Product Image
-		$productImage = Product::where('id',$id)->first();
-
-		// Get Product Image Paths
-		$large_image_path = 'images/backend_images/product/large/';
-		$medium_image_path = 'images/backend_images/product/medium/';
-		$small_image_path = 'images/backend_images/product/small/';
-
-		// Delete Large Image if not exists in Folder
-        if(file_exists($large_image_path.$productImage->image)){
-            unlink($large_image_path.$productImage->image);
-        }
-
-        // Delete Medium Image if not exists in Folder
-        if(file_exists($medium_image_path.$productImage->image)){
-            unlink($medium_image_path.$productImage->image);
-        }
-
-        // Delete Small Image if not exists in Folder
-        if(file_exists($small_image_path.$productImage->image)){
-            unlink($small_image_path.$productImage->image);
-        }
-
-        // Delete Image from Products table
-        Product::where(['id'=>$id])->update(['image'=>'']);
-
-        return redirect()->back()->with('flash_message_success', 'Product image has been deleted successfully');
-	}
-
-    public function deleteProductVideo($id){
-        // Get Video Name
-        $productVideo = Product::select('video')->where('id',$id)->first();
-
-        // Get Video Path
-        $video_path = 'videos/';
-
-        // Delete Video if exists in videos folder
-        if(file_exists($video_path.$productVideo->video)){
-            unlink($video_path.$productVideo->video);
-        }
-
-        // Delete Video from Products table
-        Product::where('id',$id)->update(['video'=>'']);
-
-        return redirect()->back()->with('flash_message_success','Product Video has been deleted successfully');
-    }
-
-    public function deleteProductAltImage($id=null){
-
-        // Get Product Image
-        $productImage = ProductsImage::where('id',$id)->first();
-
-        // Get Product Image Paths
-        $large_image_path = 'images/backend_images/product/large/';
-        $medium_image_path = 'images/backend_images/product/medium/';
-        $small_image_path = 'images/backend_images/product/small/';
-
-        // Delete Large Image if not exists in Folder
-        if(file_exists($large_image_path.$productImage->image)){
-            unlink($large_image_path.$productImage->image);
-        }
-
-        // Delete Medium Image if not exists in Folder
-        if(file_exists($medium_image_path.$productImage->image)){
-            unlink($medium_image_path.$productImage->image);
-        }
-
-        // Delete Small Image if not exists in Folder
-        if(file_exists($small_image_path.$productImage->image)){
-            unlink($small_image_path.$productImage->image);
-        }
-
-        // Delete Image from Products Images table
-        ProductsImage::where(['id'=>$id])->delete();
-
-        return redirect()->back()->with('flash_message_success', 'Product alternate mage has been deleted successfully');
-    }
-
-	public function viewProducts(Request $request){
-		$products = Product::get();
-		foreach($products as $key => $val){
-			$category_name = Category::where(['id' => $val->category_id])->first();
-			$products[$key]->category_name = $category_name->name;
-		}
-		$products = json_decode(json_encode($products));
-		//echo "<pre>"; print_r($products); die;
-		return view('admin.products.view_products')->with(compact('products'));
-	}
-
-	public function deleteProduct($id = null){
-        Product::where(['id'=>$id])->delete();
-        return redirect()->back()->with('flash_message_success', 'Product has been deleted successfully');
-    }
-
-    public function deleteAttribute($id = null){
-        ProductsAttribute::where(['id'=>$id])->delete();
-        return redirect()->back()->with('flash_message_success', 'Product Attribute has been deleted successfully');
-    }
-
-    public function addAttributes(Request $request, $id=null){
-        $productDetails = Product::with('attributes')->where(['id' => $id])->first();
-        $productDetails = json_decode(json_encode($productDetails));
-        /*echo "<pre>"; print_r($productDetails); die;*/
-
-        $categoryDetails = Category::where(['id'=>$productDetails->category_id])->first();
-        $category_name = $categoryDetails->name;
-
-        if($request->isMethod('post')){
-            $data = $request->all();
-            //echo "<pre>"; print_r($data); die;
-
-            foreach($data['sku'] as $key => $val){
-                if(!empty($val)){
-                    $attrCountSKU = ProductsAttribute::where(['sku'=>$val])->count();
-                    if($attrCountSKU>0){
-                        return redirect('admin/add-attributes/'.$id)->with('flash_message_error', 'SKU already exists. Please add another SKU.');
-                    }
-                    $attrCountSizes = ProductsAttribute::where(['product_id'=>$id,'size'=>$data['size'][$key]])->count();
-                    if($attrCountSizes>0){
-                        return redirect('admin/add-attributes/'.$id)->with('flash_message_error', 'Attribute already exists. Please add another Attribute.');
-                    }
-                    $attr = new ProductsAttribute;
-                    $attr->product_id = $id;
-                    $attr->sku = $val;
-                    $attr->size = $data['size'][$key];
-                    $attr->price = $data['price'][$key];
-                    $attr->stock = $data['stock'][$key];
-                    $attr->save();
-                }
-            }
-            return redirect('admin/add-attributes/'.$id)->with('flash_message_success', 'Product Attributes has been added successfully');
-
-        }
-
-        $title = "Add Attributes";
-
-        return view('admin.products.add_attributes')->with(compact('title','productDetails','category_name'));
-    }
-
-    public function editAttributes(Request $request, $id=null){
-        if($request->isMethod('post')){
-            $data = $request->all();
-            /*echo "<pre>"; print_r($data); die;*/
-            foreach($data['idAttr'] as $key=> $attr){
-                if(!empty($attr)){
-                    ProductsAttribute::where(['id' => $data['idAttr'][$key]])->update(['price' => $data['price'][$key], 'stock' => $data['stock'][$key]]);
-                }
-            }
-            return redirect('admin/add-attributes/'.$id)->with('flash_message_success', 'Product Attributes has been updated successfully');
-        }
-    }
-
-    public function addImages(Request $request, $id=null){
-        $productDetails = Product::where(['id' => $id])->first();
-
-        $categoryDetails = Category::where(['id'=>$productDetails->category_id])->first();
-        $category_name = $categoryDetails->name;
-
-        if($request->isMethod('post')){
-            $data = $request->all();
-            if ($request->hasFile('image')) {
-                $files = $request->file('image');
-                foreach($files as $file){
-                    // Upload Images after Resize
-                    $image = new ProductsImage;
-                    $extension = $file->getClientOriginalExtension();
-                    $fileName = rand(111,99999).'.'.$extension;
-                    $large_image_path = 'images/backend_images/product/large'.'/'.$fileName;
-                    $medium_image_path = 'images/backend_images/product/medium'.'/'.$fileName;
-                    $small_image_path = 'images/backend_images/product/small'.'/'.$fileName;
-                    Image::make($file)->save($large_image_path);
-                    Image::make($file)->resize(600, 600)->save($medium_image_path);
-                    Image::make($file)->resize(300, 300)->save($small_image_path);
-                    $image->image = $fileName;
-                    $image->product_id = $data['product_id'];
-                    $image->save();
-                }
-            }
-
-            return redirect('admin/add-images/'.$id)->with('flash_message_success', 'Product Images has been added successfully');
-
-        }
-
-        $productImages = ProductsImage::where(['product_id' => $id])->orderBy('id','DESC')->get();
-
-        $title = "Add Images";
-        return view('admin.products.add_images')->with(compact('title','productDetails','category_name','productImages'));
-    }
+	
 
     public function products($url=null){
 
     	// Show 404 Page if Category does not exists
-    	$categoryCount = Category::where(['url'=>$url,'status'=>1])->count();
+    	$categoryCount = Category::where(['url'=>$url,'status_car'=>1])->count();
     	if($categoryCount==0){
     		abort(404);
     	}
@@ -449,10 +169,10 @@ class ProductsController extends Controller
     		foreach($subCategories as $subcat){
     			$cat_ids[] = $subcat->id;
     		}
-    		$productsAll = Product::whereIn('products.category_id', $cat_ids)->where('products.status','1')->orderBy('products.id','Desc');
+    		$productsAll = Product::whereIn('products.category_id', $cat_ids)->where('products.status_car','1')->orderBy('products.id','Desc');
             $breadcrumb = "<a href='/'>Home</a> / <a href='".$categoryDetails->url."'>".$categoryDetails->name."</a>";
     	}else{
-    		$productsAll = Product::where(['products.category_id'=>$categoryDetails->id])->where('products.status','1')->orderBy('products.id','Desc');
+    		$productsAll = Product::where(['products.category_id'=>$categoryDetails->id])->where('products.status_car','1')->orderBy('products.id','Desc');
             $mainCategory = Category::where('id',$categoryDetails->parent_id)->first();
             $breadcrumb = "<a href='/'>Home</a> / <a href='".$mainCategory->url."'>".$mainCategory->name."</a> / <a href='".$categoryDetails->url."'>".$categoryDetails->name."</a>";
     	}
@@ -462,7 +182,7 @@ class ProductsController extends Controller
             $productsAll = $productsAll->whereIn('products.product_color',$colorArray);
         }
 
-        if(!empty($_GET['model'])){
+        if(!empty($_GET['sleeve'])){
             $sleeveArray = explode('-',$_GET['sleeve']);
             $productsAll = $productsAll->whereIn('products.sleeve',$sleeveArray);
         }
@@ -505,53 +225,53 @@ class ProductsController extends Controller
     	return view('products.listing')->with(compact('categories','productsAll','categoryDetails','meta_title','meta_description','meta_keywords','url','colorArray','sleeveArray','patternArray','sizesArray','breadcrumb'));
     }
 
-//    public function filter(Request $request){
-//        $data = $request->all();
-//        /*echo "<pre>"; print_r($data); die;*/
-//
-//        $categoryUrl="";
-//        if(!empty($data['categoryFilter'])){
-//            foreach($data['categoryFilter'] as $category){
-//                if(empty($categoryUrl)){
-//                    $category = "&categoryFilter=".$category;
-//                }else{
-//                    $categoryUrl .= "-".$category;
-//                }
-//            }
-//        }
-//
-//
-//
-//
-//
-//        // $modelUrl="";
-//        // if(!empty($data['modelFilter'])){
-//        //     foreach($data['modelFilter'] as $model){
-//        //         if(empty($modelUrl)){
-//        //             $modelUrl = "&model=".$model;
-//        //         }else{
-//        //             $modelUrl .= "-".$model;
-//        //         }
-//        //     }
-//        // }
-//
-//        $finalUrl = "products/".$data['url']."?".$titleUrl;
-//        return redirect::to($finalUrl);
-//    }
+    public function filter(Request $request){
+        $data = $request->all();
+        /*echo "<pre>"; print_r($data); die;*/
+
+        $colorUrl="";
+        if(!empty($data['colorFilter'])){
+            foreach($data['colorFilter'] as $color){
+                if(empty($colorUrl)){
+                    $colorUrl = "&color=".$color;
+                }else{
+                    $colorUrl .= "-".$color;
+                }
+            }
+        }
+
+        $sleeveUrl="";
+        if(!empty($data['sleeveFilter'])){
+            foreach($data['sleeveFilter'] as $sleeve){
+                if(empty($sleeveUrl)){
+                    $sleeveUrl = "&sleeve=".$sleeve;
+                }else{
+                    $sleeveUrl .= "-".$sleeve;
+                }
+            }
+        }
+
+       
+
+       
+
+        $finalUrl = "products/".$data['url']."?".$colorUrl.$sleeveUrl;
+        return redirect::to($finalUrl);
+    }
 
     public function searchProducts(Request $request){
         if($request->isMethod('post')){
             $data = $request->all();
             $categories = Category::with('categories')->where(['parent_id' => 0])->get();
             $search_product = $data['product'];
-            /*$productsAll = Product::where('product_name','like','%'.$search_product.'%')->orwhere('product_code',$search_product)->where('status',1)->paginate();*/
+            /*$productsAll = Product::where('product_name','like','%'.$search_product.'%')->orwhere('product_code',$search_product)->where('status_car',1)->paginate();*/
 
             $productsAll = Product::where(function($query) use($search_product){
                 $query->where('product_name','like','%'.$search_product.'%')
                 ->orWhere('product_code','like','%'.$search_product.'%')
                 ->orWhere('description','like','%'.$search_product.'%')
                 ->orWhere('product_color','like','%'.$search_product.'%');
-            })->where('status',1)->get();
+            })->where('status_car',1)->get();
 
             $breadcrumb = "<a href='/'>Home</a> / ".$search_product;
 
@@ -562,7 +282,7 @@ class ProductsController extends Controller
     public function product($id = null){
 
         // Show 404 Page if Product is disabled
-        $productCount = Product::where(['id'=>$id,'status'=>1])->count();
+        $productCount = Product::where(['id'=>$id,'status_car'=>1])->count();
         if($productCount==0){
             abort(404);
         }
@@ -586,7 +306,7 @@ class ProductsController extends Controller
 
         $categoryDetails = Category::where('id',$productDetails->category_id)->first();
         if($categoryDetails->parent_id==0){
-            $breadcrumb = "<a href='/'>Home</a> / <a href='".$categoryDetails->urlf."'>".$categoryDetails->name."</a> / ".$productDetails->product_name;
+            $breadcrumb = "<a href='/'>Home</a> / <a href='".$categoryDetails->url."'>".$categoryDetails->name."</a> / ".$productDetails->product_name;
         }else{
             $mainCategory = Category::where('id',$categoryDetails->parent_id)->first();
             $breadcrumb = "<a style='color:#333;' href='/'>Home</a> / <a style='color:#333;' href='/products/".$mainCategory->url."'>".$mainCategory->name."</a> / <a style='color:#333;' href='/products/".$categoryDetails->url."'>".$categoryDetails->name."</a> / ".$productDetails->product_name;

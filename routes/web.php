@@ -193,4 +193,7 @@ Route::prefix('login')->group(function () {
 
 
 
+Route::get('testtemplate', 'ProductsController@gridLoad')->name('testtemplate');
 
+Route::match(['get', 'post'],'/products-filter', 'ProductsController@filter');
+Route::get('/products/{url}','ProductsController@products');

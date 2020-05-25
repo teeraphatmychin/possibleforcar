@@ -15,34 +15,6 @@ use Illuminate\Support\Facades\DB;
 class LoadMoreController extends Controller
 {
     //
-//    public function products(Request $request){
-//
-//        // $category = Category::find($id);
-//        $category = Category::find($id);
-//        return view('categories.show')->withCategory($category);
-//
-//    }
-
-    public function filter(Request $request){
-    $data = $request->all();
-    /*echo "<pre>"; print_r($data); die;*/
-    //dd($data);
-    $categoryUrl="";
-    if(!empty($data['categoryFilter'])){
-        foreach($data['categoryFilter'] as $category){
-            if(empty($categoryUrl)){
-                $categoryUrl = "&category=".$category;
-            }else{
-                $categoryUrl .= "-".$category;
-            }
-        }
-    }
-
-
-    return route('car-view-grids');
-}
-
-
     public function gridLoad(Request $request)
     {
         // $postGrids = list_car::paginate(6);
