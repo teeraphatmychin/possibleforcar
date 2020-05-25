@@ -66,11 +66,11 @@
 					   		<a href="#search"><i class="fa fa-search"></i></a>
 					   </li>  --}}
 					   @if(empty(Auth::check()))
-									<li><a href="{{ url('login/facebook') }}" ><i class="fa fa-facebook"></i> Login / SignIn</a>
+									{{-- <li><a href="{{ url('login/facebook') }}" ><i class="fa fa-facebook"></i> Login / SignIn</a> --}}
 									
 								@else
-									<li><a href="{{ url('/account') }}"><i class="fa fa-user"></i> Account</a></li>
-									<li><a href="{{ url('/user-logout') }}"><i class="fa fa-sign-out"></i> Logout</a></li>
+									{{-- <li><a href="{{ url('/account') }}"><i class="fa fa-user"></i> Account</a></li> --}}
+									{{-- <li><a href="{{ url('/user-logout') }}"><i class="fa fa-sign-out"></i> Logout</a></li> --}}
 								@endif
 					   
 					</ul>
