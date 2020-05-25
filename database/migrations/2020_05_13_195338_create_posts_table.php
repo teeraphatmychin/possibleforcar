@@ -23,8 +23,12 @@ class CreatePostsTable extends Migration
             $table->string('sum_price')->nullable();
             $table->string('image')->nullable();
             $table->string('type')->nullable();
+            $table->integer('Discount')->nullable();
+            $table->integer('down_payment')->nullable();
+            $table->integer('Num_Gift')->nullable();
+            
             $table->string('engine')->nullable();
-            $table->string('conditions')->nullable();
+            $table->longtext('conditions')->nullable();
             $table->string('status_car')->nullable();
             $table->unsignedbigInteger('post_by_id')->nullable();
             $table->timestamps();

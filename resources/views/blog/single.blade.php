@@ -54,14 +54,15 @@
         						<div class="col-lg-6 col-12">
         							<div class="wn__fotorama__wrapper">
 	        							<div class="fotorama wn__fotorama__action" data-nav="thumbs">
-		        							  <a href="1.jpg"><img src="images/product/1.jpg" alt=""></a>
+											<a href="1.jpg"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt=""></a>
+											  {{-- <a href="1.jpg"><img src="images/product/1.jpg" alt=""></a>
 		        							  <a href="2.jpg"><img src="images/product/2.jpg" alt=""></a>
 		        							  <a href="3.jpg"><img src="images/product/3.jpg" alt=""></a>
 		        							  <a href="4.jpg"><img src="images/product/4.jpg" alt=""></a>
 		        							  <a href="5.jpg"><img src="images/product/5.jpg" alt=""></a>
 		        							  <a href="6.jpg"><img src="images/product/6.jpg" alt=""></a>
 		        							  <a href="7.jpg"><img src="images/product/7.jpg" alt=""></a>
-		        							  <a href="8.jpg"><img src="images/product/8.jpg" alt=""></a>
+		        							  <a href="8.jpg"><img src="images/product/8.jpg" alt=""></a> --}}
 	        							</div>
         							</div>
         						</div>
@@ -81,14 +82,17 @@
         									<span></span>
         								</div>
 										<div class="product__overview">
-                                            <p>{{$post->title}}</p>
-                                            <p>{{$post->conditions}}</p>
+											<p>{{$post->title}}</p>
+											@foreach(explode(',',$post->conditions) as $row)
+											<p>{{ $row }}</p>
+											@endforeach
+                                           
         								</div>
         								<div class="box-tocart d-flex">
-        									<span>Qty</span>
-        									<input id="qty" class="input-text qty" name="qty" min="1" value="1" title="Qty" type="number">
+        									{{-- <span>รับโปรโมชั่น</span> --}}
         									<div class="addtocart__actions">
-        										<button class="tocart" type="submit" title="Add to Cart">Add to Cart</button>
+												<button class="tocart" type="submit" id="myBtn2" title="Add to Cart">รับโปรโมชั่น</button> 
+												{{--  --}}
         									</div>
 											<div class="product-addto-links clearfix">
 												<a class="wishlist" href="#"></a>
@@ -100,7 +104,7 @@
 												{{-- <a href="#">{{ $categoriesfilter->name }}</a>, --}}
 											</span>
 										</div>
-										<div class="product-share">
+										{{-- <div class="product-share">
 											<ul>
 												<li class="categories-title">Share :</li>
 												<li>
@@ -124,7 +128,7 @@
 													</a>
 												</li>
 											</ul>
-										</div>
+										</div> --}}
         							</div>
         						</div>
         					</div>
@@ -450,6 +454,66 @@
 		<!-- End Search Popup -->
 		
 
+		{{--  --}}
+		<div class="modal fade" id="myModal2" role="dialog" >
+																									   
+			<div class="modal-dialog modal-dialog-centered" style="z-index: 9999999999999999999999;">
+			
+			<!-- Modal content-->
+			<div class="modal-content" >
+				<div class="modal-header" ;>
+				<h4 class="modal-title" >{{$post->category_id}} {{$post->model}}</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+					<div class="modal-body" >
+					
+						
+
+										<span id="form_result"></span>
+										<form method="post" id="sample_form" class="form-horizontal" enctype="multipart/form-data">
+										 @csrf
+										 <div class="form-group">
+											 <div class="row">
+												<label class="control-label col-md-3" >ชื่อของท่าน : </label>
+										   		<div class="col-md-7">
+										  
+												<input type="text" name="customer_name" id="customer_name" class="form-control" placeholder="">
+										   
+										   </div>   
+										</div>
+										  </div>
+										  <div class="form-group">
+										   <label class="control-label col-md-3">เบอร์ติดต่อของท่าน : </label>
+										   <div class="col-md-7">
+											<input type="text" name="customer_phone" id="customer_phone" class="form-control" placeholder="">
+										   </div>
+										  </div>
+										  {{--    --}}
+										  <div class="form-group">
+											   <label class="control-label col-md-3"> สะดวกให้ติดต่อทางไลน์หรือเฟสบุ๊ค : </label>
+											   <div class="col-md-7">
+													<input type="text" name="customer_social" id="customer_social" class="form-control" placeholder="">
+											   </div>
+										   </div>
+										   
+										  <br />
+										  <div class="form-group" align="center">
+										   <input type="hidden" name="action" id="action" />
+										   <input type="hidden" name="hidden_id" id="hidden_id" />
+										   <input type="submit" name="action_button" id="action_button" class="btn btn-warning" value="ส่งข้อมูล" />
+										  </div>
+										</form>
+								
+
+
+
+					</div>
+				
+				</div>
+			
+			</div>
+		</div>
+		{{--  --}}
 		<!-- QUICKVIEW PRODUCT -->
 		<div id="quickview-wrapper">
 		    <!-- Modal -->
@@ -464,7 +528,7 @@
 		                        <!-- Start product images -->
 		                        <div class="product-images">
 		                            <div class="main-image images">
-		                                <img alt="big images" src="images/product/big-img/1.jpg">
+		                                <img alt="big images" src="{{ asset('refinn.jpg') }}">
 		                            </div>
 		                        </div>
 		                        <!-- end product images -->
@@ -551,6 +615,60 @@
 
  
     
+<script>
+	$('.modal').insertAfter($('body'));
+	$(document).ready(function(){
+	$("#myBtn2").click(function(){
+		$("#myModal2").modal({backdrop: true});
+			  $('.modal-title').text("สนใจโปรโมชั่นของรถรุ่นนี้");
+				 $('#action_button').val("ส่งข้อมูล");
+				 $('#action').val("ส่งข้อมูล");
+				 $('#formModal').appendTo("body").modal('show');
+				
+			 });
+			
+			 $('#sample_form').on('submit', function(event){
+			  event.preventDefault();
+			  if($('#action').val() == 'ส่งข้อมูล')
+			  {
+			   $.ajax({
+				url:"{{ route('customerOrder.store') }}",
+				method:"POST",
+				data: new FormData(this),
+				contentType: false,
+				cache:false,
+				processData: false,
+				dataType:"json",
+				success:function(data)
+				{
+				 var html = '';
+				 if(data.errors)
+				 {
+				  html = '<div class="alert alert-danger">';
+				  for(var count = 0; count < data.errors.length; count++)
+				  {
+				   html += '<p>' + data.errors[count] + '</p>';
+				  }
+				  html += '</div>';
+				 }
+				 if(data.success)
+				 {
+				  html = '<div class="alert alert-success">' + data.success + '</div>';
+				  $('#sample_form')[0].reset();
+				  $('#car_manage_table').DataTable().ajax.reload();
+				 }
+				 $('#form_result').html(html);
+				}
+			   })
+			  }
+			
 
+ });
+	  
+});
+//
+
+
+</script>
 
 
