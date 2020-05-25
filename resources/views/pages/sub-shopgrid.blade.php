@@ -34,10 +34,7 @@
 
 	<!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">
-		{{-- ////////////////////////////////////////// --}}
-	
-	
-		{{-- /////////////////////////////////////////// --}}
+		
         <!-- Start Shop Page -->
         <div class="page-shop-sidebar left--sidebar bg--white section-padding--lg">
         	<div class="container">
@@ -45,74 +42,14 @@
         			<div class="col-lg-3 col-12 order-2 order-lg-1 md-mt-40 sm-mt-40">
         				<div class="shop__sidebar">
         					<aside class="wedget__categories poroduct--cat">
-								<h3 class="wedget__title">Product Categories</h3>
-								
+        						<h3 class="wedget__title">Product Categories</h3>
         						<ul>
-									<?php use App\Post; ?>
-<form action="{{ url('/products-filter') }}" method="post">{{ csrf_field() }}
-	@if(!empty($url))
-	<input name="url" value="{{ $url }}" type="hidden">
-	@endif 
-	<div class="left-sidebar">
-		<h2>Category</h2>
-		<div class="panel-group category-products" id="accordian">
-			@foreach($categories as $cat)
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordian" href="#{{$cat->id}}">
-								<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-								{{$cat->name}}
-							</a>
-						</h4>
-					</div>
-					<div id="{{$cat->id}}" class="panel-collapse collapse">
-						<div class="panel-body">
-							<ul>
-								@foreach($cat->categories as $subcat)
-									<?php $productCount = Post::productCount($subcat->id); ?>
-									@if($subcat->status==1)
-									<li><a href="{{ asset('products/'.$subcat->url) }}">{{$subcat->name}} </a> ({{ $productCount }})</li>
-									@endif
-								@endforeach
-							</ul>
-						</div>
-					</div>
-				</div>
-			@endforeach
-		</div>
-
-		@if(!empty($url))
-		
-			<h2>model</h2>	
-			<div class="panel-group">
-				@foreach($titleArray as $title)
-					@if(!empty($_GET['title']))
-						<?php $titleArr = explode('-',$_GET['title']) ?>
-						@if(in_array($title,$titleArr))
-							<?php $titlecheck="checked"; ?>	
-						@else
-							<?php $titlecheck=""; ?>
-						@endif		
-					@else
-						<?php $titlecheck=""; ?>
-					@endif
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h4 class="panel-title">
-								<input name="titerFilter[]" onchange="javascript:this.form.submit();" id="{{ $titer }}" value="{{ $titer }}" type="checkbox" {{ $titercheck }}>&nbsp;&nbsp;<span class="post-title">{{ $titer }}</span>
-							</h4>
-						</div>
-					</div>
-				@endforeach
-			</div>
-
-			<div>&nbsp;</div>
-
-		@endif
-		
-	</div>
-</form>
+									@foreach($postTags as $postTag)
+        							<li><a href="#">{{ $postTag->name }}</a></li>
+									@endforeach
+									@foreach($categories  as $category)
+									<li><input type="checkbox" class="common_selector title" value="{{ $category->name }}">{{ $category->name }}<span>({{ $row->posts()->count() }})</span></a></li>
+									@endforeach
         						</ul>
         					</aside>
         					<aside class="wedget__categories pro--range">
@@ -148,10 +85,10 @@
         						</ul>
         					</aside>
         					<aside class="wedget__categories sidebar--banner">
-								<img src="images/others/banner_left.jpg" alt="banner images">
+								<img src="{{ asset('refinn.png') }}" alt="banner images">
 								<div class="text">
-									<h2>new products</h2>
-									<h6>save up to <br> <strong>40%</strong>off</h6>
+									{{-- <h2>new products</h2> --}}
+									{{-- <h6>save up to <br> <strong>40%</strong>off</h6> --}}
 								</div>
         					</aside>
         				</div>
@@ -234,7 +171,7 @@
 															<!-- Start product images -->
 															<div class="product-images">
 																<div class="main-image images">
-																	<img alt="big images" src="images/product/big-img/1.jpg">
+																	<img alt="big images" src="{{ asset('refinn') }}">
 																</div>
 															</div>
 															<!-- end product images -->
@@ -382,5 +319,4 @@
 
 	
 	</html>
-	
 	

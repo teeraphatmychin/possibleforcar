@@ -54,7 +54,7 @@
         						<div class="col-lg-6 col-12">
         							<div class="wn__fotorama__wrapper">
 	        							<div class="fotorama wn__fotorama__action" data-nav="thumbs">
-											<a href="1.jpg"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt=""></a>
+											<a href="#"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt=""></a>
 											  {{-- <a href="1.jpg"><img src="images/product/1.jpg" alt=""></a>
 		        							  <a href="2.jpg"><img src="images/product/2.jpg" alt=""></a>
 		        							  <a href="3.jpg"><img src="images/product/3.jpg" alt=""></a>
@@ -145,9 +145,9 @@
 									<div class="description__attribute">
 									<p>{{ $post->body }}</p>
 										<ul>
-											<li>• Two-tone gray heather hoodie.</li>
-											<li>• Drawstring-adjustable hood. </li>
-											<li>• Machine wash/dry.</li>
+											<li>• รีบเลยจำนวนจำกัด.</li>
+											<li>• .</li>
+											<li>• .</li>
 										</ul>
 									</div>
 	                        	</div>
@@ -425,10 +425,10 @@
         						</ul>
         					</aside>
         					<aside class="wedget__categories sidebar--banner">
-								<img src="images/others/banner_left.jpg" alt="banner images">
+								<img src="{{ asset('refinn.png') }}" alt="banner images">
 								<div class="text">
-									<h2>new products</h2>
-									<h6>save up to <br> <strong>40%</strong>off</h6>
+									{{-- <h2>new products</h2>
+									<h6>save up to <br> <strong>40%</strong>off</h6> --}}
 								</div>
         					</aside>
         				</div>
@@ -528,7 +528,7 @@
 		                        <!-- Start product images -->
 		                        <div class="product-images">
 		                            <div class="main-image images">
-		                                <img alt="big images" src="{{ asset('refinn.jpg') }}">
+		                                <img alt="big images" src="{{ asset('refinn.png') }}">
 		                            </div>
 		                        </div>
 		                        <!-- end product images -->
