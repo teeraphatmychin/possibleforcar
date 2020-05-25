@@ -14,7 +14,13 @@ use App\Post;
 class LoadMoreController extends Controller
 {
     //
-   
+    public function products(Request $request){
+
+        // $category = Category::find($id);
+        $category = Category::find($id);
+        return view('categories.show')->withCategory($category);
+
+    }
 
     public function filter(Request $request){
     $data = $request->all();
@@ -32,7 +38,7 @@ class LoadMoreController extends Controller
     }
 
   
-    return route('car-view-grid');
+    return route('car-view-grids');
 }
 
 

@@ -48,7 +48,7 @@
 								<h3 class="wedget__title">Product Categories</h3>
 								
         						<ul>
-										<form action="{{ url('products-filter') }}" method="post">{{ csrf_field() }}
+										<form action="{{ url('/products-filter') }}" method="post">{{ csrf_field() }}
 
 										
 										@foreach($categories as $category)

@@ -81,8 +81,8 @@
         									<span></span>
         								</div>
 										<div class="product__overview">
-                                            <p>{{ $post->title }}</p>
-                                            <p>{{ $post->conditions }}</p>
+                                            <p>{{$post->title}}</p>
+                                            <p>{{$post->conditions}}</p>
         								</div>
         								<div class="box-tocart d-flex">
         									<span>Qty</span>
