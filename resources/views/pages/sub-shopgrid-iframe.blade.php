@@ -94,10 +94,11 @@
                             <div class="hot__box">
                                 @if ($post == 'ส่วนลดเยอะที่สุด')
                                     <span class="glyphicon glyphicon-certificate">{{ $post->status_car }}</span>
-                                @else 
-                                    
-                                     <span class="glyphicon glyphicon glyphicon-usd">{{ $post->status_car }}</span>
+                                @endif
                                 
+
+                                     <span class="glyphicon glyphicon glyphicon-usd">{{ $post->status_car }}</span>
+                               
                             </div>
                         </div>
                         <div class="product__content content--center">
