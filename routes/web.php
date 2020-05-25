@@ -29,7 +29,7 @@ Route::namespace('Admin')->prefix('admin')->middleware(['auth','auth.admin'])->n
       Route::get('/impersonate/user/{id}','ImpersonateController@index')->name('impersonate');
       Route::get('/admin/impersonate/destroy','Admin\ImpersonateController@destroy')->name('admin.impersonate.destroy');
 
-// });
+ });
 Route::get('/Dashboard', 'HomeController@Dashboard')->name('Dashboard');
 Route::get('/Dashboard2', 'HomeController@Dashboard2')->name('Dashboard2');
 Route::get('/Dashboard3', 'HomeController@Dashboard3')->name('Dashboard3');

@@ -17,10 +17,10 @@ class All_indexController extends Controller
         $products=Post::all();
         //$blog_slides=list_blog::all();
         $posts=Post::paginate(8);
-        $postCategories=Category::inRandomOrder();
-        $postCategories2=Category::inRandomOrder();
+        $postCategories=Category::all();
+        $postCategories2=Category::all();
 
-        $postcars=Post::inRandomOrder();
+        $postcars=Post::all();
         $postcarsback=Post::all();
         $postcar2s=Post::all()->where('title', '=', 'toyota');
         $postcar2sback=Post::all()->where('title', '=', 'toyota')->sortByDesc('id');
