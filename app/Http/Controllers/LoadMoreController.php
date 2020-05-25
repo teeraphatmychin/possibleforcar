@@ -9,44 +9,59 @@ use App\list_blog;
 use App\Category;
 use App\Tag;
 use App\Post;
+use Illuminate\Support\Facades\DB;
 
 
 class LoadMoreController extends Controller
 {
     //
-    
-
-    
-
-
-
     public function gridLoad(Request $request)
-    {   
+    {
         // $postGrids = list_car::paginate(6);
     	// if ($request->ajax()) {
     	// 	$view = view('data',compact('postGrids'))->render();
         //     return response()->json(['html'=>$view]);
         // }
         //$posts = list_car::paginate(12);
-        
-           
-            
-            
-           
-
-       
         //////
-        
+
 
         $categories = Category::all();
+//        $posts = Post::paginate(12);
+//        $posts2 = Post::paginate(4);
+        $postTags =Tag::all();
+
+
+//    	return view('pages.car-view-grid',compact('categories','posts2','postTags','posts'));
+    	return view('pages.car-view-grid',compact('categories','postTags'));
+    }
+    public function gridLoad_iframe(Request $request){
         $posts = Post::paginate(12);
         $posts2 = Post::paginate(4);
-        $postTags =Tag::all();
-        
+        return view('pages.sub-shopgrid-iframe',compact('posts','posts2'));
+    }
 
+    public function gridLoad_iframe2($title)
+    {
 
+        $sql0 = explode("-",$title,2);
+        if(count($sql0) == "1"){
+            $posts = DB::select("SELECT * FROM posts WHERE title = '$sql0[0]' limit 12");
+            $posts2 = DB::select("SELECT * FROM posts WHERE title = '$sql0[0]' limit 4");
+            return view('pages.sub-shopgrid-iframe',compact('posts','posts2'));
+        }
+        else{
+            $sqll = "";
+            $sql0 = explode("-",$title);
+            foreach ($sql0 as $sql00){
+                $sqll .= "title = '$sql00' or ";
+            }
+            $sqll = substr_replace($sqll ,"",-4);
+            $posts = DB::select("SELECT * FROM posts WHERE $sqll limit 12");
+            $posts2 = DB::select("SELECT * FROM posts WHERE $sqll limit 4");
+            return view('pages.sub-shopgrid-iframe',compact('posts','posts2'));
+        }
 
-    	return view('pages.car-view-grid',compact('categories','posts2','postTags','posts'));
     }
     public function blogPost(Request $request)
     {
