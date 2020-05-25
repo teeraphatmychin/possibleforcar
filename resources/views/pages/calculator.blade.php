@@ -177,12 +177,12 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', ['tctxM','','td
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="btn-group bootstrap-select" style="width: 100%;">
-                          <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" data-id="product_type" title="กรุงศรี นิวคาร์" aria-expanded="false">
+                          <button class="hide" type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" data-id="product_type" title="กรุงศรี นิวคาร์" aria-expanded="false">
                             {{-- <span class="filter-option pull-left">กรุงศรี นิวคาร์</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span> --}}
                           </button>
 
                             <select class="selectpicker" data-width="100%" name="product_type" id="product_type" tabindex="-98">
-                                <option value="new">คำนวณเงินดาว</option>
+                                <option class="hide" value="new">คำนวณเงินดาว</option>
                                 
                             </select></div>
                     </div>

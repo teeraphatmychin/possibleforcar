@@ -43,7 +43,7 @@
         					<aside class="wedget__categories poroduct--cat">
 								<h3 class="wedget__title">Product Categories</h3>
         						<ul>
-
+										
                                     @foreach($categories as $category)
                                         @if(!empty($_GET['category']))
                                             <?php $categories = explode('-',$_GET['category']) ?>
