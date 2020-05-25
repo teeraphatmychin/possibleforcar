@@ -24,10 +24,10 @@ Route::resource('car_crud','car_manageController')->middleware(['auth','auth.adm
  Route::post('ajax-crud/update', 'AjaxCrudController@update')->name('ajax-crud.update')->middleware(['auth','auth.admin']);
  Route::get('ajax-crud/destroy/{id}', 'AjaxCrudController@destroy')->middleware(['auth','auth.admin']);
 
-// Route::namespace('Admin')->prefix('admin')->middleware(['auth','auth.admin'])->name('admin.')->group(function(){
-//      Route::resource('/users','UserController',['except' => ['show','create','store']]);
-//      Route::get('/impersonate/user/{id}','ImpersonateController@index')->name('impersonate');
-//      Route::get('/admin/impersonate/destroy','Admin\ImpersonateController@destroy')->name('admin.impersonate.destroy');
+Route::namespace('Admin')->prefix('admin')->middleware(['auth','auth.admin'])->name('admin.')->group(function(){
+      Route::resource('/users','UserController',['except' => ['show','create','store']]);
+      Route::get('/impersonate/user/{id}','ImpersonateController@index')->name('impersonate');
+      Route::get('/admin/impersonate/destroy','Admin\ImpersonateController@destroy')->name('admin.impersonate.destroy');
 
 // });
 Route::get('/Dashboard', 'HomeController@Dashboard')->name('Dashboard');
@@ -107,7 +107,6 @@ Route::get('/calculator', function () {
 });
 
 
-Route::post('filter', 'filterController@index')->name('filter');
 
 
 Route::resource('customerOrder', 'AjaxCustomerOrderController');

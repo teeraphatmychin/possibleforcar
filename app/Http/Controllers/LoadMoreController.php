@@ -10,9 +10,32 @@ use App\Category;
 use App\Tag;
 use App\Post;
 
+
 class LoadMoreController extends Controller
 {
     //
+   
+
+    public function filter(Request $request){
+    $data = $request->all();
+    /*echo "<pre>"; print_r($data); die;*/
+    //dd($data);
+    $categoryUrl="";
+    if(!empty($data['categoryFilter'])){
+        foreach($data['categoryFilter'] as $category){
+            if(empty($categoryUrl)){
+                $categoryUrl = "&category=".$category;
+            }else{
+                $categoryUrl .= "-".$category;
+            }
+        }
+    }
+
+  
+    return route('car-view-grid');
+}
+
+
     public function gridLoad(Request $request)
     {   
         // $postGrids = list_car::paginate(6);
@@ -21,14 +44,21 @@ class LoadMoreController extends Controller
         //     return response()->json(['html'=>$view]);
         // }
         //$posts = list_car::paginate(12);
+        
            
+            
+            
+           
+
+       
+        //////
         
 
         $categories = Category::all();
         $posts = Post::paginate(12);
         $posts2 = Post::paginate(4);
         $postTags =Tag::all();
-
+        
 
 
 

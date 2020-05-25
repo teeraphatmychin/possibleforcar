@@ -34,7 +34,10 @@
 
 	<!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">
-		
+		{{-- ////////////////////////////////////////// --}}
+	
+	
+		{{-- /////////////////////////////////////////// --}}
         <!-- Start Shop Page -->
         <div class="page-shop-sidebar left--sidebar bg--white section-padding--lg">
         	<div class="container">
@@ -42,11 +45,35 @@
         			<div class="col-lg-3 col-12 order-2 order-lg-1 md-mt-40 sm-mt-40">
         				<div class="shop__sidebar">
         					<aside class="wedget__categories poroduct--cat">
-        						<h3 class="wedget__title">Product Categories</h3>
+								<h3 class="wedget__title">Product Categories</h3>
+								
         						<ul>
-									@foreach($categories as $category)
-									<li><input type="checkbox" class="common_selector brand" value="{{ $category->name }}">{{ $category->name }}<span>({{ $category->posts()->count() }})</span></a></li>
-									@endforeach
+										<form action="{{ url('products-filter') }}" method="post">{{ csrf_field() }}
+
+										
+										@foreach($categories as $category)
+											@if(!empty($_GET['category']))
+												<?php $categories = explode('-',$_GET['category']) ?>
+												@if(in_array($category,$categories))
+													<?php $categorycheck="checked"; ?>	
+												@else
+													<?php $categorycheck=""; ?>
+												@endif		
+											@else
+												<?php $categorycheck=""; ?>
+											@endif
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														<input name="categoryFilter[]" onchange="javascript:this.form.submit();" id="{{ $category->name }}" value="{{ $category->name}}" type="checkbox" >&nbsp;&nbsp;<span class="products-category">{{ $category->name }}<span>({{ $category->posts()->count() }})</span>
+													</h4>
+												</div>
+											</div>
+										@endforeach
+										
+										
+										</form>
+									</form>
         						</ul>
         					</aside>
         					<aside class="wedget__categories pro--range">
@@ -316,53 +343,5 @@
 
 	
 	</html>
-	$(document).ready(function(){
-		filter_data();
-		function filter_data()
-		{
-			$('.filter_data').html('<div id="loading" style="" ></div>');
-			var action = 'fetch_data';
-			var minimum_price = $('#hidden_minimum_price').val();
-			var maximum_price = $('#hidden_maximum_price').val();
-			var title = get_filter('title');
-			$.ajax({
-				url:"{{ route('filter') }}",
-				method:"POST",
-				data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, title:title, brand:brand},
-				success:function(data){
-					$('.filter_data').html(data);
-				}
-			});
-		}
 	
-		function get_filter(class_name)
-		{
-			var filter = [];
-			$('.'+class_name+':checked').each(function(){
-				filter.push($(this).val());
-			});
-			return filter;
-		}
-	
-		$('.common_selector').click(function(){
-			filter_data();
-		});
-	
-		$('#price_range').slider({
-			range:true,
-			min:0,
-			max:3000000,
-			values:[0000, 3000000],
-			step:500,
-			stop:function(event, ui)
-			{
-				$('#price_show').html(ui.values[0] + ' - ' + ui.values[1]);
-				$('#hidden_minimum_price').val(ui.values[0]);
-				$('#hidden_maximum_price').val(ui.values[1]);
-				filter_data();
-			}
-		});
-	
-	});
-	</script>
 	
