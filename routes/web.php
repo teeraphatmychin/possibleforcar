@@ -91,7 +91,7 @@ Route::get('/timeline', 'HomeController@timeline')->name('timeline');
 Route::get('/starter', 'HomeController@starter')->name('starter');
 
 
- 
+
 
  Route::get('/home', 'HomeController@index')->name('home')->middleware(['auth','auth.admin']);
 
@@ -124,6 +124,8 @@ Route::get('blog-view-grid', 'LoadMoreController@blogPost')->name('blog-view-gri
 // Route::get('/blog_listing_no_sidebar', 'UserController@blog_listing_no_sidebar')->name('blog_listing_no_sidebar');
 // Route::get('/blog_listing_sidebar', 'UserController@blog_listing_sidebar')->name('blog_listing_sidebar');
 Route::get('car-view-grid', 'LoadMoreController@gridLoad')->name('car-view-grid');
+Route::get('car-view-grid-iframe', 'LoadMoreController@gridLoad_iframe')->name('car-view-grid-iframe');
+Route::get('car-view-grid-iframe2/{title}', 'LoadMoreController@gridLoad_iframe2')->name('car-view-grid-iframe-2');
 Route::get('car_grid_sidebar', 'LoadMoreController@myPost')->name('car_grid_sidebar');
 Route::get('car-view-list','LoadMoreController@listLoad')->name('car-view-list');
 Route::get('car_listing_sidebar', 'LoadMoreController@myPost')->name('car_listing_sidebar');
@@ -164,7 +166,7 @@ Auth::routes(['register' => false]);
 
 ////
 Route::group(['middleware' => ['auth','auth.admin']], function () {
-    
+
 });
 
 Route::get('blog/{slug}',['as'=> 'blog.single','uses'=>'BlogController@getSingle'])->where('slug','[\w\d\-\_]+');
