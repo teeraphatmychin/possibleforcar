@@ -82,7 +82,7 @@
         								</div>
 										<div class="product__overview">
                                             <p>{{ $post->title }}</p>
-                                            <p>{{ $post->body }}</p>
+                                            <p>{{ $post->condition }}</p>
         								</div>
         								<div class="box-tocart d-flex">
         									<span>Qty</span>
