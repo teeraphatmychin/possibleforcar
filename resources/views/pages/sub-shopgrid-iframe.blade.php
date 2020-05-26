@@ -92,12 +92,14 @@
                             <a class="first__img" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
                             <a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}"><img src="images/books/2.jpg" alt="product image"></a>
                             <div class="hot__box">
-                                @if ($post->status_car == 1)
+                                @if ($post->status_car == 4)
                                     <span class="glyphicon glyphicon-certificate"> ส่วนลดเยอะที่สุด </span>
                                 @endif
-                                
+                                @else if($post->status_car == 3)
+                                <span class="glyphicon glyphicon-certificate"> ส่วนddfsd </span>
+                                @endif
 
-                                     <span class="glyphicon glyphicon glyphicon-usd">{{ $post->status_car }}</span>
+                                     {{-- <span class="glyphicon glyphicon glyphicon-usd">{{ $post->status_car }}</span> --}}
                                
                             </div>
                         </div>
