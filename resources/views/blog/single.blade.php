@@ -1,7 +1,6 @@
 
 {{--  <? php $titleTag = htmlspecialchars($post->title); ?>
 @section('title' "| $titleTag")  --}}
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -21,18 +20,22 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/css/bootstrap.min.css') }}">
+	{{-- <link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/css/bootstrap.min.css') }}"> --}}
 	<link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/css/plugins.css') }}">
 	<link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/style.css') }}">
 	<!-- Cusom css -->
    <link rel="stylesheet" href="{{ asset('frontend/boighor/boighors/css/custom.css')}}">
 
-
+   {{-- @include('layout.partials.head') --}}
 
 	<!-- Modernizer js -->
 	<script src="{{ asset('frontend/boighor/boighors/js/vendor/modernizr-3.5.0.min.js')}}"></script>
 </head>
 <body>
+	
+
+
+
 	<!--[if lte IE 9]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 	<![endif]-->
@@ -55,20 +58,15 @@
         							<div class="wn__fotorama__wrapper">
 	        							<div class="fotorama wn__fotorama__action" data-nav="thumbs">
 											<a href="#"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt=""></a>
-											  {{-- <a href="1.jpg"><img src="images/product/1.jpg" alt=""></a>
-		        							  <a href="2.jpg"><img src="images/product/2.jpg" alt=""></a>
-		        							  <a href="3.jpg"><img src="images/product/3.jpg" alt=""></a>
-		        							  <a href="4.jpg"><img src="images/product/4.jpg" alt=""></a>
-		        							  <a href="5.jpg"><img src="images/product/5.jpg" alt=""></a>
-		        							  <a href="6.jpg"><img src="images/product/6.jpg" alt=""></a>
-		        							  <a href="7.jpg"><img src="images/product/7.jpg" alt=""></a>
-		        							  <a href="8.jpg"><img src="images/product/8.jpg" alt=""></a> --}}
+											  
 	        							</div>
         							</div>
         						</div>
         						<div class="col-lg-6 col-12">
         							<div class="product__info__main">
-        								<h1>{{ $post->title }}</h1>
+										<h1>{{ $post->title }}</h1>
+										<h1>{{ $post->model }}</h1>
+
         								<div class="product-reviews-summary d-flex">
         									<ul class="rating-summary d-flex">
     											<li><i class="zmdi zmdi-star-outline"></i></li>
@@ -82,6 +80,8 @@
         									<span></span>
         								</div>
 										<div class="product__overview">
+											<h1>ราคา{{ $post->price }} บาท</h1>
+
 											<p>{{$post->title}}</p>
 											@foreach(explode(',',$post->conditions) as $row)
 											<p>{{ $row }}</p>
@@ -95,12 +95,12 @@
 												{{--  --}}
         									</div>
 											<div class="product-addto-links clearfix">
-												<a class="wishlist" href="#"></a>
-												<a class="compare" href="#"></a>
+												{{-- <a class="wishlist" href="#"></a> --}}
+												{{-- <a class="compare" href="#"></a> --}}
 											</div>
         								</div>
 										<div class="product_meta">
-											<span class="posted_in">Categories: 	
+											{{-- <span class="posted_in">Categories: 	 --}}
 												{{-- <a href="#">{{ $categoriesfilter->name }}</a>, --}}
 											</span>
 										</div>
@@ -137,7 +137,7 @@
 							<div class="pro_details_nav nav justify-content-start" role="tablist">
 								<a class="nav-item nav-link active" data-toggle="tab" href="#nav-details" role="tab">รายละเอียด</a>
 								<a class="nav-item nav-link" data-toggle="tab" href="#nav-calculator" role="tab">คำนวณเงินดาวน์</a>
-								<a class="nav-item nav-link" data-toggle="tab" href="#nav-review" role="tab">รีวิว</a>
+								{{-- <a class="nav-item nav-link" data-toggle="tab" href="#nav-review" role="tab">รีวิว</a> --}}
 	                        </div>
 	                        <div class="tab__container">
 	                        	<!-- Start Single Tab Content -->
@@ -341,7 +341,7 @@
 									<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 										<div class="product__thumb">
 											<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
-											<a class="second__img animation1" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
+											<a class="second__img animation1" href="{{ route('blog.single', $postcar->slug) }}"><img src="<img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
 											<div class="hot__box">
 												<span class="hot-label">รถยนต์ ขายดี</span>
 											</div>
