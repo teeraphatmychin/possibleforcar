@@ -90,13 +90,25 @@
                     <div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12 javascript-filter-{{$post->title}}">
                         <div class="product__thumb">
                             <a class="first__img" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
-                            <a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}"><img src="images/books/2.jpg" alt="product image"></a>
+                            <a class="second__img animation1" href="{{ route('blog.single', $post->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$post->category_id}}/{{$post->model}}/370_260/{{ $post->image }}" alt="product image"></a>
                             <div class="hot__box">
-                                @if ($post->status_car == 4)
+                                @if ($post->status_car == 1)
                                     <span class="glyphicon glyphicon-certificate"> ส่วนลดเยอะที่สุด </span>
                                 @endif
-                                @else if($post->status_car == 3)
-                                <span class="glyphicon glyphicon-certificate"> ส่วนddfsd </span>
+                                @if($post->status_car == 2)
+                                    <span class="glyphicon glyphicon-certificate">ดาวน์ต่ำสุด  </span>
+                                @endif
+                                @if($post->status_car == 3)
+                                    <span class="glyphicon glyphicon-certificate">แถมเยอะสุด </span>
+                                    @endif
+                                @if($post->status_car == 4)
+                                     <span class="glyphicon glyphicon-certificate">ดาวน์ต่ำส่วนลดเยอะ </span>
+                                     @endif
+                                @if($post->status_car == 5)
+                                    <span class="glyphicon glyphicon-certificate"> ธรรมดา </span>
+                                    @endif
+                                @if($post->status_car == 6)
+                                    <span class="glyphicon glyphicon-certificate"> ดาวน์ต่ำของแถมเยอะ </span>
                                 @endif
 
                                      {{-- <span class="glyphicon glyphicon glyphicon-usd">{{ $post->status_car }}</span> --}}
@@ -145,7 +157,7 @@
                                             <!-- Start product images -->
                                             <div class="product-images">
                                                 <div class="main-image images">
-                                                    <img alt="big images" src="images/product/big-img/1.jpg">
+                                                    <img alt="big images" src="{{ asset('refinn.png') }}">
                                                 </div>
                                             </div>
                                             <!-- end product images -->

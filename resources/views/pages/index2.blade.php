@@ -73,7 +73,24 @@
 											<a class="first__img" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
 											<a class="second__img animation1" href="{{ route('blog.single', $postcar->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar->category_id}}/{{$postcar->model}}/370_260/{{ $postcar->image }}" alt="product image"></a>
 											<div class="hot__box">
-												<span class="hot-label">BEST SALLER</span>
+												<@if ($postcar->status_car == 1)
+												<span class="glyphicon glyphicon-certificate"> ส่วนลดเยอะที่สุด </span>
+											@endif
+											@if($postcar->status_car == 2)
+												<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำสุด  </span>
+											@endif
+											@if($postcar->status_car == 3)
+												<span class="glyphicon glyphicon-certificate">แถมเยอะสุด </span>
+												@endif
+											@if($postcar->status_car == 4)
+												<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำส่วนลดเยอะ </span>
+												@endif
+											@if($postcar->status_car == 5)
+												<span class="glyphicon glyphicon-certificate"> ธรรมดา </span>
+												@endif
+											@if($postcar->status_car == 6)
+												<span class="glyphicon glyphicon-certificate"> ดาวน์ต่ำของแถมเยอะ </span>
+											@endif
 											</div>
 										</div>
 										<div class="product__content content--center">
@@ -120,7 +137,7 @@
 					{{--    --}}
 					
 					<!-- Start Single Tab Content -->
-					<div class="row single__tab tab-pane fade" id="nav-toyota" role="tabpanel">
+					<div class="row single__tab tab-pane fade" id="nav-Toyota" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							@foreach($postcar2s as $postcar2)
 							<div class="single__product">
@@ -132,7 +149,24 @@
 											<a class="first__img" href="{{ route('blog.single', $postcar2->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar2->category_id}}/{{$postcar2->model}}/370_260/{{ $postcar2->image }}" alt="product image"></a>
 											<a class="second__img animation1" href="{{ route('blog.single', $postcar2->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar2->category_id}}/{{$postcar2->model}}/370_260/{{ $postcar2->image }}" alt="product image"></a>
 											<div class="hot__box">
-												<span class="hot-label">BEST SALLER</span>
+												<@if ($postcar2->status_car == 1)
+												<span class="glyphicon glyphicon-certificate"> ส่วนลดเยอะที่สุด </span>
+											@endif
+											@if($postcar2->status_car == 2)
+												<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำสุด  </span>
+											@endif
+											@if($postcar2->status_car == 3)
+												<span class="glyphicon glyphicon-certificate">แถมเยอะสุด </span>
+												@endif
+											@if($postcar2->status_car == 4)
+												<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำส่วนลดเยอะ </span>
+												@endif
+											@if($postcar2->status_car == 5)
+												<span class="glyphicon glyphicon-certificate"> ธรรมดา </span>
+												@endif
+											@if($postcar2->status_car == 6)
+												<span class="glyphicon glyphicon-certificate"> ดาวน์ต่ำของแถมเยอะ </span>
+											@endif
 											</div>
 										</div>
 										<div class="product__content content--center">
@@ -172,7 +206,7 @@
 					</div>
 					<!-- End Single Tab Content -->
 					<!-- Start Single Tab Content -->
-					<div class="row single__tab tab-pane fade" id="nav-honda" role="tabpanel">
+					<div class="row single__tab tab-pane fade" id="nav-Honda" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							@foreach($postcar3s as $postcar3)
 							<div class="single__product">
@@ -184,7 +218,24 @@
 											<a class="first__img" href="{{ route('blog.single', $postcar3->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar3->category_id}}/{{$postcar3->model}}/370_260/{{ $postcar3->image }}" alt="product image"></a>
 											<a class="second__img animation1" href="{{ route('blog.single', $postcar3->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar3->category_id}}/{{$postcar3->model}}/370_260/{{ $postcar3->image }}" alt="product image"></a>
 											<div class="hot__box">
-												<span class="hot-label">BEST SALLER</span>
+												<@if ($postcar3->status_car == 1)
+												<span class="glyphicon glyphicon-certificate"> ส่วนลดเยอะที่สุด </span>
+											@endif
+											@if($postcar3->status_car == 2)
+												<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำสุด  </span>
+											@endif
+											@if($postcar3->status_car == 3)
+												<span class="glyphicon glyphicon-certificate">แถมเยอะสุด </span>
+												@endif
+											@if($postcar3->status_car == 4)
+												<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำส่วนลดเยอะ </span>
+												@endif
+											@if($postcar3->status_car == 5)
+												<span class="glyphicon glyphicon-certificate"> ธรรมดา </span>
+												@endif
+											@if($postcar3->status_car == 6)
+												<span class="glyphicon glyphicon-certificate"> ดาวน์ต่ำของแถมเยอะ </span>
+											@endif
 											</div>
 										</div>
 										<div class="product__content content--center">
@@ -219,55 +270,13 @@
 								
 							</div>
 							@endforeach
-							@foreach($postcar3sback  as $postcar3back)
-								<div class="single__product">
-									<!-- Start Single Product -->
-									<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-										<div class="product product__style--3">
-											<div class="product__thumb">
-												<a class="first__img" href="{{ route('blog.single', $postcar3back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar3back->category_id}}/{{$postcar3back->model}}/370_260/{{ $postcar3back->image }}" alt="product image"></a>
-												<a class="second__img animation1" href="{{ route('blog.single', $postcar3back->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar3back->category_id}}/{{$postcar3back->model}}/370_260/{{ $postcar3back->image }}" alt="product image"></a>
-												<div class="hot__box">
-													<span class="hot-label">BEST SALLER</span>
-												</div>
-											</div>
-											<div class="product__content content--center">
-												<h4><a href="single-product.html"></a>{{ $postcar3back->model }}</h4>
-												<ul class="prize d-flex">
-													<li>฿{{ $postcar3back->price }}</li>
-													<li class="old_prize">{{ $postcar3back->price }}</li>
-												</ul>
-												<div class="action">
-													<div class="actions_inner">
-														<ul class="add_to_links">
-															{{--  <li><a class="cart" href="{{ route('route') }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
-															{{--  <li><a class="wishlist" href="{{ route('wishlist') }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
-															<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="product__hover--content">
-													<ul class="rating d-flex">
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li class="on"><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Start Single Product -->	
-								</div>
-							@endforeach
+							
 							
 						</div>
 					</div>
 					<!-- End Single Tab Content -->
 					<!-- Start Single Tab Content -->
-					<div class="row single__tab tab-pane fade" id="nav-isuzu" role="tabpanel">
+					<div class="row single__tab tab-pane fade" id="nav-Isuzu" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							@foreach($postcar4s as $postcar4)
 							<div class="single__product">
@@ -279,7 +288,24 @@
 											<a class="first__img" href="{{ route('blog.single', $postcar4->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar4->category_id}}/{{$postcar4->model}}/370_260/{{ $postcar4->image }}" alt="product image"></a>
 											<a class="second__img animation1" href="{{ route('blog.single', $postcar4->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar4->category_id}}/{{$postcar4->model}}/370_260/{{ $postcar4->image }}" alt="product image"></a>
 											<div class="hot__box">
-												<span class="hot-label">BEST SALLER</span>
+												@if ($postcar4->status_car == 1)
+													<span class="glyphicon glyphicon-certificate"> ส่วนลดเยอะที่สุด </span>
+												@endif
+												@if($postcar4->status_car == 2)
+													<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำสุด  </span>
+												@endif
+												@if($postcar4->status_car == 3)
+													<span class="glyphicon glyphicon-certificate">แถมเยอะสุด </span>
+													@endif
+												@if($postcar4->status_car == 4)
+													<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำส่วนลดเยอะ </span>
+													@endif
+												@if($postcar4->status_car == 5)
+													<span class="glyphicon glyphicon-certificate"> ธรรมดา </span>
+													@endif
+												@if($postcar4->status_car == 6)
+													<span class="glyphicon glyphicon-certificate"> ดาวน์ต่ำของแถมเยอะ </span>
+												@endif
 											</div>
 										</div>
 										<div class="product__content content--center">
@@ -320,7 +346,7 @@
 					</div>
 					<!-- End Single Tab Content -->
 					<!-- Start Single Tab Content -->
-					<div class="row single__tab tab-pane fade" id="nav-ford" role="tabpanel">
+					<div class="row single__tab tab-pane fade" id="nav-Ford" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							@foreach($postcar5s as $postcar5)
 							<div class="single__product">
@@ -332,7 +358,24 @@
 											<a class="first__img" href="{{ route('blog.single', $postcar5->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar5->category_id}}/{{$postcar5->model}}/370_260/{{ $postcar5->image }}" alt="product image"></a>
 											<a class="second__img animation1" href="{{ route('blog.single', $postcar5->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar5->category_id}}/{{$postcar5->model}}/370_260/{{ $postcar5->image }}" alt="product image"></a>
 											<div class="hot__box">
-												<span class="hot-label">BEST SALLER</span>
+												@if ($postcar5->status_car == 1)
+													<span class="glyphicon glyphicon-certificate"> ส่วนลดเยอะที่สุด </span>
+												@endif
+												@if($postcar5->status_car == 2)
+													<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำสุด  </span>
+												@endif
+												@if($postcar5->status_car == 3)
+													<span class="glyphicon glyphicon-certificate">แถมเยอะสุด </span>
+													@endif
+												@if($postcar5->status_car == 4)
+													<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำส่วนลดเยอะ </span>
+													@endif
+												@if($postcar5->status_car == 5)
+													<span class="glyphicon glyphicon-certificate"> ธรรมดา </span>
+													@endif
+												@if($postcar5->status_car == 6)
+													<span class="glyphicon glyphicon-certificate"> ดาวน์ต่ำของแถมเยอะ </span>
+												@endif
 											</div>
 										</div>
 										<div class="product__content content--center">
@@ -373,7 +416,7 @@
 					</div>
 					<!-- End Single Tab Content -->
 					<!-- Start Single Tab Content -->
-					<div class="row single__tab tab-pane fade" id="nav-mazda" role="tabpanel">
+					<div class="row single__tab tab-pane fade" id="nav-Mazda" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							@foreach($postcar6s as $postcar6)
 							<div class="single__product">
@@ -385,7 +428,24 @@
 											<a class="first__img" href="{{ route('blog.single', $postcar6->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar6->category_id}}/{{$postcar6->model}}/370_260/{{ $postcar6->image }}" alt="product image"></a>
 											<a class="second__img animation1" href="{{ route('blog.single', $postcar6->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar6->category_id}}/{{$postcar6->model}}/370_260/{{ $postcar6->image }}" alt="product image"></a>
 											<div class="hot__box">
-												<span class="hot-label">BEST SALLER</span>
+												@if ($postcar6->status_car == 1)
+													<span class="glyphicon glyphicon-certificate"> ส่วนลดเยอะที่สุด </span>
+												@endif
+												@if($postcar6->status_car == 2)
+													<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำสุด  </span>
+												@endif
+												@if($postcar6->status_car == 3)
+													<span class="glyphicon glyphicon-certificate">แถมเยอะสุด </span>
+													@endif
+												@if($postcar6->status_car == 4)
+													<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำส่วนลดเยอะ </span>
+													@endif
+												@if($postcar6->status_car == 5)
+													<span class="glyphicon glyphicon-certificate"> ธรรมดา </span>
+													@endif
+												@if($postcar6->status_car == 6)
+													<span class="glyphicon glyphicon-certificate"> ดาวน์ต่ำของแถมเยอะ </span>
+												@endif
 											</div>
 										</div>
 										<div class="product__content content--center">
@@ -427,7 +487,7 @@
 					<!-- End Single Tab Content -->
 					
 					<!-- Start Single Tab Content -->
-					<div class="row single__tab tab-pane fade" id="nav-mg" role="tabpanel">
+					<div class="row single__tab tab-pane fade" id="nav-MG" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							@foreach($postcar7s as $postcar7)
 							<div class="single__product">
@@ -480,7 +540,7 @@
 					</div>
 					<!-- End Single Tab Content -->
 					<!-- Start Single Tab Content -->
-					<div class="row single__tab tab-pane fade" id="nav-nissan" role="tabpanel">
+					<div class="row single__tab tab-pane fade" id="nav-Nissan" role="tabpanel">
 						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
 							@foreach($postcar8s as $postcar8)
 							<div class="single__product">
@@ -492,7 +552,24 @@
 											<a class="first__img" href="{{ route('blog.single', $postcar8->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar8->category_id}}/{{$postcar8->model}}/370_260/{{ $postcar8->image }}" alt="product image"></a>
 											<a class="second__img animation1" href="{{ route('blog.single', $postcar8->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar8->category_id}}/{{$postcar8->model}}/370_260/{{ $postcar8->image }}" alt="product image"></a>
 											<div class="hot__box">
-												<span class="hot-label">BEST SALLER</span>
+												@if ($postcar8->status_car == 1)
+                                    <span class="glyphicon glyphicon-certificate"> ส่วนลดเยอะที่สุด </span>
+                                @endif
+                                @if($postcar8->status_car == 2)
+                                    <span class="glyphicon glyphicon-certificate">ดาวน์ต่ำสุด  </span>
+                                @endif
+                                @if($postcar8->status_car == 3)
+                                    <span class="glyphicon glyphicon-certificate">แถมเยอะสุด </span>
+                                    @endif
+                                @if($postcar8->status_car == 4)
+                                     <span class="glyphicon glyphicon-certificate">ดาวน์ต่ำส่วนลดเยอะ </span>
+                                     @endif
+                                @if($postcar8->status_car == 5)
+                                    <span class="glyphicon glyphicon-certificate"> ธรรมดา </span>
+                                    @endif
+                                @if($postcar8->status_car == 6)
+                                    <span class="glyphicon glyphicon-certificate"> ดาวน์ต่ำของแถมเยอะ </span>
+                                @endif
 											</div>
 										</div>
 										<div class="product__content content--center">
