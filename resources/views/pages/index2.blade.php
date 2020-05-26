@@ -615,7 +615,7 @@
 		</section>
 {{--  ส่วนที่สาม  --}}
 		<!-- Best Sale Area -->
-		<section class="best-seel-area pt--80 pb--60">
+		{{-- <section class="best-seel-area pt--80 pb--60">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -639,7 +639,7 @@
 								<ul class="add_to_links">
 									{{--  <li><a class="cart" href="{{ route('cart',$postcar->id) }}"><i class="bi bi-shopping-bag4"></i></a></li>  --}}
 									{{--  <li><a class="wishlist" href="{{ route('wishlist',$postcar->id) }}"><i class="bi bi-shopping-cart-full"></i></a></li>  --}}
-									<li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
+									{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
 									<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 								</ul>
 							</div>
@@ -659,7 +659,7 @@
 				<!-- Single product end -->
 				
 			</div>
-		</section>
+		</section> --}} --}}
 		<!-- Best Sale Area Area -->
 		
 		<!-- QUICKVIEW PRODUCT -->

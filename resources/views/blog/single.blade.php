@@ -387,7 +387,7 @@
         							@endforeach
         						</ul>
         					</aside>
-        					<aside class="wedget__categories pro--range">
+        					{{-- <aside class="wedget__categories pro--range">
         						<h3 class="wedget__title">Filter by price</h3>
         						<div class="content-shopby">
         						    <div class="price_filter s-filter clear">
@@ -406,15 +406,15 @@
         						        </form>
         						    </div>
         						</div>
-        					</aside>
-        					<aside class="wedget__categories poroduct--compare">
+        					</aside> --}}
+        					{{-- <aside class="wedget__categories poroduct--compare">
         						<h3 class="wedget__title">Compare</h3>
         						<ul>
         							<li><a href="#">x</a><a href="#">Condimentum posuere</a></li>
         							<li><a href="#">x</a><a href="#">Condimentum posuere</a></li>
         							<li><a href="#">x</a><a href="#">Dignissim venenatis</a></li>
         						</ul>
-        					</aside>
+        					</aside> --}}
         					<aside class="wedget__categories poroduct--tag">
         						<h3 class="wedget__title">Product Tags</h3>
         						<ul>
@@ -453,7 +453,26 @@
 		</div>
 		<!-- End Search Popup -->
 		
-
+		<div id="success_tic" class="modal fade" role="dialog">
+  		<div class="modal-dialog modal-dialog-centered">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<a class="close" href="#" data-dismiss="modal">&times;</a>
+				<div class="page-body">
+					<div class="head">  
+						<h5 style="margin-top:5px;">ข้อมูลของท่านถูกส่งแล้ว จะมีเจ้าหน้าที่ติดต่อภายใน 24 ชม.</h5>
+						<p>ขอขอบคุณที่ท่านติดต่อเรา เราจะเร่งพัฒนาให้ดียิ่งขึ้น</p>
+					</div>
+					<h1 style="text-align:center;">
+						<div class="checkmark-circle">
+							<div class="background"></div>
+							<div class="checkmark draw"></div>
+						</div>
+					<h1>
+				</div>
+			</div>
+    	</div>
+  	</div>
 		{{--  --}}
 		<div class="modal fade" id="myModal2" role="dialog" >
 																									   
@@ -616,59 +635,156 @@
  
     
 <script>
-	$('.modal').insertAfter($('body'));
-	$(document).ready(function(){
-	$("#myBtn2").click(function(){
-		$("#myModal2").modal({backdrop: true});
-			  $('.modal-title').text("สนใจโปรโมชั่นของรถรุ่นนี้");
-				 $('#action_button').val("ส่งข้อมูล");
-				 $('#action').val("ส่งข้อมูล");
-				 $('#formModal').appendTo("body").modal('show');
-				
-			 });
+	$('.modal').insertAfter($('body'));	
+	$(document).ready(function()
+	{
+		
+		//$("#myModal2").modal({backdrop:true});
+		//$('.modal-title').text("แบบฟอร์มขอรับโปรโมชั่น ฟรีไม่มีค่าใช้จ่าย");
+		$('#action_button').val("ส่งข้อมูล");
+		$('#action').val("ส่งข้อมูล");
+		$('#formModal').appendTo("body").modal('show');
+			 
+
+		$('#sample_form').on('submit', function(event){
+			event.preventDefault();
 			
-			 $('#sample_form').on('submit', function(event){
-			  event.preventDefault();
-			  if($('#action').val() == 'ส่งข้อมูล')
-			  {
-			   $.ajax({
-				url:"{{ route('customerOrder.store') }}",
-				method:"POST",
-				data: new FormData(this),
-				contentType: false,
-				cache:false,
-				processData: false,
-				dataType:"json",
-				success:function(data)
-				{
-				 var html = '';
-				 if(data.errors)
-				 {
-				  html = '<div class="alert alert-danger">';
-				  for(var count = 0; count < data.errors.length; count++)
-				  {
-				   html += '<p>' + data.errors[count] + '</p>';
-				  }
-				  html += '</div>';
-				 }
-				 if(data.success)
-				 {
-				  html = '<div class="alert alert-success">' + data.success + '</div>';
-				  $('#sample_form')[0].reset();
-				  $('#car_manage_table').DataTable().ajax.reload();
-				 }
-				 $('#form_result').html(html);
-				}
-			   })
-			  }
-			
-
- });
-	  
-});
-//
-
-
+			if($('#action').val() == 'ส่งข้อมูล')
+			{
+				$.ajax({
+					url:"{{ route('customerOrder.store') }}",
+					method:"POST",
+					data: new FormData(this),
+					contentType: false,
+					cache:false,
+					processData: false,
+					dataType:"json",
+					success:function(data)
+					{
+						 var html = '';
+						 if(data.errors)
+						 {
+							  html = '<div class="alert alert-danger">';
+							  for(var count = 0; count < data.errors.length; count++)
+							  {
+								   html += '<p>' + data.errors[count] + '</p>';
+							  }
+						  html += '</div>';
+						 }
+						 if(data.success)
+						 {	
+							$("#success_tic").modal({backdrop:true});
+							  //html = '<div class="alert alert-success">' + data.success + '</div>';
+							$('#sample_form')[0].reset();
+							  
+						 }
+						$('#form_result').html(html);
+						 
+					}
+				})
+			}	
+					
+		 });
+		  
+	});
 </script>
-
-
+<script>
+	(function ($) {
+		$.fn.countTo = function (options) {
+			options = options || {};
+			
+			return $(this).each(function () {
+				// set options for current element
+				var settings = $.extend({}, $.fn.countTo.defaults, {
+					from:            $(this).data('from'),
+					to:              $(this).data('to'),
+					speed:           $(this).data('speed'),
+					refreshInterval: $(this).data('refresh-interval'),
+					decimals:        $(this).data('decimals')
+				}, options);
+				
+				// how many times to update the value, and how much to increment the value on each update
+				var loops = Math.ceil(settings.speed / settings.refreshInterval),
+					increment = (settings.to - settings.from) / loops;
+				
+				// references & variables that will change with each update
+				var self = this,
+					$self = $(this),
+					loopCount = 0,
+					value = settings.from,
+					data = $self.data('countTo') || {};
+				
+				$self.data('countTo', data);
+				
+				// if an existing interval can be found, clear it first
+				if (data.interval) {
+					clearInterval(data.interval);
+				}
+				data.interval = setInterval(updateTimer, settings.refreshInterval);
+				
+				// initialize the element with the starting value
+				render(value);
+				
+				function updateTimer() {
+					value += increment;
+					loopCount++;
+					
+					render(value);
+					
+					if (typeof(settings.onUpdate) == 'function') {
+						settings.onUpdate.call(self, value);
+					}
+					
+					if (loopCount >= loops) {
+						// remove the interval
+						$self.removeData('countTo');
+						clearInterval(data.interval);
+						value = settings.to;
+						
+						if (typeof(settings.onComplete) == 'function') {
+							settings.onComplete.call(self, value);
+						}
+					}
+				}
+				
+				function render(value) {
+					var formattedValue = settings.formatter.call(self, value, settings);
+					$self.html(formattedValue);
+				}
+			});
+		};
+		
+		$.fn.countTo.defaults = {
+			from: 0,               // the number the element should start at
+			to: 0,                 // the number the element should end at
+			speed: 1000,           // how long it should take to count between the target numbers
+			refreshInterval: 100,  // how often the element should be updated
+			decimals: 0,           // the number of decimal places to show
+			formatter: formatter,  // handler for formatting the value before rendering
+			onUpdate: null,        // callback method for every time the element is updated
+			onComplete: null       // callback method for when the element finishes updating
+		};
+		
+		function formatter(value, settings) {
+			return value.toFixed(settings.decimals);
+		}
+	}(jQuery));
+	
+	jQuery(function ($) {
+	  // custom formatting example
+	  $('.count-number').data('countToOptions', {
+		formatter: function (value, options) {
+		  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+		}
+	  });
+	  
+	  // start all the timers
+	  $('.timer').each(count);  
+	  
+	  function count(options) {
+		var $this = $(this);
+		options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+		$this.countTo(options);
+	  }
+	});
+</script>				
