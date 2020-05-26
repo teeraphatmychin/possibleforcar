@@ -93,6 +93,62 @@
         									{{-- <span>รับโปรโมชั่น</span> --}}
         									<div class="addtocart__actions">
 												<button class="tocart" type="submit" id="myBtn2" title="Add to Cart">รับโปรโมชั่น</button> 
+												<div class="modal fade" id="myModal2" role="dialog" >
+																									   
+													<div class="modal-dialog modal-dialog-centered" style="z-index: 9999999999999999999999;">
+													
+													<!-- Modal content-->
+													<div class="modal-content" >
+														<div class="modal-header" ;>
+														<h4 class="modal-title" >{{$post->category_id}} {{$post->model}}</h4>
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+														</div>
+															<div class="modal-body" >
+										
+																				<span id="form_result"></span>
+																				<form method="post" id="sample_form" class="form-horizontal" enctype="multipart/form-data">
+																				 @csrf
+																				 <div class="form-group">
+																					 <div class="row">
+																						<label class="control-label col-md-3" >ชื่อของท่าน : </label>
+																						   <div class="col-md-7">
+																				  
+																						<input type="text" name="customer_name" id="customer_name" class="form-control" placeholder="">
+																				   
+																				   </div>   
+																				</div>
+																				  </div>
+																				  <div class="form-group">
+																				   <label class="control-label col-md-3">เบอร์ติดต่อของท่าน : </label>
+																				   <div class="col-md-7">
+																					<input type="text" name="customer_phone" id="customer_phone" class="form-control" placeholder="">
+																				   </div>
+																				  </div>
+																				  {{--    --}}
+																				  <div class="form-group">
+																					   <label class="control-label col-md-3"> สะดวกให้ติดต่อทางไลน์หรือเฟสบุ๊ค : </label>
+																					   <div class="col-md-7">
+																							<input type="text" name="customer_social" id="customer_social" class="form-control" placeholder="">
+																					   </div>
+																				   </div>
+																				   
+																				  <br />
+																				  <div class="form-group" align="center">
+																				   <input type="hidden" name="action" id="action" />
+																				   <input type="hidden" name="hidden_id" id="hidden_id" />
+																				   <input type="submit" name="action_button" id="action_button" class="btn btn-warning" value="ส่งข้อมูล" />
+																				  </div>
+																				</form>
+																		
+										
+										
+										
+															</div>
+														
+														</div>
+													
+													</div>
+												</div>
 												{{--  --}}
         									</div>
 											<div class="product-addto-links clearfix">
@@ -477,64 +533,7 @@
     	</div>
   	</div>
 		{{--  --}}
-		<div class="modal fade" id="myModal2" role="dialog" >
-																									   
-			<div class="modal-dialog modal-dialog-centered" style="z-index: 9999999999999999999999;">
-			
-			<!-- Modal content-->
-			<div class="modal-content" >
-				<div class="modal-header" ;>
-				<h4 class="modal-title" >{{$post->category_id}} {{$post->model}}</h4>
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-					<div class="modal-body" >
-					
-						
-
-										<span id="form_result"></span>
-										<form method="post" id="sample_form" class="form-horizontal" enctype="multipart/form-data">
-										 @csrf
-										 <div class="form-group">
-											 <div class="row">
-												<label class="control-label col-md-3" >ชื่อของท่าน : </label>
-										   		<div class="col-md-7">
-										  
-												<input type="text" name="customer_name" id="customer_name" class="form-control" placeholder="">
-										   
-										   </div>   
-										</div>
-										  </div>
-										  <div class="form-group">
-										   <label class="control-label col-md-3">เบอร์ติดต่อของท่าน : </label>
-										   <div class="col-md-7">
-											<input type="text" name="customer_phone" id="customer_phone" class="form-control" placeholder="">
-										   </div>
-										  </div>
-										  {{--    --}}
-										  <div class="form-group">
-											   <label class="control-label col-md-3"> สะดวกให้ติดต่อทางไลน์หรือเฟสบุ๊ค : </label>
-											   <div class="col-md-7">
-													<input type="text" name="customer_social" id="customer_social" class="form-control" placeholder="">
-											   </div>
-										   </div>
-										   
-										  <br />
-										  <div class="form-group" align="center">
-										   <input type="hidden" name="action" id="action" />
-										   <input type="hidden" name="hidden_id" id="hidden_id" />
-										   <input type="submit" name="action_button" id="action_button" class="btn btn-warning" value="ส่งข้อมูล" />
-										  </div>
-										</form>
-								
-
-
-
-					</div>
-				
-				</div>
-			
-			</div>
-		</div>
+		
 		{{--  --}}
 		<!-- QUICKVIEW PRODUCT -->
 		<div id="quickview-wrapper">
@@ -632,29 +631,23 @@
 	<script src="{{ asset('frontend/boighor/boighors/js/plugins.js')}}"></script>
 	<script src="{{ asset('frontend/boighor/boighors/js/active.js')}}"></script>
 	
-</body>
-</html>
-
- 
-    
-<script>
-	$('.modal').insertAfter($('body'));	
-	$(document).ready(function()
-	{
-		
-		//$("#myModal2").modal({backdrop:true});
-		//$('.modal-title').text("แบบฟอร์มขอรับโปรโมชั่น ฟรีไม่มีค่าใช้จ่าย");
-		$('#action_button').val("ส่งข้อมูล");
-		$('#action').val("ส่งข้อมูล");
-		$('#formModal').appendTo("body").modal('show');
-			 
-
-		$('#sample_form').on('submit', function(event){
-			event.preventDefault();
-			
-			if($('#action').val() == 'ส่งข้อมูล')
-			{
-				$.ajax({
+	<script>
+		$('.modal').insertAfter($('body'));
+		$(document).ready(function(){
+		$("#myBtn2").click(function(){
+			$("#myModal2").modal({backdrop: true});
+				  $('.modal-title').text("สนใจโปรโมชั่นของรถรุ่นนี้");
+					 $('#action_button').val("ส่งข้อมูล");
+					 $('#action').val("ส่งข้อมูล");
+					 $('#formModal').appendTo("body").modal('show');
+					
+				 });
+				
+				 $('#sample_form').on('submit', function(event){
+				  event.preventDefault();
+				  if($('#action').val() == 'ส่งข้อมูล')
+				  {
+				   $.ajax({
 					url:"{{ route('customerOrder.store') }}",
 					method:"POST",
 					data: new FormData(this),
@@ -664,130 +657,41 @@
 					dataType:"json",
 					success:function(data)
 					{
-						 var html = '';
-						 if(data.errors)
-						 {
-							  html = '<div class="alert alert-danger">';
-							  for(var count = 0; count < data.errors.length; count++)
-							  {
-								   html += '<p>' + data.errors[count] + '</p>';
-							  }
-						  html += '</div>';
-						 }
-						 if(data.success)
-						 {	
-							$("#success_tic").modal({backdrop:true});
-							  //html = '<div class="alert alert-success">' + data.success + '</div>';
-							$('#sample_form')[0].reset();
-							  
-						 }
-						$('#form_result').html(html);
-						 
+					 var html = '';
+					 if(data.errors)
+					 {
+					  html = '<div class="alert alert-danger">';
+					  for(var count = 0; count < data.errors.length; count++)
+					  {
+					   html += '<p>' + data.errors[count] + '</p>';
+					  }
+					  html += '</div>';
+					 }
+					 if(data.success)
+					 {
+					  html = '<div class="alert alert-success">' + data.success + '</div>';
+					  $('#sample_form')[0].reset();
+					  $('#car_manage_table').DataTable().ajax.reload();
+					 }
+					 $('#form_result').html(html);
 					}
-				})
-			}	
-					
-		 });
-		  
-	});
-</script>
-<script>
-	(function ($) {
-		$.fn.countTo = function (options) {
-			options = options || {};
-			
-			return $(this).each(function () {
-				// set options for current element
-				var settings = $.extend({}, $.fn.countTo.defaults, {
-					from:            $(this).data('from'),
-					to:              $(this).data('to'),
-					speed:           $(this).data('speed'),
-					refreshInterval: $(this).data('refresh-interval'),
-					decimals:        $(this).data('decimals')
-				}, options);
+				   })
+				  }
 				
-				// how many times to update the value, and how much to increment the value on each update
-				var loops = Math.ceil(settings.speed / settings.refreshInterval),
-					increment = (settings.to - settings.from) / loops;
-				
-				// references & variables that will change with each update
-				var self = this,
-					$self = $(this),
-					loopCount = 0,
-					value = settings.from,
-					data = $self.data('countTo') || {};
-				
-				$self.data('countTo', data);
-				
-				// if an existing interval can be found, clear it first
-				if (data.interval) {
-					clearInterval(data.interval);
-				}
-				data.interval = setInterval(updateTimer, settings.refreshInterval);
-				
-				// initialize the element with the starting value
-				render(value);
-				
-				function updateTimer() {
-					value += increment;
-					loopCount++;
-					
-					render(value);
-					
-					if (typeof(settings.onUpdate) == 'function') {
-						settings.onUpdate.call(self, value);
-					}
-					
-					if (loopCount >= loops) {
-						// remove the interval
-						$self.removeData('countTo');
-						clearInterval(data.interval);
-						value = settings.to;
-						
-						if (typeof(settings.onComplete) == 'function') {
-							settings.onComplete.call(self, value);
-						}
-					}
-				}
-				
-				function render(value) {
-					var formattedValue = settings.formatter.call(self, value, settings);
-					$self.html(formattedValue);
-				}
-			});
-		};
-		
-		$.fn.countTo.defaults = {
-			from: 0,               // the number the element should start at
-			to: 0,                 // the number the element should end at
-			speed: 1000,           // how long it should take to count between the target numbers
-			refreshInterval: 100,  // how often the element should be updated
-			decimals: 0,           // the number of decimal places to show
-			formatter: formatter,  // handler for formatting the value before rendering
-			onUpdate: null,        // callback method for every time the element is updated
-			onComplete: null       // callback method for when the element finishes updating
-		};
-		
-		function formatter(value, settings) {
-			return value.toFixed(settings.decimals);
-		}
-	}(jQuery));
 	
-	jQuery(function ($) {
-	  // custom formatting example
-	  $('.count-number').data('countToOptions', {
-		formatter: function (value, options) {
-		  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-		}
-	  });
-	  
-	  // start all the timers
-	  $('.timer').each(count);  
-	  
-	  function count(options) {
-		var $this = $(this);
-		options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-		$this.countTo(options);
-	  }
-	});
-</script>				
+	 });
+		  
+});
+//
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
+  

@@ -53,7 +53,7 @@
 													<input type="text" name="car_down" id="car_donw" class="form-control form-control-lg" placeholder="">
 												</div>
 												<div class="form-group col-md-6">
-													<label for="installment"> ผ่อนเท่าไรต่อเดือน (ไม่ใส่ก็ได้) :</label>													
+													<label for="installment"> ส่วนข้อเสนอที่ต้องการ :</label>													
 													<input type="text" name="installment" id="installment" class="form-control form-control-lg" placeholder="">													
 												</div>
 													<div class="form-group col-md-12">
