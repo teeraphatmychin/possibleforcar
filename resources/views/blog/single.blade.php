@@ -64,10 +64,9 @@
         						</div>
         						<div class="col-lg-6 col-12">
         							<div class="product__info__main">
-										<h1>{{ $post->title }}</h1>
-										<h1>{{ $post->model }}</h1>
+									
 
-        								<div class="product-reviews-summary d-flex">
+        								{{-- <div class="product-reviews-summary d-flex">
         									<ul class="rating-summary d-flex">
     											<li><i class="zmdi zmdi-star-outline"></i></li>
     											<li><i class="zmdi zmdi-star-outline"></i></li>
@@ -75,12 +74,14 @@
     											<li class="off"><i class="zmdi zmdi-star-outline"></i></li>
     											<li class="off"><i class="zmdi zmdi-star-outline"></i></li>
         									</ul>
-        								</div>
+										</div> --}}
+										<h1>{{ $post->title }}</h1>
+										<h1>{{ $post->model }}</h1>
         								<div class="price-box">
-        									<span></span>
+        									<span><h1>ราคา {{ $post->price }} บาท</h1></span>
         								</div>
 										<div class="product__overview">
-											<h1>ราคา{{ $post->price }} บาท</h1>
+											
 
 											<p>{{$post->title}}</p>
 											@foreach(explode(',',$post->conditions) as $row)

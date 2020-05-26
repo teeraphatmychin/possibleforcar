@@ -553,23 +553,23 @@
 											<a class="second__img animation1" href="{{ route('blog.single', $postcar8->slug) }}"><img src="{{ URL::to('/') }}/images/allcar/{{$postcar8->category_id}}/{{$postcar8->model}}/370_260/{{ $postcar8->image }}" alt="product image"></a>
 											<div class="hot__box">
 												@if ($postcar8->status_car == 1)
-                                    <span class="glyphicon glyphicon-certificate"> ส่วนลดเยอะที่สุด </span>
-                                @endif
-                                @if($postcar8->status_car == 2)
-                                    <span class="glyphicon glyphicon-certificate">ดาวน์ต่ำสุด  </span>
-                                @endif
-                                @if($postcar8->status_car == 3)
-                                    <span class="glyphicon glyphicon-certificate">แถมเยอะสุด </span>
-                                    @endif
-                                @if($postcar8->status_car == 4)
-                                     <span class="glyphicon glyphicon-certificate">ดาวน์ต่ำส่วนลดเยอะ </span>
-                                     @endif
-                                @if($postcar8->status_car == 5)
-                                    <span class="glyphicon glyphicon-certificate"> ธรรมดา </span>
-                                    @endif
-                                @if($postcar8->status_car == 6)
-                                    <span class="glyphicon glyphicon-certificate"> ดาวน์ต่ำของแถมเยอะ </span>
-                                @endif
+												<span class="glyphicon glyphicon-certificate"> ส่วนลดเยอะที่สุด </span>
+											@endif
+											@if($postcar8->status_car == 2)
+												<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำสุด  </span>
+											@endif
+											@if($postcar8->status_car == 3)
+												<span class="glyphicon glyphicon-certificate">แถมเยอะสุด </span>
+												@endif
+											@if($postcar8->status_car == 4)
+												<span class="glyphicon glyphicon-certificate">ดาวน์ต่ำส่วนลดเยอะ </span>
+												@endif
+											@if($postcar8->status_car == 5)
+												<span class="glyphicon glyphicon-certificate"> ธรรมดา </span>
+												@endif
+											@if($postcar8->status_car == 6)
+												<span class="glyphicon glyphicon-certificate"> ดาวน์ต่ำของแถมเยอะ </span>
+											@endif
 											</div>
 										</div>
 										<div class="product__content content--center">

@@ -182,7 +182,7 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', ['tctxM','','td
                           </button>
 
                             <select class="selectpicker" data-width="100%" name="product_type" id="product_type" tabindex="-98">
-                                <option class="hide" value="new">คำนวณเงินดาว</option>
+                                <option class="hide" value="new">คำนวณเงินดาวน์</option>
                                 
                             </select></div>
                     </div>
@@ -199,7 +199,7 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', ['tctxM','','td
                                             <label class="col-sm-3 control-label required" for="car_price1" id="car_price_label1"><span class="text">ราคารถ (รวม VAT)</span><span class="star"> *</span></label>
                                             <div class="col-sm-4">
                                                 <div class="input-group">
-                                                    <input type="text" id="car_price1" name="car_price1" value="{{ $post->price }}" class="form-control numeral price payment car_price" maxlength="14" style="text-align: right;  ">
+                                                    <input type="text" id="car_price1" name="car_price1" value="{{ $post->price }}" class="form-control numeral price payment car_price" maxlength="14" style="text-align: right;  " >
                                                     <div class="input-group-addon">บาท</div>
                                                 </div>
                                             </div>
